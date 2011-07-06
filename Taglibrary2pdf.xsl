@@ -22,16 +22,16 @@
                     margin-top="2.5cm"    
                     margin-bottom="2.5cm"
                     margin-left="2.5cm"
-                    margin-right="1.0cm">
+                    margin-right="1.5cm">
                     <fo:region-body
-                        margin-top="2.4cm"      margin-bottom="2.4cm"   
-                        margin-left="0cm"       margin-right="2.4cm"
+                        margin-top="2.4cm"      margin-bottom="0cm"   
+                        margin-left="0cm"       margin-right="0cm"
                         column-count="1"/>
                     <fo:region-before 
-                        region-name="taglibrary-region-before" extent="2.3cm" />  
+                        region-name="taglibrary-region-before" extent="1.3cm" />  
                     
                     <fo:region-after 
-                        region-name="taglibrary-region-after" extent="2.3cm" /> 
+                        region-name="taglibrary-region-after" extent="1.3cm" /> 
                 </fo:simple-page-master>
              
                 <fo:simple-page-master master-name="Frontmatter"
@@ -40,11 +40,11 @@
                     margin-top="2.5cm"    
                     margin-bottom="2.5cm"
                     margin-left="2.5cm"
-                    margin-right="1.5cm">
+                    margin-right="2.5cm">
                     <fo:region-body
                         margin-top="2.4cm"      margin-bottom="2.4cm"   
                         margin-left="0cm"       margin-right="2.4cm"
-                        column-count="1"/>
+                        column-count="1" display-align="centre"/>
                     <fo:region-before 
                         region-name="frontmatter-region-before" extent="2.3cm" />  
                     
@@ -752,9 +752,25 @@
     </xsl:template>
 
     <xsl:template match="tei:front/tei:div/tei:div/ex:egXML">
-        <xsl:for-each select="*">
+        <fo:block><xsl:text> </xsl:text></fo:block>
+        <fo:list-block provisional-distance-between-starts="0">
+            <fo:list-item>
+                <fo:list-item-label start-indent="0" end-indent="0">
+                    <fo:block>
+                    <xsl:text> </xsl:text>
+                    </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                    <xsl:for-each select="*">
+            <xsl:variable name="myDepth" select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*5"/>
+            <fo:block start-indent="body-start() + {$myDepth}">
             <xsl:call-template name="eg"/>
+            </fo:block>
         </xsl:for-each>
+                </fo:list-item-body>
+            </fo:list-item>
+        </fo:list-block>
+        <fo:block><xsl:text> </xsl:text></fo:block>
     </xsl:template>
 
     <xsl:template match="ex:egXML">
@@ -776,10 +792,11 @@
                     <fo:block>
                         <xsl:call-template name="newLine"/>
                     <xsl:for-each select="*">
-                        
+                       <fo:block>
                         <!--<xsl:text>&#x20;</xsl:text>-->
                         <xsl:call-template name="eg"/>
                         <xsl:call-template name="newLine"/>
+                        </fo:block> 
                     </xsl:for-each>
                     </fo:block>
                 </fo:list-item-body>
@@ -788,6 +805,7 @@
    </xsl:template>
 
     <xsl:template name="eg">
+        <fo:block>
         <xsl:call-template name="newLine"/>
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="local-name()"/>
@@ -817,12 +835,15 @@
         <xsl:value-of select="local-name()"/>
         <xsl:text>&gt;</xsl:text>
         <xsl:call-template name="newLine"/>
+            </fo:block>
     </xsl:template>
 
     <xsl:template match="eac-cpf:*">
-        <fo:block>
+        <xsl:variable name="myDepth" select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*5"/>
+        <!-- start-indent="{70 + $myDepth}" end-indent="{$myDepth}" -->
+        <fo:block start-indent="body-start() + {$myDepth}mm" wrap-option="wrap">
             <xsl:call-template name="newLine"/>
-            <xsl:call-template name="makeIndent"/>
+            <!--<xsl:call-template name="makeIndent"/>-->
             <xsl:text>&lt;</xsl:text>
             <xsl:value-of select="local-name()"/>
             <xsl:for-each select="@*">
@@ -846,13 +867,12 @@
                 <xsl:text>"</xsl:text>
             </xsl:for-each>
             <xsl:text>&gt;</xsl:text>
-            <!-- Här behöver få in radbrytningar efter ett visst antal tecken och sedan göra identeringen på den nya raden. -->
             <xsl:apply-templates select="* | text()"/>
-            <!-- Här skapas sluttaggen -->
-            <xsl:text>&lt;/</xsl:text>
-            <xsl:value-of select="local-name()"/>
-            <xsl:text>&gt;</xsl:text>
-            <xsl:call-template name="newLine"/>
+            <fo:inline keep-together.within-line="always"  keep-with-previous.within-line="">
+                <xsl:text>&lt;/</xsl:text>
+                    <xsl:value-of select="local-name()"/>
+                    <xsl:text>&gt;</xsl:text>
+            </fo:inline>
         </fo:block>
     </xsl:template>
     
@@ -865,6 +885,7 @@
         </xsl:call-template>
     </xsl:template>
     
+  
     <xsl:template name="newLine">
         <xsl:text>&#x000D;&#x000A;</xsl:text>
     </xsl:template>
