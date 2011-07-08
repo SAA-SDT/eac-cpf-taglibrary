@@ -55,7 +55,7 @@
            
             <fo:page-sequence master-reference="Frontmatter">
                 <fo:flow flow-name="xsl-region-body">
-                    <xsl:apply-templates mode="title" select="tei:TEI/tei:text/tei:front/tei:titlePage"/>
+                    <xsl:apply-templates mode="title" select="tei:TEI/tei:text/tei:front/tei:titlePage[@xml:lang = $currentLanguage]"/>
                 </fo:flow>
             </fo:page-sequence>
             
@@ -130,7 +130,8 @@
     </xsl:template>
 
     <xsl:template match="tei:front" mode="toclong">
-        <xsl:for-each select="tei:div">
+        <xsl:if test="tei:div[@xml:lang=$currentLanguage]">
+        <xsl:for-each select="tei:div/tei:div">
             <fo:block
                 font-family="Times"
                 font-size="14pt"
@@ -151,11 +152,13 @@
                 </fo:block>
             </xsl:for-each>
         </xsl:for-each>
+        </xsl:if>
     </xsl:template>
     
     <xsl:template match="tei:front" mode="tocshort">
-        <xsl:for-each select="tei:div">
-            <fo:block
+
+          <xsl:for-each select="tei:div[@xml:lang=$currentLanguage]/tei:div">
+                    <fo:block
                 font-family="Times"
                 font-size="14pt"
                 font-weight="bold"
@@ -179,7 +182,8 @@
                     </fo:inline>
                 </fo:block>
             </xsl:for-each>
-        </xsl:for-each>
+        
+            </xsl:for-each>
     </xsl:template>
 
     <xsl:template match="tei:front/tei:titlePage" mode="title">
@@ -352,6 +356,12 @@
     
 
     <xsl:template match="tei:front/tei:div">
+        <xsl:if test="@xml:lang = $currentLanguage">
+            <xsl:apply-templates />
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="tei:front/tei:div/tei:div">
         <fo:block
             page-break-before="always"
             id="{@xml:id}">
@@ -361,10 +371,10 @@
                 </fo:block>
             </fo:marker>
             <xsl:apply-templates />
-        </fo:block>
+        </fo:block>      
     </xsl:template>
 
-    <xsl:template match="tei:front/tei:div/tei:div">
+    <xsl:template match="tei:front/tei:div/tei:div/tei:div">
         <fo:block id="{@xml:id}"/>
         <xsl:apply-templates/>
     </xsl:template>
@@ -464,7 +474,8 @@
                     <xsl:text>&#xA0;&#xA0;</xsl:text>
                 <xsl:value-of select="tei:head[@type='name']"/>
             </fo:block>
-            <xsl:apply-templates select="tei:list"/>
+            <xsl:apply-templates select="tei:list[@xml:lang=$currentLanguage]"/>
+            <xsl:apply-templates select="ex:egXML"/>
         </xsl:for-each>
     </xsl:template>
 
@@ -478,6 +489,7 @@
             text-align="left"
             page-break-before="always"
             id="{@xml:id}">
+            
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
                 <xsl:text>Attributes</xsl:text>
@@ -507,7 +519,7 @@
                 <xsl:text>&#xA0;&#xA0;</xsl:text>
                 <xsl:value-of select="tei:head[@type='name']"/>
             </fo:block>
-            <xsl:apply-templates select="tei:list"/>
+            <xsl:apply-templates select="tei:list[@xml:lang=$currentLanguage]"/>
         </xsl:for-each>
     </xsl:template>
 

@@ -5727,7 +5727,7 @@
 			</div>
 		</body>
 		<back>
-			<div type="appendix" xml:id="crosswalk">
+			<div type="appendix" xml:id="crosswalk" n="1">
 				<head>ISAAR(CPF) Crosswalk</head>
 				<list>
 					<label>ISAAR (CPF)</label>
@@ -5878,7 +5878,7 @@
 						<tag>resourceRelation</tag>/<tag>date</tag> or <tag>dateRange</tag> or <tag>dateSet</tag>
 					</item>
 				</list>
-			</div>
+			</div>			
 		</back>
 	</text>
 </TEI>
