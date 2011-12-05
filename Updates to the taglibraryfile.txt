@@ -2,3 +2,4 @@ Changes needed in the xml file to make the FO work
 
 Every div that should occur in the table of contents need to have the attribute xml:id to work properly
 The appendixes need to be numbered with the help of the attribute n
+Examples using a different namespace like if the resourcerelation contains ead the elements need a prefix example to work with the FO. 

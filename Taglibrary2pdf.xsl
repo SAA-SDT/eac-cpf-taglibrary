@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+    xmlns:fo="http://www.w3.org/1999/XSL/Format" 
+    xmlns:eac-cpf="urn:isbn:1-931666-33-4"
     xmlns:ex="http://www.tei-c.org/ns/Examples"
     xmlns:exml="http://workaround for xml namespace restriction/namespace"
-    xmlns:xlink="http://www.w3c.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xlink="http://www.w3c.org/1999/xlink" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
-    exclude-result-prefixes="xs xlink eac-cpf ex exml #default"
+    xmlns:example="example"
+    exclude-result-prefixes="xs xlink eac-cpf ex exml example"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
     <xsl:output indent="yes"/>
     
@@ -606,7 +609,31 @@
                             </fo:block>
                         </fo:list-item-label>
                         <fo:list-item-body start-indent="body-start()">
-                            <fo:block>
+                            <fo:table start-indent="body-start()-20mm" table-layout="">
+                                <fo:table-body>
+                                    <xsl:for-each select="tei:list/tei:label[1]">
+                                        <fo:table-row>
+                                            <fo:table-cell width="50mm"><fo:block>
+                                                <xsl:apply-templates/></fo:block></fo:table-cell>
+                                            <fo:table-cell>
+                                                <fo:block>
+                                                    <xsl:apply-templates select="following-sibling::tei:item[1]"/>
+                                                </fo:block></fo:table-cell>
+                                        </fo:table-row> 
+                                    </xsl:for-each>
+                                    <xsl:for-each select="tei:list/tei:label[position()&gt;1]">
+                                        <fo:table-row>
+                                            <fo:table-cell><fo:block>
+                                                <xsl:apply-templates/>
+                                            </fo:block></fo:table-cell>
+                                            <fo:table-cell><fo:block>
+                                                <xsl:apply-templates select="following-sibling::tei:item[1]"/>
+                                            </fo:block></fo:table-cell>
+                                        </fo:table-row>
+                                    </xsl:for-each>
+                                </fo:table-body>
+                            </fo:table>
+                            <!--<fo:block>
                                 <xsl:for-each select="tei:list/tei:label[1]">
                                     <xsl:apply-templates/>
                                     <xsl:apply-templates select="following-sibling::tei:item[1]"/>
@@ -616,7 +643,7 @@
                                     <xsl:apply-templates/>
                                     <xsl:apply-templates select="following-sibling::tei:item[1]"/>
                                 </xsl:for-each>
-                            </fo:block>
+                            </fo:block>-->
                         </fo:list-item-body>
                     </fo:list-item>
                 </fo:list-block>
@@ -838,7 +865,7 @@
             </fo:block>
     </xsl:template>
 
-    <xsl:template match="eac-cpf:*">
+    <xsl:template match="eac-cpf:*|example:*">
         <xsl:variable name="myDepth" select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*5"/>
         <!-- start-indent="{70 + $myDepth}" end-indent="{$myDepth}" -->
         <fo:block start-indent="body-start() + {$myDepth}mm" wrap-option="wrap">

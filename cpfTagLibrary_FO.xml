@@ -3,7 +3,7 @@
 					type="xml"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:eac-cpf="urn:isbn:1-931666-33-4"
 	xmlns:exml="http://workaround for xml namespace restriction/namespace"
-	xmlns:xlink="http://www.w3c.org/1999/xlink">
+	xmlns:xlink="http://www.w3c.org/1999/xlink" xmlns:example="example">
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
@@ -4714,26 +4714,26 @@
 							<egXML xmlns="http://www.tei-c.org/ns/Examples">
 								<eac-cpf:resourceRelation resourceRelationType="creatorOf">
 									<eac-cpf:objectXMLWrap>
-										<ead xmlns:xsi="http://www.w3c.org/2001/XMLSchema-instance" xsi="urn:isbn:1-931666-22-9">
-											<eadheader>
-												<eadid identifier="e4012531" mainagencycode="GB-0066"/>
-												<filedesc>
-													<titlestmt>
-														<titleproper/>
-													</titlestmt>
-												</filedesc>
-											</eadheader>
-											<archdesc level="file">
-												<did>
-													<unitid repositorycode="GB-0066">E 40/12531</unitid>
-													<unittitle>Attached seal, Andrew Noel</unittitle>
-													<unitdate>1551-1552</unitdate>
-													<physdesc>
-														<genreform type="materialType">Seals</genreform>
-													</physdesc>
-												</did>
-											</archdesc>
-										</ead>
+										<example:ead xmlns:xsi="http://www.w3c.org/2001/XMLSchema-instance" xsi="urn:isbn:1-931666-22-9">
+											<example:eadheader>
+												<example:eadid identifier="e4012531" mainagencycode="GB-0066"/>
+												<example:filedesc>
+													<example:titlestmt>
+														<example:titleproper/>
+													</example:titlestmt>
+												</example:filedesc>
+											</example:eadheader>
+											<example:archdesc level="file">
+												<example:did>
+													<example:unitid repositorycode="GB-0066">E 40/12531</example:unitid>
+													<example:unittitle>Attached seal, Andrew Noel</example:unittitle>
+													<example:unitdate>1551-1552</example:unitdate>
+													<example:physdesc>
+														<example:genreform type="materialType">Seals</example:genreform>
+													</example:physdesc>
+												</example:did>
+											</example:archdesc>
+										</example:ead>
 									</eac-cpf:objectXMLWrap>
 								</eac-cpf:resourceRelation>
 							</egXML>
