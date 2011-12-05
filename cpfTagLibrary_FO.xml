@@ -1040,8 +1040,8 @@
 									<eac-cpf:setComponent lastDateTimeVerified="2009-08-02" xlink:href="mawsonBS.xml"
 										xlink:type="simple">
 										<eac-cpf:objectXMLWrap>
-											<eac-cpf xmlns="http://eac.staatsbibliothek-berlin.de"
-												xmlns:xlink="http://www.w3.org/1999/xlink"/>
+											<eac-cpf:eac-cpf xmlns="http://eac/staatsbibliothek-berlin.de"
+												xmlns:xlink="http://www.w3c.org/1999/xlink"> [...] </eac-cpf:eac-cpf>
 										</eac-cpf:objectXMLWrap>
 									</eac-cpf:setComponent>
 								</eac-cpf:alternativeSet>
@@ -3892,20 +3892,20 @@
 						<item>
 							<egXML xmlns="http://www.tei-c.org/ns/Examples">
 								<eac-cpf:objectXMLWrap>
-									<mods:mods xmlns:mods="http://www.loc.gov/mods/v3"
+									<example:mods xmlns:mods="http://www.loc.gov/mods/v3"
 										xmlns:xsi="http://www..w3.org/2001/XMLSchema-instance"
 										xsi:schemaLocation="http://www.loc.gov/mods/v3/mods-3-3.xsd">
-										<mods:titleInfo>
-											<mods:title>Artisti trentini tra le due guerre</mods:title>
-										</mods:titleInfo>
-										<mods:name>
-											<mods:namePart type="given">Nicoletta</mods:namePart>
-											<mods:namePart type="family">Boschiero</mods:namePart>
-											<mods:role>
-												<mods:roleTerm type="text">autore</mods:roleTerm>
-											</mods:role>
-										</mods:name>
-									</mods:mods>
+										<example:titleInfo>
+											<example:title>Artisti trentini tra le due guerre</example:title>
+										</example:titleInfo>
+										<example:name>
+											<example:namePart type="given">Nicoletta</example:namePart>
+											<example:namePart type="family">Boschiero</example:namePart>
+											<example:role>
+												<example:roleTerm type="text">autore</example:roleTerm>
+											</example:role>
+										</example:name>
+									</example:mods>
 								</eac-cpf:objectXMLWrap>
 							</egXML>
 						</item>
