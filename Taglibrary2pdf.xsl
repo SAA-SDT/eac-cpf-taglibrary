@@ -6,8 +6,10 @@
     xmlns:exml="http://workaround for xml namespace restriction/namespace"
     xmlns:xlink="http://www.w3c.org/1999/xlink" 
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:example="example"
+    xmlns:mods="http://www.loc.gov/mods/v3"
     exclude-result-prefixes="xs xlink eac-cpf ex exml example"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
     <xsl:output indent="yes"/>
@@ -873,6 +875,7 @@
             <!--<xsl:call-template name="makeIndent"/>-->
             <xsl:text>&lt;</xsl:text>
             <xsl:value-of select="local-name()"/>
+            <!-- Only gives attributes and that doesnt include the xmlns: -->
             <xsl:for-each select="@*">
                 <xsl:text>&#x20;</xsl:text>
                 <xsl:choose>
@@ -884,6 +887,12 @@
                     <xsl:when test="namespace-uri()='http://www.w3c.org/1999/xlink'">
                         <xsl:text>xlink:</xsl:text>
                         <xsl:value-of select="local-name()"/>
+                    </xsl:when>
+                    <!-- Need away to discover a different namespace and add the values! -->
+                    <!-- Can you with help of the schemalocation descide the namespace? -->
+                    <xsl:when test="local-name()='schemaLocation'">
+                        <xsl:text>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" </xsl:text>
+                        <xsl:text>xsi:schemaLocation</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="local-name()"/>

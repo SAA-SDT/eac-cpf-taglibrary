@@ -4714,7 +4714,8 @@
 							<egXML xmlns="http://www.tei-c.org/ns/Examples">
 								<eac-cpf:resourceRelation resourceRelationType="creatorOf">
 									<eac-cpf:objectXMLWrap>
-										<example:ead xmlns:xsi="http://www.w3c.org/2001/XMLSchema-instance" xsi="urn:isbn:1-931666-22-9">
+										<example:ead xmlns:xsi="http://www.w3c.org/2001/XMLSchema-instance" xmlns:ead="urn:isbn:1-931666-22-9"
+											xsi:schemaLocation="http://www.loc.gov/ead/ead.xsd">
 											<example:eadheader>
 												<example:eadid identifier="e4012531" mainagencycode="GB-0066"/>
 												<example:filedesc>

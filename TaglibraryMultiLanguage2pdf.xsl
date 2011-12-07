@@ -901,6 +901,12 @@
                         <xsl:text>xlink:</xsl:text>
                         <xsl:value-of select="local-name()"/>
                     </xsl:when>
+                    <!-- Need away to discover a different namespace and add the values! -->
+                    <!-- Can you with help of the schemalocation descide the namespace? -->
+                    <xsl:when test="local-name()='schemaLocation'">
+                        <xsl:text>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" </xsl:text>
+                        <xsl:text>xsi:schemaLocation</xsl:text>
+                    </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="local-name()"/>
                     </xsl:otherwise>
