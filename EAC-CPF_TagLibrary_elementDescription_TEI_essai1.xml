@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="principal" xml:lang="en">Encoded Archival Context—Corporate Bodies, Persons,
+          and Families (EAC-CPF) Tag Library</title>
+        <!-- Bien évidemment les titres peuvent se décliner en autant de langues que nécessaire -->
+        <title type="complement" xml:lang="en">Documentation for description element</title>
+        <title type="complement" xml:lang="fr">Documentation de l'élément description</title>
+        <!-- idem pour les respStmt, etc. -->
+        <!-- File prepared by Florence Clavaud, Ecole nationale des chartes (Paris, France) -->
+        <respStmt xml:lang="en">
+          <resp>Prepared and maintained by the </resp>
+          <name>Encoded Archival Context Working Group (EACWG) of the Society of American
+            Archivists</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <p xml:lang="en">draft</p>
+        <p xml:lang="fr">version préliminaire</p>
+      </editionStmt>
+      <publicationStmt>
+        <publisher xml:lang="en">Society of American Archivists in collaboration with
+          Staatsbibliothek zu Berlin.</publisher>
+        <date when="2010"/>
+      </publicationStmt>
+      <sourceDesc xml:lang="en">
+        <p>Born digital.</p>
+      </sourceDesc>
+      <sourceDesc xml:lang="fr">
+        <p>Nativement numérique</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <!-- the XML structure below uses TEI tagdocs module without changing anything in it-->
+      <elementSpec ident="eac-cpf:description">
+        <!-- element full name ; a <gloss> element for each documentation language -->
+        <gloss xml:lang="en">Description</gloss>
+        <gloss xml:lang="fr">Description</gloss>
+        <!-- summary : a short description for the element, in a desc element for each documentation language ; there is no <summary> element in tagdocs module-->
+        <desc xml:lang="en" n="summary">A wrapper for all of the content elements comprising
+          description (as specified in the ISAAR (CPF) Description Area) of the entity described in
+          the EAC-CPF instance.</desc>
+        <desc xml:lang="fr" n="summary">Élément englobant pour tous les éléments de contenu
+          comprenant la description (conforme à la zone de la description dans ISAAR(CPF)) de
+          l’entité décrite dans l’instance EAC-CPF.</desc>
+        <!-- description : a longer description for the element, includes its intended usage, purpose, or application where this is appropriate. Simply use <desc>-->
+        <desc xml:lang="en">The elements that constitute <gi>description</gi> together permit
+          descriptive information to be encoded in either structured or unstructured fashions, or in
+          a combined approach. <gi>description</gi> accommodates encoding all of the data elements
+          that comprise the Description Area of ISAAR (CPF) including historical, biographical, and
+          genealogical information; legal status and mandates; functions, occupations, and
+          activities, and the dates and places that further constrain those elements. </desc>
+        <desc xml:lang="fr">Les éléments constitutifs de la Description <gi>description</gi>
+          permettent l’encodage des informations descriptives de manière structurée ou non, ou dans
+          une approche combinant les deux méthodes. L’élément <gi>description</gi> accueille
+          l’encodage de tous les éléments de données que comprend la zone de la description
+          d’ISAAR(CPF), incluant les informations historiques, biographiques et généalogiques, le
+          statut juridique et les textes de référence, les fonctions, tâches et activités, ainsi que
+          les dates et les lieux qui viennent préciser ces éléments.</desc>
+        <!-- for the content : a <content> element ; it could wrap (as it wraps it in the TEI specs) the RNG declaration, or the XML W3C schema declaration ; the EAC-CPF Tag library could thus be used to generate a schema. Probably too far from the EAC-CPF community ways of doing things, maybe to long to do, thus totally unuseful... 
+          One can also use any element in this <content> element -->
+        <content>
+          <!-- could be (e.g.) used like this : -->
+          <html:p class="mayContain">biogHist, existDates, function, functions, generalContext,
+            languageUsed, languagesUsed, legalStatus, legalStatuses, localDescription,
+            localDescriptions, mandate, mandates, occupation, occupations, place, places,
+            structureOrGenealogy</html:p>
+          
+          <html:p class="attributes">
+            <html:dl xml:lang="en">
+              <html:dt>xml:base</html:dt>
+              <html:dd>optional</html:dd>
+              <html:dt>xml:id</html:dt>
+              <html:dd>optional</html:dd>
+              <html:dt>xml:lang</html:dt>
+              <html:dd>optional</html:dd>
+            </html:dl>
+            <html:dl xml:lang="fr">
+              <html:dt>xml:base</html:dt>
+              <html:dd>optionnel</html:dd>
+              <html:dt>xml:id</html:dt>
+              <html:dd>optionnel</html:dd>
+              <html:dt>xml:lang</html:dt>
+              <html:dd>optionnel</html:dd>
+            </html:dl>
+          </html:p>
+          <!-- or (better ; uses RNG compact syntax, which is easy to understand and gives much more information ) -->
+          <html:p class="mayContain">id?,lang?,base?, existDates?,(places | place | localDescription | localDescriptions | legalStatus | legalStatuses
+            | function | functions | languageUsed | languagesUsed | occupation | occupations | mandate | mandates | structureOrGenealogy | generalContext)*, biogHist*</html:p>
+          <!-- or something like this :  <rng:group>
+          <rng:optional>
+            <rng:ref name="eac-cpf:existDates"/>
+          </rng:optional>
+          <rng:zeroOrMore>
+            <rng:choice>
+              <rng:ref name="eac-cpf:places"/>
+              <rng:ref name="eac-cpf:place"/>
+              <rng:ref name="eac-cpf:localDescription"/>
+              <rng:ref name="eac-cpf:localDescriptions"/>
+              <rng:ref name="eac-cpf:legalStatus"/>
+              <rng:ref name="eac-cpf:legalStatuses"/>
+              <rng:ref name="eac-cpf:function"/>
+              <rng:ref name="eac-cpf:functions"/>
+              <rng:ref name="eac-cpf:languageUsed"/>
+              <rng:ref name="eac-cpf:languagesUsed"/>
+              <rng:ref name="eac-cpf:occupation"/>
+              <rng:ref name="eac-cpf:occupations"/>
+              <rng:ref name="eac-cpf:mandate"/>
+              <rng:ref name="eac-cpf:mandates"/>
+              <rng:ref name="eac-cpf:structureOrGenealogy"/>
+              <rng:ref name="eac-cpf:generalContext"/>
+            </rng:choice>
+          </rng:zeroOrMore>
+          <rng:zeroOrMore>
+            <rng:ref name="eac-cpf:biogHist"/>
+          </rng:zeroOrMore>
+           </rng:group>-->
+          <!-- and/or something like this : <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" ref="eac-cpf:existDates"/>
+              <xs:choice maxOccurs="unbounded" minOccurs="0">
+                <xs:element ref="eac-cpf:places"/>
+                <xs:element ref="eac-cpf:place"/>
+                <xs:element ref="eac-cpf:localDescription"/>
+                <xs:element ref="eac-cpf:localDescriptions"/>
+                <xs:element ref="eac-cpf:legalStatus"/>
+                <xs:element ref="eac-cpf:legalStatuses"/>
+                <xs:element ref="eac-cpf:function"/>
+                <xs:element ref="eac-cpf:functions"/>
+                <xs:element ref="eac-cpf:languageUsed"/>
+                <xs:element ref="eac-cpf:languagesUsed"/>
+                <xs:element ref="eac-cpf:occupation"/>
+                <xs:element ref="eac-cpf:occupations"/>
+                <xs:element ref="eac-cpf:mandate"/>
+                <xs:element ref="eac-cpf:mandates"/>
+                <xs:element ref="eac-cpf:structureOrGenealogy"/>
+                <xs:element ref="eac-cpf:generalContext"/>
+              </xs:choice>
+              <xs:element maxOccurs="unbounded" minOccurs="0" ref="eac-cpf:biogHist"/>
+            </xs:sequence>
+            <xs:attribute ref="xml:id"/>
+            <xs:attribute ref="xml:lang"/>
+            <xs:attribute ref="xml:base"/>
+          </xs:complexType>-->
+        </content>
+        <!-- list of attributes, to be there only if the content <element> above is used to declare RNG content model ; the fact the attributes are optional has to be declared in their own definition in the RNG schema, which is not done for the moment...-->
+        <!--<attList>
+          <attRef name="xml:lang"/>
+          <attRef name="xml:id"/>
+          <attRef name="xml:lang"/>
+        </attList>-->
+        <!-- examples : <exemplum> element, repeatable, in each language  -->
+        <exemplum xml:lang="en">
+          <!-- Note that an example can come with one or more paragraphs for commentaries -->
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:description>
+              <eac-cpf:existDates>
+                <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1765-09-18">September 18, 1765</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1846-06-01">June 1, 1846</eac-cpf:toDate>
+                </eac-cpf:dateRange>
+              </eac-cpf:existDates>
+              <eac-cpf:place>
+                <eac-cpf:placeEntry altitude="389" latitude="46.140833" longitude="12.215556"
+                  >Belluno</eac-cpf:placeEntry>
+                <eac-cpf:placeRole>Birthplace</eac-cpf:placeRole>
+                <eac-cpf:date standardDate="1765-09-18">September 18, 1765</eac-cpf:date>
+              </eac-cpf:place>
+              <eac-cpf:biogHist>
+                <eac-cpf:p>Cappellari was born at Belluno on 18 September 1765 to a noble family. At
+                  an early age he joined the order of the Camaldolese (part of the Benedictine
+                  monastic family) and entered the Monastery of San Michele di Murano, near Venice.
+                  As a Camaldolese monk, Cappellari rapidly gained distinction for his theological
+                  and linguistic skills. His first appearance before a wider public was in 1799,
+                  when he published against the Italian Jansenists a controversial work entitled
+                    <eac-cpf:span localType="title" style="font-style:italic">II Trionfo della Santa
+                    Sede</eac-cpf:span> , which besides passing through several editions in Italy,
+                  has been translated into several European languages. In 1800, he became a member
+                  of the Academy of the Catholic Religion, founded by Pope Pius VII (1800-1823), to
+                  which he contributed a number of memoirs on theological and philosophical
+                  questions, and in 1805 was made abbot of San Gregorio on the Caelian
+                  Hill.</eac-cpf:p>
+              </eac-cpf:biogHist>
+            </eac-cpf:description>
+          </egXML>
+        </exemplum>
+        <!-- other information : <remarks> element... -->
+        <remarks n="mayOccurWithin">
+          <p>eac-cpf:cpfDescription</p>
+        </remarks>
+        <remarks n="occurrence">
+          <p>0...1</p>
+        </remarks>
+        <remarks n="references">
+          <p>ISAAR (CPF) 5.2</p>
+        </remarks>
+      </elementSpec>
+    </body>
+  </text>
+</TEI>
