@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="xmllang">
    <div type="summary">
       <p xml:lang="en">Three-letter ISO 639-2 language code.</p>
    </div>
    <div type="description">
-      <p>The <att>xml:lang</att> may occur on any element intended to contain
+      <p xml:lang="en">The <att>xml:lang</att> may occur on any element intended to contain
 							natural language content whenever information about the language of the content of this
 							element and its children are needed. <att>xml:lang</att> should be used when the language of
 							the element differs from the Language Code declared in the <att>languageCode</att> attribute

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="xmlbase">
    <div type="summary">
       <p xml:lang="en">Used to specify a base URI other than the base URI of the EAC-CPF
 							instance.</p>
    </div>
    <div type="description">
-      <p>
+      <p xml:lang="en">
          <att>xml:base</att> is used to specify the base URI other than the base
 							URI of the EAC-CPF instance, for the purpose of resolving any relative URIs used with
 							elements that contain one or more descendants that use an attribute of type anyURI.

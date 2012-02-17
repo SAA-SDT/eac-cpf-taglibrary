@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="xlinkRole">
    <div type="summary">
       <p xml:lang="en">Identifies the type or nature of the remote resource with an absolute
 							URI.</p>
    </div>
    <div type="description">
-      <p>Identifies the type or nature of the remote resource with an absolute
+      <p xml:lang="en">Identifies the type or nature of the remote resource with an absolute
 							URI. </p>
    </div>
    <div type="datatype">

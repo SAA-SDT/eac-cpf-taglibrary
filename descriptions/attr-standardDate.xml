@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="standardDate">
    <div type="summary">
       <p xml:lang="en">The date represented in a standard form for computer processing.</p>
    </div>
    <div type="description">
-      <p>The <att>standardDate</att> may occur on <gi>date</gi>,
+      <p xml:lang="en">The <att>standardDate</att> may occur on <gi>date</gi>,
 								<gi>fromDate</gi>, and <gi>toDate</gi>. The value of <att>standardDate</att> provides a
 							standard form of the date expressed in <gi>date</gi>, <gi>fromDate</gi>, or
 								<gi>toDate</gi> that can be used in computer processing, such as searching.</p>

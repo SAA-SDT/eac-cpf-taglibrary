@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="standardDateTime">
    <div type="summary">
       <p xml:lang="en">The date or date and time represented in a standard form for computer
 							processing.</p>
    </div>
    <div type="description">
-      <p>The <att>standardDateTime</att> may occur on <gi>eventDateTime</gi>.
+      <p xml:lang="en">The <att>standardDateTime</att> may occur on <gi>eventDateTime</gi>.
 							The value of <att>standardDateTime</att> provides a standard form of the date or date and
 							time expressed in the <gi>eventDateTime</gi> that can be used in computer processing. For
 							example, using both the value in <gi>eventType</gi> and <att>standardDateTime</att>, all

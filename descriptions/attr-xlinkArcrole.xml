@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="xlinkArcrole">
    <div type="summary">
       <p xml:lang="en">URI defining the purpose of the link.</p>
    </div>
    <div type="description">
-      <p>An absolute URI that describes the nature of the relation between the
+      <p xml:lang="en">An absolute URI that describes the nature of the relation between the
 							entity being described in the EAC-CPF instance and a remote resource (<gi>cpfRelation</gi>,
 								<gi>resourceRelation</gi>, or <gi>functionRelation</gi>) or the nature of the relation
 							between the EAC-CPF instance description (or component of description) and the remote

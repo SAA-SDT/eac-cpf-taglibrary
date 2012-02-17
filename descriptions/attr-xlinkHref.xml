@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="xlinkHref">
    <div type="summary">
       <p xml:lang="en">Contains a URI, possibly relative, pointing to the related resource</p>
    </div>
    <div type="description">
-      <p>The address for a remote resource. The <att>xlink:href</att> takes the
+      <p xml:lang="en">The address for a remote resource. The <att>xlink:href</att> takes the
 							form of a Uniform Resource Identifier (URI). While it is permissible to use a relative URI,
 							and an absolute URI is recommended.</p>
    </div>

@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="notAfter">
    <div type="summary">
       <p xml:lang="en">The latest date possible for an uncertain date.</p>
    </div>
    <div type="description">
-      <p>The <att>notAfter</att> may occur on <gi>date</gi>,
+      <p xml:lang="en">The <att>notAfter</att> may occur on <gi>date</gi>,
 								<gi>fromDate</gi>, and <gi>toDate</gi>. For uncertain dates, used in conjunction with
 								<att>standardDate</att>, the value of <att>notAfter</att> is the latest date possible. See
 							also <att>notBefore</att>.</p>

@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="vocabularySource">
    <div type="summary">
       <p xml:lang="en">A value designating the source of the vocabulary from which terms are
 							derived.</p>
    </div>
    <div type="description">
-      <p>The controlled vocabulary used to derive terms for the <gi>term</gi>,
+      <p xml:lang="en">The controlled vocabulary used to derive terms for the <gi>term</gi>,
 								<gi>placeEntry</gi>, and <gi>placeRole</gi> elements. Controlled vocabularies should be
 							declared in the <gi>conventionDeclaration</gi> element within <gi>control</gi>.</p>
    </div>

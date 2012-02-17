@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="identityType">
    <div type="summary">
       <p xml:lang="en">Indicates whether the identity is given or acquired. May be useful for
 							processing when multiple identities are described in the same instance.</p>
    </div>
    <div type="description">
-      <p>The <att>identityType</att> may occur on <gi>identity</gi>. Though
+      <p xml:lang="en">The <att>identityType</att> may occur on <gi>identity</gi>. Though
 							optional, it is recommended that it be used when multiple identities are described in the
 							same EAC-CPF instance using <gi>multipleIdentities</gi>. It will enable processors to
 							distinguish between the description of a person and one or more personae. </p>

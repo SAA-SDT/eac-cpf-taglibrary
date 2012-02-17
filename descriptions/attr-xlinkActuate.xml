@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="xlinkActuate">
    <div type="summary">
       <p xml:lang="en">Used to signal intended behavior with respect to whether the remote resource
@@ -6,7 +5,7 @@
 							resource.</p>
    </div>
    <div type="description">
-      <p>The <att>xlink:actuate</att> should be used with the
+      <p xml:lang="en">The <att>xlink:actuate</att> should be used with the
 								<att>xlink:show</att> to indicate intended behavior. The <att>xlink:actuate</att> is used to
 							signal intended behavior with respect to when the remote resource is to appear. The values
 							indicate whether the resource is to appear automatically when the containing resource is

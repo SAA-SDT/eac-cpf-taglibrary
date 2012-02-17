@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="xlinkShow">
    <div type="summary">
       <p xml:lang="en">Used to signal intended behavior with respect to where the remote resource
 							is to appear when the link is resolved.</p>
    </div>
    <div type="description">
-      <p>The <att>xlink:show</att> should be used with the
+      <p xml:lang="en">The <att>xlink:show</att> should be used with the
 								<att>xlink:actuate</att> to indicate intended behavior. The <att>xlink:show</att> is used to
 							signal intended behavior with respect to where the remote resource is to appear when the link
 							is resolved. The values indicate whether the resource is to appear embedded at the point of

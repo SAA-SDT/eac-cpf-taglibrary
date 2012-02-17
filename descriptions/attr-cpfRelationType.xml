@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="cpfRelationType">
    <div type="summary">
       <p xml:lang="en">The type of relation that the corporate body, person, or family has to the
 							entity being described.</p>
    </div>
    <div type="description">
-      <p>The <att>cpfRelationType</att> may occur on <gi>cpfRelation</gi>. The
+      <p xml:lang="en">The <att>cpfRelationType</att> may occur on <gi>cpfRelation</gi>. The
 							value designates the type of relation that a corporate body, person, or family has to the
 							entity being described in the EAC-CPF instance. If the nature of the relation is more
 							specific than one of the values given below, the Xlink attributes can be used in addition to

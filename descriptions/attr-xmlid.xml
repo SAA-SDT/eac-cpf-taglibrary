@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="xmlid">
    <div type="summary">
       <p xml:lang="en">A unique identifier available on most elements that can be used to name
 							specific elements in the EAC-CPF instance.</p>
    </div>
    <div type="description">
-      <p>An identifier used to name the element so that it can be referred to, or
+      <p xml:lang="en">An identifier used to name the element so that it can be referred to, or
 							referenced from, somewhere else. Each <att>xml:id</att> within a document must have a unique
 							value. The <att>xml:id</att> attribute regularizes the naming of the element and thus
 							facilitates building links between it and other resources. For example, the <att>xml:id</att>

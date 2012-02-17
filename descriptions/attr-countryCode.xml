@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="countryCode">
    <div type="summary">
       <p xml:lang="en">Two letter ISO 3166-1 standard code representing a country.</p>
    </div>
    <div type="description">
-      <p>The <att>countryCode</att> may occur on <gi>placeEntry</gi> or
+      <p xml:lang="en">The <att>countryCode</att> may occur on <gi>placeEntry</gi> or
 								<gi>address</gi>. The <att>countryCode</att> attribute may be used to provide the ISO
 							3166-1 standard code designating the country placed named is a country, the code for that
 							country. The values are to be taken from the list of ISO 3166-1 Codes for the Representation

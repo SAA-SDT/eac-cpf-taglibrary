@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="localType">
    <div type="summary">
       <p xml:lang="en">Used to make the semantics of the element more specific or to provide
@@ -6,7 +5,7 @@
 							URI.</p>
    </div>
    <div type="description">
-      <p>The <att>localType</att> is broadly available on many descriptive and a
+      <p xml:lang="en">The <att>localType</att> is broadly available on many descriptive and a
 							few control elements. It is intended to provide a means to narrow the semantics of some
 							elements or provide semantics for elements that are primarily structural or that are
 							semantically weak. The value of the <att>localType</att> must conform to W3C Schema Part 2:

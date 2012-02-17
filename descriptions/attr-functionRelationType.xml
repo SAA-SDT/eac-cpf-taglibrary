@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <div type="attributeDocumentation" xml:id="functionRelationType">
    <div type="summary">
       <p xml:lang="en">The type of relation that the entity being described has to the related
 							function.</p>
    </div>
    <div type="description">
-      <p>The <att>functionRelationType</att> may occur on
+      <p xml:lang="en">The <att>functionRelationType</att> may occur on
 								<gi>functionRelation</gi>. The value designates the type of relation that the entity being
 							described has to the related function. If the type of relation is more specific than one of
 							the values given below, Xlink attributes may be used in addition to

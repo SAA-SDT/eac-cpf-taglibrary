@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tei="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs xd tei teiEg xi" xmlns:teiEg="http://www.tei-c.org/ns/Examples"
-    xmlns:xi="http://www.w3.org/2003/XInclude" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+    xmlns:xi="http://www.w3.org/2003/XInclude" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
     version="2.0">
     <xd:doc scope="stylesheet">
         <xd:desc>
@@ -41,39 +41,40 @@
         <xsl:variable name="filename"
             select="concat('./descriptions/', substring(@type, 1, 4), '-', @xml:id, '.xml')"/>
         <!--output xinclude reference for each element and attribute description -->
-        <xsl:element name="xi:include">
+            <xsl:element name="xi:include">
             <xsl:attribute name="href">
                 <xsl:value-of select="$filename"/>
             </xsl:attribute>
         </xsl:element>
+        <!-- <xsl:call-template name="descDiv"/> -->
         <!--output document for each element and attribute description -->
-        <xsl:result-document href="{$filename}" exclude-result-prefixes="#all">
+        <xsl:result-document href="{$filename}" exclude-result-prefixes="#all" omit-xml-declaration="yes">
             <!-- <xsl:element name="div" namespace="http://saa-sdt.org/tagLibrary/elementDesc/"> -->
-            <xsl:element name="div">
-                <xsl:attribute name="type">
-                    <!-- change a few type attribute values -->
-                    <xsl:for-each select="@type">
-                        <xsl:choose>
-                            <xsl:when test=". = 'element'">
-                                <xsl:text>elementDocumentation</xsl:text>
-                            </xsl:when>
-                            <xsl:when test=". = 'attribute'">
-                                <xsl:text>attributeDocumentation</xsl:text>
-                            </xsl:when>
-                            <xsl:when test=". = 'mayOccurIn'">
-                                <xsl:text>mayOccurWithin</xsl:text>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:copy/>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:for-each>
-                </xsl:attribute>
-                <xsl:copy-of select="@* except @type "/>
-                <!-- get name of element from head[@type = 'tag'] -->
-                <xsl:apply-templates select="tei:head[@type = 'tag']"/>
-                <!-- process list containing description sections -->
-                <xsl:apply-templates select="tei:list"/>
+            <xsl:element name="div" inherit-namespaces="no">
+            <xsl:attribute name="type">
+                <!-- change a few type attribute values -->
+                <xsl:for-each select="@type">
+                    <xsl:choose>
+                        <xsl:when test=". = 'element'">
+                            <xsl:text>elementDocumentation</xsl:text>
+                        </xsl:when>
+                        <xsl:when test=". = 'attribute'">
+                            <xsl:text>attributeDocumentation</xsl:text>
+                        </xsl:when>
+                        <xsl:when test=". = 'mayOccurIn'">
+                            <xsl:text>mayOccurWithin</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:copy/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:for-each>
+            </xsl:attribute>
+            <xsl:copy-of select="@* except @type "/>
+            <!-- get name of element from head[@type = 'tag'] -->
+            <xsl:apply-templates select="tei:head[@type = 'tag']"/>
+            <!-- process list containing description sections -->
+            <xsl:apply-templates select="tei:list"/>
             </xsl:element>
         </xsl:result-document>
     </xsl:template>
@@ -125,7 +126,6 @@
                         <xsl:apply-templates select="tei:list" mode="gloss"/>
                     </p>
                 </xsl:when>
-                <!-- convert <egXML> from TEI ex namespace to no namespace -->
                 <xsl:when test="teiEg:egXML">
                     <egXML>
                         <xsl:copy-of select="teiEg:egXML/*" copy-namespaces="no"/>
@@ -133,6 +133,11 @@
                 </xsl:when>
                 <!-- convert tei:item to <p xml:lang="en" -->
                 <xsl:when test="@n = 'summary'">
+                    <p xml:lang="en">
+                        <xsl:apply-templates/>
+                    </p>
+                </xsl:when>
+                <xsl:when test="@n = 'description' and ancestor::tei:div[@type = 'attribute']">
                     <p xml:lang="en">
                         <xsl:apply-templates/>
                     </p>
