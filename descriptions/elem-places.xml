@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="places">
+   <head>
+      <gi>places</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Places</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A grouping element used to bundle together individual <gi>place</gi>
+							elements.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Use the optional <gi>places</gi> element to group together one or more occurrences of
+									<gi>place</gi> so that they can be manipulated as a package. A single <gi>place</gi>
+								may stand alone or may be wrapped within <gi>places</gi>.</p>
+      <p xml:lang="en">The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the places and dates
+								being described. A simpler discursive expression of the places may be encoded as one or more
+									<gi>p</gi> elements.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, list, outline, p, place</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.3</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:places xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:place>
+               <eac-cpf:placeEntry>Paris, France</eac-cpf:placeEntry>
+               <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+            </eac-cpf:place>
+            <eac-cpf:place>
+               <eac-cpf:placeEntry>New York, N.Y.</eac-cpf:placeEntry>
+               <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+            </eac-cpf:place>
+            <eac-cpf:place>
+               <eac-cpf:placeEntry>Riode Janeiro, Brazil</eac-cpf:placeEntry>
+               <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+            </eac-cpf:place>
+         </eac-cpf:places>
+         <eac-cpf:places xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:place>
+               <eac-cpf:placeRole>naissance</eac-cpf:placeRole>
+               <eac-cpf:placeEntry>Nijni-Novgorod (Russie)</eac-cpf:placeEntry>
+            </eac-cpf:place>
+            <eac-cpf:place>
+               <eac-cpf:placeRole>déces</eac-cpf:placeRole>
+               <eac-cpf:placeEntry>Gorki (Russie)</eac-cpf:placeEntry>
+            </eac-cpf:place>
+            <eac-cpf:place>
+               <eac-cpf:placeRole>nationalité</eac-cpf:placeRole>
+               <eac-cpf:placeEntry countryCode="SU">Union Soviétique</eac-cpf:placeEntry>
+            </eac-cpf:place>
+         </eac-cpf:places>
+      </egXML>
+   </div>
+</div>

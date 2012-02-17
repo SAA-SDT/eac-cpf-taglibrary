@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="relationEntry">
+   <head>
+      <gi>relationEntry</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Relation Entry</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A descriptive element for relations that provides discursive text.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A descriptive element for relations that provides discursive text identifying a related
+								entity, which may be either another name (CPF) entity, a resource created by or otherwise
+								related to the named entity (e.g., archival records), or the name of a related function.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfRelation, functionRelation, resourceRelation</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:functionRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" functionRelationType="performs">
+            <eac-cpf:relationEntry>Alumni communication management, University of
+										Glasgow</eac-cpf:relationEntry>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>The management of the University's communication with its alumni.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:functionRelation>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="resourceRelationType">
+   <div type="summary">
+      <p xml:lang="en">The type of relation of entity being described to the resource.</p>
+   </div>
+   <div type="description">
+      <p>The <att>resourceRelationType</att> may occur on
+								<gi>resourceRelation</gi>. The value designates the type of relation that the entity
+							described in the EAC-CPF instance has to the resource. If the nature of the relation is more
+							specific than one of the available values, the Xlink attributes may be used in addition to
+								<att>resourceRelationType</att>.</p>
+   </div>
+   <div type="datatype">
+      <p>"creatorOf" or "subjectOf" or "other"</p>
+   </div>
+</div>

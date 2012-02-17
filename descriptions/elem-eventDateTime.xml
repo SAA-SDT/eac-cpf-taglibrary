@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="eventDateTime">
+   <head>
+      <gi>eventDateTime</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Maintenance Event Date and Time</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The date and time of a maintenance event for the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A required element within the <gi>maintenanceEvent</gi>, <gi>eventDateTime</gi> gives
+								the date and time of a maintenance event for the EAC-CPF instance. The date and time may be
+								recorded manually or machine generated in natural language as well as in machine-readable
+								format by use of the <att>standardDateTime</att> attribute.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceEvent</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>standardDateTime</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.6</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>created</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2009-11-30"/>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>Bill Stockting</eac-cpf:agent>
+            <eac-cpf:eventDescription>Created from original in ISAAR (CPF), 2nd edition: example
+										10</eac-cpf:eventDescription>
+         </eac-cpf:maintenanceEvent>
+      </egXML>
+   </div>
+</div>

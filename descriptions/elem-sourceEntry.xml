@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="sourceEntry">
+   <head>
+      <gi>sourceEntry</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Source Entry</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A textual identification of a particular source of evidence used in
+							describing the entity in the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The <gi>sourceEntry</gi> element may be used within the <gi>source</gi> element to
+								identify a source used in the construction of the EAC-CPF instance directly rather than
+								using other content in <gi>objectBinWrap</gi> or <gi>objectXMLWrap</gi>. The
+									<gi>sourceEntry</gi> element generally contains discursive text.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>source</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:sources xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Principal Family and Estate Collections: Family Names L-W,
+											1999</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Complete Peerage, 1936</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+         </eac-cpf:sources>
+      </egXML>
+   </div>
+</div>

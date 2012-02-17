@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="otherRecordId">
+   <head>
+      <gi>otherRecordId</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Other Record Identifier</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">Alternative record identifiers that may be associated with the EAC-CPF
+							instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">An element in <gi>control</gi> for the provision of alternative record identifiers to
+								the mandatory identifier in <gi>recordId</gi> that may be associated with the EAC-CPF
+								instance. These might include the identifiers of merged EAC-CPF instances representing the
+								same entity or those of records that are no longer current but had some part in the history
+								and maintenance of the EAC-CPF instance.</p>
+      <p xml:lang="en">The <att>localType</att> attribute can be used to identify the kind of institution or
+								service responsible for each associated record identifier if not the same as that given in
+								the <gi>maintenanceAgency</gi> element for this EAC-CPF instance.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:otherRecordId xmlns:eac-cpf="urn:isbn:1-931666-33-4">ARC-ID-976172</eac-cpf:otherRecordId>
+      </egXML>
+   </div>
+</div>

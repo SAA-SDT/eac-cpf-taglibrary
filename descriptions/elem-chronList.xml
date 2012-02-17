@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="chronList">
+   <head>
+      <gi>chronList</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Chronological List</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A structured chronological list of events, dates, and (optionally) places
+							that may be used within the <gi>biogHist</gi> element.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Chronology list comprises a sequentially structured list of significant events in the life
+								of the person or during the existence of the family or corporate body described in the
+								EAC-CPF instance. Such events are associated with the date of occurrence and optionally with
+								the name of a place. Each <gi>chronList</gi> contains a series of <gi>chronItem</gi>
+								elements, each associating a <gi>date</gi> or <gi>dateRange</gi> with an
+									<gi>event</gi> and an optional <gi>placeEntry</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>chronItem</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.2</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:chronList xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:chronItem>
+               <eac-cpf:date standardDate="1936">1936</eac-cpf:date>
+               <eac-cpf:event>Bachelor of Science (BSc) completed at the University of
+											Sydney</eac-cpf:event>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:date standardDate="1937">1937</eac-cpf:date>
+               <eac-cpf:event>Master of Science (MSc) completed at the University of
+											Sydney</eac-cpf:event>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1937">1937</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1941">1941</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:event>Linnean Macleay Fellow</eac-cpf:event>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1939">c. 1939</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1945">c. 1945</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:event>Worked with Army Intelligence to map the vegetation (trees and undergrowth)
+											in the coastal regions of New South Wales</eac-cpf:event>
+            </eac-cpf:chronItem>
+         </eac-cpf:chronList>
+      </egXML>
+   </div>
+</div>

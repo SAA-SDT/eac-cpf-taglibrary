@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns:ns2="http://www.tei-c.org/ns/Examples" ns="http://www.w3.org/XML/1998/namespace" xmlns:ns1="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3c.org/1999/xlink" xmlns:exml="http://workaround for xml namespace restriction/namespace" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www..w3.org/2001/XMLSchema-instance" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="ns1:TEI">
+      <element name="ns1:teiHeader">
+        <element name="ns1:fileDesc">
+          <element name="ns1:titleStmt">
+            <element name="ns1:title">
+              <text/>
+            </element>
+            <element name="ns1:respStmt">
+              <element name="ns1:resp">
+                <text/>
+              </element>
+              <element name="ns1:name">
+                <text/>
+              </element>
+            </element>
+          </element>
+          <element name="ns1:editionStmt">
+            <element name="ns1:edition">
+              <data type="NCName"/>
+            </element>
+          </element>
+          <element name="ns1:publicationStmt">
+            <element name="ns1:publisher">
+              <text/>
+            </element>
+            <element name="ns1:date">
+              <attribute name="when">
+                <data type="integer"/>
+              </attribute>
+            </element>
+          </element>
+          <element name="ns1:sourceDesc">
+            <ref name="ns1.p"/>
+          </element>
+        </element>
+      </element>
+      <element name="ns1:text">
+        <element name="ns1:front">
+          <element name="ns1:titlePage">
+            <element name="ns1:docTitle">
+              <element name="ns1:titlePart">
+                <attribute name="type">
+                  <data type="NCName"/>
+                </attribute>
+                <text/>
+              </element>
+            </element>
+            <element name="ns1:docEdition">
+              <text/>
+            </element>
+            <element name="ns1:byline">
+              <text/>
+            </element>
+            <oneOrMore>
+              <element name="ns1:docAuthor">
+                <text/>
+              </element>
+            </oneOrMore>
+            <element name="ns1:docImprint">
+              <element name="ns1:docDate">
+                <text/>
+              </element>
+            </element>
+          </element>
+          <oneOrMore>
+            <ref name="ns1.div"/>
+          </oneOrMore>
+        </element>
+        <element name="ns1:body">
+          <oneOrMore>
+            <ref name="ns1.div"/>
+          </oneOrMore>
+        </element>
+        <element name="ns1:back">
+          <ref name="ns1.div"/>
+        </element>
+      </element>
+    </element>
+  </start>
+  <define name="ns1.p">
+    <element name="ns1:p">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="ns1.att"/>
+          <ref name="ns1.list"/>
+          <ref name="ns1.ref"/>
+          <ref name="ns1.tag"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ns1.div">
+    <element name="ns1:div">
+      <optional>
+        <attribute name="n">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name>id</name>
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <oneOrMore>
+          <choice>
+            <ref name="ns1.div"/>
+            <ref name="ns1.head"/>
+          </choice>
+        </oneOrMore>
+        <oneOrMore>
+          <choice>
+            <ref name="ns1.list"/>
+            <ref name="ns1.p"/>
+            <ref name="ns2.egXML"/>
+          </choice>
+        </oneOrMore>
+      </optional>
+    </element>
+  </define>
+  <define name="ns1.att">
+    <element name="ns1:att">
+      <data type="NMTOKEN"/>
+    </element>
+  </define>
+  <define name="ns1.list">
+    <element name="ns1:list">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name>lang</name>
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <ref name="ns1.head"/>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <element name="ns1:item">
+            <optional>
+              <attribute name="n">
+                <data type="NMTOKEN"/>
+              </attribute>
+            </optional>
+            <oneOrMore>
+              <choice>
+                <text/>
+                <ref name="ns1.att"/>
+                <ref name="ns1.list"/>
+                <ref name="ns1.p"/>
+                <ref name="ns1.ref"/>
+                <ref name="ns1.tag"/>
+                <ref name="ns2.egXML"/>
+              </choice>
+            </oneOrMore>
+          </element>
+          <element name="ns1:label">
+            <data type="anyURI"/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ns1.ref">
+    <element name="ns1:ref">
+      <attribute name="target">
+        <data type="anyURI"/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+  <define name="ns1.tag">
+    <element name="ns1:tag">
+      <text/>
+    </element>
+  </define>
+  <define name="ns1.head">
+    <element name="ns1:head">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="ns1.att"/>
+          <ref name="ns1.tag"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ns2.egXML">
+    <element name="ns2:egXML">
+      <optional>
+        <choice>
+          <ref name="eac-cpf.cpfDescription"/>
+          <element name="eac-cpf:localDescriptions">
+            <oneOrMore>
+              <ref name="eac-cpf.localDescription"/>
+            </oneOrMore>
+          </element>
+        </choice>
+      </optional>
+      <optional>
+        <ref name="eac-cpf.cpfRelation"/>
+      </optional>
+      <optional>
+        <choice>
+          <ref name="eac-cpf.dateRange"/>
+          <ref name="eac-cpf.objectXMLWrap"/>
+          <ref name="eac-cpf.place"/>
+          <ref name="eac-cpf.resourceRelation"/>
+          <element name="eac-cpf:languagesUsed">
+            <oneOrMore>
+              <ref name="eac-cpf.languageUsed"/>
+            </oneOrMore>
+            <ref name="eac-cpf.descriptiveNote"/>
+          </element>
+          <element name="eac-cpf:otherRecordId">
+            <data type="NCName"/>
+          </element>
+        </choice>
+      </optional>
+      <optional>
+        <element name="eac-cpf:list">
+          <oneOrMore>
+            <ref name="eac-cpf.item"/>
+          </oneOrMore>
+        </element>
+      </optional>
+      <choice>
+        <ref name="eac-cpf.languageDeclaration"/>
+        <ref name="eac-cpf.maintenanceStatus"/>
+        <ref name="eac-cpf.publicationStatus"/>
+        <ref name="eac-cpf.relations"/>
+        <zeroOrMore>
+          <ref name="eac-cpf.maintenanceAgency"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="eac-cpf.chronItem"/>
+        </zeroOrMore>
+      </choice>
+      <zeroOrMore>
+        <ref name="eac-cpf.conventionDeclaration"/>
+      </zeroOrMore>
+      <choice>
+        <ref name="eac-cpf.languageUsed"/>
+        <ref name="eac-cpf.localDescription"/>
+        <ref name="eac-cpf.recordId"/>
+        <element name="eac-cpf:alternativeSet">
+          <oneOrMore>
+            <element name="eac-cpf:setComponent">
+              <optional>
+                <attribute name="lastDateTimeVerified">
+                  <data type="date"/>
+                </attribute>
+              </optional>
+              <attribute name="xlink:href">
+                <data type="anyURI"/>
+              </attribute>
+              <attribute name="xlink:type">
+                <data type="NCName"/>
+              </attribute>
+              <choice>
+                <ref name="eac-cpf.objectXMLWrap"/>
+                <element name="eac-cpf:componentEntry">
+                  <text/>
+                </element>
+              </choice>
+            </element>
+          </oneOrMore>
+        </element>
+        <element name="eac-cpf:dateSet">
+          <oneOrMore>
+            <ref name="eac-cpf.dateRange"/>
+          </oneOrMore>
+        </element>
+        <element name="eac-cpf:functions">
+          <oneOrMore>
+            <ref name="eac-cpf.function"/>
+          </oneOrMore>
+        </element>
+        <element name="eac-cpf:generalContext">
+          <ref name="eac-cpf.p"/>
+        </element>
+        <element name="eac-cpf:localTypeDeclaration">
+          <ref name="eac-cpf.abbreviation"/>
+          <ref name="eac-cpf.citation"/>
+          <ref name="eac-cpf.descriptiveNote"/>
+        </element>
+        <element name="eac-cpf:mandates">
+          <oneOrMore>
+            <ref name="eac-cpf.mandate"/>
+          </oneOrMore>
+        </element>
+        <zeroOrMore>
+          <ref name="eac-cpf.entityType"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="eac-cpf.biogHist"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="eac-cpf.eac-cpf"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <element name="eac-cpf:legalStatuses">
+            <oneOrMore>
+              <ref name="eac-cpf.legalStatus"/>
+            </oneOrMore>
+          </element>
+        </zeroOrMore>
+      </choice>
+      <optional>
+        <ref name="eac-cpf.function"/>
+      </optional>
+      <zeroOrMore>
+        <ref name="eac-cpf.legalStatus"/>
+      </zeroOrMore>
+      <optional>
+        <ref name="eac-cpf.mandate"/>
+      </optional>
+      <optional>
+        <ref name="eac-cpf.occupation"/>
+      </optional>
+      <choice>
+        <ref name="eac-cpf.chronList"/>
+        <ref name="eac-cpf.control"/>
+        <ref name="eac-cpf.date"/>
+        <ref name="eac-cpf.description"/>
+        <ref name="eac-cpf.existDates"/>
+        <ref name="eac-cpf.functionRelation"/>
+        <ref name="eac-cpf.identity"/>
+        <ref name="eac-cpf.maintenanceHistory"/>
+        <ref name="eac-cpf.multipleIdentities"/>
+        <ref name="eac-cpf.source"/>
+        <ref name="eac-cpf.sources"/>
+        <element name="eac-cpf:localControl">
+          <attribute name="localType">
+            <data type="NCName"/>
+          </attribute>
+          <ref name="eac-cpf.term"/>
+        </element>
+        <element name="eac-cpf:nameEntryParallel">
+          <oneOrMore>
+            <ref name="eac-cpf.nameEntry"/>
+          </oneOrMore>
+          <ref name="eac-cpf.authorizedForm"/>
+        </element>
+        <element name="eac-cpf:objectBinWrap">
+          <text/>
+        </element>
+        <element name="eac-cpf:occupations">
+          <oneOrMore>
+            <ref name="eac-cpf.occupation"/>
+          </oneOrMore>
+        </element>
+        <element name="eac-cpf:outline">
+          <oneOrMore>
+            <ref name="eac-cpf.level"/>
+          </oneOrMore>
+        </element>
+        <element name="eac-cpf:structureOrGenealogy">
+          <ref name="eac-cpf.p"/>
+        </element>
+        <zeroOrMore>
+          <ref name="eac-cpf.places"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="eac-cpf.nameEntry"/>
+        </zeroOrMore>
+        <zeroOrMore>
+          <ref name="eac-cpf.maintenanceEvent"/>
+        </zeroOrMore>
+      </choice>
+    </element>
+  </define>
+  <define name="eac-cpf.cpfDescription">
+    <element name="eac-cpf:cpfDescription">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.description"/>
+          <ref name="eac-cpf.identity"/>
+          <ref name="eac-cpf.relations"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.localDescription">
+    <element name="eac-cpf:localDescription">
+      <attribute name="localType">
+        <data type="anyURI"/>
+      </attribute>
+      <ref name="eac-cpf.term"/>
+      <ref name="eac-cpf.placeEntry"/>
+    </element>
+  </define>
+  <define name="eac-cpf.cpfRelation">
+    <element name="eac-cpf:cpfRelation">
+      <optional>
+        <attribute name="cpfRelationType">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:actuate">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:arcrole">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:href">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:show">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.dateRange"/>
+          <ref name="eac-cpf.descriptiveNote"/>
+          <ref name="eac-cpf.relationEntry"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.resourceRelation">
+    <element name="eac-cpf:resourceRelation">
+      <optional>
+        <attribute name="resourceRelationType">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:role">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.descriptiveNote"/>
+          <ref name="eac-cpf.objectXMLWrap"/>
+          <ref name="eac-cpf.relationEntry"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.place">
+    <element name="eac-cpf:place">
+      <oneOrMore>
+        <choice>
+          <ref name="eac-cpf.placeEntry"/>
+          <element name="eac-cpf:placeRole">
+            <text/>
+          </element>
+        </choice>
+      </oneOrMore>
+      <optional>
+        <choice>
+          <ref name="eac-cpf.date"/>
+          <element name="eac-cpf:address">
+            <oneOrMore>
+              <element name="eac-cpf:addressLine">
+                <optional>
+                  <attribute name="localType">
+                    <data type="NCName"/>
+                  </attribute>
+                </optional>
+                <text/>
+              </element>
+            </oneOrMore>
+          </element>
+        </choice>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.dateRange">
+    <element name="eac-cpf:dateRange">
+      <element name="eac-cpf:fromDate">
+        <optional>
+          <attribute name="notBefore">
+            <data type="NMTOKEN"/>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="standardDate">
+            <data type="NMTOKEN"/>
+          </attribute>
+        </optional>
+        <text/>
+      </element>
+      <element name="eac-cpf:toDate">
+        <optional>
+          <attribute name="notAfter">
+            <data type="NMTOKEN"/>
+          </attribute>
+        </optional>
+        <optional>
+          <attribute name="standardDate">
+            <data type="NMTOKEN"/>
+          </attribute>
+        </optional>
+        <text/>
+      </element>
+    </element>
+  </define>
+  <define name="eac-cpf.languageUsed">
+    <element name="eac-cpf:languageUsed">
+      <ref name="eac-cpf.language"/>
+      <ref name="eac-cpf.script"/>
+    </element>
+  </define>
+  <define name="eac-cpf.descriptiveNote">
+    <element name="eac-cpf:descriptiveNote">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.p"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.objectXMLWrap">
+    <element name="eac-cpf:objectXMLWrap">
+      <choice>
+        <ref name="eac-cpf.eac-cpf"/>
+        <element>
+          <name ns="http://eac.staatsbibliothek-berlin.de">eac-cpf</name>
+          <empty/>
+        </element>
+        <element name="mods:mods">
+          <attribute name="xsi:schemaLocation">
+            <data type="anyURI"/>
+          </attribute>
+          <element name="mods:titleInfo">
+            <element name="mods:title">
+              <text/>
+            </element>
+          </element>
+          <element name="mods:name">
+            <oneOrMore>
+              <element name="mods:namePart">
+                <attribute name="type">
+                  <data type="NCName"/>
+                </attribute>
+                <data type="NCName"/>
+              </element>
+            </oneOrMore>
+            <element name="mods:role">
+              <element name="mods:roleTerm">
+                <attribute name="type">
+                  <data type="NCName"/>
+                </attribute>
+                <data type="NCName"/>
+              </element>
+            </element>
+          </element>
+        </element>
+        <element name="ns2:ead">
+          <attribute name="xsi">
+            <data type="NMTOKEN"/>
+          </attribute>
+          <element name="ns2:eadheader">
+            <element name="ns2:eadid">
+              <attribute name="identifier">
+                <data type="NCName"/>
+              </attribute>
+              <attribute name="mainagencycode">
+                <data type="NCName"/>
+              </attribute>
+            </element>
+            <element name="ns2:filedesc">
+              <element name="ns2:titlestmt">
+                <element name="ns2:titleproper">
+                  <empty/>
+                </element>
+              </element>
+            </element>
+          </element>
+          <element name="ns2:archdesc">
+            <attribute name="level">
+              <data type="NCName"/>
+            </attribute>
+            <element name="ns2:did">
+              <element name="ns2:unitid">
+                <attribute name="repositorycode">
+                  <data type="NCName"/>
+                </attribute>
+                <text/>
+              </element>
+              <element name="ns2:unittitle">
+                <text/>
+              </element>
+              <element name="ns2:unitdate">
+                <data type="NMTOKEN"/>
+              </element>
+              <element name="ns2:physdesc">
+                <element name="ns2:genreform">
+                  <attribute name="type">
+                    <data type="NCName"/>
+                  </attribute>
+                  <data type="NCName"/>
+                </element>
+              </element>
+            </element>
+          </element>
+        </element>
+      </choice>
+    </element>
+  </define>
+  <define name="eac-cpf.item">
+    <element name="eac-cpf:item">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.span"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.maintenanceAgency">
+    <element name="eac-cpf:maintenanceAgency">
+      <choice>
+        <element name="eac-cpf:agencyCode">
+          <data type="NMTOKEN"/>
+        </element>
+        <element name="eac-cpf:otherAgencyCode">
+          <data type="NCName"/>
+        </element>
+      </choice>
+      <element name="eac-cpf:agencyName">
+        <text/>
+      </element>
+    </element>
+  </define>
+  <define name="eac-cpf.publicationStatus">
+    <element name="eac-cpf:publicationStatus">
+      <data type="NCName"/>
+    </element>
+  </define>
+  <define name="eac-cpf.relations">
+    <element name="eac-cpf:relations">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.cpfRelation"/>
+          <ref name="eac-cpf.functionRelation"/>
+          <ref name="eac-cpf.resourceRelation"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.chronItem">
+    <element name="eac-cpf:chronItem">
+      <choice>
+        <ref name="eac-cpf.date"/>
+        <ref name="eac-cpf.dateRange"/>
+      </choice>
+      <element name="eac-cpf:event">
+        <text/>
+      </element>
+      <optional>
+        <ref name="eac-cpf.placeEntry"/>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.languageDeclaration">
+    <element name="eac-cpf:languageDeclaration">
+      <ref name="eac-cpf.language"/>
+      <ref name="eac-cpf.script"/>
+    </element>
+  </define>
+  <define name="eac-cpf.maintenanceStatus">
+    <element name="eac-cpf:maintenanceStatus">
+      <data type="NCName"/>
+    </element>
+  </define>
+  <define name="eac-cpf.conventionDeclaration">
+    <element name="eac-cpf:conventionDeclaration">
+      <optional>
+        <ref name="eac-cpf.abbreviation"/>
+      </optional>
+      <ref name="eac-cpf.citation"/>
+      <optional>
+        <ref name="eac-cpf.descriptiveNote"/>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.entityType">
+    <element name="eac-cpf:entityType">
+      <data type="NCName"/>
+    </element>
+  </define>
+  <define name="eac-cpf.p">
+    <element name="eac-cpf:p">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.span"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.function">
+    <element name="eac-cpf:function">
+      <ref name="eac-cpf.term"/>
+      <optional>
+        <ref name="eac-cpf.descriptiveNote"/>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.recordId">
+    <element name="eac-cpf:recordId">
+      <data type="NCName"/>
+    </element>
+  </define>
+  <define name="eac-cpf.biogHist">
+    <element name="eac-cpf:biogHist">
+      <optional>
+        <element name="eac-cpf:abstract">
+          <text/>
+        </element>
+      </optional>
+      <oneOrMore>
+        <ref name="eac-cpf.p"/>
+      </oneOrMore>
+      <optional>
+        <ref name="eac-cpf.chronList"/>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.eac-cpf">
+    <element name="eac-cpf:eac-cpf">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.control"/>
+          <ref name="eac-cpf.cpfDescription"/>
+          <ref name="eac-cpf.multipleIdentities"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.legalStatus">
+    <element name="eac-cpf:legalStatus">
+      <ref name="eac-cpf.term"/>
+      <optional>
+        <ref name="eac-cpf.dateRange"/>
+      </optional>
+      <optional>
+        <choice>
+          <ref name="eac-cpf.date"/>
+          <ref name="eac-cpf.descriptiveNote"/>
+        </choice>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.abbreviation">
+    <element name="eac-cpf:abbreviation">
+      <data type="NCName"/>
+    </element>
+  </define>
+  <define name="eac-cpf.citation">
+    <element name="eac-cpf:citation">
+      <optional>
+        <attribute name="xlink:href">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="eac-cpf.mandate">
+    <element name="eac-cpf:mandate">
+      <optional>
+        <ref name="eac-cpf.term"/>
+      </optional>
+      <optional>
+        <ref name="eac-cpf.dateRange"/>
+      </optional>
+      <optional>
+        <ref name="eac-cpf.citation"/>
+      </optional>
+      <optional>
+        <ref name="eac-cpf.descriptiveNote"/>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.occupation">
+    <element name="eac-cpf:occupation">
+      <ref name="eac-cpf.term"/>
+    </element>
+  </define>
+  <define name="eac-cpf.control">
+    <element name="eac-cpf:control">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.conventionDeclaration"/>
+          <ref name="eac-cpf.languageDeclaration"/>
+          <ref name="eac-cpf.maintenanceAgency"/>
+          <ref name="eac-cpf.maintenanceHistory"/>
+          <ref name="eac-cpf.maintenanceStatus"/>
+          <ref name="eac-cpf.publicationStatus"/>
+          <ref name="eac-cpf.recordId"/>
+          <ref name="eac-cpf.sources"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.nameEntry">
+    <element name="eac-cpf:nameEntry">
+      <optional>
+        <attribute name="scriptCode">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="transliteration">
+          <data type="NMTOKEN"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="exml:lang">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.authorizedForm"/>
+          <element name="eac-cpf:alternativeForm">
+            <data type="NCName"/>
+          </element>
+          <element name="eac-cpf:part">
+            <optional>
+              <attribute name="localType"/>
+            </optional>
+            <text/>
+          </element>
+          <element name="eac-cpf:preferredForm">
+            <data type="NCName"/>
+          </element>
+          <element name="eac-cpf:useDates">
+            <ref name="eac-cpf.dateRange"/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.authorizedForm">
+    <element name="eac-cpf:authorizedForm">
+      <data type="NCName"/>
+    </element>
+  </define>
+  <define name="eac-cpf.level">
+    <element name="eac-cpf:level">
+      <zeroOrMore>
+        <choice>
+          <ref name="eac-cpf.item"/>
+          <ref name="eac-cpf.level"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.places">
+    <element name="eac-cpf:places">
+      <oneOrMore>
+        <ref name="eac-cpf.place"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.maintenanceHistory">
+    <element name="eac-cpf:maintenanceHistory">
+      <oneOrMore>
+        <ref name="eac-cpf.maintenanceEvent"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.functionRelation">
+    <element name="eac-cpf:functionRelation">
+      <optional>
+        <attribute name="functionRelationType">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.descriptiveNote"/>
+          <ref name="eac-cpf.relationEntry"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.chronList">
+    <element name="eac-cpf:chronList">
+      <oneOrMore>
+        <ref name="eac-cpf.chronItem"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.existDates">
+    <element name="eac-cpf:existDates">
+      <ref name="eac-cpf.dateRange"/>
+    </element>
+  </define>
+  <define name="eac-cpf.sources">
+    <element name="eac-cpf:sources">
+      <oneOrMore>
+        <ref name="eac-cpf.source"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.source">
+    <element name="eac-cpf:source">
+      <optional>
+        <attribute name="xlink:href">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="xlink:type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <element name="eac-cpf:sourceEntry">
+        <text/>
+      </element>
+      <optional>
+        <ref name="eac-cpf.descriptiveNote"/>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.multipleIdentities">
+    <element name="eac-cpf:multipleIdentities">
+      <oneOrMore>
+        <ref name="eac-cpf.cpfDescription"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.date">
+    <element name="eac-cpf:date">
+      <attribute name="standardDate">
+        <data type="NMTOKEN"/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+  <define name="eac-cpf.term">
+    <element name="eac-cpf:term">
+      <optional>
+        <attribute name="vocabularySource">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="eac-cpf.description">
+    <element name="eac-cpf:description">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.biogHist"/>
+          <ref name="eac-cpf.existDates"/>
+          <ref name="eac-cpf.function"/>
+          <ref name="eac-cpf.languageUsed"/>
+          <ref name="eac-cpf.place"/>
+          <ref name="eac-cpf.places"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.maintenanceEvent">
+    <element name="eac-cpf:maintenanceEvent">
+      <element name="eac-cpf:eventType">
+        <data type="NCName"/>
+      </element>
+      <element name="eac-cpf:eventDateTime">
+        <optional>
+          <attribute name="standardDateTime">
+            <data type="NMTOKEN"/>
+          </attribute>
+        </optional>
+        <text/>
+      </element>
+      <choice>
+        <element name="eac-cpf:agentType">
+          <data type="NCName"/>
+        </element>
+        <element name="eac-cpf:agentyType">
+          <data type="NCName"/>
+        </element>
+      </choice>
+      <element name="eac-cpf:agent">
+        <text/>
+      </element>
+      <optional>
+        <element name="eac-cpf:eventDescription">
+          <text/>
+        </element>
+      </optional>
+    </element>
+  </define>
+  <define name="eac-cpf.identity">
+    <element name="eac-cpf:identity">
+      <optional>
+        <attribute name="identityType">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="localType"/>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="eac-cpf.entityType"/>
+          <ref name="eac-cpf.nameEntry"/>
+          <element name="eac-cpf:entityId">
+            <data type="NCName"/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="eac-cpf.placeEntry">
+    <element name="eac-cpf:placeEntry">
+      <optional>
+        <attribute name="altitude">
+          <data type="integer"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="countryCode">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="latitude">
+          <data type="decimal"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="longitude">
+          <data type="decimal"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="vocabularySource">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="eac-cpf.relationEntry">
+    <element name="eac-cpf:relationEntry">
+      <text/>
+    </element>
+  </define>
+  <define name="eac-cpf.language">
+    <element name="eac-cpf:language">
+      <attribute name="languageCode">
+        <data type="NCName"/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+  <define name="eac-cpf.script">
+    <element name="eac-cpf:script">
+      <attribute name="scriptCode">
+        <data type="NCName"/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+  <define name="eac-cpf.span">
+    <element name="eac-cpf:span">
+      <optional>
+        <attribute name="localType">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <attribute name="style">
+        <data type="NMTOKEN"/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+</grammar>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="maintenanceHistory">
+   <head>
+      <gi>maintenanceHistory</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Maintenance History</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The history of the creation and maintenance of the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A required wrapper element within <gi>control</gi> to record the history and creation of
+								the EAC-CPF instance. There must be at least one <gi>maintenanceEvent</gi> element,
+								usually recording the creation of the instance, but there may be many other
+									<gi>maintenanceEvent</gi> elements documenting the milestone events or activities in the
+								maintenance of the instance.</p>
+   </div>
+   <div type="mayContain">
+      <p>maintenanceEvent</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.6, 5.4.9</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceHistory xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:maintenanceEvent>
+               <eac-cpf:eventType>created</eac-cpf:eventType>
+               <eac-cpf:eventDateTime standardDateTime="2009-06-29T00:20:00.000-00:00">29 giugno
+											2009</eac-cpf:eventDateTime>
+               <eac-cpf:agentType>human</eac-cpf:agentType>
+               <eac-cpf:agent>Salvatore Vassallo</eac-cpf:agent>
+               <eac-cpf:eventDescription>Prima codifica dell'espempio in italiano presente nelle
+											ISAAR(CPF)</eac-cpf:eventDescription>
+            </eac-cpf:maintenanceEvent>
+            <eac-cpf:maintenanceEvent>
+               <eac-cpf:eventType>revised</eac-cpf:eventType>
+               <eac-cpf:eventDateTime standardDateTime="2009-06-29T17:16:00.000-00:00">29 giugno
+											2009</eac-cpf:eventDateTime>
+               <eac-cpf:agentType>human</eac-cpf:agentType>
+               <eac-cpf:agent>Salvatore Vassallo</eac-cpf:agent>
+               <eac-cpf:eventDescription>Aggiunte fonti, regole usate e campi di
+											controllo</eac-cpf:eventDescription>
+            </eac-cpf:maintenanceEvent>
+         </eac-cpf:maintenanceHistory>
+      </egXML>
+   </div>
+</div>

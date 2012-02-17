@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="mandates">
+   <head>
+      <gi>mandates</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Mandates</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A grouping element used to bundle together individual <gi>mandate</gi>
+							elements.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Use the optional <gi>mandates</gi> element to group together one or more occurrences of
+									<gi>mandate</gi> so that they can be manipulated as a package. A single
+									<gi>mandate</gi> may stand alone or may be wrapped within <gi>mandates</gi>.</p>
+      <p xml:lang="en">The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the mandates being
+								described. A simpler discursive expression of the mandates may be encoded as one or more
+									<gi>p</gi> elements.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, list, mandate, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.6</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:mandates xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:mandate>
+               <eac-cpf:term>Instrucciones de 13-VI-1586 por las que se crean y definen las secretarias
+											de Tierra y Mar.</eac-cpf:term>
+            </eac-cpf:mandate>
+            <eac-cpf:mandate>
+               <eac-cpf:term>Real Decreto de Nueva Planta para el consejo de Guerra de
+											23-IV-1714.</eac-cpf:term>
+            </eac-cpf:mandate>
+            <eac-cpf:mandate>
+               <eac-cpf:term>Real Decreto de Nueva Planta para el consejo de Guerra de
+											23-VIII-1715.</eac-cpf:term>
+            </eac-cpf:mandate>
+         </eac-cpf:mandates>
+      </egXML>
+   </div>
+</div>

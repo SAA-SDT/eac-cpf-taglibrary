@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="eventType">
+   <head>
+      <gi>eventType</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Maintenance Event Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The type of maintenance event for the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A required element within <gi>maintenanceEvent</gi> that identifies the type of event.
+								The available values are: "created", "revised", "updated", "deleted", "derived", or
+								"cancelled". A fuller discursive description of the event may be given in the optional
+									<gi>eventDescription</gi> element.</p>
+      <p xml:lang="en">On first creation, the event type would be "created". A "derived" event type is available
+								to indicate that the record was derived from another descriptive system. If revisions are
+								made to an existing EAC-CPF instance, the event type would be "revised". Updating a record,
+								as a specific type of revision, may be indicated with the value "updated". Because it is
+								important to be clear what has happened to records particularly when sharing and making
+								links between them, other event types include "deleted" for records that are deleted from a
+								system or "cancelled" for records that are marked as not current (obsolete or rejected) but
+								kept for reference.</p>
+   </div>
+   <div type="mayContain">
+      <p>"cancelled" or "created" or "deleted" or "derived" or "revised" or
+							"updated"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceEvent</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.9</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>created</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2009-11-30"/>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>Bill Stockting</eac-cpf:agent>
+            <eac-cpf:eventDescription>Created from original in ISAAR (CPF), 2nd edition: example
+										10</eac-cpf:eventDescription>
+         </eac-cpf:maintenanceEvent>
+      </egXML>
+   </div>
+</div>

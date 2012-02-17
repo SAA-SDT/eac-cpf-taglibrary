@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="maintenanceStatus">
+   <head>
+      <gi>maintenanceStatus</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Maintenance Status</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The current drafting status of the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A required element within <gi>control</gi> that records the current drafting status of
+								an EAC-CPF instance: as an EAC-CPF instance is modified or other events happen to it (as
+								recorded in the <gi>maintenanceHistory</gi> element), the maintenance status should also
+								be amended to reflect the current drafting status.</p>
+      <p xml:lang="en">On first creation the status would be "new", which on revision can be changed to
+								"revised". Because it is important to be clear what has happened to records particularly
+								when sharing and making links between them, a number of status values are available for
+								records that are no longer current. A record that is simply deleted from a system can be
+								given the status "deleted", but in cases where a record is marked as not current (obsolete
+								or rejected) but kept for reference then it should be given the status "cancelled". If a
+								record is deleted though because it has become superseded by two or more records then its
+								status should be given as "deletedSplit", while if it has simply been replaced by a new
+								record then "deletedReplaced" is the appropriate status value. A "derived" status value is
+								available to indicate that the record was derived from another descriptive system.</p>
+   </div>
+   <div type="mayContain">
+      <p>"cancelled" or "deleted" or "deletedReplaced" or "deletedSplit" or
+							"derived" or "new" or "revised"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.4</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceStatus xmlns:eac-cpf="urn:isbn:1-931666-33-4">new</eac-cpf:maintenanceStatus>
+      </egXML>
+   </div>
+</div>

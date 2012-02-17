@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="xmllang">
+   <div type="summary">
+      <p xml:lang="en">Three-letter ISO 639-2 language code.</p>
+   </div>
+   <div type="description">
+      <p>The <att>xml:lang</att> may occur on any element intended to contain
+							natural language content whenever information about the language of the content of this
+							element and its children are needed. <att>xml:lang</att> should be used when the language of
+							the element differs from the Language Code declared in the <att>languageCode</att> attribute
+							on the element <gi>language</gi> in the control section. The values in the list are taken
+							from ISO 639-2 Codes for the Representation of Names of Languages. The list can be downloaded
+							from the website of the Library of Congress which is the registration agency of the standard
+								(http://www.loc.gov/standards/iso639-2/langhome.html).</p>
+   </div>
+   <div type="datatype">
+      <p>IS0 639-2 Codes for the Representation of Names of Languages.</p>
+   </div>
+</div>

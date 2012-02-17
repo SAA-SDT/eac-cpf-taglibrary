@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="event">
+   <head>
+      <gi>event</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Event</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">An element used to encode an event associated with a date and, optionally, a
+							place within a structured chronology.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The element contains discursive text identifying the event described by the
+									<gi>chronItem</gi>. Every <gi>event</gi> must have an associated <gi>date</gi>
+								element, and it may also have an optional <gi>placeEntry</gi> element, all wrapped within
+								a <gi>chronItem</gi> describing the event in a chronology.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:chronList xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:chronItem>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1944">1944</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1947">1947</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:event>Summer employment at Minnesota Valley Canning Co.</eac-cpf:event>
+               <eac-cpf:placeEntry>Blue Earth (Minn.)</eac-cpf:placeEntry>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1946">1946</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1948">1948</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:event>Macalester College</eac-cpf:event>
+               <eac-cpf:placeEntry>St. Paul (Minn.)</eac-cpf:placeEntry>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:date standardDate="1948">1948</eac-cpf:date>
+               <eac-cpf:event>Campaign Manager, 2nd District, State Democratic-Farmer-Labor Central
+											Committee. Report to Orville Freeman.</eac-cpf:event>
+            </eac-cpf:chronItem>
+         </eac-cpf:chronList>
+      </egXML>
+   </div>
+</div>

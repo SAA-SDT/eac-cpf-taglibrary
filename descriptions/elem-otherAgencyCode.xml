@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="otherAgencyCode">
+   <head>
+      <gi>otherAgencyCode</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Other Agency Code</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">Alternate code representing the instituion or service responsible for the
+							creation, maintenance, and/or dissemination of the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">An element of <gi>maintenanceAgency</gi> within <gi>control</gi> providing an
+								alternative and/or local institution code representing the institution or service
+								responsible for the creation, maintenace, and/or dissemination of the EAC-CPF instance to
+								that given in the <gi>agencyCode</gi> element in the format of the International Standard
+								identifier for Libraries and Related Organizations (ISIL: ISO 15511). The name of the agency
+								is given in <gi>agencyName</gi>. The addition of an ISO 3166-1 alpha-2 country code as the
+								prefix is recommended to ensure international uniqueness.</p>
+   </div>
+   <div type="mayContain">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceAgency</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:otherAgencyCode>GB-058</eac-cpf:otherAgencyCode>
+            <eac-cpf:agencyName>The British Library: Manuscript Collections</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+   </div>
+</div>

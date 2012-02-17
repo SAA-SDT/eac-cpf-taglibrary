@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="transliteration">
+   <div type="summary">
+      <p xml:lang="en">A value designating the transliteration scheme used in representing
+							converting one script into another script.</p>
+   </div>
+   <div type="description">
+      <p>The conventions or rules that prescribe a method for converting one
+							script into another script.</p>
+   </div>
+   <div type="datatype">
+      <p>NMTOKEN</p>
+   </div>
+</div>

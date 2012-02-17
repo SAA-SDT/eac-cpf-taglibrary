@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="entityType">
+   <head>
+      <gi>entityType</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Entity Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The type of entity being described. Values available are: person,
+							corporateBody, or family.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Within <gi>identity</gi> this mandatory element specifies the type of entity being
+								described in the EAC-CPF instance. Values available are: person, corporateBody, or
+								family.</p>
+   </div>
+   <div type="mayContain">
+      <p>"person" or "corporateBody" or "family"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>identity</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1.1</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:entityType xmlns:eac-cpf="urn:isbn:1-931666-33-4">corporateBody</eac-cpf:entityType>
+         <eac-cpf:entityType xmlns:eac-cpf="urn:isbn:1-931666-33-4">person</eac-cpf:entityType>
+         <eac-cpf:entityType xmlns:eac-cpf="urn:isbn:1-931666-33-4">family</eac-cpf:entityType>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="scriptCode">
+   <div type="summary">
+      <p xml:lang="en">The ISO 15924 four-letter code for the writing script used.</p>
+   </div>
+   <div type="description">
+      <p>A standard four-letter code for the writing script used with a given
+							language. The <att>scriptCode</att> attribute is required for the <gi>script</gi> element,
+							and is available on other elements where language designations may be used.</p>
+   </div>
+   <div type="datatype">
+      <p>ISO 15924 Code for the Representation of Names and Scripts</p>
+   </div>
+</div>

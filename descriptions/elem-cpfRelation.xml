@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="cpfRelation">
+   <head>
+      <gi>cpfRelation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Corporate Body, Person, or Family Relation</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A corporate body, person, or family related to the described entity.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The <gi>cpfRelation</gi> element contains the description of a corporate body, person,
+								or family related to the described entity. Such related entities are typically described in
+								another EAC-CPF instance or other encoding language such as MARC. Use the
+									<gi>objectXMLWrap</gi> to incorporate XML elements from any XML namespace or
+									<gi>objectBinWrap</gi> for base64-encoded binary data. A <gi>relationEntry</gi> element
+								is provided for textual identification of the related entity.</p>
+      <p xml:lang="en">Use the <gi>date</gi>, <gi>dateRange</gi>, or <gi>dateSet</gi> elements for
+								specifying the time period during which the relationship applied and the
+									<gi>placeEntry</gi> element for recording relevant locative information. A
+									<gi>descriptiveNote</gi> element may be included for a more detailed specification or
+								explanation of the relationship.</p>
+      <p xml:lang="en">The <att>cpfRelationType</att> attribute may be used to specify the nature of the
+									<gi>cpfRelation</gi> entity’s relationship to the entity described in the
+									<gi>eac-cpf</gi> instance. Values are chosen from a closed list.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, dateSet, descriptiveNote, objectBinWrap, objectXMLWrap,
+							placeEntry, relationEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>relations</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>cpfRelationType</label>
+            <item>Optional</item>
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.3</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:cpfRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns:xlink="http://www.w3c.org/1999/xlink"
+                              cpfRelationType="hierarchical-parent"
+                              xlink:href="FRDAFANCH00MC_NAETUDE_110"
+                              xlink:type="simple">
+            <eac-cpf:relationEntry>Etude notariale CX</eac-cpf:relationEntry>
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1609-07-04">4 juillet 1609</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1640-07-07">7 juillet 1640</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+         </eac-cpf:cpfRelation>
+      </egXML>
+   </div>
+</div>

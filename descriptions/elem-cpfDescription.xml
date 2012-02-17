@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="cpfDescription">
+   <head>
+      <gi>cpfDescription</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Corporate Body, Person, or Family Description</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The <gi>cpfDescription</gi> contains the description of one identity.
+							Commonly one entity has one identity, but when it has more than one, use either
+								<gi>multipleIdentities</gi> or multiple interrelated EAC-CPF instances.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The <gi>cpfDescription</gi> contains the description of one identity. Each description
+								contains the name or names by which the identity is known, and optionally may contain
+								historical context description to facilitate understanding of the identity. The
+									<gi>cpfDescription</gi> includes a required <gi>identity</gi> element containing
+								authorized or parallel name entries and optional <gi>description</gi> and
+									<gi>relations</gi> to provide contextual information for the entity being described,
+								including the relation of the entities to other entities, resources, and functions.</p>
+      <p xml:lang="en">An optional <gi>alternativeSet</gi> element allows the incorporation of two or more
+								authority records derived from two or more authority systems. The <att>xml:id</att>
+								attribute allows individual <gi>cpfDescription</gi> elements to be individually identified
+								when using the <gi>multipleIdentities</gi> structure.</p>
+   </div>
+   <div type="mayContain">
+      <p>alternativeSet, description, identity, relations</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>eac-cpf, multipleIdentities</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1, 5.2, 5.3</p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:cpfDescription xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:identity>[...] </eac-cpf:identity>
+            <eac-cpf:description>[...] </eac-cpf:description>
+            <eac-cpf:relations>[...]</eac-cpf:relations>
+         </eac-cpf:cpfDescription>
+      </egXML>
+   </div>
+</div>

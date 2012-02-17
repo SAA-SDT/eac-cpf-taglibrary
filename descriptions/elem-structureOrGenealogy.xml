@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="structureOrGenealogy">
+   <head>
+      <gi>structureOrGenealogy</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Structure or Genealogy</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A description of the internal administrative structure(s) of a corporate
+							body or the genealogy of a family.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">
+         <gi>structureOrGenealogy</gi> encodes within the description area, information expressing
+								the internal administrative structure(s) of a corporate body and the dates of any changes to
+								that structure that are significant to understanding the way that corporate body conducted
+								affairs (such as dated organization charts), and the genealogy of a family (such as a family
+								tree) in a way that demonstrates the interrelationships of its members with covering
+								dates.</p>
+      <p xml:lang="en">The optional <gi>list</gi> and <gi>outline</gi> elements are used to accommodate
+								greater complexity in expressing or representing the activities being described.
+									<gi>citation</gi> may be used to provide a link to external documents like organizational
+								charts and family trees. A simpler discursive expression of the activities may be encoded as
+								one or more <gi>p</gi> elements.</p>
+      <p xml:lang="en">Genealogical and administrative structure information may alternatively be described in
+								discursive form in the <gi>biogHist</gi> element (ISAAR (CPF) 5.2.2 History) and/or with
+									<gi>cpfRelation</gi> elements (ISAAR (CPF) 5.3). The <gi>structureOrGenealogy</gi>
+								element should be used whenever separate semantic processing of information about structure
+								or genealogies is required.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, list, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.7</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:structureOrGenealogy xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:p>Sir Edward Noel (d 1643) married Julian, daughter and co-heir of Baptists Hicks
+										(d 1629), Viscount Campden, and succeeded to the viscouty of Campden and a portion of his
+										father-in-law's estates. The third Viscount Campden (1612-82) married Hester Wotton,
+										daughter of the second Baron Wotton. The fourth Viscount Campden (1641-1689, created Earl
+										of Gainsborough, 1682) married Elizabeth Wriothesley, elder daughter of the fourth Earl of
+										Southampton. Jane Noel (d 1811), sister of the fifth and sixth Earls of Gainsborough,
+										married Gerard Anne Edwards of Welham Grove (Leicetershire) and had issue Gerard Noel
+										Edwards (1759-1838). He married in 1780 Diana Middleton (1762-1823 suo jure Baroness
+										Barham), daughter of Charles Middleton (1726-1813), created first Baronet of Barham Court
+										(Kent) in 1781 and first Baron Barham in 1805. GN Edwards assumed the surname Noel in 1798
+										on inheriting the sixth Earl of Gainborough's Rutland and Gloucestershire estates (though
+										not the Earl's honours, which were extinguished); and he later inherited his
+										father-in-law's baronetcy. His eldest son John Noel (1781-1866) succeeded to the estates
+										of his mother and his father, to his mother's barony and his father's baronetcy, and was
+										created Viscount Campden and Earl of Gainsborough in 1841.</eac-cpf:p>
+         </eac-cpf:structureOrGenealogy>
+      </egXML>
+   </div>
+</div>

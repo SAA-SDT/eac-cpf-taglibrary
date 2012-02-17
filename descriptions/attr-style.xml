@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="style">
+   <div type="summary">
+      <p xml:lang="en">Used to specify a rendering style for string. It is recommended that the
+							value conforms to W3C CSS.</p>
+   </div>
+   <div type="description">
+      <p>The <att>style</att> may occur on <gi>span</gi>. In a limited number
+							of contexts that accommodate discursive description, <gi>span</gi> with <att>style</att>
+							may be used to identify an arbitrary string that is intended to be rendered in a specific
+							style. It is highly recommended that the value of <att>style</att> be expressed as a W3C CSS
+							style to facilitate interoperability.</p>
+   </div>
+   <div type="datatype">
+      <p>string</p>
+   </div>
+</div>

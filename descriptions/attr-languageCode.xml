@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="languageCode">
+   <div type="summary">
+      <p xml:lang="en">Three-letter ISO 639-2 language code. Must occur on
+							<gi>language</gi>.</p>
+   </div>
+   <div type="description">
+      <p>The <att>languageCode</att> must occur on <gi>language</gi>. The
+							Language Code is used to provide the ISO 639-2 standard code representing the language of the
+							EAC-CPF instance. The values are to be taken from the list of ISO 639-2 Codes for the
+							representation of Names of Languages. The list can be downloaded from the website of the
+							Library of Congress which is the registration agency of the standard (http://www.loc.gov/standards/iso639-2/langhome.html).</p>
+   </div>
+   <div type="datatype">
+      <p>ISO 639-2 Codes for the Representation of Names of Languages</p>
+   </div>
+</div>

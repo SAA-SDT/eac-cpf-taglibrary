@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="biogHist">
+   <head>
+      <gi>biogHist</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Biographical or Historical Note</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A concise essay and/or chronology that provides biographical or historical
+							information about the EAC-CPF entity.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The <gi>biogHist</gi> includes significant details about the life of an individual or
+								family, or the administrative history of a corporate body. The <gi>biogHist</gi> may
+								contain just text in a series of Paragraphs <gi>p</gi>, and/or a Chronology List
+									<gi>chronList</gi> that matches dates and date ranges with associated events and/or
+								places. The <gi>abstract</gi> element is intended to provide a very brief synopsis of the
+								full <gi>biogHist</gi> content that could be extracted for inclusion in a remote source,
+								such as a MARC record.</p>
+      <p xml:lang="en">The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the biography or
+								history being described. A simpler discursive expression of the information may be encoded
+								as one or more <gi>p</gi> elements.</p>
+   </div>
+   <div type="mayContain">
+      <p>abstract, chronList, citation, list, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p> ISAAR 5.2.2</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:biogHist xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:abstract>Established in 1961, the United States Peace Corps administered and
+										coordinated Federal international volunteer and related domestic volunteer programs in
+										areas of agricultural assistance, community development, education, environmental
+										protection, and nation assistance.</eac-cpf:abstract>
+            <eac-cpf:p>The Peace Corps was established as an operating agency in the Department of
+										State Delegation of Authority 85-11, effective March 3, 1961, pursuant to Executive Order
+										(E.O.) 10924, March 1, 1961. It was recognized legislatively by the Peace Corps Act (75
+										Stat. 612), approved September 22, 1961. The Peace Corps was reassigned to the newly
+										established ACTION by Reorganization Plan No. 1 of 1971, effective July 1, 1971. It was
+										made autonomous within ACTION by E.O. 12137, May 16, 1979, and was made an independent
+										agency by Title VI of the International Security and Development Corporation Act of 1981
+										(95 Stat. 1540), February 21, 1982. The Peace Corps administered and coordinated Federal
+										international volunteer and related domestic volunteer programs including the areas of
+										agricultural assistance, community development, education, environmental protection, and
+										nation assistance.</eac-cpf:p>
+         </eac-cpf:biogHist>
+         <eac-cpf:biogHist xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:p>Ilma Mary Brewer, nee Pidgeon, was Lecturer in Botany/Biology, University of
+										Sydney 1963-70 and Senior Lecturer in Biological Sciences 1970-78. She developed new
+										methods of teaching based on the recognition that a student learnt more by working at
+										his/her own place and instruction him/her self. Her findings were published as a book,
+										"Learning More and Teaching Less."</eac-cpf:p>
+            <eac-cpf:chronList>
+               <eac-cpf:chronItem>
+                  <eac-cpf:date standardDate="1936">1936</eac-cpf:date>
+                  <eac-cpf:event>Bachelor of Science (BSc) completed at the University of
+												Sydney</eac-cpf:event>
+               </eac-cpf:chronItem>
+               <eac-cpf:chronItem>
+                  <eac-cpf:date standardDate="1937">1937</eac-cpf:date>
+                  <eac-cpf:event>Master of Science (MSc) completed at the University of
+												Sydney</eac-cpf:event>
+               </eac-cpf:chronItem>
+               <eac-cpf:chronItem>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1937">1937</eac-cpf:fromDate>
+                     <eac-cpf:toDate standardDate="1941">1941</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+                  <eac-cpf:event>Linnean Macleay Fellow</eac-cpf:event>
+               </eac-cpf:chronItem>
+            </eac-cpf:chronList>
+         </eac-cpf:biogHist>
+      </egXML>
+   </div>
+</div>

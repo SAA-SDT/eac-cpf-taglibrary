@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="recordId">
+   <head>
+      <gi>recordId</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Record Identifier</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The unique identifier for a particular instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A required element within <gi>control</gi> that designates a unique identifier for the
+								EAC-CPF instance. The assigning owner ensures the uniqueness of the value within the EAC-CPF
+								descriptive system under its control. The <gi>recordId</gi>, when used in combination with
+								the content of the required <gi>agencyCode</gi> element within
+									<gi>maintenanceAgency</gi>, will provide a globally unique identifier.</p>
+      <p xml:lang="en">Record alternate record identifiers if desired in <gi>otherRecordId</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.1</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:recordId xmlns:eac-cpf="urn:isbn:1-931666-33-4">F10219</eac-cpf:recordId>
+      </egXML>
+   </div>
+</div>

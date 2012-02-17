@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="resourceRelation">
+   <head>
+      <gi>resourceRelation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Resource Relation</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A resource related to the described entity.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The <gi>resourceRelation</gi> element contains the description of a resource related to
+								the described entity. Use <gi>objectXMLWrap</gi> to incorporate XML elements from any XML
+								namespaces or <gi>objectBinWrap</gi> for base64-encoded binary data. A
+									<gi>relationEntry</gi> element is provided for textual identification of the related
+								resource.</p>
+      <p xml:lang="en">Use the <gi>date</gi>, <gi>dateRange</gi>, or <gi>dateSet</gi> elements for
+								specifying when the relationship applied and the <gi>placeEntry</gi> element for relevant
+								locative information. A <gi>descriptiveNote</gi> element may be included for a more
+								detailed specifications or explanations of the relationship.</p>
+      <p xml:lang="en">The <att>resourceRelationType</att> attribute is used to specify the nature of the
+								relationship between the resource and the entity described in the EAC-CPF instance.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, dateSet, descriptiveNote, objectBinWrap, objectXMLWrap,
+							placeEntry, relationEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>relations</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>resourceRelationType</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 6</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:resourceRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" resourceRelationType="creatorOf">
+            <eac-cpf:objectXMLWrap>
+               <ead xsi="urn:isbn:1-931666-22-9">
+                  <eadheader>
+                     <eadid identifier="e4012531" mainagencycode="GB-0066"/>
+                     <filedesc>
+                        <titlestmt>
+                           <titleproper/>
+                        </titlestmt>
+                     </filedesc>
+                  </eadheader>
+                  <archdesc level="file">
+                     <did>
+                        <unitid repositorycode="GB-0066">E 40/12531</unitid>
+                        <unittitle>Attached seal, Andrew Noel</unittitle>
+                        <unitdate>1551-1552</unitdate>
+                        <physdesc>
+                           <genreform type="materialType">Seals</genreform>
+                        </physdesc>
+                     </did>
+                  </archdesc>
+               </ead>
+            </eac-cpf:objectXMLWrap>
+         </eac-cpf:resourceRelation>
+      </egXML>
+   </div>
+</div>

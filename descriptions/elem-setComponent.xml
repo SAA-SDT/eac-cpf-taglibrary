@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="setComponent">
+   <head>
+      <gi>setComponent</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Set Component</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A wrapper element within <gi>alternativeSet</gi> that contains the EAC-CPF
+							encoding for one entire authority record, thereby permitting the bundling of authority
+							records from multiple authority systems within a single <gi>cpfDescription</gi>.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">
+         <gi>setComponent</gi> provides an encoding wrapper to contain an entire authority record,
+								so that multiple records for the same identity from separate authority systems or in
+								different languages, may be combined together within a single EAC-CPF instance. The
+								mandatory <gi>componentEntry</gi> element encodes the link to the authority record in the
+								external authority system. An optional <gi>descriptiveNote</gi> may be used for a textual
+								note providing further information about the record referenced in
+								<gi>setComponent</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>componentEntry, descriptiveNote, objectBinWrap, objectXMLWrap</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>alternativeSet</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xlink:href="http://authorities.loc.gov"
+                                  xlink:type="simple">
+               <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xlink:href="http://nla.gov.au/anbd.aut-an35335937"
+                                  xlink:type="simple">
+               <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+         </eac-cpf:alternativeSet>
+      </egXML>
+   </div>
+</div>

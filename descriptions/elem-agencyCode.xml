@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="agencyCode">
+   <head>
+      <gi>agencyCode</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Agency Code</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The code that represents the institution or service responsible for the
+							creation, maintenance and/or dissemination of the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">An element of <gi>maintenanceAgency</gi> within <gi>control</gi> providing a code
+								representing the institution or service responsible for the creation, maintenance and/or
+								dissemination of the EAC-CPF instance. The name of the agency is given in
+									<gi>agencyName</gi>. The code is used in combination with the content of the required
+									<gi>recordId</gi> to provide a globally unique identifier for the instance.</p>
+      <p xml:lang="en">The format of the code is constrained to that of the International Standard Identifier for
+								Libraries and Related Organizations (ISIL: ISO 15511): a prefix, a dash, and an identifier.
+								The code is alphanumeric (A-Z, 0-9, solidus, hyphen-minus, and colon only) with a maximum of
+								16 characters. If appropriate to local or national convention insert a valid ISIL for an
+								institution, whether provided by a national authority (usually the national library) or a
+								service (such as OCLC). If this is not the case then local institution codes may be given
+								with the ISO 3166-1 alpha-2 country code as the prefix to ensure international uniqueness in
+								the <gi>otherAgencyCode</gi> element.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceAgency</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.2</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
+            <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+   </div>
+</div>

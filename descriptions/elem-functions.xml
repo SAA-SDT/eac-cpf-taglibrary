@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="functions">
+   <head>
+      <gi>functions</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Functions</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A grouping element used to bundle together individual <gi>function</gi>
+							elements.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Use the optional <gi>functions</gi> element to group together one or more occurrences of
+									<gi>function</gi> so that they can be manipulated as a package. A single
+									<gi>function</gi> may stand alone or may be wrapped within <gi>functions</gi>.</p>
+      <p xml:lang="en">The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the functions,
+								processes, activities, tasks, or transactions being described. A simpler discursive
+								expression of the functions may be encoded as one or more <gi>p</gi> elements.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, function, list, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.5</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:functions xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:function>
+               <eac-cpf:term>Indigenous land rights plaintiff</eac-cpf:term>
+            </eac-cpf:function>
+            <eac-cpf:function>
+               <eac-cpf:term>Indigenous arts administrator</eac-cpf:term>
+            </eac-cpf:function>
+         </eac-cpf:functions>
+      </egXML>
+   </div>
+</div>

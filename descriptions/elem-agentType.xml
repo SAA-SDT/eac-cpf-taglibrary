@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="agentType">
+   <head>
+      <gi>agentType</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Agent Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The type of agent responsible for a maintenance event of the EAC-CPF
+							instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">For each maintenance event described in a <gi>maintenanceEvent</gi> element, the type of
+								agent given in the <gi>agent</gi> element must be given as either "human" or
+								"machine."</p>
+   </div>
+   <div type="mayContain">
+      <p>"human" or "machine"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceEvent</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.9</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>created</eac-cpf:eventType>
+            <eac-cpf:eventDateTime>1993-10-20</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>McCarthy, G.J.</eac-cpf:agent>
+         </eac-cpf:maintenanceEvent>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>revised</eac-cpf:eventType>
+            <eac-cpf:eventDateTime>2006-08-01</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>machine</eac-cpf:agentType>
+            <eac-cpf:agent>BSConverta</eac-cpf:agent>
+         </eac-cpf:maintenanceEvent>
+      </egXML>
+   </div>
+</div>

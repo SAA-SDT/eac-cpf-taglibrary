@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="authorizedForm">
+   <head>
+      <gi>authorizedForm</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Authorized Form</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">Qualifies the name contained in <gi>nameEntry</gi> or the set of names
+							contained in <gi>nameEntryParallel</gi> as authorized access points.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The name of an EAC-CPF entity, as formed within the <gi>nameEntry</gi> or
+									<gi>nameEntryParallel</gi> elements, may be the authorized form of the name according to
+								a particular set of rules or conventions, or it may be an alternative or unauthorized form
+								according to a different set of rules. This optional element provides the opportunity to
+								indicate one or more sets of rules or conventions under which the form of the name expressed
+								in <gi>nameEntry</gi> or <gi>nameEntryParallel</gi> would be regard as an authorized
+								form.</p>
+      <p xml:lang="en">The eac-cpf schema offers two possibilities:</p>
+      <p xml:lang="en">1. <gi>authorizedForm</gi> is used within <gi>nameEntry</gi> only when
+									<gi>nameEntry</gi> is not included within <gi>nameEntryParallel</gi>. In this case, it
+								qualifies the form of the name recorded within the precise <gi>nameEntry</gi> element as
+								an authorized access point.</p>
+      <p xml:lang="en">2. <gi>authorizedForm</gi> may be used within <gi>nameEntryParallel</gi> to indicate
+								that the set of parallel names recorded in separate <gi>nameEntry</gi> elements within
+									<gi>nameEntryParallel</gi> are deemed as authorized access points.</p>
+      <p xml:lang="en">The content of the element is an abbreviation selected from a constrained set of values,
+								each of which represents a set of national, international or other rules that govern the
+								construction of EAC-CPF names in those environments. The abbreviations expressed in
+									<gi>authorizedForm</gi> must be declared within the <gi>conventionDeclaration</gi>
+								element in <gi>control</gi>.</p>
+      <p xml:lang="en">The parallel element <gi>alternativeForm</gi> permits one to indicate rules or
+								conventions according to which the name is the authorized form. The element
+									<gi>preferredForm</gi> permits one to indicate that the name as expressed is the
+								preferred form in the encoder's local context, regardless of its authorized status in any
+								other name authority environment.</p>
+      <p xml:lang="en">
+         <gi>authorizedForm</gi> may be repeated in case a single or a set of
+									<gi>nameEntry</gi> element(s) may conform to more than one rule.</p>
+   </div>
+   <div type="mayContain">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry, nameEntryParallel</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Brown, Bob, 1886-1959</eac-cpf:part>
+            <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+            <eac-cpf:alternativeForm>ncafnor</eac-cpf:alternativeForm>
+         </eac-cpf:nameEntry>
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Brown, Robert Carlton (1886-1959)</eac-cpf:part>
+            <eac-cpf:authorizedForm>ncafnor</eac-cpf:authorizedForm>
+            <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
+         </eac-cpf:nameEntry>
+      </egXML>
+   </div>
+</div>

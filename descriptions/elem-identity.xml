@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="identity">
+   <head>
+      <gi>identity</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Identity</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A wrapper element for the name portion of the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">
+         <gi>identity</gi> is a container element grouping all the necessary elements to the name
+								identification of the EAC-CPF instance. Within this element the <gi>entityType</gi>
+								element is required and specifies the type of entity being described (i.e., corporateBody,
+								family, or person), and one or more <gi>nameEntry</gi> elements and / or one or more
+									<gi>nameEntryParallel</gi> elements specifying names by which the entity is known. An
+								optional <gi>entityId</gi> is available for any identifiers associated with the
+								entity.</p>
+      <p xml:lang="en">All the names by which the entity being described in the EAC-CPF instance is known are
+								provided within this element. Within <gi>identity</gi>, the names of the entity, whether
+								authorized or alternatives, should be recorded in a <gi>nameEntry</gi> element. If there
+								is more than one name for the entity, each of them should be recorded in a separate
+									<gi>nameEntry</gi> element.</p>
+      <p xml:lang="en">In addition to needing to accommodate one or more names used for or by the entity,
+									<gi>identity</gi> may accommodate two or more parallel names in different languages or
+								scripts. In countries where there is more than one official language, such as Canada or
+								Switzerland, names of entities are frequently provided in more than one language. Within
+									<gi>identity</gi>, a <gi>nameEntryParallel</gi> element should be used to group two or
+								more <gi>nameEntry</gi> elements that represent parallel forms of the name of the entity
+								being described.</p>
+      <p xml:lang="en">Within <gi>identity</gi>, a <gi>descriptiveNote</gi> element may be used to record
+								other information in a textual form that assists in the identification of the entity.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, entityId, entityType, nameEntry,
+							nameEntryParallel</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>identityType</label>
+            <item>Optional</item>
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:identity xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:entityId>CLU-SC-000008</eac-cpf:entityId>
+            <eac-cpf:entityType>person</eac-cpf:entityType>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part>Brown, Bob</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                     <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+               <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+            </eac-cpf:nameEntry>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part>Brown, Robert Carlton</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                     <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+               <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
+            </eac-cpf:nameEntry>
+         </eac-cpf:identity>
+      </egXML>
+   </div>
+</div>

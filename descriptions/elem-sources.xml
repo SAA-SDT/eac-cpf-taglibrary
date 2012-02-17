@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="sources">
+   <head>
+      <gi>sources</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Sources</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A record of the sources used for the description of the entity or entities
+							in the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A wrapper element within <gi>control</gi> used to record one or more sources consulted
+								in creating the description of the entity or entities in the EAC-CPF instance.</p>
+   </div>
+   <div type="mayContain">
+      <p>source</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.8</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:sources xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Principal Family and Estate Collections: Family Names L-W,
+											1999</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Complete Peerage, 1936</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+         </eac-cpf:sources>
+      </egXML>
+   </div>
+</div>

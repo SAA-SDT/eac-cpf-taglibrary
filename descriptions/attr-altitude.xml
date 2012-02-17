@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="altitude">
+   <div type="summary">
+      <p xml:lang="en">The altitude or elevation of the geographic place.</p>
+   </div>
+   <div type="description">
+      <p>The <att>altitude</att> may occur on <gi>place</gi>. The value of the
+							attribute is the altitude or elevation of the geographic place named. <att>altitude</att>
+							should be used in conjunction with <att>longitude</att> and <att>latitude</att>.</p>
+   </div>
+   <div type="datatype">
+      <p>NMTOKEN</p>
+   </div>
+</div>

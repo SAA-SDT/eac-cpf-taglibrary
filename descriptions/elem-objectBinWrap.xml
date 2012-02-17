@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="objectBinWrap">
+   <head>
+      <gi>objectBinWrap</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Object Bin Wrap</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">This element provides a place for a base64-encoded binary representation of
+							a resource.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">This element provides a place for a base64-encoded binary representation of a resource.
+								The datatype of base64-encoded binary is based on the W3C Schema Part 2: Datatypes.</p>
+   </div>
+   <div type="mayContain">
+      <p>base64Binary</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfRelation, functionRelation, resourceRelation, setComponent,
+							source</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:objectBinWrap xmlns:eac-cpf="urn:isbn:1-931666-33-4"> [Base64 Binary code] </eac-cpf:objectBinWrap>
+      </egXML>
+   </div>
+</div>

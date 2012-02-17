@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="level">
+   <head>
+      <gi>level</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Level</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A required element for <gi>outline</gi> which delineates the outline
+							format.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Within an <gi>outline</gi>, multiple <gi>level</gi> elements are used to indicate the
+								hierarchical levels of information that comprise the outline. When more than one
+								hierarchical level exists, successive <gi>level</gi> exists, successive <gi>level</gi>
+								elements are nested recursively to identify the layers of content. Each <gi>level</gi>, in
+								turn, contains one ore more <gi>item</gi> elements that convey the information content of
+								the outline.</p>
+   </div>
+   <div type="mayContain">
+      <p>item, level</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>level, outline</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:outline xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:level>
+               <eac-cpf:item>I.</eac-cpf:item>
+            </eac-cpf:level>
+            <eac-cpf:level>
+               <eac-cpf:item>II.</eac-cpf:item>
+               <eac-cpf:level>
+                  <eac-cpf:item>A.</eac-cpf:item>
+               </eac-cpf:level>
+               <eac-cpf:level>
+                  <eac-cpf:item>B.</eac-cpf:item>
+                  <eac-cpf:level>
+                     <eac-cpf:item>1.</eac-cpf:item>
+                  </eac-cpf:level>
+                  <eac-cpf:level>
+                     <eac-cpf:item>2.</eac-cpf:item>
+                  </eac-cpf:level>
+               </eac-cpf:level>
+            </eac-cpf:level>
+         </eac-cpf:outline>
+      </egXML>
+   </div>
+</div>

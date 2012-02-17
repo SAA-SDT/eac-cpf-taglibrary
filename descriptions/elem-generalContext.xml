@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="generalContext">
+   <head>
+      <gi>generalContext</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">General Context</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">An element that encodes information about the general social and cultural
+							context of the entity being described.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The element <gi>generalContext</gi> may contain a <gi>list</gi>, <gi>outline</gi>,
+								or <gi>p</gi> element to format information about the social, cultural, economic,
+								political, and/or historical milieu in which the entity being described existed. The general
+								context provides wide latitude to record contextual information not specifically
+								accommodated by other <gi>description</gi> elements.</p>
+      <p xml:lang="en">The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the general context
+								being described. A simpler discursive expression of the general context may be encoded as
+								one or more <gi>p</gi> elements.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, list, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.8</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:generalContext xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:p>Edward Koiko Mabo was born in 1936 on the island of Mer, one of the Murray
+										Islands, which are located at the eastern extremity of Torres Strait. In June 1992, six
+										months after his death, Mabo achieved national prominence as the successful principal
+										plaintiff in the landmark High Court ruling on native land title. The High Court ruling,
+										for the first time, gave legal recognition to the fact that indigenous land ownership
+										existed in Australia before European settlement and that, in some cases, this land tenure
+										was not subsequently extinguished by the Crown.</eac-cpf:p>
+         </eac-cpf:generalContext>
+      </egXML>
+   </div>
+</div>

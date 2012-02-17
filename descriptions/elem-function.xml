@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="function">
+   <head>
+      <gi>function</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Function</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">An element that provides information about a function, activity, role, or
+							purpose performed or manifested by the entity being described.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A <gi>function</gi> element is a wrapper element used to encode an index term, using the
+								child element <gi>term</gi>. Terms are used to identify the functions, processes,
+								activities, tasks, or transactions performed by the EAC-CPF entity. They may be drawn from
+								controlled vocabularies or may be natural language terms. Associated date or date range
+									(<gi>date</gi>, <gi>dateRange</gi> or <gi>dateSet</gi>) and place(s)
+									(<gi>placeEntry</gi>) may be included to further constrain the term’s meaning. A
+									<gi>descriptiveNote</gi> may be included if a fuller textual explanation is needed.</p>
+      <p xml:lang="en">A single <gi>function</gi> element may be encoded directly within
+								<gi>description</gi>. Alternatively, multiple <gi>function</gi> elements may be grouped
+								within a <gi>functions</gi> wrapper that facilitates manipulating them as a group.</p>
+      <p xml:lang="en">Functions may alternatively be described in discursive form in <gi>biogHist</gi> (ISAAR
+								(CPF) History 5.2.2). The <gi>function</gi> element should be used whenever separate
+								semantic processing of information about functions is required.</p>
+      <p xml:lang="en">As a further alternative, descriptions of functions may form discrete components in an
+								archival descriptive system. Such descriptions should be compiled in accordance with the
+								International Standard for Describing Functions (ISDF) and will typically be described in
+								another encoding language. In such a system, use <gi>functionRelation</gi> to point from
+								the EAC-CPF entity to the related function description. In these systems, the
+									<gi>function</gi> element will probably become redundant.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry,
+							term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, functions</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.5</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:function xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Estate ownership</eac-cpf:term>
+            <eac-cpf:descriptiveNote>Social, political, and cultural role typical of landed aristocracy
+										in England. The first Viscount Campden amassed a large fortune in trade in London and
+										purchased extensive estates, including Exton (Rutland), and Chipping Campden
+										(Gloucestershire). The Barham Court (Kent) estate was the acquisition of the first Baron
+										Barham, a successful admiral and naval administrator (First Lord of the Admiralty
+										1805).</eac-cpf:descriptiveNote>
+         </eac-cpf:function>
+      </egXML>
+   </div>
+</div>

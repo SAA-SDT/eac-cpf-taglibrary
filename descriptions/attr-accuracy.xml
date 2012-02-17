@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="accuracy">
+   <div type="summary">
+      <p xml:lang="en">The accuracy specification for a place statement.</p>
+   </div>
+   <div type="description">
+      <p>Within the <gi>placeEntry</gi> element, this attribute allows for an
+							accuracy specification.</p>
+   </div>
+   <div type="datatype">
+      <p>[text]</p>
+   </div>
+</div>

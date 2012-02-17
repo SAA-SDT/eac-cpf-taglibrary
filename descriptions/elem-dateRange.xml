@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="dateRange">
+   <head>
+      <gi>dateRange</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Date Range</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The date range of an event in the history of, or a relationship with, the
+							person, family, or corporate body being described in the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A generic element that expresses inclusive dates of an event in the history of, or a
+								relationship with, the person, family, or corporate body being described in the EAC-CPF
+								instance. <gi>dateRange</gi> contains mandatory <gi>fromDate</gi> and <gi>toDate</gi>
+								child elements. If the event or relationship has a single date use the <gi>date</gi>
+								element, while more complex dates (combining single dates and date ranges) can be expressed
+								in <gi>dateSet</gi>.</p>
+      <p xml:lang="en">The <att>localType</att> attribute can be used to supply a more specific characterization
+								of the date.</p>
+      <p xml:lang="en">Dates of existence for the identity being described in the EAC-CPF instance are encoded
+								with the <gi>existDates</gi> element, while the dates of use of a particular name of an
+								identity are encoded in <gi>useDates</gi>. The date and time of a maintenance event in the
+								history of the EAC-CPF instance are given in the <gi>eventDateTime</gi> element.</p>
+   </div>
+   <div type="mayContain">
+      <p>fromDate, toDate</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem, cpfRelation, dateSet, existDates, function, functionRelation,
+							legalStatus, localControl, localDescription, mandate, occupation, place, resourceRelation,
+							useDates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:dateRange xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:fromDate standardDate="1765-09-18">September 18, 1765</eac-cpf:fromDate>
+            <eac-cpf:toDate standardDate="1846-06-01">June 1, 1846</eac-cpf:toDate>
+         </eac-cpf:dateRange>
+      </egXML>
+   </div>
+</div>

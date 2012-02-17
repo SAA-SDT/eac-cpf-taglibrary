@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="maintenanceAgency">
+   <head>
+      <gi>maintenanceAgency</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Maintenance Agency</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The institution or service responsible for the creation, maintenance, and/or
+							dissemination of the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A required element within <gi>control</gi> for wrapping information about the
+								institution or service responsible for the creation, maintenance, and/or dissemination of
+								the EAC-CPF instance.</p>
+      <p xml:lang="en">This must include the <gi>agencyName</gi> element and it is recommended to include the
+								optional <gi>agencyCode</gi> and / or <gi>otherAgencyCode</gi> elements as well to
+								unambiguously identify the institution or service. Additional local institutional codes are
+								given in <gi>otherAgencyCode</gi>. Any general information about the institution in
+								relation to the EAC-CPF instance may also be given in a <gi>descriptiveNote</gi>
+								element.</p>
+   </div>
+   <div type="mayContain">
+      <p>agencyCode, agencyName, descriptiveNote, otherAgencyCode</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.2</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:agencyCode>FR-DAF</eac-cpf:agencyCode>
+            <eac-cpf:agencyName>Archives nationales (Paris)</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:otherAgencyCode>GB-058</eac-cpf:otherAgencyCode>
+            <eac-cpf:agencyName>The British Library: Manuscript Collections</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+   </div>
+</div>

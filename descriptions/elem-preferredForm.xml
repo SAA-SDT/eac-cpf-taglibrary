@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="preferredForm">
+   <head>
+      <gi>preferredForm</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Preferred Form of Name</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">An element used to indicate which of the parallel names recorded within
+								<gi>nameEntryParallel</gi>, is the preferred one for display purposes in a given
+							context.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">In cases where parallel names are encoded as multiple <gi>nameEntry</gi> elements within
+									<gi>nameEntryParallel</gi>, a <gi>nameEntry</gi> may be chosen as preferred in a given
+								context. The <gi>preferredForm</gi> element is used only when <gi>nameEntry</gi> occurs
+								within <gi>nameEntryParallel</gi>. It is used only to distinguish the preferred form of
+								the name to be displayed, as compared to the other authorized parallel names recorded in
+								other <gi>nameEntry</gi> elements.</p>
+      <p xml:lang="en">The <gi>preferredForm</gi> element contains an abbreviation of the relevant national,
+								international or other convention or rule applied by a given agency and according to which
+								the name thus qualified is deemed as preferred to the others. The abbreviations expressed in
+									<gi>preferredForm</gi> must be declared within the <gi>conventionDeclaration</gi>
+								element in <gi>control</gi>.</p>
+      <p xml:lang="en">Within <gi>nameEntryParallel</gi>, <gi>preferredForm</gi> may occur simultaneously
+								with <gi>authorizedForm</gi> elements. While the <gi>authorizedForm</gi>, when used
+								within <gi>nameEntryParallel</gi>, qualifies collectively the set of the parallel forms
+								recorded in the separate <gi>nameEntry</gi> elements, the <gi>preferredForm</gi> element
+								is used specifically within the <gi>nameEntry</gi> elements to qualify the preferred
+								form(s) of the name that an agency chooses to display.</p>
+   </div>
+   <div type="mayContain">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry (only when it occurs within nameEntryParallel)</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1.3</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:nameEntryParallel xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:nameEntry xmlns:exml="http://workaround for xml namespace restriction/namespace"
+                               exml:lang="fre"
+                               scriptCode="Latn">
+               <eac-cpf:part>Institut international des droits de l'homme</eac-cpf:part>
+               <eac-cpf:preferredForm>AFNOR_Z44-060</eac-cpf:preferredForm>
+            </eac-cpf:nameEntry>
+            <eac-cpf:nameEntry xmlns:exml="http://workaround for xml namespace restriction/namespace"
+                               exml:lang="eng"
+                               scriptCode="Latn">International institute of human
+										rights</eac-cpf:nameEntry>
+            <eac-cpf:nameEntry xmlns:exml="http://workaround for xml namespace restriction/namespace"
+                               exml:lang="spa"
+                               scriptCode="Latn">
+               <eac-cpf:part>Instituto internacional de derechos humanos</eac-cpf:part>
+            </eac-cpf:nameEntry>
+            <eac-cpf:authorizedForm>AFNOR_Z44-060</eac-cpf:authorizedForm>
+         </eac-cpf:nameEntryParallel>
+      </egXML>
+   </div>
+</div>

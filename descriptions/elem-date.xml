@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="date">
+   <head>
+      <gi>date</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Date</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The single date of an event in the history of, or a relationship with, the
+							person, family, or corporate body being described in the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A generic element expressing the single date of an event in the history of, or a
+								relationship with, the person, family, or corporate body being described in the EAC-CPF
+								instance. If the event or relationship has inclusive dates use the <gi>dateRange</gi>
+								element, while more complex dates (combining singles dates and date ranges) can be expressed
+								in <gi>dateSet</gi>.</p>
+      <p xml:lang="en">The content of the element is intended to be a human-readable natural language date with a
+								machine-readable date provided as the value of the <att>standardDate</att> attribute,
+								formulated according to ISO 8601. Other attributes include <att>notBefore</att> and
+									<att>notAfter</att> for dates of uncertainty. The <att>localType</att> attribute can be
+								used to supply a more specific characterization of the date.</p>
+      <p xml:lang="en">Dates of existence for the entity being described in the EAC-CPF instance are encoded with
+								the <gi>existDates</gi> element, while the dates of use of a particular name of an entity
+								are encoded in <gi>useDates</gi>. The date and time of a maintenance event in the history
+								of the EAC-CPF instance are given in the <gi>eventDateTime</gi> element.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem, cpfRelation, dateSet, existDates, function, functionRelation,
+							legalStatus, localControl, localDescription, mandate, occupation, place, resourceRelation,
+							useDates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>notAfter</label>
+            <item>Optional</item>
+            <label>notBefore</label>
+            <item>Optional</item>
+            <label>standardDate</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:date xmlns:eac-cpf="urn:isbn:1-931666-33-4" standardDate="1765-09-18">September 18, 1765</eac-cpf:date>
+      </egXML>
+   </div>
+</div>

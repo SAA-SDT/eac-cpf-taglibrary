@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="lastDateTimeVerified">
+   <div type="summary">
+      <p xml:lang="en">Last date or date and time the linked resource was verified.</p>
+   </div>
+   <div type="description">
+      <p>The <att>lastDateTimeVerified</att> may occur on <gi>citation</gi>,
+								<gi>cpfRelation</gi>, <gi>functionRelation</gi>, <gi>resourceRelation</gi>,
+								<gi>setComponent</gi>, or <gi>term</gi>. The value of the attribute provides the last
+							date or last date and time when a related (or linked) object was verified. Verification may
+							include link resolution as well as verification of the version of the linked object.</p>
+   </div>
+   <div type="datatype">
+      <p>Union of the XML Schema Datatypes date, gYear, gYearMonth, and dateTime.
+							The following are all valid patterns: 2009-12-31, 2009, 2009-12, 2009-12-31T23:59:59.</p>
+   </div>
+</div>

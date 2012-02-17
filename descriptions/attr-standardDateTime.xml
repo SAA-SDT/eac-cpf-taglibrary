@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="standardDateTime">
+   <div type="summary">
+      <p xml:lang="en">The date or date and time represented in a standard form for computer
+							processing.</p>
+   </div>
+   <div type="description">
+      <p>The <att>standardDateTime</att> may occur on <gi>eventDateTime</gi>.
+							The value of <att>standardDateTime</att> provides a standard form of the date or date and
+							time expressed in the <gi>eventDateTime</gi> that can be used in computer processing. For
+							example, using both the value in <gi>eventType</gi> and <att>standardDateTime</att>, all
+							EAC-CPF instances "revised" on a particular date can be identified.</p>
+   </div>
+   <div type="datatype">
+      <p>Union of the XML Schema Datatypes date, gYear, gYearMonth, and dateTime.
+							The following are all valid patterns: 2009-12-31, 2009, 2009-12, 2009-12-31T23:59:59.</p>
+   </div>
+</div>

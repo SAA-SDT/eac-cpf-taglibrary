@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="publicationStatus">
+   <head>
+      <gi>publicationStatus</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Publication Status</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The current publication status of the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The current publication status of the EAC-CPF instance may be specified in the
+									<gi>publicationStatus</gi> element. If according to local practice the instance is still
+								in the process of being approved for publication, the value should be "inProcess," while if
+								approved for publication, the value should be "approved."</p>
+   </div>
+   <div type="mayContain">
+      <p>"inProcess" or "approved"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.4</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:publicationStatus xmlns:eac-cpf="urn:isbn:1-931666-33-4">inProcess</eac-cpf:publicationStatus>
+      </egXML>
+   </div>
+</div>

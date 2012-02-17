@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="relations">
+   <head>
+      <gi>relations</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Relations</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A wrapper element for grouping one or more specific relations.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A wrapper element that groups together one or more relation elements, each of which
+								denotes a specific relationship. Entities may have relationships with other corporate
+								bodies, persons or families, which may be expressed using <gi>cpfRelation</gi>; functions,
+								which may be expressed using <gi>functionRelation</gi>; or resources such as archival
+								collections, bibliographic resources, or artifacts, which may be expressed using
+									<gi>resourceRelation</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>cpfRelation, functionRelation, resourceRelation</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>The general concept of providing connections from archival authority
+							records to other related resources is stated in ISAAR(CPF) 6.0: "Archival authority records
+							are created primarily to document the context of records creation. To make this documentation
+							useful it is necessary to link the authority records to descriptions of records. Archival
+							authority records can also be linked to other relevant information resources."</p>
+   </div>
+   <div type="occurrence">
+      <p>0…1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:relations xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:cpfRelation>[...]</eac-cpf:cpfRelation>
+            <eac-cpf:functionRelation>[...]</eac-cpf:functionRelation>
+            <eac-cpf:resourceRelation>[...]</eac-cpf:resourceRelation>
+         </eac-cpf:relations>
+      </egXML>
+   </div>
+</div>

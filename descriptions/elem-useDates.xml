@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" n="useDatesInParallel" xml:id="useDates">
+   <head>
+      <gi>useDates</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Date of Use</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The dates when the name or names were used by the entity being described. </p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Within <gi>nameEntry</gi>, <gi>useDates</gi> provides the dates when the name was
+								used. For parallel names, <gi>useDates</gi> may occur in <gi>nameEntryParallel</gi>
+								rather than in the individual <gi>nameEntry</gi> elements contained in
+									<gi>nameEntryParallel</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, dateSet</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry, nameEntryParallel</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1.2 and 5.1.3</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Brown, Bob</eac-cpf:part>
+            <eac-cpf:useDates>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:useDates>
+            <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+         </eac-cpf:nameEntry>
+      </egXML>
+   </div>
+</div>

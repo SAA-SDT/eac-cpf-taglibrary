@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="mandate">
+   <head>
+      <gi>mandate</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Mandate</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The source of authority or mandate for the corporate body in terms of its
+							powers, functions, responsibilities or sphere of activities, such as a law, directive, or
+							charter.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A <gi>mandate</gi> element is a wrapper element used to encode an index term, using the
+								child element, <gi>term</gi>. Terms are used to identify the source of authority or
+								mandate for the corporate body in terms of its powers, functions, responsibilities or sphere
+								of activities, such as a law, directive or charter. Terms may be drawn from controlled
+								vocabularies or may be natural language terms. Associated date or date range
+									(<gi>date</gi>, <gi>dateRange</gi> or <gi>dateSet</gi>) and place(s)
+									(<gi>placeEntry</gi>) may be included to further constrain the term's meaning. A
+									<gi>descriptiveNote</gi> element may be included if a fuller textual explanation is
+								needed.</p>
+      <p xml:lang="en">A single <gi>mandate</gi> element may be encoded directly within <gi>description</gi>.
+								Alternatively, multiple <gi>mandate</gi> elements may be grouped within
+									<gi>mandates</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry,
+							term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, mandates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.6</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:mandate xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1919">1919</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1952">1925</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:citation>Minnesota. Executive Session Laws 1919 c49</eac-cpf:citation>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Board created in 1919 to receive and examine applications for bonuses from
+											Minnesota soldiers.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:mandate>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="languageUsed">
+   <head>
+      <gi>languageUsed</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Language Used</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The language and script used by the entity being described.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">
+         <gi>languageUsed</gi> is an element within <gi>description</gi> used to indicate the
+								language and script in which the entity being described was creative or productive. A
+									<gi>language</gi> element should be used to specify the language and a corresponding
+									<gi>script</gi> element for the script.</p>
+      <p xml:lang="en">Do not confuse with <gi>languageDeclaration</gi> which refers to the language and script
+								of the EAC-CPF instance.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, language, script</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, languagesUsed</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:languageUsed xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+            <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+         </eac-cpf:languageUsed>
+      </egXML>
+   </div>
+</div>

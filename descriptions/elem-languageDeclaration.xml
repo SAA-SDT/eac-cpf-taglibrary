@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="languageDeclaration">
+   <head>
+      <gi>languageDeclaration</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Language Declaration</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The declaration of the predominant language and script used in the EAC-CPF
+							instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A wrapper element within <gi>control</gi> that declares the primary language and script
+								in which an EAC-CPF instance is written in the required <gi>language</gi> and
+									<gi>script</gi> elements. Any comments about the languages and scripts in which the
+								EAC-CPF instance is written may be included in the optional <gi>descriptiveNote</gi>
+								element.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, language, script</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.7</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:languageDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+            <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+         </eac-cpf:languageDeclaration>
+      </egXML>
+   </div>
+</div>

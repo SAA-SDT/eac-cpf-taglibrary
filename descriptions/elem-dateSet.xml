@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="dateSet">
+   <head>
+      <gi>dateSet</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Date Set</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A grouping element that facilitates complex date expressions by being able
+							to combine a set comprising single dates and date ranges, multiple single dates, or multiple
+							date ranges.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A grouping element to combine single dates and date ranges, multiple single dates, or
+								multiple date ranges. The <gi>dateSet</gi> element is used in situations where complex
+								date information needs to be conveyed and requires at least two child elements. These can be
+								a combination of <gi>date</gi> and <gi>dateRange</gi> elements.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfRelation, existDates, function, functionRelation, legalStatus,
+							localDescription, mandate, occupation, place, resourceRelation, useDates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:dateSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1928-09">1928 settembre</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1930-08">1930 autunno</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1947">1947</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1949">1949</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+         </eac-cpf:dateSet>
+      </egXML>
+   </div>
+</div>

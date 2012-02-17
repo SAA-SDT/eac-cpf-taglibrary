@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="chronItem">
+   <head>
+      <gi>chronItem</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Chronological Item</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A container element that keeps a date or a date range paired with an
+							associated event and an optional place within a Chronology List <gi>chronList</gi>.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Each <gi>chronItem</gi> contains a <gi>date</gi> (a single date) or a
+									<gi>dateRange</gi> (an inclusive date span) coupled with an <gi>event</gi>. A
+									<gi>placeEntry</gi> element is optionally available to ground the event in a particular
+								location.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, event, placeEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronList</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.2</p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:chronItem xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:date standardDate="1957">1957</eac-cpf:date>
+            <eac-cpf:event>Left Mer and moved to the mainland. Worked at various jobs including
+										canecutter and railway labourer.</eac-cpf:event>
+         </eac-cpf:chronItem>
+         <eac-cpf:chronItem xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1960">1960</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1961">1961</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:event>Union representative, Townsville-Mount Isa rail construction
+										project.</eac-cpf:event>
+         </eac-cpf:chronItem>
+      </egXML>
+   </div>
+</div>

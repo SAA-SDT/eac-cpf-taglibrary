@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="source">
+   <head>
+      <gi>source</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Source</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A source of evidence used in describing the entity or entities in the
+							EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">An element for identifying a particular source of evidence used in describing the entity
+								or entities. A record for the source must be included in either <gi>objectXMLWrap</gi> or
+									<gi>objectBinWrap</gi>; or as a textual description in the <gi>sourceEntry</gi>
+								element. Use the optional <gi>descriptiveNote</gi> for any additional notes about the
+								source. A <gi>source</gi> in this context should not be confused with the
+									<gi>citation</gi> element which is used in a number of descriptive elements to point to a
+								resource that provides descriptive data which is not otherwise given in the EAC-CPF
+								instance.</p>
+      <p xml:lang="en">A link to the source may be made using the XML Linking Language (Xlink) attributes (for
+								which consult the specification at http://www.w3.org/TR/xlink/) and the last date and time that the source was verified
+								can be given in the <att>lastDateTimeVerified</att> attribute.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, objectBinWrap, objectXMLWrap, sourceEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>sources</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.8</p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:sources xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Principal Family and Estate Collections: Family Names L-W,
+											1999</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Complete Peerage, 1936</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+         </eac-cpf:sources>
+      </egXML>
+   </div>
+</div>

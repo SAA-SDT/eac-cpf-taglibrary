@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="objectXMLWrap">
+   <head>
+      <gi>objectXMLWrap</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Object XML Wrap</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A place for incorporating XML elements from any XML namespace.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">This element provides a place to express data in another XML encoding language. While the
+								element is not restricted with respect to namespace, to facilitate interoperability, the XML
+								should conform to an open, standard XML schema and a namespace attribute should be present
+								on the root element referencing the namespace of the standard.</p>
+   </div>
+   <div type="mayContain">
+      <p>any element from any namespace</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfRelation, functionRelation, resourceRelation, setComponent,
+							source</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:objectXMLWrap xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <mods:mods xmlns:mods="http://www.loc.gov/mods/v3"
+                       xmlns:xsi="http://www..w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="http://www.loc.gov/mods/v3/mods-3-3.xsd">
+               <mods:titleInfo>
+                  <mods:title>Artisti trentini tra le due guerre</mods:title>
+               </mods:titleInfo>
+               <mods:name>
+                  <mods:namePart type="given">Nicoletta</mods:namePart>
+                  <mods:namePart type="family">Boschiero</mods:namePart>
+                  <mods:role>
+                     <mods:roleTerm type="text">autore</mods:roleTerm>
+                  </mods:role>
+               </mods:name>
+            </mods:mods>
+         </eac-cpf:objectXMLWrap>
+      </egXML>
+   </div>
+</div>

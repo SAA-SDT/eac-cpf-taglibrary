@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="alternativeSet">
+   <head>
+      <gi>alternativeSet</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Alternative Set</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A container element for two or more authority records derived from two or
+							more authority systems, expressed within a single EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Alternative Set is a container element for two or more authority records derived from two
+								or more authority systems. Alternative authority records are contained with
+									<gi>alternativeSet</gi> in <gi>setComponent</gi> elements. This device allows different
+								descriptions of the same entity to be contained within a single EAC-CPF instance.</p>
+      <p xml:lang="en">Authority record aggregation may be used in cooperative or consortial contexts that gather
+								together records describing the same entity in different languages, or from different rules
+								when it is desirable to provide users with alternative descriptions of the same entity. For
+								example, in the context of the European Union, an international cooperative project may want
+								to provide users the option of descriptions in Italian, French, German, English, Spanish,
+								and in other European languages.</p>
+      <p xml:lang="en">
+         <gi>alternativeSet</gi> should not be confused with <gi>sources</gi>, wherein authority
+								records referenced are not intended to be displayed as alternative versions.</p>
+   </div>
+   <div type="mayContain">
+      <p>setComponent</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xlink:href="http://authorities.loc.gov/"
+                                  xlink:type="simple">
+               <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xlink:href="http://nla.gov.au/anbd.aut-an35335937"
+                                  xlink:type="simple">
+               <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink" lastDateTimeVerified="2009-08-02"
+                                  xlink:href="mawsonBS.xml"
+                                  xlink:type="simple">
+               <eac-cpf:objectXMLWrap>
+                  <eac-cpf/>
+               </eac-cpf:objectXMLWrap>
+            </eac-cpf:setComponent>
+         </eac-cpf:alternativeSet>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="abbreviation">
+   <head>
+      <gi>abbreviation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Abbreviation</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The <gi>abbreviation</gi> element contains an abbreviation or code for
+							identifying a thesauri, controlled vocabularies, or other standard used in formulating and
+							compiling the EAC-CPF description.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The <gi>abbreviation</gi> element contains an abbreviation or code for identifying a
+								thesauri, controlled vocabularies, or other standard used in formulating and compiling the
+								EAC-CPF description. It is recommended that the value be selected from an authorized list of
+								codes. An example of such a list may be the MARC Code List (http://www.loc.gov/marc/relators/reladesc.html).</p>
+   </div>
+   <div type="mayContain">
+      <p>[token]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>conventionDeclaration, localTypeDeclaration</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:conventionDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:abbreviation>RICA</eac-cpf:abbreviation>
+            <eac-cpf:citation>RICA (Regole italiane di catalogazione per autore)</eac-cpf:citation>
+         </eac-cpf:conventionDeclaration>
+      </egXML>
+   </div>
+</div>

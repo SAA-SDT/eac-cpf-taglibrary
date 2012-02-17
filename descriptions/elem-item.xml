@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="item">
+   <head>
+      <gi>item</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Item</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A formatting element that encodes the individual entries comprising
+							lists.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The <gi>item</gi> element is used for general lists within descriptive elements and
+								within levels in an outline. Do not confuse with <gi>chronItem</gi>, which encodes entries
+								within a structured chronology, <gi>chronList</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text], span</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>level, list</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:list xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">1450-1950</eac-cpf:span>
+										(1929)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Globe Gliding</eac-cpf:span>
+										(1930)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Gems</eac-cpf:span> (1931) </eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Words</eac-cpf:span>
+										(1931)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Demonics</eac-cpf:span> (1931)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Can We Co-operate</eac-cpf:span>
+										(1942)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Amazing Amazon</eac-cpf:span> (1942)
+									</eac-cpf:item>
+         </eac-cpf:list>
+         <eac-cpf:outline xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:level>
+               <eac-cpf:item>I.</eac-cpf:item>
+            </eac-cpf:level>
+            <eac-cpf:level>
+               <eac-cpf:item>II.</eac-cpf:item>
+               <eac-cpf:level>
+                  <eac-cpf:item>A.</eac-cpf:item>
+               </eac-cpf:level>
+               <eac-cpf:level>
+                  <eac-cpf:item>B.</eac-cpf:item>
+                  <eac-cpf:level>
+                     <eac-cpf:item>1.</eac-cpf:item>
+                  </eac-cpf:level>
+                  <eac-cpf:level>
+                     <eac-cpf:item>2.</eac-cpf:item>
+                  </eac-cpf:level>
+               </eac-cpf:level>
+            </eac-cpf:level>
+         </eac-cpf:outline>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="descriptiveNote">
+   <head>
+      <gi>descriptiveNote</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Descriptive Note</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A generic element that provides additional information and specifications,
+							in textual form, concerning the descriptive element in which it is contained.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A generic element available in a number of descriptive elements which can be used to
+								provide any additional descriptive notes that might be appropriate. Notes must be contained
+								in paragraphs (<gi>p</gi>) and any necessary formatting may be indicated by use of the
+									<gi>span</gi> element within <gi>p</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>conventionDeclaration, cpfRelation, existDates, function,
+							functionRelation, functions, identity, languageDeclaration, languageUsed, languagesUsed,
+							legalStatus, legalStatuses, localDescription, localDescriptions, localTypeDeclaration,
+							maintenanceAgency, mandate, mandates, occupation, occupations, place, places,
+							resourceRelation, setComponent, source</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:source xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns:xlink="http://www.w3c.org/1999/xlink"
+                         xlink:href="http://www.icacds.org.uk/eng/ISAAAR(CPF)2ed.pdf"
+                         xlink:type="simple">
+            <eac-cpf:sourceEntry>ISAAAR(CPF)</eac-cpf:sourceEntry>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Record created based on ISAAR(CPF) 2nd ed Example 5 - Person
+											description</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:source>
+      </egXML>
+   </div>
+</div>

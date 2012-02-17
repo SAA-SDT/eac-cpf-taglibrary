@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="legalStatuses">
+   <head>
+      <gi>legalStatuses</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Legal Statuses</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A grouping element used to bundle together individual <gi>legalStatus</gi>
+							elements.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Use the optional <gi>legalStatuses</gi> to group together one or more occurrences of
+									<gi>legalStatus</gi> so that they can be manipulated as a package. A single
+									<gi>legalStatus</gi> may stand alone or may be wrapped within
+								<gi>legalStatuses</gi>.</p>
+      <p xml:lang="en">The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the legal statuses
+								being described. A simpler discursive expression of the legal statuses may be encoded as one
+								or more <gi>p</gi> elements.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, legalStatus, list, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.4</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:legalStatuses xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>Private limited liability company</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1941">1941</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1948">1948</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:legalStatus>
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>Public limited liability company</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1948">1948</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="2006">2006</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:legalStatus>
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>Private limited liability company</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="2006">2006</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="2008">2008</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:legalStatus>
+         </eac-cpf:legalStatuses>
+         <eac-cpf:legalStatuses xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>EPIC</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate notBefore="1946-04">avril 1946</eac-cpf:fromDate>
+                  <eac-cpf:toDate notAfter="2004-11">novembre 2004</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:descriptiveNote>
+                  <eac-cpf:p>Établissement public à caractère industriel et commercial</eac-cpf:p>
+               </eac-cpf:descriptiveNote>
+            </eac-cpf:legalStatus>
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>SA</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate notBefore="2004-11">novembre 2004</eac-cpf:fromDate>
+                  <eac-cpf:toDate/>
+               </eac-cpf:dateRange>
+               <eac-cpf:descriptiveNote>
+                  <eac-cpf:p>Société anonyme à capitaux publics</eac-cpf:p>
+               </eac-cpf:descriptiveNote>
+            </eac-cpf:legalStatus>
+         </eac-cpf:legalStatuses>
+      </egXML>
+   </div>
+</div>

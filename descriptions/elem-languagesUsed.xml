@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="languagesUsed">
+   <head>
+      <gi>languagesUsed</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Languages Used</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A grouping element used to bundle together individual
+								<gi>languageUsed</gi> elements.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Use the optional <gi>languagesUsed</gi> element to group together one or more
+								occurrences of <gi>languageUsed</gi> so that they can be manipulated as a package. A
+								single <gi>languageUsed</gi> may be alone or may be wrapped within
+									<gi>languagesUsed</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, languageUsed</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:languagesUsed xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:languageUsed>
+               <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+               <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+            </eac-cpf:languageUsed>
+            <eac-cpf:languageUsed>
+               <eac-cpf:language languageCode="spa">Spanish</eac-cpf:language>
+               <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+            </eac-cpf:languageUsed>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Published works in English and Spanish.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:languagesUsed>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="agencyName">
+   <head>
+      <gi>agencyName</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Agency Name</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The name of the institution or service responsible for the creation,
+							maintenance, and/or dissemination of the EAC-CPF instance.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A mandatory element of <gi>maintenanceAgency</gi> within <gi>control</gi> that
+								provides the name of the institution or service responsible for the creation, maintenance
+								and/or dissemination of the EAC-CPF instance.</p>
+      <p xml:lang="en">It is recommended that one uses the form of the agency name that is authorized by an
+								appropriate national or international agency or service.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceAgency</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.2</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
+            <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+   </div>
+</div>

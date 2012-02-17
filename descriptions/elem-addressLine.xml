@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="addressLine">
+   <head>
+      <gi>addressLine</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Address Line</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">One line of a postal or other address</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">A required element in <gi>address</gi>, <gi>addressLine</gi> element is used to encode
+								one line of a postal or other address. <gi>addressLine</gi> may be repeated as many times
+								as necessary to encompass all available lines of an address related to the entity being
+								described.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>address</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) </p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>siege social</eac-cpf:placeRole>
+            <eac-cpf:address>
+               <eac-cpf:addressLine localType="voie">2 rue Corneille</eac-cpf:addressLine>
+               <eac-cpf:addressLine localType="city">Paris</eac-cpf:addressLine>
+               <eac-cpf:addressLine localType="postalcode">75006</eac-cpf:addressLine>
+               <eac-cpf:addressLine>France</eac-cpf:addressLine>
+            </eac-cpf:address>
+         </eac-cpf:place>
+      </egXML>
+   </div>
+</div>

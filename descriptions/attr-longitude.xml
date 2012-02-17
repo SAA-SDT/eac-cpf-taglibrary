@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="longitude">
+   <div type="summary">
+      <p xml:lang="en">The longitude of the place.</p>
+   </div>
+   <div type="description">
+      <p>The <att>longitude</att> may occur on <gi>place</gi>. The value of the
+							attribute is the geographic longitude of the place named. <att>longitude</att> should be used
+							in conjunction with <att>latitude</att> and <att>altitude</att>.</p>
+   </div>
+   <div type="datatype">
+      <p>NMTOKEN</p>
+   </div>
+</div>

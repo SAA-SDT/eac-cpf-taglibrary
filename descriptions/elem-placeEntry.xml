@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="placeEntry">
+   <head>
+      <gi>placeEntry</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Place Entry</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">An element used in both the description and relations areas to encode
+							information about the place or jurisdiction where the EAC-CPF entity was based, lived, or
+							with which it had some other significant connection.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Places should be identified by the proper noun that commonly designates the place, natural
+								feature, or political jurisdiction. It is recommended that place names be taken from
+								authorized vocabularies. Within <gi>place</gi>, a companion <gi>placeRole</gi> is
+								strongly recommended to describe the nature of the association of the place to the
+								entity.</p>
+      <p xml:lang="en">
+         <att>latitude</att>, <att>longitude</att>, and <att>altitude</att> attributes are
+								available for specific geographical data. The <att>accuracy</att> attribute may be used to
+								indicate uncertainty. The <att>vocabularySource</att> attribute may be used to indicate the
+								controlled vocabulary from which the <gi>placeEntry</gi> term is derived.</p>
+      <p xml:lang="en">The <gi>placeEntry</gi> element is repeatable. It is strongly recommended that within
+									<gi>place</gi>, the <gi>placeEntry</gi> element be repeated only to represent the same
+								place name in various languages, with an accompanying <att>xml:lang</att> attribute.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem, cpfRelation, function, functionRelation, legalStatus,
+							localDescription, mandate, occupation, place, resourceRelation</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>accuracy</label>
+            <item>Optional</item>
+            <label>altitude</label>
+            <item>Optional</item>
+            <label>countryCode</label>
+            <item>Optional</item>
+            <label>latitude</label>
+            <item>Optional</item>
+            <label>localType</label>
+            <item>Optional</item>
+            <label>longitude</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>vocabularySource</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeEntry>Paris, France</eac-cpf:placeEntry>
+            <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+         </eac-cpf:place>
+      </egXML>
+   </div>
+</div>

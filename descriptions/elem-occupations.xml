@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="occupations">
+   <head>
+      <gi>occupations</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Occupations</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">A grouping element used to bundle together individual <gi>occupation</gi>
+							elements.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Use the optional <gi>occupations</gi> element to group together one or more occurrences
+								of <gi>occupation</gi> so that they can be manipulated as a package. A single
+									<gi>occupation</gi> may stand alone or may be wrapped within <gi>occupations</gi>.</p>
+      <p xml:lang="en">The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the occupations being
+								described. A simpler discursive expression of the occupations may be encoded as one or more
+									<gi>p</gi> elements.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, list, occupation, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.5</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:occupations xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:occupation>
+               <eac-cpf:term>Teacher</eac-cpf:term>
+            </eac-cpf:occupation>
+            <eac-cpf:occupation>
+               <eac-cpf:term>Railway labourer</eac-cpf:term>
+            </eac-cpf:occupation>
+         </eac-cpf:occupations>
+      </egXML>
+   </div>
+</div>

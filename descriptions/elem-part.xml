@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="part">
+   <head>
+      <gi>part</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Part</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">
+         <gi>part</gi> is used to distinguish components of the name of the entity.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Within <gi>nameEntry</gi> each of the component parts of a name, such as forename,
+								surname, honorific title, may be recorded in a separate <gi>part</gi> element.
+									<gi>part</gi> may also contain the full name of the entity when it is not possible to
+								distinguish the different component parts of the name. The <gi>useDates</gi> element
+								should be used for any date information associated with the name.</p>
+      <p xml:lang="en">The designation of the information contained in the <gi>part</gi> can be specified by
+								the attribute <att>localType</att>.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part localType="surname">Lemoyne</eac-cpf:part>
+            <eac-cpf:part localType="forename">Francois</eac-cpf:part>
+            <eac-cpf:authorizedForm>AFNOR</eac-cpf:authorizedForm>
+         </eac-cpf:nameEntry>
+      </egXML>
+   </div>
+</div>

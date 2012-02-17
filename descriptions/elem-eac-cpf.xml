@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="elementDocumentation" xml:id="eac-cpf">
+   <head>
+      <gi>eac-cpf</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Encoded Archival Context - Corporate Bodies, Persons, and Families</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">The <gi>eac-cpf</gi> is the root element and as such contains contains the
+							entire EAC-CPF description of the person, corporate body, or family. It contains a required
+								<gi>control</gi> followed by either a <gi>cpfDescription</gi> or a
+								<gi>multipleIdentities</gi> element.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">The outermost wrapper element that defines a particular instance of an archival authority
+								record encoded with the EAC-CPF XML Schema. It contains a required <gi>control</gi> and
+								either a <gi>cpfDescription</gi> or a <gi>multipleIndentities</gi> element.</p>
+   </div>
+   <div type="mayContain">
+      <p>control, cpfDescription, multipleIdentities</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <eac-cpf:eac-cpf xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:control>[...]</eac-cpf:control>
+            <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
+         </eac-cpf:eac-cpf>
+         <eac-cpf:eac-cpf xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:control>[...]</eac-cpf:control>
+            <eac-cpf:multipleIdentities>
+               <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
+               <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
+            </eac-cpf:multipleIdentities>
+         </eac-cpf:eac-cpf>
+      </egXML>
+   </div>
+</div>

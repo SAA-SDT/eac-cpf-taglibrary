@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div type="attributeDocumentation" xml:id="xlinkTitle">
+   <div type="summary">
+      <p xml:lang="en">Information that may be used as a viewable caption for the remote
+							resource.</p>
+   </div>
+   <div type="description">
+      <p>Information that serves as a viewable caption that indicates the name or
+							type of the linked remote source.</p>
+   </div>
+   <div type="datatype">
+      <p>string</p>
+   </div>
+</div>
