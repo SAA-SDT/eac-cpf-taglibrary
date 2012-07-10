@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng"
+					type="xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+	xmlns:exml="http://workaround for xml namespace restriction/namespace"
+	xmlns:xlink="http://www.w3c.org/1999/xlink">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Encoded Archival Context&#x2014;Corporate Bodies, Persons, and Families (EAC-CPF) Tag
+					Library</title>
+				<respStmt>
+					<resp>Prepared and maintained by the </resp>
+					<name>Encoded Archival Context Working Group (EACWG) of the Society of American
+						Archivists</name>
+				</respStmt>
+			</titleStmt>
+			<editionStmt>
+				<edition>Draft</edition>
+			</editionStmt>
+			<publicationStmt>
+				<publisher>Society of American Archivists in collaboration with Staatsbibliothek zu
+					Berlin.</publisher>
+				<date when="2010"/>
+				<idno type="ISBN">123456789</idno>
+			</publicationStmt>
+			<sourceDesc>
+				<p>Born digital.</p>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<front></front>
+		<body>
+			<ab></ab>
+		</body>
+		<back></back>
+	</text>
+</TEI>
