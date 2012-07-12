@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+    xmlns:fo="http://www.w3.org/1999/XSL/Format" 
+    xmlns:eac-cpf="urn:isbn:1-931666-33-4"
     xmlns:ex="http://www.tei-c.org/ns/Examples"
     xmlns:exml="http://workaround for xml namespace restriction/namespace"
-    xmlns:xlink="http://www.w3c.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xlink="http://www.w3c.org/1999/xlink" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:example="example" exclude-result-prefixes="xs xlink eac-cpf ex exml example"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
     <xsl:output indent="yes"/>
     <!--xmlns:mods="http://www.loc.gov/mods/v3"-->
-    <!-- TEst -->
+    <!-- Test -->
 
     <xsl:variable name="currentLanguage">en</xsl:variable>
     <!-- xml:lang from taglibrary -->
@@ -853,7 +856,8 @@
         </fo:block>
     </xsl:template>
 
-    <xsl:template match="tei:div[@type='examples']"><!-- Hur få bort tagen egXML???? -->
+    <xsl:template match="tei:div[@type='examples']"><!-- Hur få bort taggen egXML???? -->
+<!--        <xsl:apply-templates/>-->
         <fo:list-block provisional-distance-between-starts="40mm">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
@@ -873,7 +877,7 @@
                         <xsl:call-template name="newLine"/>
                         <xsl:for-each select="*">
                             <fo:block>
-                                <!--<xsl:text>&#x20;</xsl:text>-->
+                               <!--<xsl:text>&#x20;</xsl:text>-->
                                 <!--<xsl:apply-templates mode="escape"/>-->
                                 <xsl:call-template name="eg"/>
                                 <xsl:call-template name="newLine"/>
@@ -887,7 +891,50 @@
 
     <xsl:template name="eg">
         <xsl:choose>
-            <xsl:when test="name()='ex:egXML'"/>
+           <xsl:when test="name()!='eac-cpf:objectXMLWrap'">
+               <!-- Here we should get the transformation to ignore the egXML-tag!!!!  -->
+                <fo:block>
+                    <xsl:call-template name="newLine"/>
+                    <xsl:text>&lt;</xsl:text>
+                    <xsl:value-of select="local-name()"/>
+                    <xsl:for-each select="@*">
+                        <xsl:text>&#x20;</xsl:text>
+                        <xsl:choose>
+                            <xsl:when
+                                test="namespace-uri()='http://workaround for xml namespace restriction/namespace'">
+                                <xsl:text>xml:</xsl:text>
+                                <xsl:value-of select="local-name()"/>
+                            </xsl:when>
+                            <xsl:when test="namespace-uri()='http://www.w3c.org/1999/xlink'">
+                                <xsl:text>xlink:</xsl:text>
+                                <xsl:value-of select="local-name()"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="local-name()"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:text>="</xsl:text>
+                        <xsl:value-of select="."/>
+                        <xsl:text>"</xsl:text>
+                    </xsl:for-each>
+                    <xsl:text>&gt;</xsl:text>
+                    <xsl:apply-templates select="* | text()"/>
+                    <xsl:text>&lt;/</xsl:text>
+                    <xsl:value-of select="local-name()"/>
+                    <xsl:text>&gt;</xsl:text>
+                    <xsl:call-template name="newLine"/>
+                </fo:block>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="objectXMLWrap"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <xsl:template name="egWithVariable">
+        <xsl:param name="newTree"/>
+<!--        <xsl:value-of select="."/>-->
+        <xsl:choose>
             <xsl:when test="name()!='eac-cpf:objectXMLWrap'">
                 <fo:block>
                     <xsl:call-template name="newLine"/>
