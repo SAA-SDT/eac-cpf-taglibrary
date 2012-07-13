@@ -513,7 +513,7 @@
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="tei:div[@type='attributesDocumentation']">
+    <xsl:template match="tei:div[@type='attributes' and parent::tei:body]">
         <fo:block font-family="Times" font-size="24pt" font-weight="bold" space-before="18pt"
             space-after="12pt" text-align="left" page-break-before="always" id="{generate-id(.)}">
             <fo:marker marker-class-name="taglibrary-head">
@@ -931,49 +931,6 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template name="egWithVariable">
-        <xsl:param name="newTree"/>
-<!--        <xsl:value-of select="."/>-->
-        <xsl:choose>
-            <xsl:when test="name()!='eac-cpf:objectXMLWrap'">
-                <fo:block>
-                    <xsl:call-template name="newLine"/>
-                    <xsl:text>&lt;</xsl:text>
-                    <xsl:value-of select="local-name()"/>
-                    <xsl:for-each select="@*">
-                        <xsl:text>&#x20;</xsl:text>
-                        <xsl:choose>
-                            <xsl:when
-                                test="namespace-uri()='http://workaround for xml namespace restriction/namespace'">
-                                <xsl:text>xml:</xsl:text>
-                                <xsl:value-of select="local-name()"/>
-                            </xsl:when>
-                            <xsl:when test="namespace-uri()='http://www.w3c.org/1999/xlink'">
-                                <xsl:text>xlink:</xsl:text>
-                                <xsl:value-of select="local-name()"/>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="local-name()"/>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                        <xsl:text>="</xsl:text>
-                        <xsl:value-of select="."/>
-                        <xsl:text>"</xsl:text>
-                    </xsl:for-each>
-                    <xsl:text>&gt;</xsl:text>
-                    <xsl:apply-templates select="* | text()"/>
-                    <xsl:text>&lt;/</xsl:text>
-                    <xsl:value-of select="local-name()"/>
-                    <xsl:text>&gt;</xsl:text>
-                    <xsl:call-template name="newLine"/>
-                </fo:block>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:call-template name="objectXMLWrap"/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
 
     <xsl:template match="eac-cpf:*|example:*">
         <xsl:variable name="myDepth"
