@@ -133,7 +133,8 @@
     </xsl:template>
 
     <xsl:template match="tei:front" mode="toclong">
-        <xsl:if test="tei:div[@xml:lang=$currentLanguage]">
+        <!--<xsl:if test="tei:div[@xml:lang=$currentLanguage]">-->
+            <xsl:for-each select="tei:div[@xml:lang=$currentLanguage]/tei:div">
         <xsl:for-each select="tei:div/tei:div">
             <fo:block
                 font-family="Times"
@@ -144,18 +145,19 @@
                 text-align="left"
                 >
                 <fo:inline>
-                <fo:basic-link internal-destination="{@xml:id}"><xsl:value-of select="tei:head"/></fo:basic-link>
+                <fo:basic-link internal-destination="{generate-id(.)}"><xsl:value-of select="tei:head"/></fo:basic-link>
                 </fo:inline>
             </fo:block>
             <xsl:for-each select="tei:div">
                 <fo:block start-indent="10pt">
                     <fo:inline>
-                        <fo:basic-link internal-destination="{@xml:id}"><xsl:value-of select="tei:head"/></fo:basic-link>
+                        <fo:basic-link internal-destination="{generate-id(.)}"><xsl:value-of select="tei:head"/></fo:basic-link>
                     </fo:inline>
                 </fo:block>
             </xsl:for-each>
         </xsl:for-each>
-        </xsl:if>
+        </xsl:for-each>
+       <!-- </xsl:if>-->
     </xsl:template>
     
     <xsl:template match="tei:front" mode="tocshort">
@@ -172,7 +174,7 @@
                 <fo:inline>
                     <xsl:value-of select="tei:head"/>
                     <fo:leader leader-pattern="dots"/>
-                    <fo:page-number-citation ref-id="{@xml:id}"/>
+                    <fo:page-number-citation ref-id="{generate-id(.)}"/>
                 </fo:inline>
             </fo:block>
             <xsl:for-each select="tei:div">
@@ -181,7 +183,7 @@
                     <fo:inline>
                         <xsl:value-of select="tei:head"/>
                         <fo:leader leader-pattern="dots"/>
-                        <fo:page-number-citation ref-id="{@xml:id}"/>
+                        <fo:page-number-citation ref-id="{generate-id(.)}"/>
                     </fo:inline>
                 </fo:block>
             </xsl:for-each>
@@ -248,6 +250,7 @@
     </xsl:template>
 
     <xsl:template match="tei:body | tei:back" mode="toclong">
+        <!-- Selection of languages needed? -->
         <xsl:for-each select="tei:div">
             <xsl:choose>
                 <xsl:when test="@type='elements'">
@@ -264,7 +267,7 @@
                     <fo:block>
                         <xsl:for-each select="tei:div[@type='element']">
                         <fo:inline>
-                            <fo:basic-link internal-destination="{@xml:id}"><xsl:value-of select="tei:head[@type='tag']/tei:tag"/></fo:basic-link>
+                            <fo:basic-link internal-destination="{generate-id(.)}"><xsl:value-of select="tei:head[@type='tag']/tei:tag"/></fo:basic-link>
                         </fo:inline>
                         </xsl:for-each>
                     </fo:block>
@@ -281,7 +284,7 @@
                     <fo:block>
                     <xsl:for-each select="tei:div[@type='attribute']">
                         <fo:inline>
-                            <fo:basic-link internal-destination="{@xml:id}"><xsl:value-of select="tei:head[@type='attribute']/tei:att"/></fo:basic-link>
+                            <fo:basic-link internal-destination="{generate-id(.)}"><xsl:value-of select="tei:head[@type='attribute']/tei:att"/></fo:basic-link>
                         </fo:inline>
                     </xsl:for-each>
                     </fo:block>
@@ -295,7 +298,7 @@
                         space-after="6pt"
                         text-align="left">
                         <fo:inline>
-                            <fo:basic-link internal-destination="{@xml:id}"><xsl:value-of select="tei:head"/></fo:basic-link>
+                            <fo:basic-link internal-destination="{generate-id(.)}"><xsl:value-of select="tei:head"/></fo:basic-link>
                         </fo:inline>
                     </fo:block>
                 </xsl:when>
@@ -319,7 +322,7 @@
                         <fo:inline>
                             <xsl:text>Elements</xsl:text>
                             <fo:leader leader-pattern="dots"/>
-                            <fo:page-number-citation ref-id="{@xml:id}"/>
+                            <fo:page-number-citation ref-id="{generate-id(.)}"/>
                         </fo:inline>
                     </fo:block>
                 </xsl:when>
@@ -335,7 +338,7 @@
                         <fo:inline>
                             <xsl:text>Attributes</xsl:text>
                             <fo:leader leader-pattern="dots"/>
-                            <fo:page-number-citation ref-id="{@xml:id}"/>
+                            <fo:page-number-citation ref-id="{generate-id(.)}"/>
                         </fo:inline></fo:block>
                 </xsl:when>
                 <xsl:when test="@type='appendix'">
@@ -350,7 +353,7 @@
                         <fo:inline>
                             <xsl:value-of select="tei:head"/>
                             <fo:leader leader-pattern="dots"/>
-                            <fo:page-number-citation ref-id="{@xml:id}"/>
+                            <fo:page-number-citation ref-id="{generate-id(.)}"/>
                         </fo:inline></fo:block>
                 </xsl:when>
             </xsl:choose>
@@ -367,7 +370,7 @@
     <xsl:template match="tei:front/tei:div/tei:div">
         <fo:block
             page-break-before="always"
-            id="{@xml:id}">
+            id="{generate-id(.)}">
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
                     <xsl:value-of select="tei:head"/>
@@ -378,7 +381,7 @@
     </xsl:template>
 
     <xsl:template match="tei:front/tei:div/tei:div/tei:div">
-        <fo:block id="{@xml:id}"/>
+        <fo:block id="{generate-id(.)}"/>
         <xsl:apply-templates/>
     </xsl:template>
 
@@ -446,7 +449,7 @@
             space-after="12pt"
             text-align="left"
             page-break-before="always"
-            id="{@xml:id}"
+            id="{generate-id(.)}"
             >
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
@@ -464,7 +467,7 @@
                 space-after="12pt"
                 text-align="left"
                 page-break-before="always"
-                id="{@xml:id}">
+                id="{generate-id(.)}">
                 <fo:marker marker-class-name="taglibrary-head">
                     <fo:block><xsl:text>&lt;</xsl:text>
                         <xsl:value-of select="tei:head[@type='tag']/tei:tag"/>
@@ -491,7 +494,7 @@
             space-after="12pt"
             text-align="left"
             page-break-before="always"
-            id="{@xml:id}">
+            id="{generate-id(.)}">
             
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
@@ -510,7 +513,7 @@
                 space-after="12pt"
                 text-align="left"
                 page-break-before="always"
-                id="{@xml:id}">
+                id="{generate-id(.)}">
                 <fo:marker marker-class-name="taglibrary-head">
                     <fo:block>
                         <xsl:text>@</xsl:text>
@@ -757,7 +760,7 @@
             space-before="18pt"
             space-after="12pt"
             text-align="left"
-            page-break-before="always" id="{@xml:id}">  
+            page-break-before="always" id="{generate-id(.)}">  
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
                     <xsl:text>Appendix </xsl:text><xsl:value-of select="@n"/>
