@@ -1,0 +1,13 @@
+<div type="attributeDocumentation" xml:id="attributeName">
+   <!-- @type is always attributeDocumentation
+      @xml:id is the name of the attribute-->
+   <div type="summary">
+      <p xml:lang="en">A summary</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Description <gi>For creating anglebrackets</gi></p>
+   </div>
+   <div type="datatype">
+      <p>State the datatype</p>
+   </div>
+</div>

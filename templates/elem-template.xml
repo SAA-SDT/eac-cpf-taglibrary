@@ -1,0 +1,56 @@
+<div type="elementDocumentation" xml:id="elementName">
+   <!-- @type is always elementDocumentation
+      @xml:id is the name of the element-->
+   <head>
+      <gi>name as in XML</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="en">Fullname</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="en">Summary</p>
+   </div>
+   <div type="description">
+      <p xml:lang="en">Description you can use <gi>to get anglebrackets</gi></p>
+   </div>
+   <div type="mayContain">
+      <p>Can contain for example [text] or elementA</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>In which elements?</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="en">
+         <list type="gloss">
+            <!-- Repeatable -->
+            <label>Attribute name</label>
+            <item>Occurances</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>Reference to standard paragraph</p>
+   </div>
+   <div type="occurrence">
+      <p>Can occur?</p>
+   </div>
+   <div type="examples">
+      <egXML>
+         <!-- Area for creating examples. Each starting element need to have the xmlns: attribute
+              and after that just add all example XML-->
+         <!-- Exampele for demonstration from EAC-CPF -->
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>created</eac-cpf:eventType>
+            <eac-cpf:eventDateTime>1993-10-20</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>McCarthy, G.J.</eac-cpf:agent>
+         </eac-cpf:maintenanceEvent>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>revised</eac-cpf:eventType>
+            <eac-cpf:eventDateTime>2006-08-01</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>machine</eac-cpf:agentType>
+            <eac-cpf:agent>BSConverta</eac-cpf:agent>
+         </eac-cpf:maintenanceEvent>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:exml="http://workaround for xml namespace restriction/namespace"
+     xmlns:xlink="http://www.w3c.org/1999/xlink"
+     xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+            <respStmt>
+               <resp>Prepared and maintained by the </resp>
+               <name>Name</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition>Edition</edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Society of American Archivists</publisher>
+            <date when="2013"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Born digital.</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <titlePage>
+            <docTitle>
+               <titlePart type="main">Document full title</titlePart>
+            </docTitle>
+            <docEdition>Version 2010 (initial release)</docEdition>
+            <byline>Prepared and maintained by the</byline>
+            <docAuthor>Writer</docAuthor>
+            <docAuthor>Writer</docAuthor>
+            <docImprint>
+               <docDate>Date of the document</docDate>
+            </docImprint>
+         </titlePage>
+         <div>
+            <!-- Descriptive chapters
+            Consists of a wrapper <div> with the elements:
+            <head> for the title
+            <p>'s for the text
+            <div> for creating next level titles
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"> for examples
+            
+            In text these elements are possible:
+            <ref> with @target for e-mail, webbpage and so on
+            <tag> with text to create anglebrakets
+            <att> with text to create attributes
+            
+            Possible elements in each <p>:
+            <list type="ordered"> for ordered list 
+               the list contains:
+               <head> for title
+               <item n="number"> for the text and where @number is the ordered number (same number cant occur twice)
+            <list type="simple"> for a simple list
+               the list contains:
+               <item> for the text
+            -->
+            <head>Title</head>
+            <p>Text</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples"/>
+         </div>
+      </front>
+      <body>
+         <div type="elements">
+            <!-- One include for each element href points to the element file -->
+            <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+                        href="./descriptions/elem-abbreviation.xml"/>
+         </div>
+         <div type="attributes">
+            <!-- One include for each attribute href points to the element file -->
+            <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+                        href="./descriptions/attr-accuracy.xml"/>
+         </div>
+      </body>
+      <back>
+         <!-- One div for each element same element available as for div in front
+            in the div:
+               @type is always appendix
+               @xml:id is a short name of the appendix
+         -->
+         <div type="appendix" xml:id="appendix1">
+            <head>Title</head>
+            <p>Here you can have list p's and so on</p>
+         </div>
+      </back>
+   </text>
+</TEI>
