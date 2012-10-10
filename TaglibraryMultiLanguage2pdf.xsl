@@ -22,12 +22,12 @@
                 <fo:simple-page-master master-name="Taglibrary"
                     page-height="29.7cm"
                     page-width="21cm"
-                    margin-top="2.5cm"    
-                    margin-bottom="2.5cm"
+                    margin-top="1.5cm"    
+                    margin-bottom="1.5cm"
                     margin-left="2.5cm"
                     margin-right="1.5cm">
                     <fo:region-body
-                        margin-top="2.4cm"      margin-bottom="0cm"   
+                        margin-top="2.0cm"      margin-bottom="2.0cm"   
                         margin-left="0cm"       margin-right="0cm"
                         column-count="1"/>
                     <fo:region-before 
@@ -243,11 +243,21 @@
             font-weight="bold"
             space-before="8pt"
             space-after="6pt"
-            text-align="center"
-            page-break-after="always">
+            text-align="center">
             <xsl:apply-templates select="tei:note"/>
         </fo:block>
+        <fo:block
+            text-align="center"
+            page-break-after="always" 
+            padding-before="150">
+            <fo:external-graphic src="SAAVert[540].jpg" alignment-adjust="center"/>
+            <fo:block>Chicago</fo:block>
+        </fo:block>
+        <!-- Page 2 with SAA info -->
+        <xsl:call-template name="secondpage"/>
     </xsl:template>
+    
+    
 
     <xsl:template match="tei:body | tei:back" mode="toclong">
         <!-- Selection of languages needed? -->
@@ -971,6 +981,136 @@
             >
             <xsl:value-of select="."/>
         </fo:block>
+    </xsl:template>
+    
+    <xsl:template name="secondpage">
+        <fo:block padding-after="5cm">
+            <xsl:value-of select="tei:docTitle/tei:titlePart"/>, <xsl:value-of
+                select="tei:docEdition"/>
+            <fo:inline border-color=""/>
+        </fo:block>
+        <xsl:variable name="TheWholeDocument" select="ancestor::tei:TEI/tei:teiHeader/tei:fileDesc"/>
+        <fo:block>
+            <fo:table>
+                <fo:table-body>
+                    <fo:table-row>
+                        <fo:table-cell width="3.5cm">
+                            <fo:block>Available from:</fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block font-weight="bold">The Society of American
+                                Archivists</fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block>17 North State Street, Suite 1425</fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block>Chicago, IL 60602-3315 USA</fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block>312/606-0722 Toll Free 866/722-7858</fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell><fo:block/>Fax: 312/606-0728</fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block>http://www.archivists.org</fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                </fo:table-body>
+            </fo:table>
+        </fo:block>
+        <fo:block>
+            <fo:table>
+                <fo:table-body>
+                    <fo:table-row>
+                        <fo:table-cell width=".5cm">
+                            <fo:block>&#169;</fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block><xsl:value-of
+                                select="$TheWholeDocument/tei:publicationStmt/tei:date/@when"/>
+                                by <xsl:value-of
+                                    select="$TheWholeDocument/tei:publicationStmt/tei:publisher"
+                                /></fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block>All rights reserved. First edition <xsl:value-of
+                                select="$TheWholeDocument/tei:publicationStmt/tei:date/@when"
+                            /></fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell><fo:block/>Revised 2012</fo:table-cell>
+                    </fo:table-row>
+                    <fo:table-row>
+                        <fo:table-cell>
+                            <fo:block> </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block>Printed in the United States of America</fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                </fo:table-body>
+            </fo:table>
+        </fo:block>
+        <fo:block padding-before="1cm">
+            <fo:table>
+                <fo:table-body>
+                    <fo:table-row>
+                        <fo:table-cell width="1.5cm">
+                            <fo:block>ISBN: </fo:block>
+                        </fo:table-cell>
+                        <fo:table-cell>
+                            <fo:block>
+                                <xsl:value-of
+                                    select="$TheWholeDocument/tei:publicationStmt/tei:idno[@type='ISBN']"
+                                />
+                            </fo:block>
+                        </fo:table-cell>
+                    </fo:table-row>
+                </fo:table-body>
+            </fo:table>
+        </fo:block>
+        <fo:block page-break-after="always"/>
+        
+        
     </xsl:template>
 
 </xsl:stylesheet>

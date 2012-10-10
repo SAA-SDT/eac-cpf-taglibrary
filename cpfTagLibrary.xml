@@ -22,6 +22,7 @@
 				<publisher>Society of American Archivists in collaboration with Staatsbibliothek zu
 					Berlin.</publisher>
 				<date when="2010"/>
+				<idno type="ISBN">123456789</idno>
 			</publicationStmt>
 			<sourceDesc>
 				<p>Born digital.</p>
@@ -3891,9 +3892,10 @@
 						<item n="occurrence">0...1</item>
 						<item>
 							<egXML xmlns="http://www.tei-c.org/ns/Examples">
+								
 								<eac-cpf:objectXMLWrap>
 									<mods:mods xmlns:mods="http://www.loc.gov/mods/v3"
-										xmlns:xsi="http://www..w3.org/2001/XMLSchema-instance"
+										xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 										xsi:schemaLocation="http://www.loc.gov/mods/v3/mods-3-3.xsd">
 										<mods:titleInfo>
 											<mods:title>Artisti trentini tra le due guerre</mods:title>
