@@ -183,7 +183,7 @@
             <xsl:apply-templates select="tei:note"/>
         </fo:block>
         <fo:block text-align="center" page-break-after="always" padding-before="150">
-            <fo:external-graphic src="SAAVert[540].jpg" alignment-adjust="center"/>
+            <fo:external-graphic src="../images/SAAVert[540].jpg" alignment-adjust="center"/>
             <fo:block>Chicago</fo:block>
         </fo:block>
         <!-- Page 2 with SAA info -->
