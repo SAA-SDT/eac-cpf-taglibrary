@@ -1,4 +1,6 @@
-<div type="attributeDocumentation" xml:id="attributeName">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div type="attributeDocumentation" xml:id="attributeName"  xmlns="http://www.tei-c.org/ns/1.0">
    <!-- @type is always attributeDocumentation
       @xml:id is the name of the attribute-->
    <div type="summary">

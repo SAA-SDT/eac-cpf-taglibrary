@@ -1,4 +1,6 @@
-<div type="elementDocumentation" xml:id="elementName">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div type="elementDocumentation" xml:id="elementName"  xmlns="http://www.tei-c.org/ns/1.0">
    <!-- @type is always elementDocumentation
       @xml:id is the name of the element-->
    <head>
