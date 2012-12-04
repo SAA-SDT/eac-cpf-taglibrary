@@ -11,7 +11,6 @@
                 <xsl:apply-templates select="@*"/>
                 <xsl:copy-of select="document('../tei/TL_EN.xml')"/>
             </xsl:copy>
-        </xsl:template>
-    
+        </xsl:template>  
     
 </xsl:stylesheet>

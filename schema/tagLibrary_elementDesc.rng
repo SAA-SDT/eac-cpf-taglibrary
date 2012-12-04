@@ -26,6 +26,9 @@
                     <value>datatype</value>
                     <!-- FC August 2nd, add "values" as a value -->
                     <value>values</value>
+                    <!-- KB December 4th, add "mandatory" and "repeatable" as values -->
+                    <value>mandatory</value>
+                    <value>repeatable</value>
                 </choice>
             </attribute>
             <!-- FC August 2nd, add xml:lang attribute, datatype language-->

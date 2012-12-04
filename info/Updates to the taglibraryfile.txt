@@ -7,3 +7,5 @@ Examples using a different namespace like if the resourcerelation contains ead t
 In publicationStmt it is valuable to have this <idno type="ISBN">123456789</idno> so it can be collected automatically
 
 **** 
+
+When using xi:include in oxygen 14 the path should contain /2001/ instead of /2003/

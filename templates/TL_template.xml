@@ -68,12 +68,14 @@
       <body>
          <div type="elements">
             <!-- One include for each element href points to the element file -->
-            <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+            <!-- KB's version of Oxygen needs /2003/ to be /2001/ -->
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                         href="./descriptions/elem-abbreviation.xml"/>
          </div>
          <div type="attributes">
             <!-- One include for each attribute href points to the element file -->
-            <xi:include xmlns:xi="http://www.w3.org/2003/XInclude"
+            <!-- KB's version of Oxygen needs /2003/ to be /2001/ -->
+            <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
                         href="./descriptions/attr-accuracy.xml"/>
          </div>
       </body>

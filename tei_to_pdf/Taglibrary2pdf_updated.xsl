@@ -618,13 +618,47 @@
             </fo:list-item>
         </fo:list-block>
     </xsl:template>
-
+    
     <xsl:template match="tei:div[@type='mayOccurWithin']">
         <fo:list-block provisional-distance-between-starts="40mm">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
                         <xsl:text>May occur within: </xsl:text>
+                    </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                    <fo:block>
+                        <xsl:apply-templates/>
+                    </fo:block>
+                </fo:list-item-body>
+            </fo:list-item>
+        </fo:list-block>
+    </xsl:template>
+    
+    <xsl:template match="tei:div[@type='mandatory']">
+        <fo:list-block provisional-distance-between-starts="40mm">
+            <fo:list-item>
+                <fo:list-item-label end-indent="label-end()">
+                    <fo:block>
+                        <xsl:text>Mandatory/Optional: </xsl:text>
+                    </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                    <fo:block>
+                        <xsl:apply-templates/>
+                    </fo:block>
+                </fo:list-item-body>
+            </fo:list-item>
+        </fo:list-block>
+    </xsl:template>
+    
+    <xsl:template match="tei:div[@type='repeatable']">
+        <fo:list-block provisional-distance-between-starts="40mm">
+            <fo:list-item>
+                <fo:list-item-label end-indent="label-end()">
+                    <fo:block>
+                        <xsl:text>Repeatable/Non-repeatable: </xsl:text>
                     </fo:block>
                 </fo:list-item-label>
                 <fo:list-item-body start-indent="body-start()">
@@ -872,7 +906,9 @@
                         </xsl:choose>
                     </fo:block>
                 </fo:list-item-label>
+               
                 <fo:list-item-body start-indent="body-start()">
+                    
                     <fo:block>
                         <xsl:call-template name="newLine"/>
                         <xsl:for-each select="*">
@@ -884,7 +920,9 @@
                             </fo:block>
                         </xsl:for-each>
                     </fo:block>
+                    
                 </fo:list-item-body>
+                
             </fo:list-item>
         </fo:list-block>
     </xsl:template>
@@ -893,7 +931,8 @@
         <xsl:choose>
            <xsl:when test="name()!='eac-cpf:objectXMLWrap'">
                <!-- Here we should get the transformation to ignore the egXML-tag!!!!  -->
-                <fo:block>
+               
+               <fo:block>
                     <xsl:call-template name="newLine"/>
                     <xsl:text>&lt;</xsl:text>
                     <xsl:value-of select="local-name()"/>
@@ -924,6 +963,7 @@
                     <xsl:text>&gt;</xsl:text>
                     <xsl:call-template name="newLine"/>
                 </fo:block>
+               
             </xsl:when>
             <xsl:otherwise>
                 <xsl:call-template name="objectXMLWrap"/>
