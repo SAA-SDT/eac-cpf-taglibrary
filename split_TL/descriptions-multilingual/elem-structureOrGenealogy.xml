@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="structureOrGenealogy"
+     type="elementDocumentation">
+   <head>
+      <gi>structureOrGenealogy</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Structure or Genealogy</p>
+      <p xml:lang="fre">Organisation interne ou généalogie</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A description of the internal administrative structure(s) of a corporate
+							body or the genealogy of a family.</p>
+      <p xml:lang="fre">Description de la ou des structure(s) administrative(s) interne(s) d’une collectivité ou de la généalogie d’une famille.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <gi>structureOrGenealogy</gi> encodes within the description area, information expressing
+								the internal administrative structure(s) of a corporate body and the dates of any changes to
+								that structure that are significant to understanding the way that corporate body conducted
+								affairs (such as dated organization charts), and the genealogy of a family (such as a family
+								tree) in a way that demonstrates the interrelationships of its members with covering
+								dates.</p>
+      <p>The optional <gi>list</gi> and <gi>outline</gi> elements are used to accommodate
+								greater complexity in expressing or representing the activities being described.
+									<gi>citation</gi> may be used to provide a link to external documents like organizational
+								charts and family trees. A simpler discursive expression of the activities may be encoded as
+								one or more <gi>p</gi> elements.</p>
+      <p>Genealogical and administrative structure information may alternatively be described in
+								discursive form in the <gi>biogHist</gi> element (ISAAR (CPF) 5.2.2 History) and/or with
+									<gi>cpfRelation</gi> elements (ISAAR (CPF) 5.3). The <gi>structureOrGenealogy</gi>
+								element should be used whenever separate semantic processing of information about structure
+								or genealogies is required.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'élément Organisation interne ou généalogie <gi>structureOrGenealogy</gi> sert à encoder, dans la zone de la description de la norme ISAAR(CPF), les informations représentant la ou les structure(s) administrative(s)
+                     interne(s) d'une collectivité (comme les organigrammes à un instant t) et les dates de tout changement significatif de cette structure pour permettre de comprendre comment cette collectivité a exercé son activité ; cet
+                     élément sert à encoder les informations concernant la généalogie d'une famille (comme les arbres généalogiques) de façon à mettre en évidence les relations entre ses membres avec les dates couvertes.</p>
+      <p>Les éléments facultatifs Liste <gi>list</gi> et Vue d’ensemble <gi>outline</gi> sont utilisés pour décrire l’organisation interne de manière plus complexe. Pour une présentation plus simple, sous forme de texte, on peut
+                     utiliser un ou plusieurs élément(s) <gi>p</gi>.</p>
+      <p>L'élément Citation <gi>citation</gi> sert à fournir un lien vers un document externe comme un organigramme ou un arbre généalogique. Pour une présentation plus simple, sous forme de texte, on peut utiliser un ou
+                     plusieurs élément(s) <gi>p</gi>.</p>
+      <p>Les informations sur une généalogie ou une structure administrative peuvent aussi être décrites sous forme de texte dans l'élément Biographie ou histoire <gi>biogHist</gi> (ISAAR (CPF) 5.2.2 Histoire) et/ou en utilisant
+                     les éléments <gi>cpfRelation</gi> (ISAAR (CPF) 5.3). L'élément <gi>structureOrGenealogy</gi> doit être utilisé chaque fois qu’un traitement sémantique distinct des informations relatives aux structures ou aux
+                     généalogies est nécessaire.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, list, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.7</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:structureOrGenealogy xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:p>Sir Edward Noel (d 1643) married Julian, daughter and co-heir of Baptists Hicks
+										(d 1629), Viscount Campden, and succeeded to the viscouty of Campden and a portion of his
+										father-in-law's estates. The third Viscount Campden (1612-82) married Hester Wotton,
+										daughter of the second Baron Wotton. The fourth Viscount Campden (1641-1689, created Earl
+										of Gainsborough, 1682) married Elizabeth Wriothesley, elder daughter of the fourth Earl of
+										Southampton. Jane Noel (d 1811), sister of the fifth and sixth Earls of Gainsborough,
+										married Gerard Anne Edwards of Welham Grove (Leicetershire) and had issue Gerard Noel
+										Edwards (1759-1838). He married in 1780 Diana Middleton (1762-1823 suo jure Baroness
+										Barham), daughter of Charles Middleton (1726-1813), created first Baronet of Barham Court
+										(Kent) in 1781 and first Baron Barham in 1805. GN Edwards assumed the surname Noel in 1798
+										on inheriting the sixth Earl of Gainborough's Rutland and Gloucestershire estates (though
+										not the Earl's honours, which were extinguished); and he later inherited his
+										father-in-law's baronetcy. His eldest son John Noel (1781-1866) succeeded to the estates
+										of his mother and his father, to his mother's barony and his father's baronetcy, and was
+										created Viscount Campden and Earl of Gainsborough in 1841.</eac-cpf:p>
+         </eac-cpf:structureOrGenealogy>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <structureOrGenealogy>
+            <p> Sir Edward Noel (d 1643) married Julian, daughter and co-heir of Baptists Hicks (d 1629), Viscount Campden, and succeeded to the viscouty of Campden and a portion of his father-in-law's estates. The third
+                           Viscount Campden (1612-82) married Hester Wotton, daughter of the second Baron Wotton. The fourth Viscount Campden (1641-1689, created Earl of Gainsborough, 1682) married Elizabeth Wriothesley, elder daughter of
+                           the fourth Earl of Southampton. Jane Noel (d 1811), sister of the fifth and sixth Earls of Gainsborough, married Gerard Anne Edwards of Welham Grove (Leicetershire) and had issue Gerard Noel Edwards (1759-1838).
+                           He married in 1780 Diana Middleton (1762-1823 suo jure Baroness Barham), daughter of Charles Middleton (1726-1813), created first Baronet of Barham Court (Kent) in 1781 and first Baron Barham in 1805. GN Edwards
+                           assumed the surname Noel in 1798 on inheriting the sixth Earl of Gainborough's Rutland and Gloucestershire estates (though not the Earl's honours, which were extinguished); and he later inherited his
+                           father-in-law's baronetcy. His eldest son John Noel (1781-1866) succeeded to the estates of his mother and his father, to his mother's barony and his father's baronetcy, and was created Viscount Campden and Earl
+                           of Gainsborough in 1841. </p>
+         </structureOrGenealogy>
+      </egXML>
+   </div>
+</div>

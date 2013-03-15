@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="mandate" type="elementDocumentation">
+   <head>
+      <gi>mandate</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Mandate</p>
+      <p xml:lang="fre">Mandat</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The source of authority or mandate for the corporate body in terms of its
+							powers, functions, responsibilities or sphere of activities, such as a law, directive, or
+							charter.</p>
+      <p xml:lang="fre">Texte de référence ou mandat d'une collectivité précisant ses pouvoirs, fonctions, responsabilités ou sphères d'activité, par exemple un texte de loi, directive ou convention.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A <gi>mandate</gi> element is a wrapper element used to encode an index term, using the
+								child element, <gi>term</gi>. Terms are used to identify the source of authority or
+								mandate for the corporate body in terms of its powers, functions, responsibilities or sphere
+								of activities, such as a law, directive or charter. Terms may be drawn from controlled
+								vocabularies or may be natural language terms. Associated date or date range
+									(<gi>date</gi>, <gi>dateRange</gi> or <gi>dateSet</gi>) and place(s)
+									(<gi>placeEntry</gi>) may be included to further constrain the term's meaning. A
+									<gi>descriptiveNote</gi> element may be included if a fuller textual explanation is
+								needed.</p>
+      <p>A single <gi>mandate</gi> element may be encoded directly within <gi>description</gi>.
+								Alternatively, multiple <gi>mandate</gi> elements may be grouped within
+									<gi>mandates</gi>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'élément Mandat <gi>mandate</gi> est un élément englobant qui sert à encoder des termes d'indexation à l'aide de l'élément-enfant Terme <gi>term</gi>. Les termes utilisés servent à identifier le texte de référence
+                     (loi, directive, convention) ou les attributions d'une collectivité en matière de pouvoirs, fonctions, responsabilités ou sphères d'activités.</p>
+      <p>Les termes utilisés peuvent être issus de vocabulaires contrôlés ou exprimés en langage naturel. </p>
+      <p>Des dates ou intervalles de dates (Date <gi>date</gi>, Intervalle de dates <gi>dateRange</gi> ou Ensemble de dates <gi>dateSet</gi>) ou des lieux (Forme du nom de lieu <gi>placeEntry</gi>) peuvent être introduits pour
+                     préciser la portée du terme. </p>
+      <p>Une Note descriptive <gi>descriptiveNote</gi> peut être introduite si une explication sous forme de texte est nécessaire. </p>
+      <p>Un élément <gi>mandate</gi> utilisé seul peut être encodé directement dans l'élément Description <gi>description</gi>. Lorsqu'il y en a plusieurs, ils peuvent être regroupés à l'aide de l'élément Mandats
+                        <gi>mandates</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry,
+							term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, mandates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.6</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:mandate xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1919">1919</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1952">1925</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:citation>Minnesota. Executive Session Laws 1919 c49</eac-cpf:citation>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Board created in 1919 to receive and examine applications for bonuses from
+											Minnesota soldiers.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:mandate>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <mandate>
+            <dateRange>
+               <fromDate standardDate="1919"> 1919 </fromDate>
+               <toDate standardDate="1925"> 1925 </toDate>
+            </dateRange>
+            <citation> Minnesota. Executive Session Laws 1919 c49 </citation>
+            <descriptiveNote>
+               <p> Board created in 1919 to receive and examine applications for bonuses from Minnesota soldiers. </p>
+            </descriptiveNote>
+         </mandate>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chronList"
+     type="elementDocumentation">
+   <head>
+      <gi>chronList</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Chronological List</p>
+      <p xml:lang="fre"/>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A structured chronological list of events, dates, and (optionally) places
+							that may be used within the <gi>biogHist</gi> element.</p>
+      <p xml:lang="fre">Une liste d'évènements, de dates et (éventuellement) de lieux, structurée de manière chronologique, qui peut être utilisée au sein de l'élément Biographie ou histoire <gi>biogHist</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Chronology list comprises a sequentially structured list of significant events in the life
+								of the person or during the existence of the family or corporate body described in the
+								EAC-CPF instance. Such events are associated with the date of occurrence and optionally with
+								the name of a place. Each <gi>chronList</gi> contains a series of <gi>chronItem</gi>
+								elements, each associating a <gi>date</gi> or <gi>dateRange</gi> with an
+									<gi>event</gi> and an optional <gi>placeEntry</gi>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'élément Liste chronologique <gi>chronList</gi> comprend une séquence structurée d'évènements significatifs intervenus au cours de l'existence de la personne, de la famille ou de la collectivité décrite dans l'instance
+                     EAC-CPF. Ces évènements sont associés à la date à laquelle ils sont intervenus, et éventuellement à un nom de lieu. Chaque élément <gi>chronList</gi> contient une série d'éléments Élément de liste chronologique
+                        <gi>chronItem</gi> ; chacun de ces derniers associe un élément Date <gi>date</gi> ou un élément Intervalle de dates <gi>dateRange</gi> à un élément Évènement <gi>event</gi> et éventuellement à un élément Forme du nom
+                     de lieu <gi>placeEntry</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>chronItem</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.2</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:chronList xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:chronItem>
+               <eac-cpf:date standardDate="1936">1936</eac-cpf:date>
+               <eac-cpf:event>Bachelor of Science (BSc) completed at the University of
+											Sydney</eac-cpf:event>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:date standardDate="1937">1937</eac-cpf:date>
+               <eac-cpf:event>Master of Science (MSc) completed at the University of
+											Sydney</eac-cpf:event>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1937">1937</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1941">1941</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:event>Linnean Macleay Fellow</eac-cpf:event>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1939">c. 1939</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1945">c. 1945</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:event>Worked with Army Intelligence to map the vegetation (trees and undergrowth)
+											in the coastal regions of New South Wales</eac-cpf:event>
+            </eac-cpf:chronItem>
+         </eac-cpf:chronList>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <chronList>
+            <chronItem>
+               <date standardDate="1936"> 1936 </date>
+               <event> Bachelor of Science (Bsc), obtenu à l'Université de Sydney </event>
+            </chronItem>
+            <chronItem>
+               <date standardDate="1937"> 1937 </date>
+               <event> Master of Science (MSc), obtenu à l'Université de Sydney </event>
+            </chronItem>
+            <chronItem>
+               <dateRange>
+                  <fromDate standardDate="1937"> 1937 </fromDate>
+                  <toDate standardDate="1941"> 1941 </toDate>
+               </dateRange>
+               <event> Linnean Macleay Fellow </event>
+            </chronItem>
+            <chronItem>
+               <dateRange>
+                  <fromDate standardDate="1939"> c. 1939 </fromDate>
+                  <toDate standardDate="1945"> c. 1945 </toDate>
+               </dateRange>
+               <event> Travaille au sein des services de renseignement de l'armée à cartographier la flore (arbres et sous-bois) des régions côtières de Nouvelle-Galles du Sud. </event>
+            </chronItem>
+         </chronList>
+      </egXML>
+   </div>
+</div>

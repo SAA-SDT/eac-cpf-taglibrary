@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="alternativeSet"
+     type="elementDocumentation">
+   <head>
+      <gi>alternativeSet</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Alternative Set</p>
+      <p xml:lang="fre">Ensemble Alternatif</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A container element for two or more authority records derived from two or
+							more authority systems, expressed within a single EAC-CPF instance.</p>
+      <p xml:lang="fre">Un élément qui contient dans une seule instance EAC-CPF deux ou plusieurs notices d’autorité dérivées de deux ou plusieurs systèmes d’autorité.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Alternative Set is a container element for two or more authority records derived from two
+								or more authority systems. Alternative authority records are contained with
+									<gi>alternativeSet</gi> in <gi>setComponent</gi> elements. This device allows different
+								descriptions of the same entity to be contained within a single EAC-CPF instance.</p>
+      <p>Authority record aggregation may be used in cooperative or consortial contexts that gather
+								together records describing the same entity in different languages, or from different rules
+								when it is desirable to provide users with alternative descriptions of the same entity. For
+								example, in the context of the European Union, an international cooperative project may want
+								to provide users the option of descriptions in Italian, French, German, English, Spanish,
+								and in other European languages.</p>
+      <p>
+         <gi>alternativeSet</gi> should not be confused with <gi>sources</gi>, wherein authority
+								records referenced are not intended to be displayed as alternative versions.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’Ensemble alternatif est un élément qui contient deux ou plusieurs notices d’autorité dérivées de deux ou plusieurs systèmes d’autorité. Chacune des notices d’autorité, dite alternative, est contenue dans un élément
+                     Composant d’un ensemble <gi>setComponent</gi> au sein de l’élément Ensemble alternatif <gi>alternativeSet</gi>. Ce dispositif permet de contenir dans une seule instance EAC-CPF des descriptions différentes de la même
+                     entité.</p>
+      <p>L’agrégation des notices d’autorité peut être utile dans des contextes de coopération qui rassemblent des notices décrivant la même entité dans différentes langues ou appliquant des règles différentes, lorsqu’il est
+                     souhaitable de fournir aux utilisateurs des descriptions alternatives pour la même entité. Par exemple, dans le contexte de l’Union européenne, un projet de coopération peut offrir aux utilisateurs un choix de
+                     descriptions en italien, en français, en allemand, en anglais, en espagnol et dans d’autres langues européennes. L’élément <gi>alternativeSet</gi> ne doit pas être confondu avec l’élément Sources <gi>sources</gi> : en
+                     effet, les notices d’autorité référencées dans l’élément <gi>sources</gi> ne sont pas destinées à être affichées comme des versions alternatives.</p>
+   </div>
+   <div type="mayContain">
+      <p>setComponent</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xmlns:xlink_1="http://www.w3.org/1999/xlink"
+                                  xmlns:xlink_2="http://www.w3.org/1999/xlink"
+                                  xlink_1:href="http://authorities.loc.gov/"
+                                  xlink_2:type="simple">
+               <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xmlns:xlink_1="http://www.w3.org/1999/xlink"
+                                  xmlns:xlink_2="http://www.w3.org/1999/xlink"
+                                  xlink_1:href="http://nla.gov.au/anbd.aut-an35335937"
+                                  xlink_2:type="simple">
+               <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xmlns:xlink_2="http://www.w3.org/1999/xlink"
+                                  xmlns:xlink_3="http://www.w3.org/1999/xlink"
+                                  lastDateTimeVerified="2009-08-02"
+                                  xlink_2:href="mawsonBS.xml"
+                                  xlink_3:type="simple">
+               <eac-cpf:objectXMLWrap>
+                  <eac-cpf/>
+               </eac-cpf:objectXMLWrap>
+            </eac-cpf:setComponent>
+         </eac-cpf:alternativeSet>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <alternativeSet>
+            <setComponent xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="http://authorities.loc.gov/"
+                          xlink:type="simple">
+               <componentEntry> Bright Sparcs Record </componentEntry>
+            </setComponent>
+            <setComponent xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="http://nla.gov.au/anbd.aut-an35335937"
+                          xlink:type="simple">
+               <componentEntry> NLA record. </componentEntry>
+            </setComponent>
+            <setComponent xmlns:xlink="http://www.w3.org/1999/xlink" lastDateTimeVerified="2009-08-02"
+                          xlink:href="mawsonBS.xml"
+                          xlink:type="simple">
+               <objectXMLWrap/>
+            </setComponent>
+         </alternativeSet>
+      </egXML>
+   </div>
+</div>

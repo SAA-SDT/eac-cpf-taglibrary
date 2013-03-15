@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="latitude"
+     type="attributeDocumentation">
+   <head>
+      <att>latitude</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Latitude</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The geographic latitude of the place.</p>
+      <p xml:lang="fre">La latitude du lieu.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>latitude</att> may occur on <gi>place</gi>. The value of the
+							attribute is the geographic latitude of the place named. <att>latitude</att> should be used
+							in conjunction with <att>longitude</att> and <att>altitude</att>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>latitude</att> est un attribut de l’élément Lieu <gi>place</gi>. La valeur de cet attribut correspond à la latitude du lieu. L’attribut <att>latitude</att> doit être utilisé conjointement avec les
+                     attributs <att>longitude</att> et <att>altitude</att>.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>NMTOKEN</p>
+   </div>
+</div>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="source" type="elementDocumentation">
+   <head>
+      <gi>source</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Source</p>
+      <p xml:lang="fre">Source</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A source of evidence used in describing the entity or entities in the
+							EAC-CPF instance.</p>
+      <p xml:lang="fre">Source d’information fiable utilisée dans la description de l’entité ou des entités dans l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An element for identifying a particular source of evidence used in describing the entity
+								or entities. A record for the source must be included in either <gi>objectXMLWrap</gi> or
+									<gi>objectBinWrap</gi>; or as a textual description in the <gi>sourceEntry</gi>
+								element. Use the optional <gi>descriptiveNote</gi> for any additional notes about the
+								source. A <gi>source</gi> in this context should not be confused with the
+									<gi>citation</gi> element which is used in a number of descriptive elements to point to a
+								resource that provides descriptive data which is not otherwise given in the EAC-CPF
+								instance.</p>
+      <p>A link to the source may be made using the XML Linking Language (Xlink) attributes (for
+								which consult the specification at http://www.w3.org/TR/xlink/) and the last date and time that the source was verified
+								can be given in the <att>lastDateTimeVerified</att> attribute.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément permettant d’identifier une source spécifique d’information fiable utilisée pour la description de l’entité ou des entités. Une notice ayant servi de source d’information doit être incluse soit dans l’élement
+                     Enveloppe d’objet XML <gi>objectXMLWrap</gi> soit dans l’élément Enveloppe d’objet binaire <gi>objectBinWrap</gi>, ou bien en texte libre dans l’élément Nom de la source <gi>sourceEntry</gi>. Pour toute note
+                     complémentaire sur la source utiliser l’élément facultatif Note descriptive <gi>descriptiveNote</gi>. Une <gi>source</gi> dans ce contexte ne doit pas être confondue avec l’élément Citation <gi>citation</gi> qui est
+                     utilisé dans un certain nombre d’éléments descriptifs pour pointer vers une ressource qui fournit des données descriptives non incluses dans l’instance EAC-CPF.</p>
+      <p>Un lien vers la source peut être effectué en utilisant les attributs de XML Linking Language (XLink) (pour ce dernier consulter les spécifications à l’adresse http://www.w3.org/TR/xlink/) ;la dernière date et l’heure de
+                     vérification de la source peuvent être données dans l’attribut <att>lastDateTimeVerified</att>.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, objectBinWrap, objectXMLWrap, sourceEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>sources</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Facultatif</item>
+            <label>xlink:actuate</label>
+            <item>Facultatif</item>
+            <label>xlink:arcrole</label>
+            <item>Facultatif</item>
+            <label>xlink:href</label>
+            <item>Facultatif</item>
+            <label>xlink:role</label>
+            <item>Facultatif</item>
+            <label>xlink:show</label>
+            <item>Facultatif</item>
+            <label>xlink:title</label>
+            <item>Facultatif</item>
+            <label>xlink:type</label>
+            <item>Obligatoire (si au moins un attribut XLink est utilisé)</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.8</p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:sources xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Principal Family and Estate Collections: Family Names L-W,
+											1999</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Complete Peerage, 1936</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+         </eac-cpf:sources>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <sources>
+            <source>
+               <sourceEntry> HMC, Principal Family and Estate Collections: Family Names L-W, 1999 </sourceEntry>
+            </source>
+            <source>
+               <sourceEntry> HMC, Complete Peerage, 1936 </sourceEntry>
+            </source>
+         </sources>
+      </egXML>
+   </div>
+</div>

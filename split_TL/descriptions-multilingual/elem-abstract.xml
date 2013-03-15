@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="abstract"
+     type="elementDocumentation">
+   <head>
+      <gi>abstract</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Abstract</p>
+      <p xml:lang="fre">Résumé</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element that encodes a brief summary of the information contained within
+							the <gi>biogHist</gi> as a whole. </p>
+      <p xml:lang="fre">Élément encodant un bref résumé des informations contenues dans l’élément Biographie ou histoire <gi>biogHist</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>abstract</gi> is a 1-2 sentence synopsis of the identity’s biography or history
+								that is often extracted from the longer descriptions found in <gi>biogHist</gi>. Its
+								purpose is to help readers quickly identify the entity described in the EAC-CPF instance.
+								The content within this element may also be harvested by other systems to provide
+								explanatory context for the <gi>nameEntry</gi> data when it appears in a set of search
+								results.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élément Résumé <gi>abstract</gi> donne en une ou deux phrases un résumé de la biographie ou de l’histoire de l’entité décrite dans l’instance EAC-CPF. Ce résumé est le plus souvent extrait des descriptions plus
+                     longues figurant dans <gi>biogHist</gi>. Son objectif est d’aider les lecteurs à identifier rapidement l’entité décrite dans l’instance EAC-CPF. Le contenu de cet élément peut être également moissonné par d’autres
+                     systèmes pour fournir des explications contextuelles sur les données de l’élément Forme du nom <gi>nameEntry</gi> lorsque celles-ci apparaissent dans une liste de résultats de recherche.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text], span</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>LocalType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0…1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:biogHist xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:abstract>Established in 1961, the United States Peace Corps administered and
+										coordinated Federal international volunteer and related domestic volunteer programs in
+										areas of agricultural assistance, community development, education, environmental
+										protection, and nation assistance.</eac-cpf:abstract>
+            <eac-cpf:p>The Peace Corps was established as an operating agency in the Department of
+										State Delegation of Authority 85-11, effective March 3, 1961, pursuant to Executive Order
+										(E.O.) 10924, March 1, 1961. It was recognized legislatively by the Peace Corps Act (75
+										Stat. 612), approved September 22, 1961. The Peace Corps was reassigned to the newly
+										established ACTION by Reorganization Plan No. 1 of 1971, effective July 1, 1971. It was
+										made autonomous within ACTION by E.O. 12137, May 16, 1979, and was made an independent
+										agency by Title VI of the International Security and Development Corporation Act of 1981
+										(95 Stat. 1540), February 21, 1982. The Peace Corps administered and coordinated Federal
+										international volunteer and related domestic volunteer programs including the areas of
+										agricultural assistance, community development, education, environmental protection, and
+										nation assistance.</eac-cpf:p>
+         </eac-cpf:biogHist>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <biogHist>
+            <abstract> Established in 1961, the United States Peace Corps administered and coordinated Federal international volunteer and related domestic volunteer programs in areas of agricultural assistance, community
+                           development, education, environmental protection, and nation assistance. </abstract>
+            <p> The Peace Corps was established as an operating agency in the Department of State Delegation of Authority 85-11, effective March 3, 1961, pursuant to Executive Order (E.O.) 10924, March 1, 1961. It was recognized
+                           legislatively by the Peace Corps Act (75 Stat. 612), approved September 22, 1961. The Peace Corps was reassigned to the newly established ACTION by Reorganization Plan No. 1 of 1971, effective July 1, 1971. It was
+                           made autonomous within ACTION by E.O. 12137, May 16, 1979, and was made an independent agency by Title VI of the International Security and Development Corporation Act of 1981 (95 Stat. 1540), February 21, 1982.
+                           The Peace Corps administered and coordinated Federal international volunteer and related domestic volunteer programs including the areas of agricultural assistance, community development, education, environmental
+                           protection, andnation assistance. </p>
+         </biogHist>
+      </egXML>
+   </div>
+</div>

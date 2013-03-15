@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="outline" type="elementDocumentation">
+   <head>
+      <gi>outline</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Outline</p>
+      <p xml:lang="fre"/>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element used within the description area to encode information in an
+							outline format.</p>
+      <p xml:lang="fre">Élément utilisé au sein d’autres éléments contenus dans l’élément Description <gi>description</gi>, pour une présentation des informations sous forme de vue d’ensemble.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <gi>outline</gi> contains one or more <gi>level</gi> elements, which contain either
+									<gi>item</gi> elements or further <gi>level</gi> elements in a hierarchical
+								fashion.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élément <gi>outline</gi> contient un ou plusieurs élément(s) Niveau <gi>level</gi> qui, à leur tour, contiennent soit des éléments Item <gi>item</gi> soit d’autres éléments <gi>level</gi> de manière à créer une
+                     hiérarchie.</p>
+   </div>
+   <div type="mayContain">
+      <p>level</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist, functions, generalContext, legalStatuses, localDescriptions,
+							mandates, occupations, places, structureOrGenealogy</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:outline xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:level>
+               <eac-cpf:item>I.</eac-cpf:item>
+            </eac-cpf:level>
+            <eac-cpf:level>
+               <eac-cpf:item>II.</eac-cpf:item>
+               <eac-cpf:level>
+                  <eac-cpf:item>A.</eac-cpf:item>
+               </eac-cpf:level>
+               <eac-cpf:level>
+                  <eac-cpf:item>B.</eac-cpf:item>
+                  <eac-cpf:level>
+                     <eac-cpf:item>1.</eac-cpf:item>
+                  </eac-cpf:level>
+                  <eac-cpf:level>
+                     <eac-cpf:item>2.</eac-cpf:item>
+                  </eac-cpf:level>
+               </eac-cpf:level>
+            </eac-cpf:level>
+         </eac-cpf:outline>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <outline>
+            <level>
+               <item> I. </item>
+            </level>
+            <level>
+               <item> II. </item>
+               <level>
+                  <item> A. </item>
+               </level>
+               <level>
+                  <item> B. </item>
+                  <level>
+                     <item> 1. </item>
+                  </level>
+                  <level>
+                     <item> 2. </item>
+                  </level>
+               </level>
+            </level>
+         </outline>
+      </egXML>
+   </div>
+</div>

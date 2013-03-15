@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="languagesUsed"
+     type="elementDocumentation">
+   <head>
+      <gi>languagesUsed</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Languages Used</p>
+      <p xml:lang="fre">Langues utilisées</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A grouping element used to bundle together individual
+								<gi>languageUsed</gi> elements.</p>
+      <p xml:lang="fre">Elément permettant de regrouper des éléments individuels Langue utilisée <gi>languageUsed</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Use the optional <gi>languagesUsed</gi> element to group together one or more
+								occurrences of <gi>languageUsed</gi> so that they can be manipulated as a package. A
+								single <gi>languageUsed</gi> may be alone or may be wrapped within
+									<gi>languagesUsed</gi>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Utiliser l’élément facultatif <gi>languagesUsed</gi> pour regrouper une ou plusieurs occurrences de l’élément <gi>languageUsed</gi> pour qu’elles puissent être manipulées comme un ensemble. Un élément isolé
+                        <gi>languageUsed</gi> peut exister seul ou être englobé dans un élément Langues utilisées <gi>languagesUsed</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, languageUsed</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:languagesUsed xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:languageUsed>
+               <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+               <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+            </eac-cpf:languageUsed>
+            <eac-cpf:languageUsed>
+               <eac-cpf:language languageCode="spa">Spanish</eac-cpf:language>
+               <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+            </eac-cpf:languageUsed>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Published works in English and Spanish.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:languagesUsed>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <languagesUsed>
+            <languageUsed>
+               <language languageCode="eng"> English </language>
+               <script scriptCode="Latn"> Latin </script>
+            </languageUsed>
+            <languageUsed>
+               <language languageCode="spa"> Spanish </language>
+               <script scriptCode="Latn"> Latin </script>
+            </languageUsed>
+            <descriptiveNote>
+               <p> Published works in English and Spanish. </p>
+            </descriptiveNote>
+         </languagesUsed>
+      </egXML>
+   </div>
+</div>

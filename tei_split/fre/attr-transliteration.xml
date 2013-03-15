@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="transliteration"
+     type="attributeDocumentation">
+   <head>
+      <att>transliteration</att>
+   </head>
+   
+   <div type="summary">
+      
+      <p xml:lang="fre">Valeur indiquant le système de translittération utilisé pour convertir une écriture dans une autre.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>Attribut permettant d’indiquer les normes ou conventions qui prescrivent un système de conversion d’une écriture dans une autre.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="fre">
+      <p>NMTOKEN</p>
+   </div>
+</div>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="resourceRelation"
+     type="elementDocumentation">
+   <head>
+      <gi>resourceRelation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Resource Relation</p>
+      <p xml:lang="fre">Relation avec une ressource</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A resource related to the described entity.</p>
+      <p xml:lang="fre">Ressource en relation avec l’entité décrite.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>resourceRelation</gi> element contains the description of a resource related to
+								the described entity. Use <gi>objectXMLWrap</gi> to incorporate XML elements from any XML
+								namespaces or <gi>objectBinWrap</gi> for base64-encoded binary data. A
+									<gi>relationEntry</gi> element is provided for textual identification of the related
+								resource.</p>
+      <p>Use the <gi>date</gi>, <gi>dateRange</gi>, or <gi>dateSet</gi> elements for
+								specifying when the relationship applied and the <gi>placeEntry</gi> element for relevant
+								locative information. A <gi>descriptiveNote</gi> element may be included for a more
+								detailed specifications or explanations of the relationship.</p>
+      <p>The <att>resourceRelationType</att> attribute is used to specify the nature of the
+								relationship between the resource and the entity described in the EAC-CPF instance.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élément Relation avec une ressource <gi>resourceRelation</gi> contient la description d’une ressource en relation avec l’entité décrite. On utilise l’élément Enveloppe d’objet XML <gi>objectXMLWrap</gi> pour
+                     incorporer des éléments de tout espace de nom XML ou l’élément Enveloppe d’objet binaire <gi>objectBinWrap</gi> pour des données binaires encodées en base64. Un élément Forme du nom de l’entité en relation
+                        <gi>relationEntry</gi> est fourni pour l’identification textuelle de la ressource en relation.</p>
+      <p>On utilise les éléments Date <gi>date</gi>, Intervalle de dates <gi>dateRange</gi> ou Ensemble de dates <gi>dateSet</gi> pour préciser quand la relation s’applique, ainsi que l’élément Forme du nom de lieu
+                        <gi>placeEntry</gi> pour des informations de localisation pertinentes. Un élément Note descriptive <gi>descriptiveNote</gi> apporte si besoin est des précisions ou des explications plus détaillées sur la
+                     relation.</p>
+      <p>On utilise l’attribut <att>resourceRelationType</att> pour préciser la nature de la relation entre la ressource et l’entité décrite dans l’instance EAC-CPF.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, dateSet, descriptiveNote, objectBinWrap, objectXMLWrap,
+							placeEntry, relationEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>relations</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>resourceRelationType</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Facultatif</item>
+            <label>resourceRelationType</label>
+            <item>Facultatif</item>
+            <label>xlink:actuate</label>
+            <item>Facultatif</item>
+            <label>xlink:arcrole</label>
+            <item>Facultatif</item>
+            <label>xlink:href</label>
+            <item>Facultatif</item>
+            <label>xlink:role</label>
+            <item>Facultatif</item>
+            <label>xlink:show</label>
+            <item>Facultatif</item>
+            <label>xlink:title</label>
+            <item>Facultatif</item>
+            <label>xlink:type</label>
+            <item>Obligatoire (si au moins un attribut XLink est utilisé)</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 6</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:resourceRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" resourceRelationType="creatorOf">
+            <eac-cpf:objectXMLWrap>
+               <ead xsi="urn:isbn:1-931666-22-9">
+                  <eadheader>
+                     <eadid identifier="e4012531" mainagencycode="GB-0066"/>
+                     <filedesc>
+                        <titlestmt>
+                           <titleproper/>
+                        </titlestmt>
+                     </filedesc>
+                  </eadheader>
+                  <archdesc level="file">
+                     <did>
+                        <unitid repositorycode="GB-0066">E 40/12531</unitid>
+                        <unittitle>Attached seal, Andrew Noel</unittitle>
+                        <unitdate>1551-1552</unitdate>
+                        <physdesc>
+                           <genreform type="materialType">Seals</genreform>
+                        </physdesc>
+                     </did>
+                  </archdesc>
+               </ead>
+            </eac-cpf:objectXMLWrap>
+         </eac-cpf:resourceRelation>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <resourceRelation resourceRelationType="creatorOf">
+            <objectXMLWrap> E 40/12531Attached seal, Andrew Noel1551-1552Seals </objectXMLWrap>
+         </resourceRelation>
+      </egXML>
+   </div>
+</div>

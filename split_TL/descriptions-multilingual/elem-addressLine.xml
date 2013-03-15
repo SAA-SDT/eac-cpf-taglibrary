@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="addressLine"
+     type="elementDocumentation">
+   <head>
+      <gi>addressLine</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Address Line</p>
+      <p xml:lang="fre">Ligne d’adresse</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">One line of a postal or other address</p>
+      <p xml:lang="fre">Une ligne dans une adresse postale ou un autre type d'adresse.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A required element in <gi>address</gi>, <gi>addressLine</gi> element is used to encode
+								one line of a postal or other address. <gi>addressLine</gi> may be repeated as many times
+								as necessary to encompass all available lines of an address related to the entity being
+								described.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément obligatoire au sein de l'élément Adresse <gi>address</gi>. L'élément Ligne d'adresse <gi>addressLine</gi> est utilisé pour encoder une ligne d'adresse postale ou de tout autre type d'adresse.
+                        <gi>addressLine</gi> peut être répété autant de fois que nécessaire jusqu’à comprendre l'ensemble des lignes d'une adresse liée à l'entité décrite. </p>
+      <p/>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>address</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType </label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) </p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>siege social</eac-cpf:placeRole>
+            <eac-cpf:address>
+               <eac-cpf:addressLine localType="voie">2 rue Corneille</eac-cpf:addressLine>
+               <eac-cpf:addressLine localType="city">Paris</eac-cpf:addressLine>
+               <eac-cpf:addressLine localType="postalcode">75006</eac-cpf:addressLine>
+               <eac-cpf:addressLine>France</eac-cpf:addressLine>
+            </eac-cpf:address>
+         </eac-cpf:place>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <place>
+            <placeRole> Siège social </placeRole>
+            <address>
+               <addressLine localType="voie">  2 rue Corneille  </addressLine>
+               <addressLine localType="city">  Paris  </addressLine>
+               <addressLine localType="postalcode">  75006  </addressLine>
+               <addressLine>  France  </addressLine>
+            </address>
+         </place>
+      </egXML>
+   </div>
+</div>

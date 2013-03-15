@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkHref"
+     type="attributeDocumentation">
+   <head>
+      <att>xlink:href</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Xlink: HREF</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Contains a URI, possibly relative, pointing to the related resource</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The address for a remote resource. The <att>xlink:href</att> takes the
+							form of a Uniform Resource Identifier (URI). While it is permissible to use a relative URI,
+							and an absolute URI is recommended.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>anyURI</p>
+   </div>
+</div>

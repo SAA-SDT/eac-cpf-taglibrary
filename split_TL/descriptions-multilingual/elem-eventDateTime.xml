@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="eventDateTime"
+     type="elementDocumentation">
+   <head>
+      <gi>eventDateTime</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Maintenance Event Date and Time</p>
+      <p xml:lang="fre">Date et heure de l’intervention</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The date and time of a maintenance event for the EAC-CPF instance.</p>
+      <p xml:lang="fre">La date et l’heure d’une intervention dans l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A required element within the <gi>maintenanceEvent</gi>, <gi>eventDateTime</gi> gives
+								the date and time of a maintenance event for the EAC-CPF instance. The date and time may be
+								recorded manually or machine generated in natural language as well as in machine-readable
+								format by use of the <att>standardDateTime</att> attribute.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément obligatoire au sein de l’élément Intervention <gi>maintenanceEvent</gi> permettant de donner la date et l’heure d’une intervention dans l’instance EAC-CPF. La date et l’heure peuvent être enregistrées
+                     manuellement ou générées par la machine en langage naturel aussi bien qu’en format lisible en machine au moyen de l’attribut <att>standardDateTime</att>.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceEvent</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>standardDateTime</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.6</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>created</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2009-11-30"/>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>Bill Stockting</eac-cpf:agent>
+            <eac-cpf:eventDescription>Created from original in ISAAR (CPF), 2nd edition: example
+										10</eac-cpf:eventDescription>
+         </eac-cpf:maintenanceEvent>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceEvent>
+            <eventType> created </eventType>
+            <eventDateTime standardDateTime="2009-11-30"/>
+            <agentType> human </agentType>
+            <agent> Bill Stockting </agent>
+            <eventDescription> Created from original in ISAAR (CPF), 2nd edition: example 10 </eventDescription>
+         </maintenanceEvent>
+      </egXML>
+   </div>
+</div>

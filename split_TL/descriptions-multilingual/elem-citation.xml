@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="citation"
+     type="elementDocumentation">
+   <head>
+      <gi>citation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Citation</p>
+      <p xml:lang="fre"/>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A linking element that cites an external resource.</p>
+      <p xml:lang="fre">Élément de lien qui cite une ressource externe. </p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <gi>citation</gi> is a generic linking element that cites an external resource in machine
+								and / or human readable form, which is available within a number of descriptive elements.
+								The purpose of the <gi>citation</gi> element is to point to a resource that provides
+								descriptive data which is not otherwise given in the EAC-CPF instance, such as an original
+								document that sets out the mandate for a corporate body; it should not be confused with the
+									<gi>source</gi> element which is used to declare a particular resource used in the
+								composition of the EAC-CPF instance. In most contexts it is optional, but a
+									<gi>citation</gi> element must be given within <gi>conventionDeclaration</gi> and
+									<gi>localTypeDeclaration</gi> elements in <gi>control</gi>. Provide the formal title or
+								name of the resource, using the <gi>span</gi> element to indicate any formatting (such as
+								italic or bold etc) thought necessary. The user experience can be controlled by use of the
+								available XML linking Language (Xlink) attributes for which consult the specification at
+								http://www.w3.org/TR/xlink/.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Citation <gi>citation</gi> est un élément générique de lien qui cite une ressource externe d'une manière qui puisse être interprétée par une machine et/ou lue par un humain, et qui est disponible dans un certain nombre
+                     d'éléments descriptifs. Le but de l'élément <gi>citation</gi> est de pointer vers une ressource qui fournit des données descriptives qui ne sont pas par ailleurs présentes dans l'instance EAC-CPF, par exemple un
+                     document original qui donne les missions ou le mandat d'une collectivité ; à ne pas confondre avec l'élément Source <gi>source</gi> qui est utilisé pour déclarer une ressource particulière utilisée dans la rédaction de
+                     l'instance EAC-CPF. Dans la plupart des contextes, <gi>citation</gi> est facultatif, mais un élément <gi>citation</gi> doit être renseigné au sein des éléments Déclaration de règle ou de convention
+                        <gi>conventionDeclaration</gi> et Déclaration d'une convention locale <gi>localTypeDeclaration</gi> présents dans l'élément Contrôle <gi>control</gi>. On peut y fournir le titre ou le nom officiel de la ressource, en
+                     utilisant l'élément Segment de texte <gi>span</gi> pour indiquer tout format (par exemple italique, gras, etc.) jugé nécessaire. Les actions de l'utilisateur peuvent être contrôlées en utilisant les attributs du langage
+                     de liens étendus XML XLink (pour ce dernier, consulter les spécifications à l’adresse http://www.w3.org/TR/xlink/). </p>
+   </div>
+   <div type="mayContain">
+      <p>[text], span</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist, conventionDeclaration, function, legalStatus, localDescription,
+							localTypeDeclaration, mandate, occupation, place</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Facultatif</item>
+            <label>xlink:actuate</label>
+            <item>Facultatif</item>
+            <label>xlink:arcrole</label>
+            <item>Facultatif</item>
+            <label>xlink:href</label>
+            <item>Facultatif</item>
+            <label>xlink:role</label>
+            <item>Facultatif</item>
+            <label>xlink:show</label>
+            <item>Facultatif</item>
+            <label>xlink:title</label>
+            <item>Facultatif</item>
+            <label>xlink:type</label>
+            <item>Obligatoire (si au moins un attribut XLink est utilisé)</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞ or 1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:conventionDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:abbreviation>AFNOR</eac-cpf:abbreviation>
+            <eac-cpf:citation>Indexation conforme à la norme AFNOR NF Z44-060 (decembre 1996)
+										Documentation - Catalogue d'auteurs et d'anonymes-formes et structures des vedettes de
+										collectivites - auteurs</eac-cpf:citation>
+         </eac-cpf:conventionDeclaration>
+         <eac-cpf:conventionDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:abbreviation>USNARA-LDRG</eac-cpf:abbreviation>
+            <eac-cpf:citation>U.S. National Archives and Records Administration, Lifecycle Data
+										Requirements Guide (for creating the authorized form of the name).</eac-cpf:citation>
+         </eac-cpf:conventionDeclaration>
+         <eac-cpf:mandate xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:citation>FR ANOM COL C11D 1 Fo 179-179vo : concession de peche en Acadie par le
+										Roi à Bergier, Gaultier, Boucher et autres date du 3 mars 1684.</eac-cpf:citation>
+         </eac-cpf:mandate>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <conventionDeclaration>
+            <abbreviation> AFNOR </abbreviation>
+            <citation> Indexation conforme à la norme AFNOR NF Z44-060 (décembre 1996) Documentation - Catalogue d'auteurs et d'anonymes - Forme et structure des vedettes de collectivités – auteurs </citation>
+         </conventionDeclaration>
+         <conventionDeclaration>
+            <abbreviation> USNARA-LDRG </abbreviation>
+            <citation> U.S. National Archives and Records Administration, Lifecycle Data Requirements Guide (for creating the authorized form of the name). </citation>
+         </conventionDeclaration>
+         <mandate>
+            <citation> FR ANOM COL C11D 1 Fo 179-179vo : concession de pêche en Acadie par le Roi à Bergier, Gaultier, Boucher et autres daté du 3 mars 1684.
+                     <!-- FC --></citation>
+         </mandate>
+         <!--&lt;/citation&gt;&lt;/mandate&gt;--></egXML>
+   </div>
+</div>

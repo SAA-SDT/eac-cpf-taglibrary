@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="list" type="elementDocumentation">
+   <head>
+      <gi>list</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">List</p>
+      <p xml:lang="fre">Liste</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A wrapper element to encode a simple list consisting of two or more
+								<gi>item</gi> elements.</p>
+      <p xml:lang="fre">Élément englobant qui sert à encoder une liste simple, comprenant plusieurs éléments Item <gi>item</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>list</gi> element is used for general lists that can be embedded with a large
+								number of descriptive elements. Lists are comprised of one or more <gi>item</gi> elements.
+								Do not confuse with <gi>chronList</gi>, which encodes a structured chronology.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'élément Liste <gi>list</gi> est utilisé pour encoder les listes générales qui peuvent être contenues dans un grand nombre d'éléments descriptifs. Les listes comprennent plusieurs éléments <gi>item</gi>. Il ne faut pas
+                     confondre cet élément avec l'élément Liste chronologique <gi>chronList</gi> qui sert à encoder une structure chronologique.</p>
+   </div>
+   <div type="mayContain">
+      <p>item</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist, functions, generalContext, legalStatuses, localDescriptions,
+							mandates, occupations, places, structureOrGenealogy</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:list xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">1450-1950</eac-cpf:span>
+										(1929)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Globe Gliding</eac-cpf:span>
+										(1930)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Gems</eac-cpf:span> (1931) </eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Words</eac-cpf:span>
+										(1931)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Demonics</eac-cpf:span> (1931)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Can We Co-operate</eac-cpf:span>
+										(1942)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Amazing Amazon</eac-cpf:span> (1942)
+									</eac-cpf:item>
+         </eac-cpf:list>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <list>
+            <item>
+               <span style="font-style:italic"> 1450-1950 </span> (1929) </item>
+            <item>
+               <span style="font-style:italic"> Globe Gliding </span> (1930) </item>
+            <item>
+               <span style="font-style:italic"> Gems </span> (1931) </item>
+            <item>
+               <span style="font-style:italic"> Words </span> (1931) </item>
+            <item>
+               <span style="font-style:italic"> Demonics </span> (1931) </item>
+            <item>
+               <span style="font-style:italic"> Can We Co-operate </span> (1942) </item>
+            <item>
+               <span style="font-style:italic"> Amazing Amazon </span> (1942) </item>
+         </list>
+      </egXML>
+   </div>
+</div>

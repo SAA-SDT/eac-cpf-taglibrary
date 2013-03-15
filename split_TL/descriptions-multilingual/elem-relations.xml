@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="relations"
+     type="elementDocumentation">
+   <head>
+      <gi>relations</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Relations</p>
+      <p xml:lang="fre">Relations</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A wrapper element for grouping one or more specific relations.</p>
+      <p xml:lang="fre">Élément englobant qui regroupe une ou plusieurs relation(s) précise(s).</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A wrapper element that groups together one or more relation elements, each of which
+								denotes a specific relationship. Entities may have relationships with other corporate
+								bodies, persons or families, which may be expressed using <gi>cpfRelation</gi>; functions,
+								which may be expressed using <gi>functionRelation</gi>; or resources such as archival
+								collections, bibliographic resources, or artifacts, which may be expressed using
+									<gi>resourceRelation</gi>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément englobant qui regroupe un ou plusieurs élément(s) de relation, chacun représentant une relation précise.</p>
+      <p>Les entités peuvent être en relation avec d’autres collectivités, personnes ou familles ; ces relations peuvent être exprimées avec l’élément Relation avec une collectivité, une personne ou une famille
+                        <gi>cpfRelation</gi>.</p>
+      <p>Les entités peuvent être en relation avec des fonctions ; ces relations peuvent être exprimées avec l’élément Relation avec une fonction <gi>functionRelation</gi>.</p>
+      <p>Enfin, les entités peuvent être en relation avec des ressources (fonds d’archives, ressources bibliographiques ou artefacts) ; ces relations peuvent être exprimées avec l’élément Relation avec une ressource
+                        <gi>resourceRelation</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>cpfRelation, functionRelation, resourceRelation</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>The general concept of providing connections from archival authority
+							records to other related resources is stated in ISAAR(CPF) 6.0: "Archival authority records
+							are created primarily to document the context of records creation. To make this documentation
+							useful it is necessary to link the authority records to descriptions of records. Archival
+							authority records can also be linked to other relevant information resources."</p>
+   </div>
+   <div type="occurrence">
+      <p>0…1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:relations xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:cpfRelation>[...]</eac-cpf:cpfRelation>
+            <eac-cpf:functionRelation>[...]</eac-cpf:functionRelation>
+            <eac-cpf:resourceRelation>[...]</eac-cpf:resourceRelation>
+         </eac-cpf:relations>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <relations>
+            <cpfRelation> [...] </cpfRelation>
+            <functionRelation> [...] </functionRelation>
+            <resourceRelation> [...] </resourceRelation>
+         </relations>
+      </egXML>
+   </div>
+</div>

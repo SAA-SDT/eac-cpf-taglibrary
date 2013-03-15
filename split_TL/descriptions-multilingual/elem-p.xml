@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="p" type="elementDocumentation">
+   <head>
+      <gi>p</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Paragraph</p>
+      <p xml:lang="fre">Paragraphe</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A generic element in the description area which marks one or more sentences
+							that form a logical prose passage.</p>
+      <p xml:lang="fre">Élément générique contenu au sein d’autres éléments de Description <gi>description</gi>, qui délimite une ou plusieurs phrases formant dans le texte des ensembles logiques.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A paragraph may be a subdivision of a larger composition, or it may exist alone. It is
+								usually typographically distinct. A line space is often left blank before it; the text
+								begins on a new line; and the first letter of the first word is often indented, enlarged, or
+								both.</p>
+      <p>The <gi>p</gi> element is an important textual feature, which must be used as part of
+								any general description within a <gi>descriptiveNote</gi> element and may be used inside
+								many of the descriptive elements within the description area. While it generally contains
+								discursive text, it may also contain a <gi>span</gi> element to further stress or style
+								specific character strings by particular formatting (such as italic or bold, etc.).</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Un paragraphe peut être une subdivision d’un ensemble plus large, comme il peut exister tout seul. Il est habituellement distingué typographiquement. On va souvent à la ligne avant de commencer un nouveau paragraphe ;
+                     le texte commence sur une nouvelle ligne et la première lettre du premier mot est souvent en retrait et/ou dans une police plus grande. L’élément <gi>p</gi> est une caractéristique textuelle importante, à utiliser dans
+                     toute description générale au sein d’un élément Note descriptive <gi>descriptiveNote</gi>. Il peut aussi être utilisé dans de nombreux éléments descriptifs contenus dans l’élément <gi>description</gi>. S’il contient
+                     généralement un texte rédigé, il peut aussi héberger un élément Segment de texte <gi>span</gi> pour mettre en valeur des chaînes de caractères spécifiques grâce à une mise en forme particulière (comme l’italique, le
+                     gras, etc.)</p>
+   </div>
+   <div type="mayContain">
+      <p>[text], span</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist, descriptiveNote, functions, generalContext, legalStatuses,
+							localDescriptions, mandates, occupations, places, structureOrGenealogy</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:biogHist xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:p>Robert Carlton Brown (1886-1959) was a writer, editor, publisher, and traveler.
+										From 1908 to 1917, he wrote poetry and prose for numerous magazines and newspapers in New
+										York City, publishing two pulp novels, <eac-cpf:span style="font-style:italic">What
+											Happened to Mary</eac-cpf:span> and <eac-cpf:span style="font-style:italic">The
+											Remarkable Adventures of Christopher Poe</eac-cpf:span> (1913), and one volume of poetry,
+											<eac-cpf:span style="font-style:italic">My Marjonary</eac-cpf:span> (1916).</eac-cpf:p>
+            <eac-cpf:p>During 1918, he traveled extensively in Mexico and Central America, writing for
+										the U.S. Committee of Public Information in Santiago de Chile. In 1919, he moved with his
+										wife, Rose Brown, to Rio de Janeiro, where they founded <eac-cpf:span style="font-style:italic">Brazilian American</eac-cpf:span>, a weekly magazine that ran
+										until 1929. With Brown's mother, Cora, the Browns also established magazines in Mexico
+										City and London: <eac-cpf:span style="font-style:italic">Mexican American</eac-cpf:span>
+										(1924-1929) and <eac-cpf:span style="font-style:italic">British American</eac-cpf:span>
+										(1926-1929).</eac-cpf:p>
+         </eac-cpf:biogHist>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <biogHist>
+            <p> Robert Carlton Brown (1886-1959) was a writer, editor, publisher, and traveler. From 1908 to 1917, he wrote poetry and prose for numerous magazines and newspapers in New York City, publishing two pulp novels,
+                              <span style="font-style:italic"> What Happened to Mary </span> and <span style="font-style:italic"> The Remarkable Adventures of Christopher Poe </span> (1913), and one volume of poetry, <span style="font-style:italic"> My Marjonary </span> (1916). </p>
+            <p> During 1918, he traveled extensively in Mexico and Central America, writing for the U.S. Committee of Public Information in Santiago de Chile. In 1919, he moved with his wife, Rose Brown, to Rio de Janeiro, where
+                           they founded <span style="font-style:italic"> Brazilian American </span> , a weekly magazine that ran until 1929. With Brown's mother, Cora, the Browns also established magazines in Mexico City and London: <span style="font-style:italic"> Mexican American </span> (1924-1929) and <span style="font-style:italic"> British American </span> (1926-1929). </p>
+         </biogHist>
+      </egXML>
+   </div>
+</div>

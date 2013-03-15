@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="agentType"
+     type="elementDocumentation">
+   <head>
+      <gi>agentType</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Agent Type</p>
+      <p xml:lang="fre">Type de l’agent</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The type of agent responsible for a maintenance event of the EAC-CPF
+							instance.</p>
+      <p xml:lang="fre">Le type de l’agent responsable d’une intervention dans l’instance EAC.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>For each maintenance event described in a <gi>maintenanceEvent</gi> element, the type of
+								agent given in the <gi>agent</gi> element must be given as either "human" or
+								"machine."</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Pour chaque intervention décrite dans l’élément Intervention <gi>maintenanceEvent</gi>, le type de l’agent, précisé dans l’élément Agent <gi>agent</gi>, doit être donné soit par la valeur “human” soit par la valeur
+                     “machine” (machine).</p>
+   </div>
+   <div type="mayContain">
+      <p>"human" or "machine"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceEvent</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.9</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>created</eac-cpf:eventType>
+            <eac-cpf:eventDateTime>1993-10-20</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>McCarthy, G.J.</eac-cpf:agent>
+         </eac-cpf:maintenanceEvent>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>revised</eac-cpf:eventType>
+            <eac-cpf:eventDateTime>2006-08-01</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>machine</eac-cpf:agentType>
+            <eac-cpf:agent>BSConverta</eac-cpf:agent>
+         </eac-cpf:maintenanceEvent>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceEvent>
+            <eventType> created </eventType>
+            <eventDateTime> 1993-10-20 </eventDateTime>
+            <agentType> human </agentType>
+            <agent> McCarthy, G.J. </agent>
+         </maintenanceEvent>
+         <maintenanceEvent>
+            <eventType> revised </eventType>
+            <eventDateTime> 2006-08-01 </eventDateTime>
+            <agentType> machine </agentType>
+            <agent> BSConverta </agent>
+         </maintenanceEvent>
+      </egXML>
+   </div>
+</div>

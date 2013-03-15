@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkTitle"
+     type="attributeDocumentation">
+   <head>
+      <att>xlink:title</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Xlink: Title</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Information that may be used as a viewable caption for the remote
+							resource.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Information that serves as a viewable caption that indicates the name or
+							type of the linked remote source.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>string</p>
+   </div>
+</div>

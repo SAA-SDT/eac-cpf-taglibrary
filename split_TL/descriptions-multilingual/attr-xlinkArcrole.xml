@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkArcrole"
+     type="attributeDocumentation">
+   <head>
+      <att>xlink:arcrole</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Xlink: Arc role</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">URI defining the purpose of the link.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An absolute URI that describes the nature of the relation between the
+							entity being described in the EAC-CPF instance and a remote resource (<gi>cpfRelation</gi>,
+								<gi>resourceRelation</gi>, or <gi>functionRelation</gi>) or the nature of the relation
+							between the EAC-CPF instance description (or component of description) and the remote
+							resource (<gi>citation</gi>, <gi>setComponent</gi>, and<gi>source</gi>). The value of
+							the attribute should indicate the direction of the relation. It is recommended that the
+							direction of the relation be from local resource to remote resource.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>string</p>
+   </div>
+</div>

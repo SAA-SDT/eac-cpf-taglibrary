@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="existDates"
+     type="elementDocumentation">
+   <head>
+      <gi>existDates</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Dates of Existence</p>
+      <p xml:lang="fre">Dates d’existence</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The dates of existence of the entity being described, such as dates of
+							establishment and dissolution for corporate bodies and dates of birth and death or flourit
+							for persons.</p>
+      <p xml:lang="fre">Les dates d'existence de l'entité décrite, par exemple les dates de création et de disparition d'une collectivité, et les dates de naissance et de mort ou d'activité d'une personne.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The dates of existence of the entity being described, such as dates of establishment and
+								dissolution for corporate bodies and dates of birth and death or flourit for persons.
+									<gi>existDates</gi> may contain actual or approximate dates expressed through its
+								elements <gi>date</gi>, <gi>dateRange</gi>, or <gi>dateSet</gi>. A
+									<gi>descriptiveNote</gi> may be included if a fuller explanation of the dates of
+								existence is needed.</p>
+      <p>Use the <gi>date</gi> element to record the date of a single event, such as a date of
+								birth or date of incorporation. Use <gi>dateRange</gi> to encode a pair of inclusive
+								dates. Use <gi>dateSet</gi> to encode more complex date expressions that intermix
+									<gi>date</gi> and <gi>dateRange</gi> elements.</p>
+      <p>Do not confuse with <gi>useDates</gi>, which is a child element of <gi>nameEntry</gi>
+								or <gi>nameEntryParallel</gi> and represents the dates of use for a particular name or set
+								of names.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Les dates d'existence de l'entité décrite, par exemple les dates de création et de disparition d'une collectivité, et les dates de naissance et de mort ou d'activité d'une personne. L'élément Dates d'existence
+                        <gi>existDates</gi> peut contenir des dates précises ou approximatives, exprimées à travers les éléments Date <gi>date</gi>, Intervalle de dates <gi>dateRange</gi>, ou Ensemble de dates <gi>dateSet</gi>. Un élément
+                     Note descriptive <gi>descriptiveNote</gi> peut aussi être inclus si une explication plus détaillée des dates d'existence est nécessaire. </p>
+      <p>Utiliser l'élément Date <gi>date</gi> pour encoder un évènement particulier, comme une date de naissance ou une date de création de société. Utiliser l'élément Intervalle de dates <gi>dateRange</gi> pour encoder une
+                     fourchette de dates. Utiliser l'élément Ensemble de dates <gi>dateSet</gi> pour encoder un ensemble de dates exprimé sous forme plus complexe qui mêle les éléments Date <gi>date</gi> et Intervalle de dates
+                        <gi>dateRange</gi>. </p>
+      <p>Ne pas confondre avec l'élément Dates d'utilisation <gi>useDates</gi>, qui est un élément fils de Forme du nom <gi>nameEntry</gi> ou Forme parallèle du nom <gi>nameEntryParallel</gi>, et qui indique les dates
+                     d'utilisation d'un nom ou d'un ensemble de noms particulier.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, dateSet, descriptiveNote</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.1</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:existDates xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1868">1868</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1936">1936</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+         </eac-cpf:existDates>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <existDates>
+            <dateRange>
+               <fromDate standardDate="1868"> 1868 </fromDate>
+               <toDate standardDate="1936"> 1936
+                     </toDate>
+            </dateRange>
+         </existDates>
+      </egXML>
+   </div>
+</div>

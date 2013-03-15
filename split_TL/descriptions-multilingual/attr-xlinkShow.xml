@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkShow"
+     type="attributeDocumentation">
+   <head>
+      <att>xlink:show</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Xlink: Show</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Used to signal intended behavior with respect to where the remote resource
+							is to appear when the link is resolved.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>xlink:show</att> should be used with the
+								<att>xlink:actuate</att> to indicate intended behavior. The <att>xlink:show</att> is used to
+							signal intended behavior with respect to where the remote resource is to appear when the link
+							is resolved. The values indicate whether the resource is to appear embedded at the point of
+							the link ("embed"), replace the resource in which it appears ("replace"), or in a new window
+							("new"). "None" or "other" are also valid values.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>"embed" or "new" or "replace" or "none" or "other"</p>
+   </div>
+</div>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="descriptiveNote"
+     type="elementDocumentation">
+   <head>
+      <gi>descriptiveNote</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Descriptive Note</p>
+      <p xml:lang="fre">Note descriptive</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A generic element that provides additional information and specifications,
+							in textual form, concerning the descriptive element in which it is contained.</p>
+      <p xml:lang="fre">Élément générique fournissant, sous une forme textuelle, des informations complémentaires ou des précisions relatives à l’élément de description dans lequel est contenu l’élément Note descriptive
+                        <gi>descriptiveNote</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A generic element available in a number of descriptive elements which can be used to
+								provide any additional descriptive notes that might be appropriate. Notes must be contained
+								in paragraphs (<gi>p</gi>) and any necessary formatting may be indicated by use of the
+									<gi>span</gi> element within <gi>p</gi>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément générique disponible dans un certain nombre d’éléments de description, que l’on peut utiliser pour introduire les notes appropriées. Les notes doivent être contenues dans des éléments Paragraphe <gi>p</gi> et
+                     l’élément Segment de texte <gi>span</gi> au sein de <gi>p</gi> permet de spécifier la mise en forme recherchée.</p>
+   </div>
+   <div type="mayContain">
+      <p>p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>conventionDeclaration, cpfRelation, existDates, function,
+							functionRelation, functions, identity, languageDeclaration, languageUsed, languagesUsed,
+							legalStatus, legalStatuses, localDescription, localDescriptions, localTypeDeclaration,
+							maintenanceAgency, mandate, mandates, occupation, occupations, place, places,
+							resourceRelation, setComponent, source</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:source xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns:xlink="http://www.w3c.org/1999/xlink"
+                         xmlns:xlink_1="http://www.w3.org/1999/xlink"
+                         xmlns:xlink_2="http://www.w3.org/1999/xlink"
+                         xlink_1:href="http://www.icacds.org.uk/eng/ISAAAR(CPF)2ed.pdf"
+                         xlink_2:type="simple">
+            <eac-cpf:sourceEntry>ISAAAR(CPF)</eac-cpf:sourceEntry>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Record created based on ISAAR(CPF) 2nd ed Example 5 - Person
+											description</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:source>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <source xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xlink:href="http://www.icacds.org.uk/eng/ISAAR(CPF)2ed.pdf"
+                 xlink:type="simple">
+            <sourceEntry> ISAAAR(CPF) </sourceEntry>
+            <descriptiveNote>
+               <p> Record created based on ISAAR(CPF) 2nd ed Example 5 - Person description </p>
+            </descriptiveNote>
+         </source>
+      </egXML>
+   </div>
+</div>

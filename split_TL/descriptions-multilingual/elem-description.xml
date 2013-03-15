@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="description"
+     type="elementDocumentation">
+   <head>
+      <gi>description</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Description</p>
+      <p xml:lang="fre">Description</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A wrapper for all of the content elements comprising description (as
+							specified in the ISAAR (CPF) Description Area) of the entity described in the EAC-CPF
+							instance.</p>
+      <p xml:lang="fre">Élément englobant pour tous les éléments de contenu comprenant la description (conforme à la zone de la description dans ISAAR(CPF)) de l’entité décrite dans l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The elements that constitute <gi>description</gi> together permit descriptive
+								information to be encoded in either structured or unstructured fashions, or in a combined
+								approach. <gi>description</gi> accommodates encoding all of the data elements that
+								comprise the Description Area of ISAAR (CPF) including historical, biographical, and
+								genealogical information; legal status and mandates; functions, occupations, and activities,
+								and the dates and places that further constrain those elements.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Les éléments constitutifs de la Description <gi>description</gi> permettent d’encoder des informations descriptives de manière structurée ou non, ou dans une approche combinant les deux méthodes. L’élément
+                        <gi>description</gi> accueille l’encodage de tous les éléments de données compris dans la zone de la description d’ISAAR(CPF), parmi lesquels les informations historiques, biographiques et généalogiques, le statut
+                     juridique et les textes de référence, les fonctions, tâches et activités, ainsi que les dates et les lieux qui viennent préciser ces éléments.</p>
+   </div>
+   <div type="mayContain">
+      <p>biogHist, existDates, function, functions, generalContext, languageUsed,
+							languagesUsed, legalStatus, legalStatuses, localDescription, localDescriptions, mandate,
+							mandates, occupation, occupations, place, places, structureOrGenealogy</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:description xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:existDates>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1765-09-18">September 18, 1765</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1846-06-01">June 1, 1846</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:existDates>
+            <eac-cpf:place>
+               <eac-cpf:placeEntry altitude="389" latitude="46.140833" longitude="12.215556">Belluno</eac-cpf:placeEntry>
+               <eac-cpf:placeRole>Birthplace</eac-cpf:placeRole>
+               <eac-cpf:date standardDate="1765-09-18">September 18, 1765</eac-cpf:date>
+            </eac-cpf:place>
+            <eac-cpf:biogHist>
+               <eac-cpf:p>Cappellari was born at Belluno on 18 September 1765 to a noble family. At an
+											early age he joined the order of the Camaldolese (part of the Benedictine monastic
+											family) and entered the Monastery of San Michele di Murano, near Venice. As a Camaldolese
+											monk, Cappellari rapidly gained distinction for his theological and linguistic skills.
+											His first appearance before a wider public was in 1799, when he published against the
+											Italian Jansenists a controversial work entitled <eac-cpf:span localType="title" style="font-style:italic">II Trionfo della Santa Sede</eac-cpf:span>, which besides
+											passing through several editions in Italy, has been translated into several European
+											languages. In 1800, he became a member of the Academy of the Catholic Religion, founded
+											by Pope Pius VII (1800-1823), to which he contributed a number of memoirs on theological
+											and philosophical questions, and in 1805 was made abbot of San Gregorio on the Caelian
+											Hill.</eac-cpf:p>
+            </eac-cpf:biogHist>
+         </eac-cpf:description>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <description>
+            <existDates>
+               <dateRange>
+                  <fromDate standardDate="1765-09-18"> September 18, 1765 </fromDate>
+                  <toDate standardDate="1846-06-01"> June 1, 1846 </toDate>
+               </dateRange>
+            </existDates>
+            <place>
+               <placeEntry altitude="389" latitude="46.140833" longitude="12.215556"> Belluno </placeEntry>
+               <placeRole> Birthplace </placeRole>
+               <date standardDate="1765-09-18"> September 18, 1765 </date>
+            </place>
+            <biogHist>
+               <p> Cappellari was born at Belluno on 18 September 1765 to a noble family. At an early age he joined the order of the Camaldolese (part of the Benedictine monastic family) and entered the Monastery of San Michele
+                              di Murano, near Venice. As a Camaldolese monk, Cappellari rapidly gained distinction for his theological and linguistic skills. His first appearance before a wider public was in 1799, when he published against
+                              the Italian Jansenists a controversial work entitled <span localType="title" style="font-style:italic"> II Trionfo della Santa Sede </span> , which besides passing through several editions in Italy, has been
+                              translated into several European languages. In 1800, he became a member of the Academy of the Catholic Religion, founded by Pope Pius VII (1800-1823), to which he contributed a number of memoirs on theological
+                              and philosophical questions, and in 1805 was made abbot of San Gregorio on the Caelian Hill. </p>
+            </biogHist>
+         </description>
+      </egXML>
+   </div>
+</div>

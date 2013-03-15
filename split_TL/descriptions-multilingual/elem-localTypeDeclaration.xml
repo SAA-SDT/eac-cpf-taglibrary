@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="localTypeDeclaration"
+     type="elementDocumentation">
+   <head>
+      <gi>localTypeDeclaration</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Local Type Declaration</p>
+      <p xml:lang="fre">Déclaration d’une convention locale</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">
+         <gi>localTypeDeclaration</gi> is used to declare any local conventions used in
+								<att>localType</att> in the EAC-CPF instance.</p>
+      <p xml:lang="fre">L’élément Déclaration d’une convention locale <gi>localTypeDeclaration</gi> est utilisé pour déclarer toute convention locale utilisée dans l’attribut <att>localType</att> dans l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>localTypeDeclaration</gi> is available to declare the local conventions and
+								controlled vocabularies used in <att>localType</att> in the EAC-CPF instance. The
+									<gi>citation</gi> element must be used to site the resource that lists the used values
+								(semantic scope and intention). Any notes relating to how rules or conventions have been
+								used may be given within a <gi>descriptiveNote</gi> element. The <gi>abbreviation</gi>
+								element may be used to identify the standard or controlled vocabulary in a coded
+								structure.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élément <gi>localTypeDeclaration</gi> est disponible pour déclarer les conventions locales et les vocabulaires contrôlés utilisés dans l’attribut <att>localType</att> de l’instance EAC-CPF. L’élément Citation
+                        <gi>citation</gi> doit être utilisé pour citer la ressource qui liste les valeurs utilisées (champ d’application sémantique et objet). Toute note relative à la façon dont les règles ou conventions ont été utilisées
+                     peut être fournie au moyen de l’élément Note descriptive <gi>descriptiveNote</gi>. L’élément Abréviation <gi>abbreviation</gi> peut être utilisé pour identifier la norme ou le vocabulaire contrôlé sous une forme
+                     codée.</p>
+   </div>
+   <div type="mayContain">
+      <p>abbreviation, citation, descriptiveNote</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:localTypeDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:abbreviation>Categorycodes</eac-cpf:abbreviation>
+            <eac-cpf:citation xmlns:xlink="http://www.w3c.org/1999/xlink"
+                              xmlns:xlink_1="http://www.w3.org/1999/xlink"
+                              xmlns:xlink_2="http://www.w3.org/1999/xlink"
+                              xlink_1:href="http://nad.ra.se/static/termlistor/Kategorikoder.htm"
+                              xlink_2:type="simple">The categorycodes used in Swedish NAD (http://nad.ra.se). Used in
+										element function</eac-cpf:citation>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Codes for categorizing different types of authority records through
+											organizational form, operation, function, archivalorganization etcetera. </eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:localTypeDeclaration>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <localTypeDeclaration>
+            <abbreviation> Categorycodes </abbreviation>
+            <citation xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xlink:href="http://nad.ra.se/static/termlistor/ Kategorikoder.htm"
+                      xlink:type="simple"> The categorycodes used in Swedish NAD (http://nad.ra.se). Used in element
+                           function </citation>
+            <descriptiveNote>
+               <p> Codes for categorizing different types of authority records through organizationalform, operation, function, archivalorganization etcetera. </p>
+            </descriptiveNote>
+         </localTypeDeclaration>
+      </egXML>
+   </div>
+</div>

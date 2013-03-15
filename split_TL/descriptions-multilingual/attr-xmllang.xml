@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xmllang"
+     type="attributeDocumentation">
+   <head>
+      <att>xml:lang</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">XML Language</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Three-letter ISO 639-2 language code.</p>
+      <p xml:lang="fre">Code de langue à trois lettres ISO 639-2.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>xml:lang</att> may occur on any element intended to contain
+							natural language content whenever information about the language of the content of this
+							element and its children are needed. <att>xml:lang</att> should be used when the language of
+							the element differs from the Language Code declared in the <att>languageCode</att> attribute
+							on the element <gi>language</gi> in the control section. The values in the list are taken
+							from ISO 639-2 Codes for the Representation of Names of Languages. The list can be downloaded
+							from the website of the Library of Congress which is the registration agency of the standard
+								(http://www.loc.gov/standards/iso639-2/langhome.html).</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>xml:lang</att> s’applique à tout élément dont le contenu est rédigé en langage naturel, chaque fois qu’il est nécessaire d’indiquer la langue du contenu de cet élément et de ses enfants. On doit utiliser
+                     l’attribut <att>xml:lang</att> quand la langue de l’élément diffère de celle déclarée dans l’attribut <att>languageCode</att> de l’élément Langue <gi>language</gi> qui fait partie du contrôle de la description. Les
+                     valeurs de la liste sont issues de la norme ISO 639-2 Codes pour la représentation des noms de langue. On peut télécharger cette liste à partir du site de la Bibliothèque du Congrès qui est l’agence d’enregistrement de
+                     la norme (http://www.loc.gov/standards/iso639-2/langhome.html).</p>
+      <p/>
+      <p/>
+      <p/>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>IS0 639-2 Codes for the Representation of Names of Languages.</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>languageVoir ISO 639-2 Codes pour la représentation des noms de langue</p>
+   </div>
+</div>
