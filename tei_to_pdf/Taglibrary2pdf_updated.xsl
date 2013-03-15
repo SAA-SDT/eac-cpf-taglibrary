@@ -2,13 +2,14 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:fo="http://www.w3.org/1999/XSL/Format" 
     xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+    xmlns:ead="urn:isbn:1-931666-22-9"
     xmlns:ex="http://www.tei-c.org/ns/Examples"
     xmlns:exml="http://workaround for xml namespace restriction/namespace"
     xmlns:xlink="http://www.w3c.org/1999/xlink" 
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema" 
     xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:example="example" exclude-result-prefixes="xs xlink eac-cpf ex exml example"
+    xmlns:example="example" exclude-result-prefixes="xs xlink eac-cpf ex exml example ead"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
     <xsl:output indent="yes"/>
     <!--xmlns:mods="http://www.loc.gov/mods/v3"-->
@@ -508,7 +509,19 @@
 <!--                <xsl:apply-templates select="tei:div[@type='fullName']/tei:p"/>-->
                 <xsl:value-of select="tei:div[@type='fullName']/tei:p"/>
             </fo:block>
-            <xsl:apply-templates select="tei:div"/>
+            <xsl:apply-templates select="tei:div[@type='summary']"/>
+            <xsl:apply-templates select="tei:div[@type='description']"/>
+            <xsl:apply-templates select="tei:div[@type='mayContain']"/>
+            <xsl:apply-templates select="tei:div[@type='mayOccurWithin']"/>
+            <xsl:apply-templates select="tei:div[@type='reference']"/>
+            <xsl:apply-templates select="tei:div[@type='attributes']"/>
+            <xsl:apply-templates select="tei:div[@type='occurrence']"/>
+            <xsl:apply-templates select="tei:div[@type='mandatory']"/>
+            <xsl:apply-templates select="tei:div[@type='repetable']"/>
+            <!-- Karin!!! för mycket nästling fixa!!!! -->
+            <xsl:apply-templates select="tei:div[@type='examples']"/>
+            <!--<xsl:apply-templates/>-->
+            <!--<xsl:apply-templates select="tei:div"/>-->
             <!--<xsl:apply-templates select="tei:list"/>-->
         </xsl:for-each>
     </xsl:template>
@@ -863,7 +876,8 @@
         <xsl:apply-templates/>
     </xsl:template>
 
-    <xsl:template match="tei:front/tei:div/tei:div/ex:egXML">
+    <!-- match="tei:front/tei:div/tei:div/ex:egXML" -->
+    <xsl:template name="Tillfalligtute2">
         <fo:block>
             <xsl:text> </xsl:text>
         </fo:block>
@@ -890,8 +904,7 @@
         </fo:block>
     </xsl:template>
 
-    <xsl:template match="tei:div[@type='examples']"><!-- Hur få bort taggen egXML???? -->
-<!--        <xsl:apply-templates/>-->
+    <xsl:template match="tei:div[@type='examples']">
         <fo:list-block provisional-distance-between-starts="40mm">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
@@ -911,14 +924,29 @@
                     
                     <fo:block>
                         <xsl:call-template name="newLine"/>
-                        <xsl:for-each select="*">
+                        <xsl:apply-templates mode="escape"/>
+                        <!--Borttaget för test
+                            <xsl:element name="{local-name(.)}">
+                            <xsl:copy-of select="@*"/>
+                            <xsl:copy-of select="*"/>
+                        </xsl:element>-->
+<!--                        <xsl:apply-templates/>-->
+                        <!-- Flyttat till egXML -->
+                        <!--<xsl:for-each select="*">
                             <fo:block>
-                               <!--<xsl:text>&#x20;</xsl:text>-->
-                                <!--<xsl:apply-templates mode="escape"/>-->
-                                <xsl:call-template name="eg"/>
-                                <xsl:call-template name="newLine"/>
+                               <xsl:apply-templates/>
+                               <!-\- <xsl:element name="{local-name(.)}">
+                                    <xsl:copy-of select="*"/>
+<!-\-                                    <xsl:apply-templates/>-\->
+                                </xsl:element>
+                               <!-\-<xsl:text>&#x20;</xsl:text>-\->
+                                <!-\-<xsl:apply-templates mode="escape"/>-\->
+<!-\-                                <xsl:call-template name="aNewBeginning"/>-\->
+<!-\-                                <xsl:call-template name="eg"/>-\->
+                                <xsl:call-template name="newLine"/>-\->
+                               
                             </fo:block>
-                        </xsl:for-each>
+                        </xsl:for-each>-->
                     </fo:block>
                     
                 </fo:list-item-body>
@@ -926,6 +954,41 @@
             </fo:list-item>
         </fo:list-block>
     </xsl:template>
+    
+    <!-- match="ex:egXML" -->
+    <xsl:template name="tillfalligtute4" >
+       <fo:block> 
+           <xsl:for-each select="*">
+            
+            <xsl:apply-templates mode="escape"/>
+               <!--<xsl:element name="{local-name(.)}">
+            <xsl:copy-of select="@*"/>
+                   <xsl:copy-of select="*"/>
+        </xsl:element>-->
+ 
+        <xsl:call-template name="newLine"/> 
+            
+        </xsl:for-each>
+        </fo:block>
+    </xsl:template>
+    
+    <xsl:template match="eac-cpf:*|ead:*" mode="escape">
+        <xsl:element name="{local-name(.)}">
+            <xsl:copy-of select="@*"/>
+            <xsl:copy-of select="*"/>
+<!--            <xsl:apply-templates/>-->
+        </xsl:element>
+    </xsl:template>
+    
+    
+  
+    <xsl:template name="aNewBeginning">
+        <xsl:element name="{local-name(.)}">
+            <xsl:copy-of select="@*"/>
+            <xsl:call-template name="aNewBeginning"/>
+        </xsl:element>
+    </xsl:template>
+
 
     <xsl:template name="eg">
         <xsl:choose>
@@ -934,6 +997,11 @@
                
                <fo:block>
                     <xsl:call-template name="newLine"/>
+                   <!--<xsl:element name="{local-name(.)}">
+                       <xsl:copy-of select="@*"/>
+                       <xsl:copy-of select="*"/>
+                       
+                   </xsl:element>-->
                     <xsl:text>&lt;</xsl:text>
                     <xsl:value-of select="local-name()"/>
                     <xsl:for-each select="@*">
@@ -971,13 +1039,22 @@
         </xsl:choose>
     </xsl:template>
     
-
-    <xsl:template match="eac-cpf:*|example:*">
+<!--match="eac-cpf:* |example:* -->
+    <xsl:template name="Tillfalligtute3">
         <xsl:variable name="myDepth"
             select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*5"/>
         <!-- start-indent="{70 + $myDepth}" end-indent="{$myDepth}" -->
         <fo:block start-indent="body-start() + {$myDepth}mm" wrap-option="wrap">
             <xsl:call-template name="newLine"/>
+            <!--<xsl:element name="{local-name(.)}">
+                <xsl:copy-of select="@*"/>
+                <xsl:apply-templates select="* | text()"/>
+            </xsl:element>-->
+            <!--<xsl:element name="{local-name(.)}">
+                <xsl:copy-of select="@*"/>
+                <xsl:copy-of select="*"/>
+                
+            </xsl:element>-->
             <!--            <xsl:apply-templates mode="escape"/>-->
             <!--<xsl:call-template name="makeIndent"/>-->
             <xsl:text>&lt;</xsl:text>
@@ -1017,17 +1094,21 @@
         </fo:block>
     </xsl:template>
 
+<!--  -->
     <xsl:template match="eac-cpf:objectXMLWrap" name="objectXMLWrap">
         <xsl:variable name="myDepth"
             select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*1"/>
         <fo:block start-indent="body-start() + {$myDepth}mm" wrap-option="wrap">
             <xsl:text>&lt;objectXMLWrap&gt;</xsl:text>
+            <fo:block>
             <xsl:apply-templates mode="escape"/>
+            </fo:block>
             <xsl:text>&lt;/objectXMLWrap&gt;</xsl:text>
         </fo:block>
     </xsl:template>
 
-    <xsl:template match="*" mode="escape">
+    <!-- match="*" mode="escape" -->
+    <xsl:template name="Tillfalligtute">
         <!-- Xlink och xsi kommer inte med det blir namespacec ibland på alla taggar -->
         <xsl:variable name="myDepth"
             select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*5"/>
@@ -1096,11 +1177,11 @@
 
     </xsl:template>
 
-    <xsl:template match="text()" mode="escape">
+    <!--<xsl:template match="text()" mode="escape">
         <xsl:call-template name="escape-xml">
             <xsl:with-param name="text" select="."/>
         </xsl:call-template>
-    </xsl:template>
+    </xsl:template>-->
 
 
     <xsl:template name="escape-xml">
