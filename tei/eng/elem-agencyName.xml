@@ -49,7 +49,7 @@
       <p xml:lang="eng">Non-repeatable</p>
    </div>
    <div type="occurrence">
-      <p>0...1</p>
+      <p>1</p>
    </div>
    <div type="examples">
       <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
