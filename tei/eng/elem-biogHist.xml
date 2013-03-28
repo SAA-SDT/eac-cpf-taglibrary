@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="biogHist"
      type="elementDocumentation">
    <head>
       <gi>biogHist</gi>
    </head>
    <div type="fullName">
-      <p xml:lang="eng">Biographical or Historical Note</p>
+      <p xml:lang="eng">Biography or History</p>
       
    </div>
    <div type="summary">
@@ -24,7 +24,7 @@
 								such as a MARC record.</p>
       <p>The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
 								used to accommodate greater complexity in expressing or representing the biography or
-								history being described. A simpler discursive expression of the information may be encoded
+								history of the CPF entity being described. A simpler discursive expression of the information may be encoded
 								as one or more <gi>p</gi> elements.</p>
    </div>
    
@@ -50,11 +50,17 @@
    <div type="reference">
       <p> ISAAR 5.2.2</p>
    </div>
+   <div type="mandatory">
+      <p xml:lang="eng">Optional</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Repeatable</p>
+   </div>
    <div type="occurrence">
       <p>0...∞</p>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:biogHist xmlns:eac-cpf="urn:isbn:1-931666-33-4">
             <eac-cpf:abstract>Established in 1961, the United States Peace Corps administered and
 										coordinated Federal international volunteer and related domestic volunteer programs in
@@ -98,38 +104,6 @@
                </eac-cpf:chronItem>
             </eac-cpf:chronList>
          </eac-cpf:biogHist>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <biogHist>
-            <abstract> Established in 1961, the United States Peace Corps administered and coordinated Federal international volunteer and related domestic volunteer programs in areas of agricultural assistance, community
-                           development, education, environmental protection, and nation assistance. </abstract>
-            <p> The Peace Corps was established as an operating agency in the Department of State Delegation of Authority 85-11, effective March 3, 1961, pursuant to Executive Order (E.O.) 10924, March 1, 1961. It was recognized
-                           legislatively by the Peace Corps Act (75 Stat. 612), approved September 22, 1961. The Peace Corps was reassigned to the newly established ACTION by Reorganization Plan No. 1 of 1971, effective July 1, 1971. It was
-                           made autonomous within ACTION by E.O. 12137, May 16, 1979, and was made an independent agency by Title VI of the International Security and Development Corporation Act of 1981 (95 Stat. 1540), February 21, 1982.
-                           The Peace Corps administered and coordinated Federal international volunteer and related domestic volunteer programs including the areas of agricultural assistance, community development, education, environmental
-                           protection, andnation assistance. </p>
-         </biogHist>
-         <biogHist>
-            <p> Ilma Mary Brewer, nee Pidgeon, was Lecturer in Botany/Biology, University of Sydney 1963-70 and Senior Lecturer in Biological Sciences 1970-78. She developed new methods of teaching based on the recognition that
-                           a student learnt more by working at his/her own place and instruction him/her self. Her findings were published as a book, "Learning More and Teaching Less." </p>
-            <chronList>
-               <chronItem>
-                  <date standardDate="1936"> 1936 </date>
-                  <event> Bachelor of Science (BSc) completed at the University of Sydney </event>
-               </chronItem>
-               <chronItem>
-                  <date standardDate="1937"> 1937 </date>
-                  <event> Master of Science (MSc) completed at the University of Sydney </event>
-               </chronItem>
-               <chronItem>
-                  <dateRange>
-                     <fromDate standardDate="1937"> 1937 </fromDate>
-                     <toDate standardDate="1941"> 1941 </toDate>
-                  </dateRange>
-                  <event> Linnean Macleay Fellow </event>
-               </chronItem>
-            </chronList>
-         </biogHist>
       </egXML>
    </div>
 </div>

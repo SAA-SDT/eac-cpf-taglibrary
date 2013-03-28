@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="chronList"
      type="elementDocumentation">
    <head>
       <gi>chronList</gi>
    </head>
    <div type="fullName">
-      <p xml:lang="eng">Chronological List</p>
+      <p xml:lang="eng">Chronology List</p>
       
    </div>
    <div type="summary">
@@ -15,7 +15,7 @@
       
    </div>
    <div type="description" xml:lang="eng">
-      <p>Chronology list comprises a sequentially structured list of significant events in the life
+      <p>Chronology List comprises a sequentially structured list of significant events in the life
 								of the person or during the existence of the family or corporate body described in the
 								EAC-CPF instance. Such events are associated with the date of occurrence and optionally with
 								the name of a place. Each <gi>chronList</gi> contains a series of <gi>chronItem</gi>
@@ -45,11 +45,17 @@
    <div type="reference">
       <p>ISAAR (CPF) 5.2.2</p>
    </div>
+   <div type="mandatory">
+      <p xml:lang="eng">Optional</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Repeatable</p>
+   </div>
    <div type="occurrence">
       <p>0...∞</p>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:chronList xmlns:eac-cpf="urn:isbn:1-931666-33-4">
             <eac-cpf:chronItem>
                <eac-cpf:date standardDate="1936">1936</eac-cpf:date>
@@ -77,32 +83,6 @@
 											in the coastal regions of New South Wales</eac-cpf:event>
             </eac-cpf:chronItem>
          </eac-cpf:chronList>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <chronList>
-            <chronItem>
-               <date standardDate="1936"> 1936 </date>
-               <event> Bachelor of Science (Bsc), obtenu à l'Université de Sydney </event>
-            </chronItem>
-            <chronItem>
-               <date standardDate="1937"> 1937 </date>
-               <event> Master of Science (MSc), obtenu à l'Université de Sydney </event>
-            </chronItem>
-            <chronItem>
-               <dateRange>
-                  <fromDate standardDate="1937"> 1937 </fromDate>
-                  <toDate standardDate="1941"> 1941 </toDate>
-               </dateRange>
-               <event> Linnean Macleay Fellow </event>
-            </chronItem>
-            <chronItem>
-               <dateRange>
-                  <fromDate standardDate="1939"> c. 1939 </fromDate>
-                  <toDate standardDate="1945"> c. 1945 </toDate>
-               </dateRange>
-               <event> Travaille au sein des services de renseignement de l'armée à cartographier la flore (arbres et sous-bois) des régions côtières de Nouvelle-Galles du Sud. </event>
-            </chronItem>
-         </chronList>
       </egXML>
    </div>
 </div>

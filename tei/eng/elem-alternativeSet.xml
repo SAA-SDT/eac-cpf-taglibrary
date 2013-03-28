@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="alternativeSet"
      type="elementDocumentation">
    <head>
@@ -17,10 +17,10 @@
    <div type="description" xml:lang="eng">
       <p>Alternative Set is a container element for two or more authority records derived from two
 								or more authority systems. Alternative authority records are contained with
-									<gi>alternativeSet</gi> in <gi>setComponent</gi> elements. This device allows different
-								descriptions of the same entity to be contained within a single EAC-CPF instance.</p>
+									<gi>alternativeSet</gi> in <gi>setComponent</gi> elements. This approach allows different
+								descriptions of the same CPF entity to be contained within a single EAC-CPF instance.</p>
       <p>Authority record aggregation may be used in cooperative or consortial contexts that gather
-								together records describing the same entity in different languages, or from different rules
+								together records describing the same CPF entity in different languages, or from different rules
 								when it is desirable to provide users with alternative descriptions of the same entity. For
 								example, in the context of the European Union, an international cooperative project may want
 								to provide users the option of descriptions in Italian, French, German, English, Spanish,
@@ -49,57 +49,46 @@
       </p>
       
    </div>
+   <div type="mandatory">
+      <p xml:lang="eng">Optional</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Non-repeatable</p>
+   </div>
    <div type="occurrence">
       <p>0...1</p>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
-            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
-                                  xmlns:xlink_1="http://www.w3.org/1999/xlink"
-                                  xmlns:xlink_2="http://www.w3.org/1999/xlink"
-                                  xlink_1:href="http://authorities.loc.gov/"
-                                  xlink_2:type="simple">
+            <eac-cpf:setComponent  xlink:href="http://authorities.loc.gov/" xlink:type="simple" lastDateTimeVerified="2009-08-02" xmlns:xlink="http://www.w3.org/1999/xlink">
                <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
-            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
-                                  xmlns:xlink_1="http://www.w3.org/1999/xlink"
-                                  xmlns:xlink_2="http://www.w3.org/1999/xlink"
-                                  xlink_1:href="http://nla.gov.au/anbd.aut-an35335937"
-                                  xlink_2:type="simple">
+            <eac-cpf:setComponent xlink:href="http://nla.gov.au/anbd.aut-an35335937"
+               xlink:type="simple" lastDateTimeVerified="2012-06-25" xmlns:xlink="http://www.w3.org/1999/xlink">
                <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
-            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
-                                  xmlns:xlink_2="http://www.w3.org/1999/xlink"
-                                  xmlns:xlink_3="http://www.w3.org/1999/xlink"
-                                  lastDateTimeVerified="2009-08-02"
-                                  xlink_2:href="mawsonBS.xml"
-                                  xlink_3:type="simple">
+            <eac-cpf:setComponent>
                <eac-cpf:objectXMLWrap>
-                  
+                  <eac-cpf:eac-cpf xmlns="urn:isbn:1-931666-33-4"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd">
+                     <eac-cpf:control>[...]</eac-cpf:control>
+                     <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
+                  </eac-cpf:eac-cpf>
                </eac-cpf:objectXMLWrap>
             </eac-cpf:setComponent>
          </eac-cpf:alternativeSet>
       </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <alternativeSet>
-            <setComponent xmlns:xlink="http://www.w3.org/1999/xlink"
-                          xlink:href="http://authorities.loc.gov/"
-                          xlink:type="simple">
-               <componentEntry> Bright Sparcs Record </componentEntry>
-            </setComponent>
-            <setComponent xmlns:xlink="http://www.w3.org/1999/xlink"
-                          xlink:href="http://nla.gov.au/anbd.aut-an35335937"
-                          xlink:type="simple">
-               <componentEntry> NLA record. </componentEntry>
-            </setComponent>
-            <setComponent xmlns:xlink="http://www.w3.org/1999/xlink"
-                          lastDateTimeVerified="2009-08-02"
-                          xlink:href="mawsonBS.xml"
-                          xlink:type="simple">
-               
-            </setComponent>
-         </alternativeSet>
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:setComponent xlink:href="http://authorities.loc.gov/" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+            <eac-cpf:setComponent xlink:href="http://nla.gov.au/anbd.aut-an35335937" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+         </eac-cpf:alternativeSet>
       </egXML>
    </div>
 </div>

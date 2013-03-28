@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="chronItem"
      type="elementDocumentation">
    <head>
       <gi>chronItem</gi>
    </head>
    <div type="fullName">
-      <p xml:lang="eng">Chronological Item</p>
+      <p xml:lang="eng">Chronology List Item</p>
       
    </div>
    <div type="summary">
@@ -43,11 +43,17 @@
    <div type="reference">
       <p>ISAAR (CPF) 5.2.2</p>
    </div>
+   <div type="mandatory">
+      <p xml:lang="eng">Mandatory</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Repeatable</p>
+   </div>
    <div type="occurrence">
       <p>1...∞</p>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML  xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:chronItem xmlns:eac-cpf="urn:isbn:1-931666-33-4">
             <eac-cpf:date standardDate="1957">1957</eac-cpf:date>
             <eac-cpf:event>Left Mer and moved to the mainland. Worked at various jobs including
@@ -61,19 +67,6 @@
             <eac-cpf:event>Union representative, Townsville-Mount Isa rail construction
 										project.</eac-cpf:event>
          </eac-cpf:chronItem>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <chronItem>
-            <date standardDate="1957"> 1957 </date>
-            <event> Quitte Mer pour s’installer sur le continent. Exerce successivement divers emplois, travaillant en particulier comme coupeur de canne à sucre et comme employé des chemins defer. </event>
-         </chronItem>
-         <chronItem>
-            <dateRange>
-               <fromDate standardDate="1960"> 1960 </fromDate>
-               <toDate standardDate="1961"> 1961 </toDate>
-            </dateRange>
-            <event> Représentant syndical dans le cadre de la construction de la liaison ferroviaireTownsville-Mount Isa. </event>
-         </chronItem>
       </egXML>
    </div>
 </div>
