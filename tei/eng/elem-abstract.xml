@@ -42,14 +42,14 @@
       </p>
       
    </div>
-   <div type="mandatory">
+   
+   <div type="occurrence">
+      <div type="mandatory">
       <p xml:lang="eng">Optional</p>
    </div>
    <div type="repeatable">
       <p xml:lang="eng">Non-repeatable</p>
    </div>
-   <div type="occurrence">
-      <p>0…1</p>
    </div>
    <div type="examples">
       <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">            
