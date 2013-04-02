@@ -29,6 +29,8 @@
                     <!-- KB December 4th, add "mandatory" and "repeatable" as values -->
                     <value>mandatory</value>
                     <value>repeatable</value>
+                    <!-- KB April 2nd, added occurenceSpecifikation as value -->
+                    <value>occurenceSpecifikation</value>
                 </choice>
             </attribute>
             <!-- FC August 2nd, add xml:lang attribute, datatype language-->
