@@ -49,23 +49,23 @@
       </p>
       
    </div>
-   <div type="mandatory">
+   
+   <div type="occurrence">
+      <div type="mandatory">
       <p xml:lang="eng">Optional</p>
    </div>
    <div type="repeatable">
       <p xml:lang="eng">Non-repeatable</p>
    </div>
-   <div type="occurrence">
-      <p>0...1</p>
    </div>
    <div type="examples">
       <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
-         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
-            <eac-cpf:setComponent  xlink:href="http://authorities.loc.gov/" xlink:type="simple" lastDateTimeVerified="2009-08-02" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <eac-cpf:setComponent  xlink:href="http://authorities.loc.gov/" xlink:type="simple" lastDateTimeVerified="2009-08-02">
                <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
             <eac-cpf:setComponent xlink:href="http://nla.gov.au/anbd.aut-an35335937"
-               xlink:type="simple" lastDateTimeVerified="2012-06-25" xmlns:xlink="http://www.w3.org/1999/xlink">
+               xlink:type="simple" lastDateTimeVerified="2012-06-25" >
                <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
             <eac-cpf:setComponent>
@@ -81,11 +81,11 @@
          </eac-cpf:alternativeSet>
       </egXML>
       <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
-         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
-            <eac-cpf:setComponent xlink:href="http://authorities.loc.gov/" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <eac-cpf:setComponent xlink:href="http://authorities.loc.gov/" xlink:type="simple" >
                <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
-            <eac-cpf:setComponent xlink:href="http://nla.gov.au/anbd.aut-an35335937" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <eac-cpf:setComponent xlink:href="http://nla.gov.au/anbd.aut-an35335937" xlink:type="simple">
                <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
          </eac-cpf:alternativeSet>

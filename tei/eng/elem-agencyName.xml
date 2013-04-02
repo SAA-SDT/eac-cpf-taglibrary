@@ -42,14 +42,14 @@
    <div type="reference">
       <p>ISAAR (CPF) 5.4.2</p>
    </div>
-   <div type="mandatory">
+   
+   <div type="occurrence">
+      <div type="mandatory">
       <p xml:lang="eng">Mandatory</p>
    </div>
    <div type="repeatable">
       <p xml:lang="eng">Non-repeatable</p>
    </div>
-   <div type="occurrence">
-      <p>1</p>
    </div>
    <div type="examples">
       <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
