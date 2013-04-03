@@ -14,8 +14,8 @@
       
    </div>
    <div type="description" xml:lang="eng">
-      <p>An optional element of <gi>identity</gi> which may be used to record any identifier
-								associated with the entity being described in the EAC-CPF instance. Identifiers such as
+      <p>An optional element of <gi>identity</gi> that may be used to record any identifier
+								associated with the CPF entity being described in the EAC-CPF instance. Identifiers such as
 								legal identifiers, typically assigned by an authoritative agency, may be recorded in this
 								element.</p>
       <p>Do not confuse with <gi>recordId</gi> within <gi>control</gi>, which refers to an
@@ -43,7 +43,12 @@
       <p>ISAAR (CPF) 5.1.6</p>
    </div>
    <div type="occurrence">
-      <p>0...∞</p>
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
    </div>
    <div type="examples">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">

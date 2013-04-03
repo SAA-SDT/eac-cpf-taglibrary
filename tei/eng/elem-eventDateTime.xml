@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="eventDateTime"
      type="elementDocumentation">
    <head>
@@ -43,27 +43,30 @@
       <p>ISAAR (CPF) 5.4.6</p>
    </div>
    <div type="occurrence">
-      <p>1</p>
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Non-repeatable</p>
+      </div>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
-            <eac-cpf:eventType>created</eac-cpf:eventType>
-            
-            <eac-cpf:agentType>human</eac-cpf:agentType>
-            <eac-cpf:agent>Bill Stockting</eac-cpf:agent>
-            <eac-cpf:eventDescription>Created from original in ISAAR (CPF), 2nd edition: example
-										10</eac-cpf:eventDescription>
-         </eac-cpf:maintenanceEvent>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <maintenanceEvent>
-            <eventType> created </eventType>
-            
-            <agentType> human </agentType>
-            <agent> Bill Stockting </agent>
-            <eventDescription> Created from original in ISAAR (CPF), 2nd edition: example 10 </eventDescription>
-         </maintenanceEvent>
+               <eac-cpf:eventType>created</eac-cpf:eventType>
+               <eac-cpf:eventDateTime standardDateTime="2009-11-30T12:00:00+01:00"/>
+               <eac-cpf:agentType>human</eac-cpf:agentType>
+               <eac-cpf:agent>Bill Stockting</eac-cpf:agent>
+               <eac-cpf:eventDescription>Created from original in ISAAR (CPF), 2nd edition: example 
+                  10</eac-cpf:eventDescription>
+            </eac-cpf:maintenanceEvent>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+               <eac-cpf:eventType>updated</eac-cpf:eventType>
+               <eac-cpf:eventDateTime>11th of June 2012 at 9AM</eac-cpf:eventDateTime>
+               <eac-cpf:agentType>human</eac-cpf:agentType>
+               <eac-cpf:agent>Karin Bredenberg</eac-cpf:agent>
+               <eac-cpf:eventDescription>Updated example 10</eac-cpf:eventDescription>
+            </eac-cpf:maintenanceEvent>
       </egXML>
    </div>
 </div>
