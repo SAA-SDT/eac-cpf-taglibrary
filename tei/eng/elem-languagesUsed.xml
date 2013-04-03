@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="languagesUsed"
      type="elementDocumentation">
    <head>
@@ -41,10 +41,15 @@
       
    </div>
    <div type="occurrence">
-      <p>0...1</p>
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:languagesUsed xmlns:eac-cpf="urn:isbn:1-931666-33-4">
             <eac-cpf:languageUsed>
                <eac-cpf:language languageCode="eng">English</eac-cpf:language>
@@ -58,21 +63,6 @@
                <eac-cpf:p>Published works in English and Spanish.</eac-cpf:p>
             </eac-cpf:descriptiveNote>
          </eac-cpf:languagesUsed>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <languagesUsed>
-            <languageUsed>
-               <language languageCode="eng"> English </language>
-               <script scriptCode="Latn"> Latin </script>
-            </languageUsed>
-            <languageUsed>
-               <language languageCode="spa"> Spanish </language>
-               <script scriptCode="Latn"> Latin </script>
-            </languageUsed>
-            <descriptiveNote>
-               <p> Published works in English and Spanish. </p>
-            </descriptiveNote>
-         </languagesUsed>
       </egXML>
    </div>
 </div>
