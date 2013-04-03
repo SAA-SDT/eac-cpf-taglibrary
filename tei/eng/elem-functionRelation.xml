@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="functionRelation"
      type="elementDocumentation">
    <head>
@@ -10,21 +11,20 @@
       
    </div>
    <div type="summary">
-      <p xml:lang="eng">A function related to the described entity.</p>
+      <p xml:lang="eng">An element designed to encode a relationship between a function and the CPF entity described in the EAC-CPF instance.</p>
       
    </div>
    <div type="description" xml:lang="eng">
       <p>The <gi>functionRelation</gi> element contains the description of a function related to
-								the described entity. Such related functions are typically described in another encoding
+								the described CPF entity. Such related functions are typically described in another encoding
 								language. Use <gi>objectXMLWrap</gi> to incorporate XML elements from any XML namespace or
 									<gi>objectBinWrap</gi> for base64-encoded binary data. A <gi>relationEntry</gi> element
 								is provided for textual identification of the related function.</p>
       <p>Use the <gi>date</gi>, <gi>dateRange</gi>, or <gi>dateSet</gi> elements for
 								specifying when the relation applied and the <gi>placeEntry</gi> element for relevant
-								locative information. A <gi>descriptiveNote</gi> element may be included for a more
-								detailed specification or explanation of the relationship.</p>
+         location information. A <gi>descriptiveNote</gi> element may be included for a more detailed explanation of the relationship.</p>
       <p>The <att>functionRelationType</att> attribute is used to specify the nature of the
-								relationship that exists between the <gi>function</gi> and the <gi>eac-cpf</gi> entity.
+         relationship that exists between the <gi>function</gi> and the CPF entity described in the EAC-CPF instance.
 								Values are chosen from a closed list.</p>
    </div>
    
@@ -68,25 +68,29 @@
       <p>ISDF Chapter 6</p>
    </div>
    <div type="occurrence">
-      <p>0...∞</p>
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:functionRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" functionRelationType="performs">
             <eac-cpf:relationEntry>Alumni communication management, University of
-										Glasgow</eac-cpf:relationEntry>
+               Glasgow</eac-cpf:relationEntry>
             <eac-cpf:descriptiveNote>
-               <eac-cpf:p>The management of the University's communication with its alumni.</eac-cpf:p>
+               <eac-cpf:p>The management of the University's communication with its
+                  alumni.</eac-cpf:p>
             </eac-cpf:descriptiveNote>
          </eac-cpf:functionRelation>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <functionRelation functionRelationType="performs">
-            <relationEntry> Alumni communication management, University of Glasgow </relationEntry>
-            <descriptiveNote>
-               <p> The management of the University's communication with its alumni. </p>
-            </descriptiveNote>
-         </functionRelation>
+         <eac-cpf:functionRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" functionRelationType="controls">
+            <eac-cpf:relationEntry>Εstablishment and abolishment of schools</eac-cpf:relationEntry>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>The second responsibility of the Department is to control the establishment and abolishment of schools.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:functionRelation>
       </egXML>
    </div>
 </div>
