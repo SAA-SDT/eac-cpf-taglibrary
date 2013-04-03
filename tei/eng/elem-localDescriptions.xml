@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="localDescriptions"
      type="elementDocumentation">
    <head>
@@ -44,46 +44,41 @@
       
    </div>
    <div type="occurrence">
-      <p>0...∞</p>
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
    </div>
    <div type="examples">
       <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <eac-cpf:localDescriptions xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+         <eac-cpf:localDescriptions xmlns:eac-cpf="urn:isbn:1-931666-33-4" localType="http://....fr/eac-cpf/localType/">
             <eac-cpf:localDescription localType="http://....fr/eac-cpf/localType/nationalité">
-               <eac-cpf:term vocabularySource="http://....fr/eac-cpf/localType/nationalité#French">French</eac-cpf:term>
+               <eac-cpf:term
+                  vocabularySource="http://....fr/eac-cpf/localType/nationalité#French"
+                  >French</eac-cpf:term>
                <eac-cpf:placeEntry countryCode="FR"
-                                   vocabularySource="http://....fr/registerOfFrenchPlaceNames#France">France</eac-cpf:placeEntry>
+                  vocabularySource="http://....fr/registerOfFrenchPlaceNames#France"
+                  >France</eac-cpf:placeEntry>
             </eac-cpf:localDescription>
             <eac-cpf:localDescription localType="http://....fr/eac-cpf/localType/citoyenneté">
-               <eac-cpf:term vocabularySource="http://....fr/eac-cpf/localType/citoyenneté#French">French</eac-cpf:term>
+               <eac-cpf:term
+                  vocabularySource="http://....fr/eac-cpf/localType/citoyenneté#French"
+                  >French</eac-cpf:term>
                <eac-cpf:placeEntry countryCode="FR"
-                                   vocabularySource="http://....fr/registerOfFrenchPlaceNames#France">France</eac-cpf:placeEntry>
+                  vocabularySource="http://....fr/registerOfFrenchPlaceNames#France"
+                  >France</eac-cpf:placeEntry>
             </eac-cpf:localDescription>
             <eac-cpf:localDescription localType="http://....fr/eac-cpf/localType/citoyenneté">
-               <eac-cpf:term vocabularySource="http://....fr/eac-cpf/localType/citoyenneté#Brazil">Brazil</eac-cpf:term>
+               <eac-cpf:term
+                  vocabularySource="http://....fr/eac-cpf/localType/citoyenneté#Brazil"
+                  >Brazil</eac-cpf:term>
                <eac-cpf:placeEntry countryCode="BR"
-                                   vocabularySource="http://....fr/registerOfFrenchPlaceNames#France">Brazil</eac-cpf:placeEntry>
+                  vocabularySource="http://....fr/registerOfFrenchPlaceNames#France"
+                  >Brazil</eac-cpf:placeEntry>
             </eac-cpf:localDescription>
          </eac-cpf:localDescriptions>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <localDescriptions>
-            <localDescription localType="http://....fr/eac-cpf/ localType/nationalité">
-               <term vocabularySource="http://....fr/eac-cpf/ localType/nationalité#French"> French </term>
-               <placeEntry countryCode="FR"
-                           vocabularySource="http://....fr/ registerOfFrenchPlaceNames#France"> France </placeEntry>
-            </localDescription>
-            <localDescription localType="http://....fr/eac-cpf/ localType/citoyenneté">
-               <term vocabularySource="http://....fr/eac-cpf/localType/ citoyenneté#French"> French </term>
-               <placeEntry countryCode="FR"
-                           vocabularySource="http://....fr/ registerOfFrenchPlaceNames#France"> France </placeEntry>
-            </localDescription>
-            <localDescription localType="http://....fr/eac-cpf/ localType/citoyenneté">
-               <term vocabularySource="http://....fr/eac-cpf/localType/ citoyenneté#Brazil"> Brazil </term>
-               <placeEntry countryCode="BR"
-                           vocabularySource="http://....fr/ registerOfFrenchPlaceNames#France"> Brazil </placeEntry>
-            </localDescription>
-         </localDescriptions>
       </egXML>
    </div>
 </div>
