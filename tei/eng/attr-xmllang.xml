@@ -9,7 +9,7 @@
       <p xml:lang="eng">XML Language</p>
    </div>
    <div type="summary">
-      <p xml:lang="eng">Three-letter ISO 639-2 language code.</p>
+      <p xml:lang="eng">Two-letter language code from the IANA registry as dictated by the W3C specification.</p>
       
    </div>
    <div type="description" xml:lang="eng">
@@ -17,14 +17,12 @@
 							natural language content whenever information about the language of the content of this
 							element and its children are needed. <att>xml:lang</att> should be used when the language of
 							the element differs from the Language Code declared in the <att>languageCode</att> attribute
-							on the element <gi>language</gi> in the control section. The values in the list are taken
-							from ISO 639-2 Codes for the Representation of Names of Languages. The list can be downloaded
-							from the website of the Library of Congress which is the registration agency of the standard
-								(http://www.loc.gov/standards/iso639-2/langhome.html).</p>
+         on the element <gi>language</gi> within the <control> element. The values in the list are taken
+            from the IANA Registry (http://www.iana.org/assignments/language-subtag-registry). The use of the IANA Registry code for languages in this context is outlined in the W3C specification. The syntax is specified at: http://www.w3.org/International/articles/language-tags/. </p>
    </div>
    
    <div type="datatype" xml:lang="eng">
-      <p>IS0 639-2 Codes for the Representation of Names of Languages.</p>
+      <p>IANA Registry for language codes.</p>
    </div>
    
 </div>
