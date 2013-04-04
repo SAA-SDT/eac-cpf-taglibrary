@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="placeEntry"
      type="elementDocumentation">
    <head>
@@ -10,9 +10,7 @@
       
    </div>
    <div type="summary">
-      <p xml:lang="eng">An element used in both the description and relations areas to encode
-							information about the place or jurisdiction where the EAC-CPF entity was based, lived, or
-							with which it had some other significant connection.</p>
+      <p xml:lang="eng">An element used to encode information about the place or jurisdiction where the CPF entity described in the EAC-CPF instance was based, lived, or with which it had some other significant connection.</p>
       
    </div>
    <div type="description" xml:lang="eng">
@@ -68,20 +66,34 @@
       
    </div>
    <div type="occurrence">
-      <p>0...∞</p>
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
-            <eac-cpf:placeEntry>Paris, France</eac-cpf:placeEntry>
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+        <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
             <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+            <eac-cpf:placeEntry localType="address">31 rue Cambon</eac-cpf:placeEntry>
+            <eac-cpf:placeEntry localType="address">Paris</eac-cpf:placeEntry>
+            <eac-cpf:placeEntry localType="address" countryCode="FR">France</eac-cpf:placeEntry>
          </eac-cpf:place>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <place>
-            <placeEntry> Paris, France </placeEntry>
-            <placeRole> Residence </placeRole>
-         </place>
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>Birthplace</eac-cpf:placeRole>
+            <eac-cpf:placeEntry latitude="59.37541" longitude="17.03371">Strängnäs</eac-cpf:placeEntry>
+         </eac-cpf:place>
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>Family seat</eac-cpf:placeRole>
+            <eac-cpf:placeEntry vocabularySource="lcsh" latitude="55.4667" longitude="4.3000">Auchinleck
+               (Scotland)</eac-cpf:placeEntry>
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1504">1504</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1986">1986</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+         </eac-cpf:place>
       </egXML>
    </div>
 </div>

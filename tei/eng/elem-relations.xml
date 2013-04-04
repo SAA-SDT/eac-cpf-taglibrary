@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="relations"
      type="elementDocumentation">
    <head>
@@ -10,12 +10,12 @@
       
    </div>
    <div type="summary">
-      <p xml:lang="eng">A wrapper element for grouping one or more specific relations.</p>
+      <p xml:lang="eng">A wrapper element for grouping one or more specific relations, each of them expressed by <gi>cpfRelation</gi>, <gi>resourceRelation</gi>, or <gi>functionRelation</gi>.</p>
       
    </div>
    <div type="description" xml:lang="eng">
       <p>A wrapper element that groups together one or more relation elements, each of which
-								denotes a specific relationship. Entities may have relationships with other corporate
+								encodes a specific relationship. CPF entities may have relationships with other corporate
 								bodies, persons or families, which may be expressed using <gi>cpfRelation</gi>; functions,
 								which may be expressed using <gi>functionRelation</gi>; or resources such as archival
 								collections, bibliographic resources, or artifacts, which may be expressed using
@@ -49,22 +49,20 @@
 							authority records can also be linked to other relevant information resources."</p>
    </div>
    <div type="occurrence">
-      <p>0…1</p>
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:relations xmlns:eac-cpf="urn:isbn:1-931666-33-4">
             <eac-cpf:cpfRelation>[...]</eac-cpf:cpfRelation>
             <eac-cpf:functionRelation>[...]</eac-cpf:functionRelation>
             <eac-cpf:resourceRelation>[...]</eac-cpf:resourceRelation>
          </eac-cpf:relations>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <relations>
-            <cpfRelation> [...] </cpfRelation>
-            <functionRelation> [...] </functionRelation>
-            <resourceRelation> [...] </resourceRelation>
-         </relations>
       </egXML>
    </div>
 </div>

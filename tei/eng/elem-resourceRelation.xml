@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
      xml:id="resourceRelation"
      type="elementDocumentation">
    <head>
@@ -10,18 +10,17 @@
       
    </div>
    <div type="summary">
-      <p xml:lang="eng">A resource related to the described entity.</p>
+      <p xml:lang="eng">An element for encoding a relation between a resource and the CPF entity.</p>
       
    </div>
    <div type="description" xml:lang="eng">
       <p>The <gi>resourceRelation</gi> element contains the description of a resource related to
 								the described entity. Use <gi>objectXMLWrap</gi> to incorporate XML elements from any XML
 								namespaces or <gi>objectBinWrap</gi> for base64-encoded binary data. A
-									<gi>relationEntry</gi> element is provided for textual identification of the related
-								resource.</p>
+         <gi>relationEntry</gi> element is provided for a textual description of the related resource.</p>
       <p>Use the <gi>date</gi>, <gi>dateRange</gi>, or <gi>dateSet</gi> elements for
-								specifying when the relationship applied and the <gi>placeEntry</gi> element for relevant
-								locative information. A <gi>descriptiveNote</gi> element may be included for a more
+         specifying the time period of the relationship and the <gi>placeEntry</gi> element for relevant
+								location information. A <gi>descriptiveNote</gi> element may be included for a more
 								detailed specifications or explanations of the relationship.</p>
       <p>The <att>resourceRelationType</att> attribute is used to specify the nature of the
 								relationship between the resource and the entity described in the EAC-CPF instance.</p>
@@ -67,39 +66,56 @@
       <p>ISAAR (CPF) 6</p>
    </div>
    <div type="occurrence">
-      <p>0...∞</p>
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
    </div>
    <div type="examples">
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:resourceRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" resourceRelationType="creatorOf">
             <eac-cpf:objectXMLWrap>
-               <ead xsi="urn:isbn:1-931666-22-9">
-                  <eadheader>
-                     
-                     <filedesc>
-                        <titlestmt>
-                           
-                        </titlestmt>
-                     </filedesc>
-                  </eadheader>
-                  <archdesc level="file">
-                     <did>
-                        <unitid repositorycode="GB-0066">E 40/12531</unitid>
-                        <unittitle>Attached seal, Andrew Noel</unittitle>
-                        <unitdate>1551-1552</unitdate>
-                        <physdesc>
-                           <genreform type="materialType">Seals</genreform>
-                        </physdesc>
-                     </did>
-                  </archdesc>
-               </ead>
+               <ead:ead xmlns:ead="urn:isbn:1-931666-22-9"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+                  <ead:eadheader>
+                     <ead:eadid identifier="e4012531" mainagencycode="GB-0066"/>
+                     <ead:filedesc>
+                        <ead:titlestmt>
+                           <ead:titleproper/>
+                        </ead:titlestmt>
+                     </ead:filedesc>
+                  </ead:eadheader>
+                  <ead:archdesc level="file">
+                     <ead:did>
+                        <ead:unitid repositorycode="GB-0066">E 40/12531</ead:unitid>
+                        <ead:unittitle>Attached seal, Andrew Noel</ead:unittitle>
+                        <ead:unitdate>1551-1552</ead:unitdate>
+                        <ead:physdesc>
+                           <ead:genreform type="materialType">Seals</ead:genreform>
+                        </ead:physdesc>
+                     </ead:did>
+                  </ead:archdesc>
+               </ead:ead>
             </eac-cpf:objectXMLWrap>
          </eac-cpf:resourceRelation>
-      </egXML>
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">
-         <resourceRelation resourceRelationType="creatorOf">
-            <objectXMLWrap> E 40/12531Attached seal, Andrew Noel1551-1552Seals </objectXMLWrap>
-         </resourceRelation>
+         <eac-cpf:resourceRelation  xmlns:eac-cpf="urn:isbn:1-931666-33-4" resourceRelationType="creatorOf" xml:id="UA013">
+            <eac-cpf:relationEntry>Department of Romance Languages records</eac-cpf:relationEntry>
+            <eac-cpf:objectXMLWrap>
+               <ead:ead xmlns:ead="urn:isbn:1-931666-22-9"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+                  <ead:archdesc level="collection">
+                     <ead:did>
+                        <ead:unittitle>Department of Romance Languages records</ead:unittitle>
+                        <ead:unitid>UA013</ead:unitid>
+                     </ead:did>
+                  </ead:archdesc>
+               </ead:ead>
+            </eac-cpf:objectXMLWrap>
+         </eac-cpf:resourceRelation>
       </egXML>
    </div>
 </div>
