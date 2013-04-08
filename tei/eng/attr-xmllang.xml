@@ -17,7 +17,7 @@
 							natural language content whenever information about the language of the content of this
 							element and its children are needed. <att>xml:lang</att> should be used when the language of
 							the element differs from the Language Code declared in the <att>languageCode</att> attribute
-         on the element <gi>language</gi> within the <control> element. The values in the list are taken
+         on the element <gi>language</gi> within the <gi>control</gi> element. The values in the list are taken
             from the IANA Registry (http://www.iana.org/assignments/language-subtag-registry). The use of the IANA Registry code for languages in this context is outlined in the W3C specification. The syntax is specified at: http://www.w3.org/International/articles/language-tags/. </p>
    </div>
    
