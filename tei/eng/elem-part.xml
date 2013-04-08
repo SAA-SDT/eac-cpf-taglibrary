@@ -59,5 +59,16 @@
             <eac-cpf:authorizedForm>AFNOR</eac-cpf:authorizedForm>
          </eac-cpf:nameEntry>
       </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Elytēs, Odysseas</eac-cpf:part>
+            <eac-cpf:useDates>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate>1911</eac-cpf:fromDate>
+                  <eac-cpf:toDate>1996</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:useDates>
+         </eac-cpf:nameEntry>
+      </egXML>
    </div>
 </div>

@@ -14,7 +14,7 @@
       
    </div>
    <div type="description" xml:lang="eng">
-      <p>Within <gi>nameEntry></gi>, <gi>useDates</gi> provides the dates during which the name was used for or by the CPF entity. For parallel names, <gi>useDates</gi> may occur in <gi>nameEntryParallel</gi>
+      <p>Within <gi>nameEntry</gi>, <gi>useDates</gi> provides the dates during which the name was used for or by the CPF entity. For parallel names, <gi>useDates</gi> may occur in <gi>nameEntryParallel</gi>
 								rather than in the individual <gi>nameEntry</gi> elements contained in
 									<gi>nameEntryParallel</gi>.</p>
    </div>
