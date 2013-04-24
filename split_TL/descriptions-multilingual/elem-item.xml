@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="item" type="elementDocumentation">
+   <head>
+      <gi>item</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Item</p>
+      <p xml:lang="fre">Item</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A formatting element that encodes the individual entries comprising
+							lists.</p>
+      <p xml:lang="fre">Élément de formatage qui sert à encoder les entrées individuelles de listes.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>item</gi> element is used for general lists within descriptive elements and
+								within levels in an outline. Do not confuse with <gi>chronItem</gi>, which encodes entries
+								within a structured chronology, <gi>chronList</gi>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'élément Item <gi>item</gi> est utilisé pour les listes générales au sein d'éléments descriptifs et au sein des niveaux dans une vue d’ensemble effectuée grâce à l'élément Vue d’ensemble <gi>outline</gi>. Ne pas
+                     confondre avec Élément de liste chronologique <gi>chronItem</gi>, qui sert à encoder les entrées d'une Liste chronologique <gi>chronList</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text], span</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>level, list</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:list xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">1450-1950</eac-cpf:span>
+										(1929)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Globe Gliding</eac-cpf:span>
+										(1930)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Gems</eac-cpf:span> (1931) </eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Words</eac-cpf:span>
+										(1931)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Demonics</eac-cpf:span> (1931)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Can We Co-operate</eac-cpf:span>
+										(1942)</eac-cpf:item>
+            <eac-cpf:item>
+               <eac-cpf:span style="font-style:italic">Amazing Amazon</eac-cpf:span> (1942)
+									</eac-cpf:item>
+         </eac-cpf:list>
+         <eac-cpf:outline xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:level>
+               <eac-cpf:item>I.</eac-cpf:item>
+            </eac-cpf:level>
+            <eac-cpf:level>
+               <eac-cpf:item>II.</eac-cpf:item>
+               <eac-cpf:level>
+                  <eac-cpf:item>A.</eac-cpf:item>
+               </eac-cpf:level>
+               <eac-cpf:level>
+                  <eac-cpf:item>B.</eac-cpf:item>
+                  <eac-cpf:level>
+                     <eac-cpf:item>1.</eac-cpf:item>
+                  </eac-cpf:level>
+                  <eac-cpf:level>
+                     <eac-cpf:item>2.</eac-cpf:item>
+                  </eac-cpf:level>
+               </eac-cpf:level>
+            </eac-cpf:level>
+         </eac-cpf:outline>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <list>
+            <item>
+               <span style="font-style:italic"> 1450-1950 </span> (1929) </item>
+            <item>
+               <span style="font-style:italic"> Globe Gliding </span> (1930) </item>
+            <item>
+               <span style="font-style:italic"> Gems </span> (1931) </item>
+            <item>
+               <span style="font-style:italic"> Words </span> (1931) </item>
+            <item>
+               <span style="font-style:italic"> Demonics </span> (1931) </item>
+            <item>
+               <span style="font-style:italic"> Can We Co-operate </span> (1942) </item>
+            <item>
+               <span style="font-style:italic"> Amazing Amazon </span> (1942) </item>
+         </list>
+         <outline>
+            <level>
+               <item> I. </item>
+            </level>
+            <level>
+               <item> II. </item>
+               <level>
+                  <item> A. </item>
+               </level>
+               <level>
+                  <item> B. </item>
+                  <level>
+                     <item> 1. </item>
+                  </level>
+                  <level>
+                     <item> 2. </item>
+                  </level>
+               </level>
+            </level>
+         </outline>
+      </egXML>
+   </div>
+</div>

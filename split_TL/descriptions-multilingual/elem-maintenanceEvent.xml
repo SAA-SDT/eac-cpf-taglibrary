@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="maintenanceEvent"
+     type="elementDocumentation">
+   <head>
+      <gi>maintenanceEvent</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Maintenance Event</p>
+      <p xml:lang="fre">Intervention</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A maintenance event in the life of the EAC-CPF instance.</p>
+      <p xml:lang="fre">Intervention au cours de la vie de l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A wrapper element within <gi>maintenanceHistory</gi> to record information about
+								particular maintenance events in the history of the EAC-CPF instance. There will always be
+								at least one maintenance event for each instance, usually its creation, and each event must
+								be defined in the <gi>eventType</gi> element. Information must also be given about who or
+								what carried out, or was otherwise responsible for, the work on the EAC-CPF instance in the
+									<gi>agent</gi> and <gi>agentType</gi> elements and when the event took place in the
+									<gi>eventDateTime</gi> element. The event may also be described in the
+									<gi>eventDescription</gi> element.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément englobant contenu dans l’élément Historique des interventions <gi>maintenanceHistory</gi> permettant d’enregistrer les informations relatives à chaque intervention dans l’historique de l’instance EAC-CPF. Il y a
+                     toujours au moins une intervention pour chaque instance, généralement sa création. Chaque intervention doit être définie dans l’élément Type d’intervention <gi>eventType</gi>. Dans les éléments Agent <gi>agent</gi> et
+                     Type d’agent <gi>agentType</gi>, il faut également donner des informations sur l’agent ayant accompli l’opération concernée sur l’instance EAC-CPF, ou en étant responsable, et dans l’élément Date et heure de
+                     l’intervention <gi>eventDateTime</gi> les informations sur le moment de la réalisation de l’opération. L’intervention peut également être décrite dans l’élément Description de l’intervention
+                     <gi>eventDescription</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>agent, agentType, eventDateTime, eventDescription, eventType</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceHistory</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.6 and 5.4.9</p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>derived</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2009-06-30T09:37:17.029-04:00"/>
+            <eac-cpf:agentType>machine</eac-cpf:agentType>
+            <eac-cpf:agent>XSLT ead2cpf.xsl/Saxon B9</eac-cpf:agent>
+            <eac-cpf:eventDescription>Derived from EAD instance.</eac-cpf:eventDescription>
+         </eac-cpf:maintenanceEvent>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>revised</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2009-07-08">2009-07-08</eac-cpf:eventDateTime>
+            <eac-cpf:agentyType>human</eac-cpf:agentyType>
+            <eac-cpf:agent>Claire Sibille</eac-cpf:agent>
+            <eac-cpf:eventDescription>Notice convertie en EAC-CPF avec l'editeur
+										oXygen</eac-cpf:eventDescription>
+         </eac-cpf:maintenanceEvent>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>created</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2001-11-03">2001-11/03</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>Lina Bountouri</eac-cpf:agent>
+         </eac-cpf:maintenanceEvent>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceEvent>
+            <eventType> derived </eventType>
+            <eventDateTime standardDateTime="2009-06-30T09:37:17.029-04:00"/>
+            <agentType> machine </agentType>
+            <agent> XSLT ead2cpf.xsl/Saxon B9 </agent>
+            <eventDescription> Derived from EAD instance. </eventDescription>
+         </maintenanceEvent>
+         <maintenanceEvent>
+            <eventType> revised </eventType>
+            <eventDateTime standardDateTime="2009-07-08"> 2009-07-08 </eventDateTime>
+            <agentType> human </agentType>
+            <agent> Claire Sibille </agent>
+            <eventDescription> Notice convertie en EAC-CPF avec l'editeur oXygen </eventDescription>
+         </maintenanceEvent>
+         <maintenanceEvent>
+            <eventType> created </eventType>
+            <eventDateTime standardDateTime="2001-11-03"> 2001-11-03 </eventDateTime>
+            <agentType> human </agentType>
+            <agent> Lina Bountouri </agent>
+         </maintenanceEvent>
+      </egXML>
+   </div>
+</div>

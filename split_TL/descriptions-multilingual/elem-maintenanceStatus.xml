@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="maintenanceStatus"
+     type="elementDocumentation">
+   <head>
+      <gi>maintenanceStatus</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Maintenance Status</p>
+      <p xml:lang="fre">État de la notice</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The current drafting status of the EAC-CPF instance.</p>
+      <p xml:lang="fre">L’état actuel de rédaction de l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A required element within <gi>control</gi> that records the current drafting status of
+								an EAC-CPF instance: as an EAC-CPF instance is modified or other events happen to it (as
+								recorded in the <gi>maintenanceHistory</gi> element), the maintenance status should also
+								be amended to reflect the current drafting status.</p>
+      <p>On first creation the status would be "new", which on revision can be changed to
+								"revised". Because it is important to be clear what has happened to records particularly
+								when sharing and making links between them, a number of status values are available for
+								records that are no longer current. A record that is simply deleted from a system can be
+								given the status "deleted", but in cases where a record is marked as not current (obsolete
+								or rejected) but kept for reference then it should be given the status "cancelled". If a
+								record is deleted though because it has become superseded by two or more records then its
+								status should be given as "deletedSplit", while if it has simply been replaced by a new
+								record then "deletedReplaced" is the appropriate status value. A "derived" status value is
+								available to indicate that the record was derived from another descriptive system.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément obligatoire contenu dans l’élément Contrôle <gi>control</gi> où le statut actuel de rédaction d’une instance EAC-CPF est déclaré : lorsqu’une instance EAC-CPF est modifiée ou que d’autres évènements sont
+                     survenus (tels que déclarés dans l’élément Historique des interventions <gi>maintenanceHistory</gi>), le statut de la notice doit être mis à jour pour refléter l’état actuel de rédaction.</p>
+      <p>Le statut d’une instance nouvellement créée est “new” (nouveau) ; lors d’une modification il peut être modifié en “revised” (révisée). Comme il est important de rendre compte clairement des évènements de la vie des
+                     notices, surtout dans les contextes de partage et de création de liens entre elles, un certain nombre de valeurs de statut sont proposées pour les notices qui ne sont plus utilisées. Une notice qui est simplement
+                     détruite dans un système peut avoir le statut “deleted” (supprimée). Lorsqu’une notice est marquée comme non utilisée (obsolète ou rejetée), alors qu’elle est conservée dans le système pour des raisons d’orientation,
+                     elle doit avoir le statut “cancelled” (annulée). Si une notice est détruite parce qu’elle a été remplacée par deux ou plusieurs notices, alors son statut doit être “deletedSplit” (suppriméeScindée). Si elle a été
+                     simplement remplacée par une nouvelle notice, le statut approprié est “deletedReplaced” (suppriméeRemplacée). La valeur “derived” (dérivée) est disponible pour indiquer que la notice a été dérivée d’un autre système de
+                     description.</p>
+   </div>
+   <div type="mayContain">
+      <p>"cancelled" or "deleted" or "deletedReplaced" or "deletedSplit" or
+							"derived" or "new" or "revised"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.4</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceStatus xmlns:eac-cpf="urn:isbn:1-931666-33-4">new</eac-cpf:maintenanceStatus>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceStatus> new </maintenanceStatus>
+      </egXML>
+   </div>
+</div>

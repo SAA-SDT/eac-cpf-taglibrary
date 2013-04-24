@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="alternativeForm"
+     type="elementDocumentation">
+   <head>
+      <gi>alternativeForm</gi>
+   </head>
+   <div type="fullName">
+      
+      <p xml:lang="fre">Forme alternative</p>
+   </div>
+   <div type="summary">
+      
+      <p xml:lang="fre">Qualifie la forme du nom contenue dans l’élément Forme du nom <gi>nameEntry</gi> ou l’ensemble des formes du nom indiquées dans l’élément Forme parallèle du nom <gi>nameEntryParallel</gi> comme formes alternatives ou
+                     variantes de formes.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>Le nom d’une entité EAC-CPF, tel qu’il est construit dans les éléments Forme du nom <gi>nameEntry</gi> et Formes parallèles du nom <gi>nameEntryParallel</gi>, peut être soit la forme autorisée du nom selon un ensemble
+                     défini de normes ou de conventions soit une forme alternative ou une forme non autorisée du nom d’après un autre ensemble de normes. Cet élément facultatif permet d’indiquer selon quelle(s) norme(s) ou convention(s) la
+                     forme du nom indiquée dans <gi>nameEntry</gi> et <gi>nameEntryParallel</gi> est considérée comme forme autorisée ou forme alternative.</p>
+      <p>Le schéma EAC-CPF offre deux possibilités :</p>
+      <p>Le contenu de l’élément est une abréviation choisie parmi une liste fermée de valeurs abrégées d’un ensemble de règles internationales, nationales ou autres qui régissent la structure des noms en EAC-CPF. Les
+                     abréviations indiquées dans <gi>alternativeForm</gi> doivent être précisées dans l'élément Déclaration de règle ou de convention <gi>conventionDeclaration</gi> de l’élément Contrôle <gi>control</gi>. </p>
+      <p>L’élément complémentaire Forme autorisée du nom <gi>authorizedForm</gi> permet uniquement d’indiquer selon quelles normes ou conventions la forme du nom est une forme autorisée. L’élément <gi>preferredForm</gi> permet
+                     uniquement de préciser que la forme du nom qui est indiquée est la forme préférée dans un contexte local d’encodage, indépendamment du fait qu’elle soit forme autorisée dans un autre environnement de données
+                     d’autorité.</p>
+      <p>
+         <gi>alternativeForm</gi> est répétable si l’élément ou le groupe d’éléments <gi>nameEntry</gi> est construit conformément à plusieurs normes.</p>
+   </div>
+   <div type="mayContain">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry, nameEntryParallel</p>
+   </div>
+   <div type="attributes">
+      
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1.5</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Brown, Bob, 1886-1959</eac-cpf:part>
+            <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+            <eac-cpf:alternativeForm>ncafnor</eac-cpf:alternativeForm>
+         </eac-cpf:nameEntry>
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Brown, Robert Carlton (1886-1959)</eac-cpf:part>
+            <eac-cpf:authorizedForm>ncafnor</eac-cpf:authorizedForm>
+            <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
+         </eac-cpf:nameEntry>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <nameEntry>
+            <part> Brown, Bob, 1886-1959 </part>
+            <authorizedForm> AACR2 </authorizedForm>
+            <alternativeForm> ncafnor </alternativeForm>
+         </nameEntry>
+         <nameEntry>
+            <part> Brown, Robert Carlton (1886-1959) </part>
+            <authorizedForm> ncafnor </authorizedForm>
+            <alternativeForm> AACR2 </alternativeForm>
+         </nameEntry>
+      </egXML>
+   </div>
+</div>

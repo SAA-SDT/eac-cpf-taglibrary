@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="eac-cpf" type="elementDocumentation">
+   <head>
+      <gi>eac-cpf</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Encoded Archival Context - Corporate Bodies, Persons, and Families</p>
+      <p xml:lang="fre">Contexte archivistique encodé – collectivités, personnes, familles</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The <gi>eac-cpf</gi> is the root element and as such contains contains the
+							entire EAC-CPF description of the person, corporate body, or family. It contains a required
+								<gi>control</gi> followed by either a <gi>cpfDescription</gi> or a
+								<gi>multipleIdentities</gi> element.</p>
+      <p xml:lang="fre"><!--&lt;eac-cpf&gt;--><gi>eac-cpf</gi> est l’élément racine. Il contient l’intégralité de la description EAC-CPF de la personne, collectivité ou famille. Il est composé d’un élément obligatoire Contrôle <gi>control</gi> suivi soit d’un
+                     élément Description de collectivité, de personne ou de famille <gi>cpfDescription</gi>, soit d’un élément Identités multiples <gi>multipleIdentities</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The outermost wrapper element that defines a particular instance of an archival authority
+								record encoded with the EAC-CPF XML Schema. It contains a required <gi>control</gi> and
+								either a <gi>cpfDescription</gi> or a <gi>multipleIndentities</gi> element.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élément le plus englobant qui définit une instance particulière d’une notice d’autorité archivistique encodée au moyen du schéma XML EAC-CPF. Il contient un élément obligatoire Contrôle <gi>control</gi> et soit un
+                     élément <gi>cpfDescription</gi>, soit un élément <gi>multipleIdentities</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>control, cpfDescription, multipleIdentities</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:eac-cpf xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:control>[...]</eac-cpf:control>
+            <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
+         </eac-cpf:eac-cpf>
+         <eac-cpf:eac-cpf xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:control>[...]</eac-cpf:control>
+            <eac-cpf:multipleIdentities>
+               <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
+               <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
+            </eac-cpf:multipleIdentities>
+         </eac-cpf:eac-cpf>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf>
+            <control> [...] </control>
+            <cpfDescription> [...] </cpfDescription>
+         </eac-cpf>
+         <eac-cpf>
+            <control> [...] </control>
+            <multipleIdentities>
+               <cpfDescription> [...] </cpfDescription>
+               <cpfDescription> [...] </cpfDescription>
+            </multipleIdentities>
+         </eac-cpf>
+      </egXML>
+   </div>
+</div>

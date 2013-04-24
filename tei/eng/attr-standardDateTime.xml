@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="standardDateTime"
+     type="attributeDocumentation">
+   <head>
+      <att>standardDateTime</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Standard Date and Time</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The date or date and time represented in a standard form for computer
+							processing.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>standardDateTime</att> may occur on <gi>eventDateTime</gi>.
+							The value of <att>standardDateTime</att> provides a standard form of the date or date and
+							time expressed in the <gi>eventDateTime</gi> that can be used in computer processing. For
+							example, using both the value in <gi>eventType</gi> and <att>standardDateTime</att>, all
+							EAC-CPF instances "revised" on a particular date can be identified.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>Union of the XML Schema Datatypes date, gYear, gYearMonth, and dateTime.
+							The following are all valid patterns: 2009-12-31, 2009, 2009-12, 2009-12-31T23:59:59.</p>
+   </div>
+   
+</div>

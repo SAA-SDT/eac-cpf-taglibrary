@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="part"
+     type="elementDocumentation">
+   <head>
+      <gi>part</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Part</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">
+         <gi>part</gi> is used to distinguish components of the name of the CPF entity’s name within <gi>nameEntry</gi>.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Within <gi>nameEntry</gi> each of the component parts of a name, such as forename,
+								surname or honorific title, may be recorded in a separate <gi>part</gi> element.
+									<gi>part</gi> may also contain the full name of the entity when it is not possible to
+								distinguish the different component parts of the name. The <gi>useDates</gi> element
+								should be used for any date information related to the use of the name.</p>
+      <p>The designation of the information contained in the <gi>part</gi> can be specified by
+								the attribute <att>localType</att>.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part localType="surname">Lemoyne</eac-cpf:part>
+            <eac-cpf:part localType="forename">Francois</eac-cpf:part>
+            <eac-cpf:authorizedForm>AFNOR</eac-cpf:authorizedForm>
+         </eac-cpf:nameEntry>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Elytēs, Odysseas</eac-cpf:part>
+            <eac-cpf:useDates>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate>1911</eac-cpf:fromDate>
+                  <eac-cpf:toDate>1996</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:useDates>
+         </eac-cpf:nameEntry>
+      </egXML>
+   </div>
+</div>

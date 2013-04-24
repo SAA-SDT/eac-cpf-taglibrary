@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="localDescriptions"
+     type="elementDocumentation">
+   <head>
+      <gi>localDescriptions</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Local Descriptions</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A grouping element used to bundle together individual
+								<gi>localDescription</gi> elements.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Use the optional <gi>localDescriptions</gi> element to group together one or more
+								occurrences of <gi>localDescription</gi> so that they can be manipulated as a package. A
+								single <gi>localDescription</gi> may stand alone or may be wrapped within
+									<gi>localDescriptions</gi>.</p>
+      <p>The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the information being
+								described. A simpler discursive may be encoded as one or more <gi>p</gi> elements.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>citation, list, localDescription, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Required</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:localDescriptions xmlns:eac-cpf="urn:isbn:1-931666-33-4" localType="http://....fr/eac-cpf/localType/">
+            <eac-cpf:localDescription localType="http://....fr/eac-cpf/localType/nationalité">
+               <eac-cpf:term
+                  vocabularySource="http://....fr/eac-cpf/localType/nationalité#French"
+                  >French</eac-cpf:term>
+               <eac-cpf:placeEntry countryCode="FR"
+                  vocabularySource="http://....fr/registerOfFrenchPlaceNames#France"
+                  >France</eac-cpf:placeEntry>
+            </eac-cpf:localDescription>
+            <eac-cpf:localDescription localType="http://....fr/eac-cpf/localType/citoyenneté">
+               <eac-cpf:term
+                  vocabularySource="http://....fr/eac-cpf/localType/citoyenneté#French"
+                  >French</eac-cpf:term>
+               <eac-cpf:placeEntry countryCode="FR"
+                  vocabularySource="http://....fr/registerOfFrenchPlaceNames#France"
+                  >France</eac-cpf:placeEntry>
+            </eac-cpf:localDescription>
+            <eac-cpf:localDescription localType="http://....fr/eac-cpf/localType/citoyenneté">
+               <eac-cpf:term
+                  vocabularySource="http://....fr/eac-cpf/localType/citoyenneté#Brazil"
+                  >Brazil</eac-cpf:term>
+               <eac-cpf:placeEntry countryCode="BR"
+                  vocabularySource="http://....fr/registerOfFrenchPlaceNames#France"
+                  >Brazil</eac-cpf:placeEntry>
+            </eac-cpf:localDescription>
+         </eac-cpf:localDescriptions>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="resourceRelationType"
+     type="attributeDocumentation">
+   <head>
+      <att>resourceRelationType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Resource Relation Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The type of relation of entity being described to the resource.</p>
+      <p xml:lang="fre">Le type de relation de l’entité décrite avec une ressource.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>resourceRelationType</att> may occur on
+								<gi>resourceRelation</gi>. The value designates the type of relation that the entity
+							described in the EAC-CPF instance has to the resource. If the nature of the relation is more
+							specific than one of the available values, the Xlink attributes may be used in addition to
+								<att>resourceRelationType</att>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>resourceRelationType</att> est un attribut de l’élément Relation avec une ressource <gi>resourceRelation</gi>. La valeur désigne le type de relation que l’entité décrite dans l’instance EAC-CPF
+                     entretient avec la ressource. Si la nature de la relation est plus précise que les valeurs disponibles, on peut utiliser les attributs XLink en complément de l’attribut <att>resourceRelationType</att>.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>"creatorOf" or "subjectOf" or "other"</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>"creatorOf" (producteur de) ou "subjectOf" (sujet de) ou "other" (autre)</p>
+   </div>
+</div>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="placeEntry"
+     type="elementDocumentation">
+   <head>
+      <gi>placeEntry</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Place Entry</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element used to encode information about the place or jurisdiction where the CPF entity described in the EAC-CPF instance was based, lived, or with which it had some other significant connection.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Places should be identified by the proper noun that commonly designates the place, natural
+								feature, or political jurisdiction. It is recommended that place names be taken from
+								authorized vocabularies. Within <gi>place</gi>, a companion <gi>placeRole</gi> is
+								strongly recommended to describe the nature of the association of the place to the
+								entity.</p>
+      <p>
+         <att>latitude</att>, <att>longitude</att>, and <att>altitude</att> attributes are
+								available for specific geographical data. The <att>accuracy</att> attribute may be used to
+								indicate uncertainty. The <att>vocabularySource</att> attribute may be used to indicate the
+								controlled vocabulary from which the <gi>placeEntry</gi> term is derived.</p>
+      <p>The <gi>placeEntry</gi> element is repeatable. It is strongly recommended that within
+									<gi>place</gi>, the <gi>placeEntry</gi> element be repeated only to represent the same
+								place name in various languages, with an accompanying <att>xml:lang</att> attribute.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem, cpfRelation, function, functionRelation, legalStatus,
+							localDescription, mandate, occupation, place, resourceRelation</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>accuracy</label>
+            <item>Optional</item>
+            <label>altitude</label>
+            <item>Optional</item>
+            <label>countryCode</label>
+            <item>Optional</item>
+            <label>latitude</label>
+            <item>Optional</item>
+            <label>localType</label>
+            <item>Optional</item>
+            <label>longitude</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>vocabularySource</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+        <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+            <eac-cpf:placeEntry localType="address">31 rue Cambon</eac-cpf:placeEntry>
+            <eac-cpf:placeEntry localType="address">Paris</eac-cpf:placeEntry>
+            <eac-cpf:placeEntry localType="address" countryCode="FR">France</eac-cpf:placeEntry>
+         </eac-cpf:place>
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>Birthplace</eac-cpf:placeRole>
+            <eac-cpf:placeEntry latitude="59.37541" longitude="17.03371">Strängnäs</eac-cpf:placeEntry>
+         </eac-cpf:place>
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>Family seat</eac-cpf:placeRole>
+            <eac-cpf:placeEntry vocabularySource="lcsh" latitude="55.4667" longitude="4.3000">Auchinleck
+               (Scotland)</eac-cpf:placeEntry>
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1504">1504</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1986">1986</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+         </eac-cpf:place>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="xmllang"
+     type="attributeDocumentation">
+   <head>
+      <att>xml:lang</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">XML Language</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Two-letter language code from the IANA registry as dictated by the W3C specification.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>xml:lang</att> may occur on any element intended to contain
+							natural language content whenever information about the language of the content of this
+							element and its children are needed. <att>xml:lang</att> should be used when the language of
+							the element differs from the Language Code declared in the <att>languageCode</att> attribute
+         on the element <gi>language</gi> within the <gi>control</gi> element. The values in the list are taken
+            from the IANA Registry (http://www.iana.org/assignments/language-subtag-registry). The use of the IANA Registry code for languages in this context is outlined in the W3C specification. The syntax is specified at: http://www.w3.org/International/articles/language-tags/. </p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>IANA Registry for language codes.</p>
+   </div>
+   
+</div>

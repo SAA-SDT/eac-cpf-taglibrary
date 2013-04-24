@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="xmlbase"
+     type="attributeDocumentation">
+   <head>
+      <att>xml:base</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">XML Base</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Used to specify a base URI other than the base URI of the EAC-CPF
+							instance.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <att>xml:base</att> is used to specify the base URI other than the base
+							URI of the EAC-CPF instance, for the purpose of resolving any relative URIs used with
+							elements that contain one or more descendants that use an attribute of type anyURI.
+								<att>xml:base</att> makes it possible to declare an absolute base URI to facilitate the use
+							of relative URIs on the descendants.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>NMTOKEN</p>
+   </div>
+   
+</div>

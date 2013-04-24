@@ -1,0 +1,11 @@
+Changes needed in the xml file to make the FO work
+
+Every div that should occur in the table of contents need to have the attribute xml:id to work properly, the attribute is set with generate-id function
+The appendixes need to be numbered with the help of the attribute n
+Examples using a different namespace like if the resourcerelation contains ead the elements need a prefix example to work with the FO. There are also the need of the schemaLocation attribute.
+
+In publicationStmt it is valuable to have this <idno type="ISBN">123456789</idno> so it can be collected automatically
+
+**** 
+
+When using xi:include in oxygen 14 the path should contain /2001/ instead of /2003/

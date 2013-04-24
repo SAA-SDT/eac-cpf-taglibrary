@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="chronItem"
+     type="elementDocumentation">
+   <head>
+      <gi>chronItem</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Chronology List Item</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A container element that keeps a date or a date range paired with an
+							associated event and an optional place within a Chronology List <gi>chronList</gi>.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Each <gi>chronItem</gi> contains a <gi>date</gi> (a single date) or a
+									<gi>dateRange</gi> (an inclusive date span) coupled with an <gi>event</gi>. A
+									<gi>placeEntry</gi> element is optionally available to ground the event in a particular
+								location.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>date, dateRange, event, placeEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronList</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.2</p>
+   </div>
+   
+   <div type="occurrence">
+      <div type="mandatory">
+      <p xml:lang="eng">Mandatory</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Repeatable</p>
+   </div>
+   </div>
+   <div type="examples">
+      <egXML  xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:chronItem xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:date standardDate="1957">1957</eac-cpf:date>
+            <eac-cpf:event>Left Mer and moved to the mainland. Worked at various jobs including
+										canecutter and railway labourer.</eac-cpf:event>
+         </eac-cpf:chronItem>
+         <eac-cpf:chronItem xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1960">1960</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1961">1961</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:event>Union representative, Townsville-Mount Isa rail construction
+										project.</eac-cpf:event>
+         </eac-cpf:chronItem>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="dateSet" type="elementDocumentation">
+   <head>
+      <gi>dateSet</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Date Set</p>
+      <p xml:lang="fre"/>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A grouping element that facilitates complex date expressions by being able
+							to combine a set comprising single dates and date ranges, multiple single dates, or multiple
+							date ranges.</p>
+      <p xml:lang="fre">Élément regroupant qui permet d'exprimer aisément des dates complexes en un ensemble combinant des dates simples et des intervalles de dates, plusieurs dates simples, ou plusieurs intervalles de dates.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A grouping element to combine single dates and date ranges, multiple single dates, or
+								multiple date ranges. The <gi>dateSet</gi> element is used in situations where complex
+								date information needs to be conveyed and requires at least two child elements. These can be
+								a combination of <gi>date</gi> and <gi>dateRange</gi> elements.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément de regroupement qui permet de combiner des dates simples et des intervalles de dates, plusieurs dates simples, ou plusieurs intervalles de dates. L'élément Ensemble de dates <gi>dateSet</gi> est utilisé s’il
+                     faut exprimer des dates de manière complexe et requiert au moins deux éléments fils, qui peuvent être une combinaison d'éléments Date <gi>date</gi> et Intervalle de dates <gi>dateRange</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfRelation, existDates, function, functionRelation, legalStatus,
+							localDescription, mandate, occupation, place, resourceRelation, useDates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:dateSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1928-09">1928 settembre</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1930-08">1930 autunno</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1947">1947</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1949">1949</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+         </eac-cpf:dateSet>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <dateSet>
+            <dateRange>
+               <fromDate standardDate="1928-09"> Septembre 1928 </fromDate>
+               <toDate standardDate="1930-08"> Août 1930 </toDate>
+            </dateRange>
+            <dateRange>
+               <fromDate standardDate="1947"> 1947 </fromDate>
+               <toDate standardDate="1949"> 1949 </toDate>
+            </dateRange>
+         </dateSet>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="countryCode"
+     type="attributeDocumentation">
+   <head>
+      <att>countryCode</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Country Code</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Two letter ISO 3166-1 standard code representing a country.</p>
+      <p xml:lang="fre">Code de pays à deux caractères alphabétiques de la norme ISO 3166-1.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>countryCode</att> may occur on <gi>placeEntry</gi> or
+								<gi>address</gi>. The <att>countryCode</att> attribute may be used to provide the ISO
+							3166-1 standard code designating the country placed named is a country, the code for that
+							country. The values are to be taken from the list of ISO 3166-1 Codes for the Representation
+							of Names of Countries. The list can be downloaded from the website of ISO 3166 Maintenance
+							Agency http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>countryCode</att> est un attribut des éléments Forme du nom de lieu <gi>placeEntry</gi> et Adresse <gi>address</gi>. Ilpeut être utilisé pourfournir lecode issu de la norme ISO 3166-1désignantle code de
+                     pays. Les valeurs de la liste sontissues de la norme ISO 3166-1Codes pour la représentationdes noms de pays. La listepeut être téléchargéedepuis le site webde l’Agence de maintenance de
+                     l'ISO3166http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>ISO 3166-1 Codes for the Representation of Names of Countries, column
+							A2.</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>ISO 3166-1 Codes pour la représentation des noms de pays, colonne A2.</p>
+   </div>
+</div>

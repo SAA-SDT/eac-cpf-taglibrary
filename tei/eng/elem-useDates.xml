@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="useDates"
+     type="elementDocumentation">
+   <head>
+      <gi>useDates</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Date of Use</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The dates when the name or names were used for or by the CPF entity being described.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Within <gi>nameEntry</gi>, <gi>useDates</gi> provides the dates during which the name was used for or by the CPF entity. For parallel names, <gi>useDates</gi> may occur in <gi>nameEntryParallel</gi>
+								rather than in the individual <gi>nameEntry</gi> elements contained in
+									<gi>nameEntryParallel</gi>.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>date, dateRange, dateSet</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry, nameEntryParallel</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1.2 and 5.1.3</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Brown, Bob</eac-cpf:part>
+            <eac-cpf:useDates>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:useDates>
+            <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+         </eac-cpf:nameEntry>
+      </egXML>
+   </div>
+</div>

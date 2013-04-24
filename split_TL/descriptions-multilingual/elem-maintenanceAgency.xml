@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="maintenanceAgency"
+     type="elementDocumentation">
+   <head>
+      <gi>maintenanceAgency</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Maintenance Agency</p>
+      <p xml:lang="fre">Organisme responsable</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The institution or service responsible for the creation, maintenance, and/or
+							dissemination of the EAC-CPF instance.</p>
+      <p xml:lang="fre">L’institution ou le service responsable de la création, de la gestion et/ou de la diffusion de l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A required element within <gi>control</gi> for wrapping information about the
+								institution or service responsible for the creation, maintenance, and/or dissemination of
+								the EAC-CPF instance.</p>
+      <p>This must include the <gi>agencyName</gi> element and it is recommended to include the
+								optional <gi>agencyCode</gi> and / or <gi>otherAgencyCode</gi> elements as well to
+								unambiguously identify the institution or service. Additional local institutional codes are
+								given in <gi>otherAgencyCode</gi>. Any general information about the institution in
+								relation to the EAC-CPF instance may also be given in a <gi>descriptiveNote</gi>
+								element.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément obligatoire au sein de l’élément Contrôle <gi>control</gi> servant à englober les informations relatives à l’institution ou au service responsable de la création, de la gestion et/ou de la diffusion de
+                     l’instance EAC-CPF.</p>
+      <p>Il doit inclure l’élément Nom de l’organisme <gi>agencyName</gi> ; il est recommandé d’y renseigner également les éléments facultatifs Code de l’organisme <gi>agencyCode</gi> et/ou Autre code de l’organisme
+                        <gi>otherAgencyCode</gi> afin d’identifier sans ambiguïté l’institution ou le service. D’autres codes institutionnels de portée locale sont donnés dans <gi>otherAgencyCode</gi>. Toute information générale sur
+                     l’institution en relation avec l’instance EAC-CPF peut également être donnée dans un élément Note descriptive <gi>descriptiveNote</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>agencyCode, agencyName, descriptiveNote, otherAgencyCode</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.2</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:agencyCode>FR-DAF</eac-cpf:agencyCode>
+            <eac-cpf:agencyName>Archives nationales (Paris)</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:otherAgencyCode>GB-058</eac-cpf:otherAgencyCode>
+            <eac-cpf:agencyName>The British Library: Manuscript Collections</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceAgency>
+            <agencyCode> FR-DAF </agencyCode>
+            <agencyName> Archives nationales (Paris) </agencyName>
+         </maintenanceAgency>
+         <maintenanceAgency>
+            <otherAgencyCode> GB-058 </otherAgencyCode>
+            <agencyName> The British Library: Manuscript Collections </agencyName>
+         </maintenanceAgency>
+      </egXML>
+   </div>
+</div>

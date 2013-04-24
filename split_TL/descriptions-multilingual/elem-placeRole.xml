@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="placeRole"
+     type="elementDocumentation">
+   <head>
+      <gi>placeRole</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Place Role</p>
+      <p xml:lang="fre"> Rôle du lieu</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element to identify the contextual role a place or jurisdiction has in
+							relation to the EAC-CPF entity in <gi>place</gi> elements.</p>
+      <p xml:lang="fre">Élément explicitant le rôle d’un lieu ou d’une juridiction en relation avec l’entité décrite dans l’instance EAC-CPF dans des éléments Lieu <gi>place</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <gi>placeRole</gi> provides a contextual role for a <gi>placeEntry</gi> within
+									<gi>place</gi>. Places should be identified by the proper noun that commonly designates
+								the place, natural feature, or political jurisdiction. It is strongly recommended that each
+								place name is accompanied by a <gi>placeRole</gi> element in order to describe the nature
+								of the association of the place to the entity.</p>
+      <p>The <att>vocabularySource</att> attribute may be used to indicate the controlled
+								vocabulary form which the <gi>placeRole</gi> term is derived.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élément Rôle du lieu <gi>placeRole</gi> explicite le rôle pour une Forme du nom de lieu <gi>placeEntry</gi> au sein de Lieu <gi>place</gi>. Les lieux doivent être identifiés par le nom propre désignant communément le
+                     lieu physique ou la circonscription politique. Il est fortement recommandé d’utiliser chaque nom de lieu avec un élément <gi>placeRole</gi> afin de décrire la nature de la relation du lieu avec l’entité décrite dans
+                     l’instance EAC-CPF.</p>
+      <p>L’attribut <att>vocabularySource</att> peut être utilisé pour indiquer la forme de vocabulaire contrôlé dont est dérivé le terme <gi>placeRole</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>place</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>vocabularySource</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Facultatif</item>
+            <label>scriptCode</label>
+            <item>Facultatif</item>
+            <label>transliteration</label>
+            <item>Facultatif</item>
+            <label>vocabularySource</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeEntry>Paris, France</eac-cpf:placeEntry>
+            <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+         </eac-cpf:place>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <place>
+            <placeEntry> Paris, France </placeEntry>
+            <placeRole> Residence </placeRole>
+         </place>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkActuate"
+     type="attributeDocumentation">
+   <head>
+      <att>xlink:actuate</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Xlink: Actuate</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Used to signal intended behavior with respect to whether the remote resource
+							link is resolved when the containing resource is rendered, or when the user requests the
+							resource.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>xlink:actuate</att> should be used with the
+								<att>xlink:show</att> to indicate intended behavior. The <att>xlink:actuate</att> is used to
+							signal intended behavior with respect to when the remote resource is to appear. The values
+							indicate whether the resource is to appear automatically when the containing resource is
+							rendered ("onLoad"), or only after the user requests the resource ("onRequest"). "None" or
+							"other" are also valid values.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>"onLoad" or "onRequest" or "other" or "none"</p>
+   </div>
+</div>

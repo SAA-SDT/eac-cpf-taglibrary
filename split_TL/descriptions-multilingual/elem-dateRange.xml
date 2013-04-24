@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="dateRange"
+     type="elementDocumentation">
+   <head>
+      <gi>dateRange</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Date Range</p>
+      <p xml:lang="fre">Intervalle de dates</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The date range of an event in the history of, or a relationship with, the
+							person, family, or corporate body being described in the EAC-CPF instance.</p>
+      <p xml:lang="fre">Intervalle de dates d'un évènement dans l'histoire de la personne, la famille ou la collectivité décrite dans l'instance EAC-CPF, ou d'une relation concernant cette entité.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A generic element that expresses inclusive dates of an event in the history of, or a
+								relationship with, the person, family, or corporate body being described in the EAC-CPF
+								instance. <gi>dateRange</gi> contains mandatory <gi>fromDate</gi> and <gi>toDate</gi>
+								child elements. If the event or relationship has a single date use the <gi>date</gi>
+								element, while more complex dates (combining single dates and date ranges) can be expressed
+								in <gi>dateSet</gi>.</p>
+      <p>The <att>localType</att> attribute can be used to supply a more specific characterization
+								of the date.</p>
+      <p>Dates of existence for the identity being described in the EAC-CPF instance are encoded
+								with the <gi>existDates</gi> element, while the dates of use of a particular name of an
+								identity are encoded in <gi>useDates</gi>. The date and time of a maintenance event in the
+								history of the EAC-CPF instance are given in the <gi>eventDateTime</gi> element.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément générique qui exprime les dates extrêmes d'un évènement dans l'histoire de la personne, la famille ou la collectivité décrite dans l'instance EAC-CPF, ou d'une relation concernant cette entité. Intervalle de
+                     dates <gi>dateRange</gi> contient obligatoirement les éléments fils Date de début <gi>fromDate</gi> et Date de fin <gi>toDate</gi>. Si l'évènement ou la relation correspondent à une date simple, utiliser l'élément Date
+                        <gi>date</gi>, des dates plus complexes (combinant des dates simples et des intervalles de dates) pouvant être exprimées grâce à l'élément Ensemble de dates <gi>dateSet</gi>.</p>
+      <p>L'attribut <att>localType</att> peut être utilisé pour caractériser plus spécifiquement la date.</p>
+      <p>Les dates d'existence de l'entité décrite dans l'instance EAC-CPF sont encodées dans l'élément Dates d'existence <gi>existDates</gi>, alors que les dates d'utilisation d'un nom particulier d'une entité sont encodées
+                     dans l'élément Dates d'utilisation <gi>useDates</gi>. Les date et heure d'un évènement de maintenance dans l'histoire de l'instance EAC-CPF sont données dans l'élément Date et heure de l’intervention
+                        <gi>eventDateTime</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>fromDate, toDate</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem, cpfRelation, dateSet, existDates, function, functionRelation,
+							legalStatus, localControl, localDescription, mandate, occupation, place, resourceRelation,
+							useDates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:dateRange xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:fromDate standardDate="1765-09-18">September 18, 1765</eac-cpf:fromDate>
+            <eac-cpf:toDate standardDate="1846-06-01">June 1, 1846</eac-cpf:toDate>
+         </eac-cpf:dateRange>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <dateRange>
+            <fromDate standardDate="1765-09-18"> 18 septembre 1765 </fromDate>
+            <toDate standardDate="1846-06-01"> 1er juin 1846 </toDate>
+         </dateRange>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="agencyName"
+     type="elementDocumentation">
+   <head>
+      <gi>agencyName</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Agency Name</p>
+      <p xml:lang="fre">Nom de l’organisme</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The name of the institution or service responsible for the creation,
+							maintenance, and/or dissemination of the EAC-CPF instance.</p>
+      <p xml:lang="fre">Le nom de l’organisme ou du service responsable de la création, de la gestion et/ou de la diffusion de l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A mandatory element of <gi>maintenanceAgency</gi> within <gi>control</gi> that
+								provides the name of the institution or service responsible for the creation, maintenance
+								and/or dissemination of the EAC-CPF instance.</p>
+      <p>It is recommended that one uses the form of the agency name that is authorized by an
+								appropriate national or international agency or service.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément obligatoire contenu dans l’élément Organisme responsable <gi>maintenanceAgency</gi> au sein de l’élément Contrôle <gi>control</gi>, il permet de fournir le nom de l’institution ou du service responsable de la
+                     création, de la gestion et/ou de la diffusion de l’instance EAC-CPF. Il est recommandé d’utiliser la forme du nom autorisée par une agence nationale ou internationale ou un service habilité pour ce faire.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceAgency</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.2</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
+            <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceAgency>
+            <agencyCode> AU-ANL:PEAU </agencyCode>
+            <agencyName> National Library of Australia </agencyName>
+         </maintenanceAgency>
+      </egXML>
+   </div>
+</div>

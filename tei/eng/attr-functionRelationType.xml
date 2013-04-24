@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="functionRelationType"
+     type="attributeDocumentation">
+   <head>
+      <att>functionRelationType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Function Relation Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The type of relation that the entity being described has to the related
+							function.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>functionRelationType</att> may occur on
+								<gi>functionRelation</gi>. The value designates the type of relation that the entity being
+							described has to the related function. If the type of relation is more specific than one of
+							the values given below, Xlink attributes may be used in addition to
+								<att>functionRelationType</att>.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>"controls" or "owns" or "performs"</p>
+   </div>
+   
+</div>

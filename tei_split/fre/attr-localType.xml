@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="localType"
+     type="attributeDocumentation">
+   <head>
+      <att>localType</att>
+   </head>
+   
+   <div type="summary">
+      
+      <p xml:lang="fre">Utilisé pour affiner la sémantique d’un élément ou pour apporter de la précision sémantique à des éléments dont la sémantique est faible. La valeur doit être un URI absolu.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>localType</att> est un attribut d’un grand nombre d’éléments descriptifs et de quelques éléments de contrôle. Il est destiné à restreindre la sémantique de certains éléments ou à donner du sens à des
+                     éléments qui à l’origine sont structurels ou dont la sémantique est faible. La valeur de l’attribut <att>localType</att> doit être du type anyURI défini par les spécifications W3C XML Schema. Afin de faciliter l’échange
+                     des instances EAC-CPF, il est hautement recommandé que l’URI soit absolu et renvoie à une ressource locale décrivant la portée sémantique et l’utilisation de la valeur.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="fre">
+      <p>anyURI</p>
+   </div>
+</div>

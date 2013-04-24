@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="agencyCode"
+     type="elementDocumentation">
+   <head>
+      <gi>agencyCode</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Agency Code</p>
+      <p xml:lang="fre">Code de l’organisme</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The code that represents the institution or service responsible for the
+							creation, maintenance and/or dissemination of the EAC-CPF instance.</p>
+      <p xml:lang="fre">Le code représentant l’institution ou le service responsable de la création, de la gestion et/ou de la diffusion de l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An element of <gi>maintenanceAgency</gi> within <gi>control</gi> providing a code
+								representing the institution or service responsible for the creation, maintenance and/or
+								dissemination of the EAC-CPF instance. The name of the agency is given in
+									<gi>agencyName</gi>. The code is used in combination with the content of the required
+									<gi>recordId</gi> to provide a globally unique identifier for the instance.</p>
+      <p>The format of the code is constrained to that of the International Standard Identifier for
+								Libraries and Related Organizations (ISIL: ISO 15511): a prefix, a dash, and an identifier.
+								The code is alphanumeric (A-Z, 0-9, solidus, hyphen-minus, and colon only) with a maximum of
+								16 characters. If appropriate to local or national convention insert a valid ISIL for an
+								institution, whether provided by a national authority (usually the national library) or a
+								service (such as OCLC). If this is not the case then local institution codes may be given
+								with the ISO 3166-1 alpha-2 country code as the prefix to ensure international uniqueness in
+								the <gi>otherAgencyCode</gi> element.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément contenu dans l’élément Organisme responsable <gi>maintenanceAgency</gi> dans l’élément Contrôle <gi>control</gi>, permettant de fournir un code représentant l’institution ou le service responsable de la
+                     création, de la gestion et/ou de la diffusion de l’instance EAC-CPF. Le nom de l’organisme est donné dans l’élément Nom de l’organisme <gi>agencyName</gi>. Le code est utilisé en association avec le contenu de l’élément
+                     obligatoire Identifiant de la notice <gi>recordId</gi> pour fournir un identifiant unique pour l’instance. Le format du code est contraint à celui de l’Identifiant international normalisé pour les bibliothèques et les
+                     organismes apparentés (ISIL : ISO 15511) : un préfixe, un tiret et un identifiant. Le code est alphanumérique (seulement les caractères A-Z, 0-9, barre oblique, tiret-signe minus et deux points) avec un maximum de 16
+                     caractères. Si les conventions nationales ou locales le permettent, insérer un ISIL valide pour une institution, qu’il soit fourni par une autorité (généralement par la bibliothèque nationale d’un pays) ou un service
+                     (tel que OCLC). Si tel n’est pas le cas, des identifiants locaux peuvent être donnés avec pour préfixe le code pays alpha-2 de la norme ISO 3166-1 afin d’assurer l’unicité internationale du code dans l’élément Code de
+                     l’organisme <gi>AgencyCode</gi>.1L’original porte par erreur <gi>otherAgencyCode</gi>. Correction effectuée dans la traduction française.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceAgency</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.2</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
+            <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceAgency>
+            <agencyCode> AU-ANL:PEAU </agencyCode>
+            <agencyName> National Library of Australia </agencyName>
+         </maintenanceAgency>
+      </egXML>
+   </div>
+</div>

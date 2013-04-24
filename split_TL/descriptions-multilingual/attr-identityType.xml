@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="identityType"
+     type="attributeDocumentation">
+   <head>
+      <att>identityType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Identity Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Indicates whether the identity is given or acquired. May be useful for
+							processing when multiple identities are described in the same instance.</p>
+      <p xml:lang="fre">Indique sil'identitéest donnéeou acquise. Peutêtre utilepour le traitementlorsque des identitésmultiplessont décritesdans la même instance.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>identityType</att> may occur on <gi>identity</gi>. Though
+							optional, it is recommended that it be used when multiple identities are described in the
+							same EAC-CPF instance using <gi>multipleIdentities</gi>. It will enable processors to
+							distinguish between the description of a person and one or more personae. </p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>identityType</att> est un attribut de l’élément Identité <gi>identity</gi>. Bien qu'il soit facultatif, il est recommandé de l’utiliser quand des identités multiples sont décrites dans la même instance
+                     EAC-CPF en utilisant l’élément Identités multiples <gi>multipleIdentities</gi>. Ilpermettra aux traitements informatiquesde distinguer la descriptiond'une personnede celle d’une ou de plusieursidentités.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>"given" or "acquired"</p>
+   </div>
+   <div type="values" xml:lang="fre">
+      <p>"given" (donné) or "acquired" (acquis)</p>
+   </div>
+</div>

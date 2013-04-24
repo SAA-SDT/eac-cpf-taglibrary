@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkRole"
+     type="attributeDocumentation">
+   <head>
+      <att>xlink:role</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Xlink: Role</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Identifies the type or nature of the remote resource with an absolute
+							URI.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Identifies the type or nature of the remote resource with an absolute
+							URI. </p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>string</p>
+   </div>
+</div>

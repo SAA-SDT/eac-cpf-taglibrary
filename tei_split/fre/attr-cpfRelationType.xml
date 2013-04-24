@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="cpfRelationType"
+     type="attributeDocumentation">
+   <head>
+      <att>cpfRelationType</att>
+   </head>
+   
+   <div type="summary">
+      
+      <p xml:lang="fre">Type de relation qu’une collectivité, une personne ou une famille a avec l’entité décrite.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>cpfRelationType</att> est un attribut de l’élément Relation avec une collectivité, une personne ou une famille <gi>cpfRelation</gi>. La valeur désigne le type de relation qu’une collectivité, une
+                     personne ou une famille a avec l’entité décrite dans l’instance EAC-CPF. Si la nature de la relation est plus préciseque l’une des valeurs données ci-dessous, on peut utiliser les attributs XLink en plus de l’attribut
+                        <att>cpfRelationType</att>.</p>
+   </div>
+   
+   <div type="values" xml:lang="fre">
+      <p>"identity" (identitaire) ou "hierarchical" (hiérarchique) ou "hierarchical-parent" (hiérarchique-parent) ou "hierarchical-child" (hiérarchique-enfant) ou "temporal" (chronologique) ou "temporal-earlier"
+                     (chronologique-prédécesseur) ou "temporal-later" (chronologique-successeur) ou "family" (familiale) ou "associative" (d’association)</p>
+   </div>
+</div>

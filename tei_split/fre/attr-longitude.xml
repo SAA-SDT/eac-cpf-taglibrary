@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="longitude"
+     type="attributeDocumentation">
+   <head>
+      <att>longitude</att>
+   </head>
+   
+   <div type="summary">
+      
+      <p xml:lang="fre">La longitude du lieu.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>longitude</att> est un attribut de l’élément Lieu <gi>place</gi>. La valeur de cet attribut correspond à la longitude du lieu. L’attribut <att>longitude</att> doit être utilisé conjointement avec les
+                     attributs <att>latitude</att> et <att>altitude</att>.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="fre">
+      <p>NMTOKEN</p>
+   </div>
+</div>

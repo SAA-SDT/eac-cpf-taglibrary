@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="agent"
+     type="elementDocumentation">
+   <head>
+      <gi>agent</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Agent</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The agent (human or machine) responsible for an event in the maintenance of
+							the EAC instance.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>For each maintenance event described in a <gi>maintenanceEvent</gi> element, the name of
+								the agent responsible for the maintenance event must be given. This might be a person or
+								institution in which case the <gi>agentType</gi> should be set as "human," or the name of
+								a system, in which case set the <gi>agentType</gi> to "machine."</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceEvent</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.9</p>
+   </div>
+   
+   <div type="occurrence">
+      <div type="mandatory">
+      <p xml:lang="eng">Mandatory</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Non-repeatable</p>
+   </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+      <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+         <eac-cpf:eventType>created</eac-cpf:eventType>
+         <eac-cpf:eventDateTime>20/06/2000 12:00</eac-cpf:eventDateTime>
+         <eac-cpf:agentType>human</eac-cpf:agentType>
+         <eac-cpf:agent>Bountouri, Lina</eac-cpf:agent>
+      </eac-cpf:maintenanceEvent>
+      <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+         <eac-cpf:eventType>updated</eac-cpf:eventType>
+         <eventDateTime standardDateTime="20120601T12:00:00+02:00">June 1, 2012</eventDateTime>
+         <eac-cpf:agentType>human</eac-cpf:agentType>
+         <eac-cpf:agent>Ionian University Library, Catalog Division</eac-cpf:agent>
+      </eac-cpf:maintenanceEvent>
+      <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+         <eac-cpf:eventType>revised</eac-cpf:eventType>
+         <eac-cpf:eventDateTime>2012-06-11 10:00AM</eac-cpf:eventDateTime>
+         <eac-cpf:agentType>machine</eac-cpf:agentType>
+         <eac-cpf:agent>ConvertUtility</eac-cpf:agent>
+      </eac-cpf:maintenanceEvent>
+      </egXML>
+   </div>
+</div>

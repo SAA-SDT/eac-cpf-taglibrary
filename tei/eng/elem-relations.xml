@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="relations"
+     type="elementDocumentation">
+   <head>
+      <gi>relations</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Relations</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A wrapper element for grouping one or more specific relations, each of them expressed by <gi>cpfRelation</gi>, <gi>resourceRelation</gi>, or <gi>functionRelation</gi>.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A wrapper element that groups together one or more relation elements, each of which
+								encodes a specific relationship. CPF entities may have relationships with other corporate
+								bodies, persons or families, which may be expressed using <gi>cpfRelation</gi>; functions,
+								which may be expressed using <gi>functionRelation</gi>; or resources such as archival
+								collections, bibliographic resources, or artifacts, which may be expressed using
+									<gi>resourceRelation</gi>.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>cpfRelation, functionRelation, resourceRelation</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>The general concept of providing connections from archival authority
+							records to other related resources is stated in ISAAR(CPF) 6.0: "Archival authority records
+							are created primarily to document the context of records creation. To make this documentation
+							useful it is necessary to link the authority records to descriptions of records. Archival
+							authority records can also be linked to other relevant information resources."</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:relations xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:cpfRelation>[...]</eac-cpf:cpfRelation>
+            <eac-cpf:functionRelation>[...]</eac-cpf:functionRelation>
+            <eac-cpf:resourceRelation>[...]</eac-cpf:resourceRelation>
+         </eac-cpf:relations>
+      </egXML>
+   </div>
+</div>

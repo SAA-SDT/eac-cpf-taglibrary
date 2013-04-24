@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="agencyName"
+     type="elementDocumentation">
+   <head>
+      <gi>agencyName</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Agency Name</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The name of the institution or service responsible for the creation,
+							maintenance, and/or dissemination of the EAC-CPF instance.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A mandatory element of <gi>maintenanceAgency</gi> within <gi>control</gi> that
+								provides the name of the institution or service responsible for the creation, maintenance
+								and/or dissemination of the EAC-CPF instance.</p>
+      <p>It is recommended that one uses the form of the agency name that is authorized by an
+								appropriate national or international agency or service.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceAgency</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.2</p>
+   </div>
+   
+   <div type="occurrence">
+      <div type="mandatory">
+      <p xml:lang="eng">Mandatory</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Non-repeatable</p>
+   </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
+            <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+   </div>
+</div>

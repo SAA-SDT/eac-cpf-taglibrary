@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="occupation"
+     type="elementDocumentation">
+   <head>
+      <gi>occupation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Occupation</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element that provides information about the occupation of the CPF entity
+							being described.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An <gi>occupation</gi> element is a wrapper element used to encode an index term, using
+								the element <gi>term</gi>. Terms are used to identify an occupation held by the
+								CPF entity. Terms may be drawn from controlled vocabularies or may be natural language
+								terms. Associated date or date range (<gi>date</gi>, <gi>dateRange</gi> or
+									<gi>dateSet</gi>) and place(s) (<gi>placeEntry</gi>) may be included to further
+								constrain the term's meaning. A <gi>descriptiveNote</gi> element may be included if a
+								textual explanation needed.</p>
+      <p>A single <gi>occupation</gi> element may be encoded directly within
+									<gi>description</gi>. Alternatively, multiple <gi>occupation</gi> elements may be
+								grouped within a <gi>occupations</gi> wrapper that facilitates manipulating them as a
+								group.</p>
+      <p>Occupations may alternatively be described in discursive form in <gi>biogHist</gi>. The <gi>occupation</gi> element should be used whenever
+								separate semantic processing of information about occupations is required.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry,
+							term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, occupations</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.5</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:occupations xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:occupation>
+               <eac-cpf:term>Teacher</eac-cpf:term>
+            </eac-cpf:occupation>
+            <eac-cpf:occupation>
+               <eac-cpf:term>Railway labourer</eac-cpf:term>
+            </eac-cpf:occupation>
+         </eac-cpf:occupations>
+      </egXML>
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:description xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:occupations>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Writer/Poet </eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1931</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1971</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Diplomat</eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1926</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1962</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Vice Consul at the General Consulate of the Hellenic Republic in
+                     London</eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1931</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1934</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Consul in Koritsa</eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1936</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1938</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Head of the Foreign Press Departement (Sub ministry of Press and Information) in Athens</eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1938</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1941</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Diplomat in the Greek Embassy of Pretoria</eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1941</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1942</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Director of the political office of Viceroy Archbishop Damaskinos and
+                     director of the National Theatre</eac-cpf:term>
+                  <eac-cpf:date>1945</eac-cpf:date>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Embassy Counsellor in Ancara </eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1948</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1950</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Embassy Counsellor in London</eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1951</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1953</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Appointed as minister to Lebanon (with responsibilities for Libanon, Syria, Jordan, and Iraq</eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1952</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1956</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Head of the Second Department of Politics (Ministry of Foreign Affairs) in Athens</eac-cpf:term>
+                  <eac-cpf:date>1956</eac-cpf:date>
+               </eac-cpf:occupation>
+               <eac-cpf:occupation>
+                  <eac-cpf:term>Royal Greek Ambassador in London</eac-cpf:term>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate>1957</eac-cpf:fromDate>
+                     <eac-cpf:toDate>1962</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:occupation>
+            </eac-cpf:occupations>
+            <eac-cpf:biogHist>
+               <eac-cpf:citation>The complete biography of George Seferis can be found in 
+                  "Beaton, Roderick . <eac-cpf:span style="italics">George Seferis: Waiting for the Angel – A Biography.</eac-cpf:span> New Haven: Yale University Press, 2003."
+               </eac-cpf:citation>
+            </eac-cpf:biogHist>
+         </eac-cpf:description>
+      </egXML>
+   </div>
+</div>

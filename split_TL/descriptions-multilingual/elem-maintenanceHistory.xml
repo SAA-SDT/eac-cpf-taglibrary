@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="maintenanceHistory"
+     type="elementDocumentation">
+   <head>
+      <gi>maintenanceHistory</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Maintenance History</p>
+      <p xml:lang="fre">Historique des interventions</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The history of the creation and maintenance of the EAC-CPF instance.</p>
+      <p xml:lang="fre">Historique de la création et de la gestion de l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A required wrapper element within <gi>control</gi> to record the history and creation of
+								the EAC-CPF instance. There must be at least one <gi>maintenanceEvent</gi> element,
+								usually recording the creation of the instance, but there may be many other
+									<gi>maintenanceEvent</gi> elements documenting the milestone events or activities in the
+								maintenance of the instance.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément englobant obligatoire contenu dans l’élément Contrôle <gi>control</gi> permettant d’enregistrer l’historique de la création et de la gestion de l’instance EAC-CPF. Cet élément doit contenir au moins un élément
+                     Intervention <gi>maintenanceEvent</gi>, mais il peut inclure plusieurs autres éléments <gi>maintenanceEvent</gi> qui précisent les interventions marquantes effectuées sur l’instance.</p>
+   </div>
+   <div type="mayContain">
+      <p>maintenanceEvent</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.6, 5.4.9</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceHistory xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:maintenanceEvent>
+               <eac-cpf:eventType>created</eac-cpf:eventType>
+               <eac-cpf:eventDateTime standardDateTime="2009-06-29T00:20:00.000-00:00">29 giugno
+											2009</eac-cpf:eventDateTime>
+               <eac-cpf:agentType>human</eac-cpf:agentType>
+               <eac-cpf:agent>Salvatore Vassallo</eac-cpf:agent>
+               <eac-cpf:eventDescription>Prima codifica dell'espempio in italiano presente nelle
+											ISAAR(CPF)</eac-cpf:eventDescription>
+            </eac-cpf:maintenanceEvent>
+            <eac-cpf:maintenanceEvent>
+               <eac-cpf:eventType>revised</eac-cpf:eventType>
+               <eac-cpf:eventDateTime standardDateTime="2009-06-29T17:16:00.000-00:00">29 giugno
+											2009</eac-cpf:eventDateTime>
+               <eac-cpf:agentType>human</eac-cpf:agentType>
+               <eac-cpf:agent>Salvatore Vassallo</eac-cpf:agent>
+               <eac-cpf:eventDescription>Aggiunte fonti, regole usate e campi di
+											controllo</eac-cpf:eventDescription>
+            </eac-cpf:maintenanceEvent>
+         </eac-cpf:maintenanceHistory>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceHistory>
+            <maintenanceEvent>
+               <eventType> created </eventType>
+               <eventDateTime standardDateTime="2009-06-29T00:20:00.000-00:00"> 29 giugno2009 </eventDateTime>
+               <agentType> human </agentType>
+               <agent> Salvatore Vassallo </agent>
+               <eventDescription> Prima codifica dell'espempio in italiano presente nelleISAAR(CPF) </eventDescription>
+            </maintenanceEvent>
+            <maintenanceEvent>
+               <eventType> revised </eventType>
+               <eventDateTime standardDateTime="2009-06-29T17:16:00.000-00:00"> 29 giugno2009 </eventDateTime>
+               <agentType> human </agentType>
+               <agent> Salvatore Vassallo </agent>
+               <eventDescription> Aggiunte fonti, regole usate e campi di controllo </eventDescription>
+            </maintenanceEvent>
+         </maintenanceHistory>
+      </egXML>
+   </div>
+</div>

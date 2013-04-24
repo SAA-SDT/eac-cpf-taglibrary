@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="languageUsed"
+     type="elementDocumentation">
+   <head>
+      <gi>languageUsed</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Language Used</p>
+      <p xml:lang="fre">Langue utilisée</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The language and script used by the entity being described.</p>
+      <p xml:lang="fre">La langue et l’écriture utilisées par l’entité décrite.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <gi>languageUsed</gi> is an element within <gi>description</gi> used to indicate the
+								language and script in which the entity being described was creative or productive. A
+									<gi>language</gi> element should be used to specify the language and a corresponding
+									<gi>script</gi> element for the script.</p>
+      <p>Do not confuse with <gi>languageDeclaration</gi> which refers to the language and script
+								of the EAC-CPF instance.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élément Langue utilisée <gi>languageUsed</gi> au sein de l’élément Description <gi>description</gi> sert à indiquer la langue et l’écriture d’expression de l’entité dans l’exercice de ses activités. Un élément Langue
+                        <gi>language</gi> doit être utilisé pour préciser la langue et un élément correspondant Écriture <gi>script</gi> pour préciser l’écriture.</p>
+      <p>Ne pas confondre avec Déclaration de langue <gi>languageDeclaration</gi> qui fait référence à la langue et à l’écriture de l’instance EAC-CPF.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, language, script</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, languagesUsed</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:languageUsed xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+            <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+         </eac-cpf:languageUsed>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <languagesUsed>
+            <languageUsed>
+               <language languageCode="eng"> English </language>
+               <script scriptCode="Latn"> Latin </script>
+            </languageUsed>
+            <languageUsed>
+               <language languageCode="spa"> Spanish </language>
+               <script scriptCode="Latn"> Latin </script>
+            </languageUsed>
+            <descriptiveNote>
+               <p> Published works in English and Spanish. </p>
+            </descriptiveNote>
+         </languagesUsed>
+      </egXML>
+   </div>
+</div>

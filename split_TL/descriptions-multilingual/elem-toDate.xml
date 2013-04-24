@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="toDate" type="elementDocumentation">
+   <head>
+      <gi>toDate</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">To Date</p>
+      <p xml:lang="fre">Date de fin</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The ending date in a date range.</p>
+      <p xml:lang="fre">Date de fin d'un intervalle de dates.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>May contain actual or approximate dates expressed as a month, day, or year in any format.
+								A standard numerical form of the date (YYYYMMDD, etc.) can be specified with the
+									<att>standardDate</att> attribute. The <att>notBefore</att> and <att>notAfter</att>
+								attributes may be used to indicate uncertainty.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'élément Date de fin <gi>toDate</gi> représente la date de fin d'un intervalle de dates, et peut contenir une date précise ou une date approximative, exprimée par un jour, un mois ou une année, dans quelque format que
+                     ce soit. Une forme numérique normalisée (AAAAMMJJ, etc.) peut être indiquée dans l'attribut <att>standardDate</att>. Les attributs <att>notBefore</att> et <att>notAfter</att> peuvent être utilisés pour indiquer un
+                     caractère d'incertitude.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>dateRange</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>notAfter</label>
+            <item>Optional</item>
+            <label>notBefore</label>
+            <item>Optional</item>
+            <label>standardDate</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>notAfter</label>
+            <item>Facultatif</item>
+            <label>notBefore</label>
+            <item>Facultatif</item>
+            <label>standardDate</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:existDates xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1868">1868</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1936">1936</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+         </eac-cpf:existDates>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <existDates>
+            <dateRange>
+               <fromDate standardDate="1868"> 1868 </fromDate>
+               <toDate standardDate="1936"> 1936 </toDate>
+            </dateRange>
+         </existDates>
+      </egXML>
+   </div>
+</div>

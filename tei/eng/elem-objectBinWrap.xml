@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="objectBinWrap"
+     type="elementDocumentation">
+   <head>
+      <gi>objectBinWrap</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Object Bin Wrap</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">This element provides a place for a base64-encoded binary representation of
+							a resource.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>This element provides a place for a base64-encoded binary representation of a resource.
+         The datatype of base64-encoded binary is based on the W3C Schema Part 2: Datatypes. (for which consult the specification at http://www.w3.org/TR/xmlschema-2/)</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>base64Binary</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfRelation, functionRelation, resourceRelation, setComponent,
+							source</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:objectBinWrap xmlns:eac-cpf="urn:isbn:1-931666-33-4"> [Base64 Binary code] </eac-cpf:objectBinWrap>
+      </egXML>
+   </div>
+</div>

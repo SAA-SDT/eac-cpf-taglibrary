@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="term" type="elementDocumentation">
+   <head>
+      <gi>term</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Term</p>
+      <p xml:lang="fre"/>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A generic element used to encode a descriptive term in accordance with local
+							descriptive rules.</p>
+      <p xml:lang="fre">Un élément générique utilisé pour encoder un terme de description conformément à des règles locales.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A generic element used to encode a descriptive term in accordance with local descriptive
+								rules. The local authority – thesaurus or local controlled vocabulary – should be declared
+								in the <gi>localTypeDeclaration</gi> element within the <gi>control</gi> section.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Un élément générique utilisé pour encoder un terme de description conformément à des règles locales. Tout référentiel local utilisé – qu’il s’agisse d’un thésaurus ou d’un vocabulaire contrôlé local – doit être déclaré
+                     dans l’élément Déclaration de type local <gi>localTypeDeclaration</gi> au sein de l’élément Contrôle <gi>control</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>function, legalStatus, localControl, localDescription, mandate,
+							occupation, place</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>vocabularySource</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Facultatif</item>
+            <label>scriptCode</label>
+            <item>Facultatif</item>
+            <label>transliteration</label>
+            <item>Facultatif</item>
+            <label>vocabularySource</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:function xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Estate ownership</eac-cpf:term>
+            <eac-cpf:descriptiveNote>Social, political, and cultural role typical of landed aristocracy
+										in England. The first Viscount Campden amassed a large fortune in trade in London and
+										purchased extensive estates, including Exton (Rutland), and Chipping Campden
+										(Gloucestershire). The Barham Court (Kent) estate was the acquisition of the first Baron
+										Barham, a successful admiral and naval administrator (First Lord of the Admiralty
+										1805).</eac-cpf:descriptiveNote>
+         </eac-cpf:function>
+         <eac-cpf:legalStatus xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Organismo de la Administracion Central del Estado</eac-cpf:term>
+            <eac-cpf:date standardDate="1769">1769</eac-cpf:date>
+         </eac-cpf:legalStatus>
+         <eac-cpf:mandate xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Minnesota. Executive Session Laws 1919 c49</eac-cpf:term>
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate>1919</eac-cpf:fromDate>
+               <eac-cpf:toDate>1925</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Board created in 1919 to receive and examine applications for bonuses from
+											Minnesota soldiers.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:mandate>
+         <eac-cpf:occupation xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Teacher</eac-cpf:term>
+         </eac-cpf:occupation>
+         <eac-cpf:localControl xmlns:eac-cpf="urn:isbn:1-931666-33-4" localType="detailLevel">
+            <eac-cpf:term>minimal</eac-cpf:term>
+         </eac-cpf:localControl>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <function>
+            <term> Estate ownership </term>
+            <descriptiveNote> Social, political, and cultural role typical of landed aristocracy in England. The first Viscount Campden amassed a large fortune in trade in London and purchased extensive estates, including Exton
+                           (Rutland), and Chipping Campden (Gloucestershire). The Barham Court (Kent) estate was the acquisition of the first Baron Barham, a successful admiral and naval administrator (First Lord of the Admiralty 1805).
+                        </descriptiveNote>
+         </function>
+         <legalStatus>
+            <term> Organismo de la Administracion Central del Estado </term>
+            <date standardDate="1769"> 1769 </date>
+         </legalStatus>
+         <mandate>
+            <term> Minnesota. Executive Session Laws 1919 c49 </term>
+            <dateRange>
+               <fromDate> 1919 </fromDate>
+               <toDate> 1925 </toDate>
+            </dateRange>
+            <descriptiveNote>
+               <p> Board created in 1919 to receive and examine applications for bonuses from Minnesota soldiers. </p>
+            </descriptiveNote>
+         </mandate>
+         <occupation>
+            <term> Teacher </term>
+         </occupation>
+         <localControl localType="detailLevel">
+            <term> minimal </term>
+         </localControl>
+      </egXML>
+   </div>
+</div>

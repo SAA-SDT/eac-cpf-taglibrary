@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="languageCode"
+     type="attributeDocumentation">
+   <head>
+      <att>languageCode</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Language Code</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Three-letter ISO 639-2 language code. Must occur on
+							<gi>language</gi>.</p>
+      <p xml:lang="fre">Code de langue à trois caractères alphabétiques de la norme ISO 639-2. Attribut obligatoire de l’élément Langue <gi>language</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>languageCode</att> must occur on <gi>language</gi>. The
+							Language Code is used to provide the ISO 639-2 standard code representing the language of the
+							EAC-CPF instance. The values are to be taken from the list of ISO 639-2 Codes for the
+							representation of Names of Languages. The list can be downloaded from the website of the
+							Library of Congress which is the registration agency of the standard (http://www.loc.gov/standards/iso639-2/langhome.html).</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>languageCode</att> est un attribut obligatoire de l’élément Langue <gi>language</gi>. L’attribut <att>languageCode</att> est utilisé pour indiquer le code issu de la norme ISO 639-2 représentant la
+                     langue de l’instance EAC-CPF. Les valeurs de la liste sont issues de la norme ISO 639-2 Codes pour la représentation des noms de langue. La liste peut être téléchargée à partir du site de la Bibliothèque du Congrès qui
+                     est l’Agence d’enregistrement de cette norme (http://www.loc.gov/standards/iso639-2/langhome.html).</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>ISO 639-2 Codes for the Representation of Names of Languages</p>
+   </div>
+   <div type="values" xml:lang="fre">
+      <p>Voir ISO 639-2 Codes pour la représentation des noms de langue</p>
+   </div>
+</div>
