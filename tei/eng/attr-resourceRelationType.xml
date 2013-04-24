@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="resourceRelationType"
+     type="attributeDocumentation">
+   <head>
+      <att>resourceRelationType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Resource Relation Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The type of relation of entity being described to the resource.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>resourceRelationType</att> may occur on
+								<gi>resourceRelation</gi>. The value designates the type of relation that the entity
+							described in the EAC-CPF instance has to the resource. If the nature of the relation is more
+							specific than one of the available values, the Xlink attributes may be used in addition to
+								<att>resourceRelationType</att>.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>"creatorOf" or "subjectOf" or "other"</p>
+   </div>
+   
+</div>

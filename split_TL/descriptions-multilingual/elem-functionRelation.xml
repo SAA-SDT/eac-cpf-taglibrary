@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="functionRelation"
+     type="elementDocumentation">
+   <head>
+      <gi>functionRelation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Function Relation</p>
+      <p xml:lang="fre">Relation avec une fonction </p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A function related to the described entity.</p>
+      <p xml:lang="fre">Une fonction reliée à l'entité décrite.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>functionRelation</gi> element contains the description of a function related to
+								the described entity. Such related functions are typically described in another encoding
+								language. Use <gi>objectXMLWrap</gi> to incorporate XML elements from any XML namespace or
+									<gi>objectBinWrap</gi> for base64-encoded binary data. A <gi>relationEntry</gi> element
+								is provided for textual identification of the related function.</p>
+      <p>Use the <gi>date</gi>, <gi>dateRange</gi>, or <gi>dateSet</gi> elements for
+								specifying when the relation applied and the <gi>placeEntry</gi> element for relevant
+								locative information. A <gi>descriptiveNote</gi> element may be included for a more
+								detailed specification or explanation of the relationship.</p>
+      <p>The <att>functionRelationType</att> attribute is used to specify the nature of the
+								relationship that exists between the <gi>function</gi> and the <gi>eac-cpf</gi> entity.
+								Values are chosen from a closed list.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'élément Relation avec une fonction <gi>functionRelation</gi> contient la description d'une fonction liée à l'entité décrite. De telles fonctions sont selon toute vraisemblance décrites dans un autre langage
+                     d'encodage. Utiliser Enveloppe d’objet XML <gi>objectXMLWrap</gi> pour incorporer des éléments XML provenant de tout autre espace de nom XML, ou Enveloppe d’objet binaire <gi>objectBinWrap</gi> pour encoder des données
+                     binaires en base 64. Un élément Forme du nom de l’entité en relation <gi>relationEntry</gi> est disponible pour décrire sous forme textuelle la fonction en relation. </p>
+      <p>Utiliser les éléments Date <gi>date</gi>, Intervalle de dates <gi>dateRange</gi>, ou Ensemble de dates <gi>dateSet</gi> et l'élément Forme du nom de lieu <gi>placeEntry</gi> pour préciser les lieux et les dates
+                     s’appliquant à la relation. On peut inclure l'élément <gi>descriptiveNote</gi> pour une description plus détaillée ou plus précise de la relation.</p>
+      <p>L'attribut <att>functionRelationType</att> est utilisé pour préciser la nature de la relation qui existe entre la fonction et l’entité décrite dans l’instance EAC-CPF. Les valeurs sont choisies à partir d’une liste
+                     fermée de valeurs.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, dateSet, descriptiveNote, objectBinWrap, objectXMLWrap,
+							placeEntry, relationEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>relations</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>functionRelationType</label>
+            <item>Optional</item>
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>functionRelationType</label>
+            <item>Facultatif</item>
+            <label>lastDateTimeVerified</label>
+            <item>Facultatif</item>
+            <label>xlink:actuate</label>
+            <item>Facultatif</item>
+            <label>xlink:arcrole</label>
+            <item>Facultatif</item>
+            <label>xlink:href</label>
+            <item>Facultatif</item>
+            <label>xlink:role</label>
+            <item>Facultatif</item>
+            <label>xlink:show</label>
+            <item>Facultatif</item>
+            <label>xlink:title</label>
+            <item>Facultatif</item>
+            <label>xlink:type</label>
+            <item>Obligatoire (si au moins un attribut XLink est utilisé)</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISDF Chapter 6</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:functionRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" functionRelationType="performs">
+            <eac-cpf:relationEntry>Alumni communication management, University of
+										Glasgow</eac-cpf:relationEntry>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>The management of the University's communication with its alumni.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:functionRelation>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <functionRelation functionRelationType="performs">
+            <relationEntry> Alumni communication management, University of Glasgow </relationEntry>
+            <descriptiveNote>
+               <p> The management of the University's communication with its alumni. </p>
+            </descriptiveNote>
+         </functionRelation>
+      </egXML>
+   </div>
+</div>

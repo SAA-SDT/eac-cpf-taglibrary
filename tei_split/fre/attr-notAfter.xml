@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="notAfter"
+     type="attributeDocumentation">
+   <head>
+      <att>notAfter</att>
+   </head>
+   
+   <div type="summary">
+      
+      <p xml:lang="fre">La date la plus récente possible pour une date incertaine.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>L'attribut <att>notAfter</att> est un attribut des éléments Date <gi>date</gi>, Date de début <gi>fromDate</gi> et Date de fin <gi>toDate</gi>. Pour les dates incertaines, cet attribut a pour valeur la date la plus
+                     récente possible. Il est utilisé conjointement avec l'attribut <att>standardDate</att>. Voir aussi <att>notBefore</att>.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="fre">
+      <p>Union des types de données date, gYear et gYearMonth, définis dans W3C XML Schema. Les exemples suivants sont des expressions valides : 2009-12-31, 2009, 2009-12.</p>
+   </div>
+</div>

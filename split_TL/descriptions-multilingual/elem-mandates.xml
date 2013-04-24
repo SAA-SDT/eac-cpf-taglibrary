@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="mandates"
+     type="elementDocumentation">
+   <head>
+      <gi>mandates</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Mandates</p>
+      <p xml:lang="fre">Mandats</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A grouping element used to bundle together individual <gi>mandate</gi>
+							elements.</p>
+      <p xml:lang="fre">Élément regroupant qui sert à lier entre eux des éléments individuels Mandat <gi>mandate</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Use the optional <gi>mandates</gi> element to group together one or more occurrences of
+									<gi>mandate</gi> so that they can be manipulated as a package. A single
+									<gi>mandate</gi> may stand alone or may be wrapped within <gi>mandates</gi>.</p>
+      <p>The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the mandates being
+								described. A simpler discursive expression of the mandates may be encoded as one or more
+									<gi>p</gi> elements.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Utiliser l’élément facultatif Mandats <gi>mandates</gi> pour regrouper plusieurs occurrences de Mandat <gi>mandate</gi> de manière à pouvoir les traiter comme un ensemble. Un élément <gi>mandate</gi> unique peut rester
+                     isolé ou être englobé dans l'élément <gi>mandates</gi>.</p>
+      <p>Les éléments facultatifs Citation <gi>citation</gi>, Liste <gi>list</gi> et Vue d’ensemble <gi>outline</gi> sont utilisés pour décrire les mandats de manière plus complexe. Pour une présentation plus simple, sous forme
+                     de texte, on peut utiliser un ou plusieurs élément(s) Paragraphe <gi>p</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, list, mandate, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.6</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:mandates xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:mandate>
+               <eac-cpf:term>Instrucciones de 13-VI-1586 por las que se crean y definen las secretarias
+											de Tierra y Mar.</eac-cpf:term>
+            </eac-cpf:mandate>
+            <eac-cpf:mandate>
+               <eac-cpf:term>Real Decreto de Nueva Planta para el consejo de Guerra de
+											23-IV-1714.</eac-cpf:term>
+            </eac-cpf:mandate>
+            <eac-cpf:mandate>
+               <eac-cpf:term>Real Decreto de Nueva Planta para el consejo de Guerra de
+											23-VIII-1715.</eac-cpf:term>
+            </eac-cpf:mandate>
+         </eac-cpf:mandates>
+      </egXML>
+   </div>
+</div>

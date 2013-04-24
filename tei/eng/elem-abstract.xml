@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="abstract"
+     type="elementDocumentation">
+   <head>
+      <gi>abstract</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Abstract</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element that contains a brief summary of the information contained within
+							the <gi>biogHist</gi> as a whole. </p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>abstract</gi> is a brief synopsis of the identity’s biography or history
+								that is often based on the longer descriptions found in <gi>biogHist</gi>. Its
+         purpose is to help readers quickly identify the identity described in the EAC-CPF instance.
+								The content within this element may also be harvested by other systems to provide
+								explanatory context for the <gi>nameEntry</gi> data when it appears in a set of search
+								results.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text], span</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   
+   <div type="occurrence">
+      <div type="mandatory">
+      <p xml:lang="eng">Optional</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Non-repeatable</p>
+   </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">            
+            <eac-cpf:biogHist xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+               <eac-cpf:abstract>Hubert H. Humphrey was born in Wallace, South Dakota (1911). He  was elected Mayor of Minneapolis in 1945 and served until 1948.  In November of 1948, he was elected to the United
+                  States Senate and he also served as the Senate Democratic Whip from 1961 to 1964 and in 1968, Humphrey was the Democratic
+                  Party's candidate for President, but he was defeated by Richard M. Nixon. </eac-cpf:abstract>
+               <eac-cpf:p>Hubert H. Humphrey was born in Wallace, South Dakota, on May 27,
+                  1911. He left South Dakota to attend the University of Minnesota but
+                  returned to South Dakota to help manage his fathers drug store early
+                  in the depression. He attended the Capitol College of Pharmacy in
+                  Denver, Colorado, and became a register pharmacist in 1933. On
+                  September 3, 1936, Humphrey married Muriel Fay Buck. He returned
+                  to the University of Minnesota and earned a B.A. degree in 1939. In
+                  1940 he earned an M.A. in political science from Louisiana State
+                  University and returned to Minneapolis to teach and pursue further
+                  graduate study, he began working for the W.P.A. (Works Progress
+                  Administration). He moved on from there to a series of positions with
+                  wartime agencies. In 1943, he ran unsuccessfully for Mayor of
+                  Minneapolis and returned to teaching as a visiting professor at
+                  Macalester College in St. Paul. Between 1943 and 1945 Humphrey
+                  worked at a variety of jobs. In 1945, he was elected Mayor of
+                  Minneapolis and served until 1948. In 1948, at the Democratic
+                  National Convention, he gained national attention when he delivered a
+                  stirring speech in favor of a strong civil rights plank in the partys
+                  platform. In November of 1948, Humphrey was elected to the United
+                  States Senate. He served as the Senate Democratic Whip from 1961 to
+                  1964.</eac-cpf:p>
+               <eac-cpf:p>In 1964, at the Democratic National Convention, President Lyndon B.
+                  Johnson asked the convention to select Humphrey as the Vice
+                  Presidential nominee. The ticket was elected in November in a
+                  Democratic landslide. In 1968, Humphrey was the Democratic
+                  Partys candidate for President, but he was defeated narrowly by
+                  Richard M. Nixon. After the defeat, Humphrey returned to Minnesota
+                  to teach at the University of Minnesota and Macalester College. He
+                  returned to the U.S. Senate in 1971, and he won re-election in 1976.
+                  He died January 13, 1978 of cancer.</eac-cpf:p>
+            </eac-cpf:biogHist>
+      </egXML>
+   </div>
+</div>

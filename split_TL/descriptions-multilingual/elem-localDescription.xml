@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="localDescription"
+     type="elementDocumentation">
+   <head>
+      <gi>localDescription</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Local Description</p>
+      <p xml:lang="fre">Description locale</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A means, within description, to extend the descriptive categories available
+							in a local system. Its meaning will depend on the context in which it occurs.</p>
+      <p xml:lang="fre">Cet élément permet d’inclure dans l’instance EAC-CPF les catégories de description disponibles dans un système local. Sa signification dépend du contexte dans lequel il est utilisé.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <gi>localDescription</gi> provides a means to extend the list of description elements
+								defined by ISAAR (CPF) and specified in the EAC-CPF schema. It should be used to record
+								structured index terms rather than discursive text. It contains a child element
+									<gi>term</gi>, which may be drawn from controlled vocabularies or may be natural language
+								terms. Associate date or date range (<gi>date</gi>, <gi>dateRange</gi> or
+									<gi>dateSet</gi>) and place(s) (<gi>placeEntry</gi>) may be included to further
+								constrain the term's meaning. A <gi>descriptiveNote</gi> may be included if a fuller
+								textual explanation is needed.</p>
+      <p>The <gi>localDescription</gi> element should be used whenever separate semantic process
+								of the descriptive information is required.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élément Description locale <gi>localDescription</gi> permet d’enrichir la liste des éléments de description définis par ISAAR(CPF) et spécifiés dans le schéma EAC-CPF. Il doit être utilisé pour enregistrer des termes
+                     d’indexation structurés plutôt que du texte rédigé. Il contient un élément enfant Terme <gi>term</gi> qui peut contenir des termes issus de vocabulaires contrôlés ou du langage naturel. Des dates ou intervalles de dates
+                     en relation (Date <gi>date</gi>, Intervalle de dates <gi>dateRange</gi> ou Ensemble de dates <gi>dateSet</gi>) et des lieux (Forme du nom de lieu <gi>placeEntry</gi>) peuvent être introduits pour préciser la portée du
+                     terme. Une Note descriptive <gi>descriptiveNote</gi> peut être introduite si une explication sous forme de texte est nécessaire.</p>
+      <p>L’élément <gi>localDescription</gi> doit être utilisé chaque fois qu’un traitement sémantique distinct des informations descriptives est nécessaire.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry,
+							term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, localDescriptions</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Required</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Obligatoire</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:localDescription xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+                                   localType="http://....fr/eac-cpf/localType/nationalité">
+            <eac-cpf:term vocabularySource="http://....fr/eac-cpf/localType/nationalité#French">French</eac-cpf:term>
+            <eac-cpf:placeEntry countryCode="FR"
+                                vocabularySource="http://....fr/registerOfFrenchPlaceNames#France">France</eac-cpf:placeEntry>
+         </eac-cpf:localDescription>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <localDescription localType="http://....fr/eac-cpf/localType/nationalité">
+            <term vocabularySource="http://....fr/eac-cpf/ localType/nationalité#French"> French </term>
+            <placeEntry countryCode="FR"
+                        vocabularySource="http://....fr/ registerOfFrenchPlaceNames#France"> France </placeEntry>
+         </localDescription>
+      </egXML>
+   </div>
+</div>

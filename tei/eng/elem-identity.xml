@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="identity"
+     type="elementDocumentation">
+   <head>
+      <gi>identity</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Identity</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A wrapper element for the name or names related to the identity being described within the <gi>cpfDescription</gi> element in the EAC-CPF instance. In case of multiple identities, a separate <gi>identity</gi> element is contained in each of the <gi>cpfDescription</gi> elements of instance.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <gi>identity</gi> is a container element used to group the elements necessary to encode the name or names related to the identity of the CPF entity within the <gi>cpfDescription</gi> element. Within this element the <gi>entityType</gi> element is required and specifies the type of entity (i.e., corporateBody, family, or person). One or more <gi>nameEntry</gi> elements and / or one or more <gi>nameEntryParallel</gi> elements specifying names by which the identity is known is also required. An optional <gi>entityId</gi> is available for any identifiers associated with the CPF entity.</p>
+      <p>All names by which the identity, being described within one <gi>cpfDescription</gi> element in the EAC-CPF instance is known are provided within this element. Within <gi>identity</gi>, each of the names, whether authorized or alternatives, should be recorded in a separate <gi>nameEntry</gi> element.</p>
+      <p>In addition to needing to accommodate one or more names used for or by the CPF entity,
+									<gi>identity</gi> may accommodate two or more parallel names in different languages or
+								scripts. In countries where there is more than one official language, such as Canada or
+								Switzerland, names of CPF entities are frequently provided in more than one language. Within
+									<gi>identity</gi>, a <gi>nameEntryParallel</gi> element should be used to group two or
+								more <gi>nameEntry</gi> elements that represent parallel forms of the name of the CPF entity
+								being described.</p>
+      <p>Within <gi>identity</gi>, a <gi>descriptiveNote</gi> element may be used to record
+								other information in a textual form that assists in the identification of the CPF entity.</p>
+      <p>In case of multiple identities of the same entity in one EAC-CPF instance, a separate <gi>identity</gi> element is contained in each of the <gi>cpfDescription</gi> elements of the EAC-CPF instance.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>descriptiveNote, entityId, entityType, nameEntry,
+							nameEntryParallel</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>identityType</label>
+            <item>Optional</item>
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:identity xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:entityId>CLU-SC-000008</eac-cpf:entityId>
+            <eac-cpf:entityType>person</eac-cpf:entityType>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part>Brown, Bob</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                     <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+               <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+            </eac-cpf:nameEntry>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part>Brown, Robert Carlton</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                     <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+               <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
+            </eac-cpf:nameEntry>
+         </eac-cpf:identity>
+      </egXML>
+   </div>
+</div>

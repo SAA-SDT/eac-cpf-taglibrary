@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="xmlid"
+     type="attributeDocumentation">
+   <head>
+      <att>xml:id</att>
+   </head>
+   
+   <div type="summary">
+      
+      <p xml:lang="fre">Attribut, disponible pour la plupart des éléments, à utiliser lorsque l’on souhaite identifier de façon univoque un élément particulier dans l’instance EAC-CPF.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>xml:id</att> a pour valeur un identifiant permettant de renvoyer à l’élément qu’il qualifie ou de citer cet élément. Chaque attribut <att>xml:id</att> doit avoir une valeur unique au sein d’un document
+                     XML. L’attribut <att>xml:id</att> donne la forme canonique pour identifier l’élément et facilite ainsi la construction de liens entre cet élément et d’autres ressources. Par exemple, on peut utiliser l’attribut
+                        <att>xml:id</att> pour identifier de manière unique plusieurs éléments Description de collectivité, de personne ou de famille <gi>cpfDescription</gi> au sein d’un élément Identités multiples
+                        <gi>multipleIdentities</gi>. Il peut être nécessaire ou utile, dans des environnements de gestion, d’identifier de manière unique ou de distinguer plusieurs éléments <gi>cpfDescription</gi> quand on relie des
+                     ressources, des fonctions, ou des collectivités, personnes ou familles, à une identité parmi celles représentées dans une instance EAC-CPF.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="fre">
+      <p>ID</p>
+   </div>
+</div>

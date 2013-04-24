@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="placeEntry"
+     type="elementDocumentation">
+   <head>
+      <gi>placeEntry</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Place Entry</p>
+      <p xml:lang="fre">Forme du nom de lieu</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element used in both the description and relations areas to encode
+							information about the place or jurisdiction where the EAC-CPF entity was based, lived, or
+							with which it had some other significant connection.</p>
+      <p xml:lang="fre">Élément utilisé dans les zones de la description et des relations pour encoder les informations sur le lieu ou la circonscription où l’entité EAC-CPF était établie, a vécu, ou avec lequel ou laquelle elle avait un autre
+                     lien significatif.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Places should be identified by the proper noun that commonly designates the place, natural
+								feature, or political jurisdiction. It is recommended that place names be taken from
+								authorized vocabularies. Within <gi>place</gi>, a companion <gi>placeRole</gi> is
+								strongly recommended to describe the nature of the association of the place to the
+								entity.</p>
+      <p>
+         <att>latitude</att>, <att>longitude</att>, and <att>altitude</att> attributes are
+								available for specific geographical data. The <att>accuracy</att> attribute may be used to
+								indicate uncertainty. The <att>vocabularySource</att> attribute may be used to indicate the
+								controlled vocabulary from which the <gi>placeEntry</gi> term is derived.</p>
+      <p>The <gi>placeEntry</gi> element is repeatable. It is strongly recommended that within
+									<gi>place</gi>, the <gi>placeEntry</gi> element be repeated only to represent the same
+								place name in various languages, with an accompanying <att>xml:lang</att> attribute.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Les lieux doivent être identifiés par le nom propre désignant communément le lieu physique ou la circonscription politique. Il est recommandé que les noms de lieu soient issus de vocabulaires autorisés. Au sein de
+                     l’élément Lieu <gi>place</gi>, il est fortement recommandé de renseigner l’élément complémentaire Rôle du lieu <gi>placeRole</gi> pour décrire la nature de la relation du lieu avec l’entité. Les attributs
+                        <att>latitude</att>, <att>longitude</att> et <att>altitude</att> sont disponibles pour des données géographiques spécifiques. L’attribut <att>accuracy</att> est utilisé pour indiquer qu’un lieu est incertain.
+                     L’attribut <att>vocabularySource</att> est utilisé pour indiquer le vocabulaire contrôlé dont est dérivé le terme <gi>placeEntry</gi>.</p>
+      <p>L’élément <gi>placeEntry</gi> est répétable. Au sein de <gi>place</gi>, il est fortement recommandé de répéter l’élément <gi>placeEntry</gi> uniquement pour donner les équivalences du même nom de lieu dans des langues
+                     différentes, en utilisant conjointement l’attribut <att>xml:lang</att>.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem, cpfRelation, function, functionRelation, legalStatus,
+							localDescription, mandate, occupation, place, resourceRelation</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>accuracy</label>
+            <item>Optional</item>
+            <label>altitude</label>
+            <item>Optional</item>
+            <label>countryCode</label>
+            <item>Optional</item>
+            <label>latitude</label>
+            <item>Optional</item>
+            <label>localType</label>
+            <item>Optional</item>
+            <label>longitude</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>vocabularySource</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>accuracy</label>
+            <item>Facultatif</item>
+            <label>altitude</label>
+            <item>Facultatif</item>
+            <label>countryCode</label>
+            <item>Facultatif</item>
+            <label>latitude</label>
+            <item>Facultatif</item>
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>longitude</label>
+            <item>Facultatif</item>
+            <label>scriptCode</label>
+            <item>Facultatif</item>
+            <label>transliteration</label>
+            <item>Facultatif</item>
+            <label>vocabularySource</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeEntry>Paris, France</eac-cpf:placeEntry>
+            <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+         </eac-cpf:place>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <place>
+            <placeEntry> Paris, France </placeEntry>
+            <placeRole> Residence </placeRole>
+         </place>
+      </egXML>
+   </div>
+</div>

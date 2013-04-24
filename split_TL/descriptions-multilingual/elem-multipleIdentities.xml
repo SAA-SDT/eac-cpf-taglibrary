@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="multipleIdentities"
+     type="elementDocumentation">
+   <head>
+      <gi>multipleIdentities</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Multiple Identities</p>
+      <p xml:lang="fre">Identités multiples</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A wrapper element used to group together more than one
+								<gi>cpfDescription</gi> within a single EAC-CPF instance.</p>
+      <p xml:lang="fre">Élément englobant employé pour regrouper plusieurs éléments Description de collectivité, de personne ou de famille <gi>cpfDescription</gi> dans une seule instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A wrapper element used to encode more than one <gi>cpfDescription</gi> in a single
+								EAC-CPF instance. The use of the <gi>multipleIdentities</gi> element can resolve two
+								identity circumstances. First, it can be used to represent more than one identity (including
+								official identities) of the same entity each with a separate <gi>cpfDescription</gi>.
+								Second, it can be used to represent a collaborative identity which includes multiple
+								individuals operating under a shared identity (such as a shared pseudonym).</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément englobant employé pour encoder plusieurs éléments <gi>cpfDescription</gi> dans une seule instance EAC-CPF. L’utilisation d’un élément Identités multiples <gi>multipleIdentities</gi> permet de résoudre deux
+                     problèmes liés aux différentes identités d’une même entité. D’une part, cet élément est employé pour représenter plus d’une identité (dont les identités officielles) d’une même entité en employant plusieurs éléments
+                        <gi>cpfDescription</gi>. D’autre part, il est employé pour représenter une entité collaborative comportant plusieurs individus qui apparaissent sous une identité collective (comme les pseudonymes collectifs).</p>
+   </div>
+   <div type="mayContain">
+      <p>cpfDescription</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>eac-cpf</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:multipleIdentities xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:cpfDescription>
+               <eac-cpf:identity identityType="acquired" localType="pseudonyme">
+                  <eac-cpf:entityType>person</eac-cpf:entityType>
+                  <eac-cpf:nameEntry xml:lang="rus" scriptCode="Latn" transliteration="ISO9:1995">
+                     <eac-cpf:part localType="élément d'entrée">Gorki</eac-cpf:part>
+                     <eac-cpf:part localType="autre élément">Maksim</eac-cpf:part>
+                     <eac-cpf:useDates>
+                        <eac-cpf:dateRange>
+                           <eac-cpf:fromDate standardDate="1892">1892</eac-cpf:fromDate>
+                           <eac-cpf:toDate standardDate="1936">1936</eac-cpf:toDate>
+                        </eac-cpf:dateRange>
+                     </eac-cpf:useDates>
+                  </eac-cpf:nameEntry>
+               </eac-cpf:identity>
+               <eac-cpf:description>
+                  <eac-cpf:existDates>
+                     <eac-cpf:dateRange>
+                        <eac-cpf:fromDate standardDate="1868">1868</eac-cpf:fromDate>
+                        <eac-cpf:toDate standardDate="1936">1936</eac-cpf:toDate>
+                     </eac-cpf:dateRange>
+                  </eac-cpf:existDates>
+                  <eac-cpf:function>
+                     <eac-cpf:term>Romancier</eac-cpf:term>
+                  </eac-cpf:function>
+                  <eac-cpf:languageUsed>
+                     <eac-cpf:language languageCode="rus">russe</eac-cpf:language>
+                     <eac-cpf:script scriptCode="Cyrl"/>
+                  </eac-cpf:languageUsed>
+               </eac-cpf:description>
+            </eac-cpf:cpfDescription>
+            <eac-cpf:cpfDescription>
+               <eac-cpf:identity identityType="given" localType="état civil">
+                  <eac-cpf:entityType>person</eac-cpf:entityType>
+                  <eac-cpf:nameEntry xml:lang="rus" scriptCode="Latn" transliteration="ISO9:1995">
+                     <eac-cpf:part localType="élément d'entrée">Peškov</eac-cpf:part>
+                     <eac-cpf:part localType="autre élément">Aleksej Maksimovič</eac-cpf:part>
+                  </eac-cpf:nameEntry>
+               </eac-cpf:identity>
+               <eac-cpf:description>
+                  <eac-cpf:existDates>
+                     <eac-cpf:dateRange>
+                        <eac-cpf:fromDate standardDate="1868-03-28">28 mars 1868</eac-cpf:fromDate>
+                        <eac-cpf:toDate standardDate="1936-06-18">18 juin 1936</eac-cpf:toDate>
+                     </eac-cpf:dateRange>
+                  </eac-cpf:existDates>
+                  <eac-cpf:places>
+                     <eac-cpf:place>
+                        <eac-cpf:placeRole>naissance</eac-cpf:placeRole>
+                        <eac-cpf:placeEntry>Nijni-Novgorod (Russie)</eac-cpf:placeEntry>
+                     </eac-cpf:place>
+                     <eac-cpf:place>
+                        <eac-cpf:placeRole>déces</eac-cpf:placeRole>
+                        <eac-cpf:placeEntry>Gorki (Russie)</eac-cpf:placeEntry>
+                     </eac-cpf:place>
+                     <eac-cpf:place>
+                        <eac-cpf:placeRole>nationalité</eac-cpf:placeRole>
+                        <eac-cpf:placeEntry countryCode="SU">Union Soviétique</eac-cpf:placeEntry>
+                     </eac-cpf:place>
+                  </eac-cpf:places>
+                  <eac-cpf:biogHist>
+                     <eac-cpf:p>Élevé par son oncle maternel à Nijni-Novgorod. S'installe à Kazan en 1884.
+													Autodidacte. Premiers contacts avec les milieux marxistes et populistes. Retour à
+													Nijni-Novgorod en 1889 et première arrestation. Entame un premier voyage dans le sud de
+													la Russie en 1891 et s'installe à Tiflis (1891-1892), avant de revenir à Nijni-Novgorod
+													(1893-1895 puis 1898). Arrêté un deuixème fois à Tiflis en 1898. Il se rend pour la
+													première fois à Saint-Pétersbourg en 1899. Arrêté une 3e fois à Nijni-Novgorod en 1901,
+													ce qui provoque une campagne de protestations. Entretient des liens d'amitié avec Cehov
+													et Tol'stoj. Il apporte son soutien financier au Parti social-démocrate et se rapproche
+													des Bolcheviks après 1905. Il s'exile à Capri de 1906 à 1913. Rentré en Russie en 1913,
+													il s'exile de nouveau en 1921 en Allemagne puis en Italie en 1923. Il retourne
+													définitivement en URSS en 1932.</eac-cpf:p>
+                  </eac-cpf:biogHist>
+               </eac-cpf:description>
+            </eac-cpf:cpfDescription>
+         </eac-cpf:multipleIdentities>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <multipleIdentities>
+            <cpfDescription>
+               <identity identityType="acquired" localType="pseudonyme">
+                  <entityType> person </entityType>
+                  <nameEntry xml:lang="rus" scriptCode="Latn" transliteration="ISO9:1995">
+                     <part localType="élément d'entrée"> Gorki </part>
+                     <part localType="autre élément"> Maksim </part>
+                     <useDates>
+                        <dateRange>
+                           <fromDate standardDate="1892"> 1892 </fromDate>
+                           <toDate standardDate="1936"> 1936 </toDate>
+                        </dateRange>
+                     </useDates>
+                  </nameEntry>
+               </identity>
+               <description>
+                  <existDates>
+                     <dateRange>
+                        <fromDate standardDate="1868"> 1868 </fromDate>
+                        <toDate standardDate="1936"> 1936 </toDate>
+                     </dateRange>
+                  </existDates>
+                  <function>
+                     <term> Romancier </term>
+                  </function>
+                  <languageUsed>
+                     <language languageCode="rus"> russe </language>
+                     <script scriptCode="Cyrl"/>
+                  </languageUsed>
+               </description>
+            </cpfDescription>
+            <cpfDescription>
+               <identity identityType="given" localType="état civil">
+                  <entityType> person </entityType>
+                  <nameEntry xml:lang="rus" scriptCode="Latn" transliteration="ISO9:1995">
+                     <part localType="élément d'entrée"> Peškov </part>
+                     <part localType="autre élément"> Aleksej Maksimovič </part>
+                  </nameEntry>
+               </identity>
+               <description>
+                  <existDates>
+                     <dateRange>
+                        <fromDate standardDate="1868-03-28"> 28 mars 1868 </fromDate>
+                        <toDate standardDate="1936-06-18"> 18 juin 1936 </toDate>
+                     </dateRange>
+                  </existDates>
+                  <places>
+                     <place>
+                        <placeRole> naissance </placeRole>
+                        <placeEntry> Nijni-Novgorod (Russie) </placeEntry>
+                     </place>
+                     <place>
+                        <placeRole> déces </placeRole>
+                        <placeEntry> Gorki (Russie) </placeEntry>
+                     </place>
+                     <place>
+                        <placeRole> nationalité </placeRole>
+                        <placeEntry countryCode="SU"> Union Soviétique </placeEntry>
+                     </place>
+                  </places>
+                  <biogHist>
+                     <p> Élevé par son oncle maternel à Nijni-Novgorod. S'installe à Kazan en 1884. Autodidacte. Premiers contacts avec les milieux marxistes et populistes. Retour à Nijni-Novgorod en 1889 et première
+                                    arrestation. Entame un premier voyage dans le sud de la Russie en 1891 et s'installe à Tiflis (1891- 1892), avant de revenir à Nijni-Novgorod (1893-1895 puis 1898). Arrêté un deuixème fois à Tiflis en
+                                    1898. Il se rend pour la première fois à Saint-Pétersbourg en 1899. Arrêté une 3e fois à Nijni-Novgorod en 1901, ce qui provoque une campagne de protestations. Entretient des liens d'amitié avec Cehov et
+                                    Tol'stoj. Il apporte son soutien financier au Parti social-démocrate et se rapproche des Bolcheviks après 1905. Il s'exile à Capri de 1906 à 1913. Rentré en Russie en 1913, il s'exile de nouveau en 1921
+                                    en Allemagne puis en Italie en 1923. Il retourne définitivement en URSS en 1932. </p>
+                  </biogHist>
+               </description>
+            </cpfDescription>
+         </multipleIdentities>
+      </egXML>
+   </div>
+</div>

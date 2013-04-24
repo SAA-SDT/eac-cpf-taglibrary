@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="span" type="elementDocumentation">
+   <head>
+      <gi>span</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Span</p>
+      <p xml:lang="fre">Segment de texte</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Specifies the beginning and the end of a span of text.</p>
+      <p xml:lang="fre">Indique le début et la fin d'un segment de texte.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A formatting element for marking arbitrary words or phrases that are stressed or
+								emphasized for linguistic effect or identifying some qualities of the words or phrases. Use
+								the <att>style</att> attribute to affect an arbitrary stylistic difference. Use the
+									<att>localType</att> attribute to assign other characteristics.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément de format qui sert à encoder les mots ou les phrases que l'on souhaite mettre en valeur, soit à des fins de style, soit pour souligner certaines propriétés spécifiques de ces mots ou phrases. On utilisera
+                     l'attribut <att>style</att> pour affecter au segment de texte une valeur stylistique particulière, et l'attribut <att>localType</att> s’il s’agit plutôt de lui conférer d’autres caractéristiques.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>abstract, citation, componentEntry, item, p, sourceEntry</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>style</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>style</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:biogHist xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:p>Robert Carlton Brown (1886-1959) was a writer, editor, publisher, and traveler.
+										From 1908 to 1917, he wrote poetry and prose for numerous magazines and newspapers in New
+										York City, publishing two pulp novels, <eac-cpf:span style="font-style:italic">What
+											Happened to Mary</eac-cpf:span> and <eac-cpf:span style="font-style:italic">The
+											Remarkable Adventures of Christopher Poe</eac-cpf:span> (1913), and one volume of poetry,
+											<eac-cpf:span style="font-style:italic">My Marjonary</eac-cpf:span> (1916).</eac-cpf:p>
+            <eac-cpf:p>During 1918, he traveled extensively in Mexico and Central America, writing for
+										the U.S. Committee of Public Information in Santiago de Chile. In 1919, he moved with his
+										wife, Rose Brown, to Rio de Janeiro, where they founded <eac-cpf:span style="font-style:italic">Brazilian American</eac-cpf:span>, a weekly magazine that ran
+										until 1929. With Brown's mother, Cora, the Browns also established magazines in Mexico
+										City and London: <eac-cpf:span style="font-style:italic">Mexican American</eac-cpf:span>
+										(1924-1929) and <eac-cpf:span style="font-style:italic">British American</eac-cpf:span>
+										(1926-1929).</eac-cpf:p>
+         </eac-cpf:biogHist>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <biogHist>
+            <p> Robert Carlton Brown (1886-1959) was a writer, editor, publisher, and traveler. From 1908 to 1917, he wrote poetry and prose for numerous magazines and newspapers in New York City, publishing two pulp novels,
+                              <span style="font-style:italic"> What Happened to Mary </span> and <span style="font-style:italic"> The Remarkable Adventures of Christopher Poe </span> (1913), and one volume of poetry, <span style="font-style:italic"> My Marjonary </span> (1916). </p>
+            <p> During 1918, he traveled extensively in Mexico and Central America, writing for the U.S. Committee of Public Information in Santiago de Chile. In 1919, he moved with his wife, Rose Brown, to Rio de Janeiro, where
+                           they founded <span style="font-style:italic"> Brazilian American </span> , a weekly magazine that ran until 1929. With Brown's mother, Cora, the Browns also established magazines in Mexico City and London: <span style="font-style:italic"> Mexican American </span> (1924-1929) and <span style="font-style:italic"> British American </span> (1926-1929). </p>
+         </biogHist>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="cpfRelationType"
+     type="attributeDocumentation">
+   <head>
+      <att>cpfRelationType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Corporate Body, Person, or Family Relation Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The type of relation that the corporate body, person, or family has to the
+							entity being described.</p>
+      <p xml:lang="fre">Type de relation qu’une collectivité, une personne ou une famille a avec l’entité décrite.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>cpfRelationType</att> may occur on <gi>cpfRelation</gi>. The
+							value designates the type of relation that a corporate body, person, or family has to the
+							entity being described in the EAC-CPF instance. If the nature of the relation is more
+							specific than one of the values given below, the Xlink attributes can be used in addition to
+								<att>cpfRelationType</att>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>cpfRelationType</att> est un attribut de l’élément Relation avec une collectivité, une personne ou une famille <gi>cpfRelation</gi>. La valeur désigne le type de relation qu’une collectivité, une
+                     personne ou une famille a avec l’entité décrite dans l’instance EAC-CPF. Si la nature de la relation est plus préciseque l’une des valeurs données ci-dessous, on peut utiliser les attributs XLink en plus de l’attribut
+                        <att>cpfRelationType</att>.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>"identity" or "hierarchical" or "hierarchical-parent" or
+							"hierarchical-child" or "temporal" or "temporal-earlier" or "temporal-later" or "family" or
+							"associative"</p>
+   </div>
+   <div type="values" xml:lang="fre">
+      <p>"identity" (identitaire) ou "hierarchical" (hiérarchique) ou "hierarchical-parent" (hiérarchique-parent) ou "hierarchical-child" (hiérarchique-enfant) ou "temporal" (chronologique) ou "temporal-earlier"
+                     (chronologique-prédécesseur) ou "temporal-later" (chronologique-successeur) ou "family" (familiale) ou "associative" (d’association)</p>
+   </div>
+</div>

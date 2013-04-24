@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="maintenanceStatus"
+     type="elementDocumentation">
+   <head>
+      <gi>maintenanceStatus</gi>
+   </head>
+   <div type="fullName">
+      
+      <p xml:lang="fre">État de la notice</p>
+   </div>
+   <div type="summary">
+      
+      <p xml:lang="fre">L’état actuel de rédaction de l’instance EAC-CPF.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>Élément obligatoire contenu dans l’élément Contrôle <gi>control</gi> où le statut actuel de rédaction d’une instance EAC-CPF est déclaré : lorsqu’une instance EAC-CPF est modifiée ou que d’autres évènements sont
+                     survenus (tels que déclarés dans l’élément Historique des interventions <gi>maintenanceHistory</gi>), le statut de la notice doit être mis à jour pour refléter l’état actuel de rédaction.</p>
+      <p>Le statut d’une instance nouvellement créée est “new” (nouveau) ; lors d’une modification il peut être modifié en “revised” (révisée). Comme il est important de rendre compte clairement des évènements de la vie des
+                     notices, surtout dans les contextes de partage et de création de liens entre elles, un certain nombre de valeurs de statut sont proposées pour les notices qui ne sont plus utilisées. Une notice qui est simplement
+                     détruite dans un système peut avoir le statut “deleted” (supprimée). Lorsqu’une notice est marquée comme non utilisée (obsolète ou rejetée), alors qu’elle est conservée dans le système pour des raisons d’orientation,
+                     elle doit avoir le statut “cancelled” (annulée). Si une notice est détruite parce qu’elle a été remplacée par deux ou plusieurs notices, alors son statut doit être “deletedSplit” (suppriméeScindée). Si elle a été
+                     simplement remplacée par une nouvelle notice, le statut approprié est “deletedReplaced” (suppriméeRemplacée). La valeur “derived” (dérivée) est disponible pour indiquer que la notice a été dérivée d’un autre système de
+                     description.</p>
+   </div>
+   <div type="mayContain">
+      <p>"cancelled" or "deleted" or "deletedReplaced" or "deletedSplit" or
+							"derived" or "new" or "revised"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.4</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceStatus xmlns:eac-cpf="urn:isbn:1-931666-33-4">new</eac-cpf:maintenanceStatus>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceStatus> new </maintenanceStatus>
+      </egXML>
+   </div>
+</div>

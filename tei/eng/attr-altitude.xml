@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="altitude"
+     type="attributeDocumentation">
+   <head>
+      <att>altitude</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Altitude</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The altitude or elevation of the geographic place.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>altitude</att> may occur on <gi>place</gi>. The value of the attribute is the altitude or elevation of the geographic place named. <att>altitude</att> should be used in conjunction with <att>longitude</att> and
+            <att>latitude</att>.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>NMTOKEN</p>
+   </div>
+   
+</div>

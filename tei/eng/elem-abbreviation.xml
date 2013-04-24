@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="abbreviation"
+     type="elementDocumentation">
+   <head>
+      <gi>abbreviation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Abbreviation</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The <gi>abbreviation</gi> element contains an abbreviation or code for
+         identifying a thesaurus, controlled vocabulary, or other standard used in formulating and
+							compiling the EAC-CPF description.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>abbreviation</gi> element contains an abbreviation or code for identifying a
+         thesaurus, controlled vocabulary, or other standard used in formulating and compiling the
+								EAC-CPF description. It is recommended that the value be selected from an authorized list of
+								codes. An example of such a list may be the MARC Code List (http://www.loc.gov/marc/sourcelist/).</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[token]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>conventionDeclaration, localTypeDeclaration</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>      
+   </div>
+   
+   <div type="occurrence">
+      <div type="mandatory">
+      <p xml:lang="eng">Optional</p>
+   </div>
+   <div type="repeatable">
+      <p xml:lang="eng">Non-repeatable</p>
+   </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:conventionDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:abbreviation>RICA</eac-cpf:abbreviation>
+            <eac-cpf:citation>RICA (Regole italiane di catalogazione per autore)</eac-cpf:citation>
+         </eac-cpf:conventionDeclaration>
+      </egXML>
+   </div>
+</div>

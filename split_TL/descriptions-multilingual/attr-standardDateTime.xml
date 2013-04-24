@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="standardDateTime"
+     type="attributeDocumentation">
+   <head>
+      <att>standardDateTime</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Standard Date and Time</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The date or date and time represented in a standard form for computer
+							processing.</p>
+      <p xml:lang="fre">La date, ou la date et l'heure, exprimée(s) de manière normalisée pour traitement informatique.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>standardDateTime</att> may occur on <gi>eventDateTime</gi>.
+							The value of <att>standardDateTime</att> provides a standard form of the date or date and
+							time expressed in the <gi>eventDateTime</gi> that can be used in computer processing. For
+							example, using both the value in <gi>eventType</gi> and <att>standardDateTime</att>, all
+							EAC-CPF instances "revised" on a particular date can be identified.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'attribut <att>standardDateTime</att> est un attribut de l'élément Date et heure de l’intervention <gi>eventDateTime</gi>. La valeur de <att>standardDateTime</att> fournit une forme normalisée de la date, ou de la date
+                     et de l'heure, exprimée(s) dans l'élément <gi>eventDateTime</gi>, qui peut être utilisée lors de traitements informatiques. Par exemple, en utilisant la valeur de l'élément Type d’intervention <gi>eventType</gi> et
+                     l'attribut <att>standardDateTime</att>, on peut aisément identifier toutes les instances EAC-CPF modifiées à une date particulière.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>Union of the XML Schema Datatypes date, gYear, gYearMonth, and dateTime.
+							The following are all valid patterns: 2009-12-31, 2009, 2009-12, 2009-12-31T23:59:59.</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>Union des types de données date, gYear, gYearMonth et dateTime, définis dans W3C XML Schema. Les exemples suivants sont des expressions valides : 2009-12-31, 2009, 2009-12, 2009-12-31T23:59:59.</p>
+   </div>
+</div>

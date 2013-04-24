@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chronItem"
+     type="elementDocumentation">
+   <head>
+      <gi>chronItem</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Chronological Item</p>
+      <p xml:lang="fre"/>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A container element that keeps a date or a date range paired with an
+							associated event and an optional place within a Chronology List <gi>chronList</gi>.</p>
+      <p xml:lang="fre">Élément englobant qui permet d'associer une date, ou un intervalle de dates, à un évènement et éventuellement à un lieu, au sein d'un élément Liste chronologique <gi>chronList</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Each <gi>chronItem</gi> contains a <gi>date</gi> (a single date) or a
+									<gi>dateRange</gi> (an inclusive date span) coupled with an <gi>event</gi>. A
+									<gi>placeEntry</gi> element is optionally available to ground the event in a particular
+								location.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Chaque élément <gi>chronItem</gi> contient un élément Date <gi>date</gi> (date simple) ou un élément Intervalle de dates <gi>dateRange</gi>, associé à un élément Évènement <gi>event</gi>. Un élément Forme du nom de lieu
+                        <gi>placeEntry</gi>, facultatif, est également disponible pour mettre en relation un évènement avec un lieu particulier.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, event, placeEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronList</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.2</p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:chronItem xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:date standardDate="1957">1957</eac-cpf:date>
+            <eac-cpf:event>Left Mer and moved to the mainland. Worked at various jobs including
+										canecutter and railway labourer.</eac-cpf:event>
+         </eac-cpf:chronItem>
+         <eac-cpf:chronItem xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1960">1960</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1961">1961</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:event>Union representative, Townsville-Mount Isa rail construction
+										project.</eac-cpf:event>
+         </eac-cpf:chronItem>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <chronItem>
+            <date standardDate="1957"> 1957 </date>
+            <event> Quitte Mer pour s’installer sur le continent. Exerce successivement divers emplois, travaillant en particulier comme coupeur de canne à sucre et comme employé des chemins defer. </event>
+         </chronItem>
+         <chronItem>
+            <dateRange>
+               <fromDate standardDate="1960"> 1960 </fromDate>
+               <toDate standardDate="1961"> 1961 </toDate>
+            </dateRange>
+            <event> Représentant syndical dans le cadre de la construction de la liaison ferroviaireTownsville-Mount Isa. </event>
+         </chronItem>
+      </egXML>
+   </div>
+</div>

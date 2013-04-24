@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xmlbase"
+     type="attributeDocumentation">
+   <head>
+      <att>xml:base</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">XML Base</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Used to specify a base URI other than the base URI of the EAC-CPF
+							instance.</p>
+      <p xml:lang="fre">Cet attribut sert à indiquer un URI de base distinct de l’URI de base de l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <att>xml:base</att> is used to specify the base URI other than the base
+							URI of the EAC-CPF instance, for the purpose of resolving any relative URIs used with
+							elements that contain one or more descendants that use an attribute of type anyURI.
+								<att>xml:base</att> makes it possible to declare an absolute base URI to facilitate the use
+							of relative URIs on the descendants.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>xml:base</att> sert à indiquer un URI de base distinct de l’URI de base de l’instance EAC-CPF, pour résoudre les URIs relatifs qui figurent dans les attributs de type anyURI d’un ou plusieurs élément(s)
+                     descendant(s) de l’élément courant. L’attribut <att>xml:base</att> permet de déclarer un URI de base absolu pour faciliter l’utilisation d’URIs relatifs dans les éléments descendants de l’élément courant.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>anyURI</p>
+   </div>
+</div>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="otherAgencyCode"
+     type="elementDocumentation">
+   <head>
+      <gi>otherAgencyCode</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Other Agency Code</p>
+      <p xml:lang="fre">Autre code de l’organisme</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Alternate code representing the instituion or service responsible for the
+							creation, maintenance, and/or dissemination of the EAC-CPF instance.</p>
+      <p xml:lang="fre">Autre code représentant l’institution ou le service responsable de la création, de la gestion et/ou de la diffusion de l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An element of <gi>maintenanceAgency</gi> within <gi>control</gi> providing an
+								alternative and/or local institution code representing the institution or service
+								responsible for the creation, maintenace, and/or dissemination of the EAC-CPF instance to
+								that given in the <gi>agencyCode</gi> element in the format of the International Standard
+								identifier for Libraries and Related Organizations (ISIL: ISO 15511). The name of the agency
+								is given in <gi>agencyName</gi>. The addition of an ISO 3166-1 alpha-2 country code as the
+								prefix is recommended to ensure international uniqueness.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément contenu dans l’élément Organisme responsable <gi>maintenanceAgency</gi> au sein de l’élément Contrôle <gi>control</gi>, permettant de fournir un autre code et/ou un code local représentant l’institution ou le
+                     service responsable de la création, de la gestion et/ou de la diffusion de l’instance EAC-CPF. Ce code est différent de celui donné dans l’élément Code de l’organisme <gi>agencyCode</gi> dont le format est celui de
+                     l’Identifiant international normalisé pour les bibliothèques et les organismes apparentés (ISIL : ISO 15511). Le nom de l’organisme est donné dans l’élément Nom de l’organisme <gi>agencyName</gi>. L’ajout d’un préfixe
+                     comportant le code pays ISO 3166-1 alpha-2 est recommandé pour rendre le code univoque au niveau international.</p>
+   </div>
+   <div type="mayContain">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceAgency</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:otherAgencyCode>GB-058</eac-cpf:otherAgencyCode>
+            <eac-cpf:agencyName>The British Library: Manuscript Collections</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <maintenanceAgency>
+            <otherAgencyCode> GB-058 </otherAgencyCode>
+            <agencyName> The British Library: Manuscript Collections </agencyName>
+         </maintenanceAgency>
+      </egXML>
+   </div>
+</div>

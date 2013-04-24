@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="vocabularySource"
+     type="attributeDocumentation">
+   <head>
+      <att>vocabularySource</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Source of Vocabulary</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A value designating the source of the vocabulary from which terms are
+							derived.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The controlled vocabulary used to derive terms for the <gi>term</gi>,
+								<gi>placeEntry</gi>, and <gi>placeRole</gi> elements. Controlled vocabularies should be
+							declared in the <gi>conventionDeclaration</gi> element within <gi>control</gi>.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>anyURI</p>
+   </div>
+   
+</div>

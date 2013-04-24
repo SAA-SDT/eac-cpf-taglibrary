@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="date"
+     type="elementDocumentation">
+   <head>
+      <gi>date</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Date</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The single date of an event in the history of, or a relationship with, the
+							person, family, or corporate body being described in the EAC-CPF instance.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A generic element expressing the single date of an event in the history of, or a
+								relationship with, the person, family, or corporate body being described in the EAC-CPF
+								instance. If the event or relationship has inclusive dates use the <gi>dateRange</gi>
+								element, while more complex dates (combining singles dates and date ranges) can be expressed
+								in <gi>dateSet</gi>.</p>
+      <p>The content of the element is intended to be a human-readable natural language date with a
+								machine-readable date provided as the value of the <att>standardDate</att> attribute,
+								formulated according to ISO 8601. Other attributes include <att>notBefore</att> and
+									<att>notAfter</att> for dates of uncertainty. The <att>localType</att> attribute can be
+								used to supply a more specific characterization of the date.</p>
+      <p>Dates of existence for the entity being described in the EAC-CPF instance are encoded with
+								the <gi>existDates</gi> element, while the dates of use of a particular name of an entity
+								are encoded in <gi>useDates</gi>. The date and time of a maintenance event in the history
+								of the EAC-CPF instance are given in the <gi>eventDateTime</gi> element.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem, cpfRelation, dateSet, existDates, function, functionRelation,
+							legalStatus, localControl, localDescription, mandate, occupation, place, resourceRelation,
+							useDates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>notAfter</label>
+            <item>Optional</item>
+            <label>notBefore</label>
+            <item>Optional</item>
+            <label>standardDate</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:date xmlns:eac-cpf="urn:isbn:1-931666-33-4" standardDate="1765-09-18">September 18, 1765</eac-cpf:date>
+      </egXML>
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:date xmlns:eac-cpf="urn:isbn:1-931666-33-4" localType="WeddingDay" standardDate="2000-08-12">September 12, 2000</eac-cpf:date>
+      </egXML>
+   </div>
+</div>

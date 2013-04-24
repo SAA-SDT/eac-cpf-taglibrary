@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="sourceEntry"
+     type="elementDocumentation">
+   <head>
+      <gi>sourceEntry</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Source Entry</p>
+      <p xml:lang="fre">Nom de la source</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A textual identification of a particular source of evidence used in
+							describing the entity in the EAC-CPF instance.</p>
+      <p xml:lang="fre">Une identification textuelle d’une source particulière d’information utilisée dans la description de l’entité dans l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>sourceEntry</gi> element may be used within the <gi>source</gi> element to
+								identify a source used in the construction of the EAC-CPF instance directly rather than
+								using other content in <gi>objectBinWrap</gi> or <gi>objectXMLWrap</gi>. The
+									<gi>sourceEntry</gi> element generally contains discursive text.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’élement Nom de la source <gi>sourceEntry</gi> permet d’identifier la source utilisée pour la construction de l’instance EAC-CPF. Il peut être utilisé directement au sein de l’élément Source <gi>source</gi> sans avoir
+                     besoin de recourir à des contenus encapsulés dans des éléments Enveloppe d’objet binaire <gi>objectBinWrap</gi> ou Enveloppe d’objet XML <gi>objectXMLWrap</gi>. L’élément contient généralement du texte.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>source</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>scriptCode</label>
+            <item>Facultatif</item>
+            <label>transliteration</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:sources xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Principal Family and Estate Collections: Family Names L-W,
+											1999</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+            <eac-cpf:source>
+               <eac-cpf:sourceEntry>HMC, Complete Peerage, 1936</eac-cpf:sourceEntry>
+            </eac-cpf:source>
+         </eac-cpf:sources>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <sources>
+            <source>
+               <sourceEntry> HMC, Principal Family and Estate Collections: Family Names L-W, 1999 </sourceEntry>
+            </source>
+            <source>
+               <sourceEntry> HMC, Complete Peerage, 1936 </sourceEntry>
+            </source>
+         </sources>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="nameEntryParallel"
+     type="elementDocumentation">
+   <head>
+      <gi>nameEntryParallel</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Name Entry Parallel</p>
+      <p xml:lang="fre">Formes parallèles du nom</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A wrapper element for two or more <gi>nameEntry</gi> elements that
+							represent parallel forms of the name.</p>
+      <p xml:lang="fre">Élément englobant deux ou plusieurs éléments Forme du nom <gi>nameEntry</gi> qui représentent des formes parallèles du nom.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A container element used to group two or more <gi>nameEntry</gi> elements representing
+								parallel forms of the name for the same entity (e.g., official forms of the name in
+								different languages and/or scripts, transliterated forms of the name). All those forms
+								should have the same status, either authorized or alternative. Two optional elements,
+									<gi>authorizedForm</gi> or <gi>alternativeForm</gi> may be used to account more
+								precisely for the status of the set of parallel name forms contained in
+									<gi>nameEntryParallel</gi>. Do not use for pairing authorized and unauthorized forms of
+								the same name (e.g., an authorized form with see references).</p>
+      <p>The <gi>nameEntryParallel</gi> element may contain a <gi>useDates</gi> element to
+								indicate the dates of use of the set of parallel name forms.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément englobant employé pour regrouper deux ou plusieurs éléments <gi>nameEntry</gi> représentant les formes parallèles du nom d’une même entité (par exemple : les formes officielles du nom dans différentes langues
+                     et/ou écritures, les formes translittérées du nom). L’ensemble de ces formes ont un statut identique, ce sont soit des formes autorisées, soit des formes alternatives. Deux éléments facultatifs, Forme autorisée
+                        <gi>authorizedForm</gi> et Forme alternative <gi>alternativeForm</gi> sont employés pour indiquer de manière plus précise le statut de l’ensemble des formes du nom indiquées dans Formes parallèles du nom
+                        <gi>nameEntryParallel</gi>. Ne pas utiliser pour réunir des formes retenues et des formes rejetées du même nom (c’est-à-dire une forme retenue avec des renvois).</p>
+      <p>L’élément <gi>nameEntryParallel</gi> peut contenir un élément Dates d’utilisation <gi>useDates</gi> pour indiquer les dates d’usage de l’ensemble des formes parallèles du nom.</p>
+   </div>
+   <div type="mayContain">
+      <p>alternativeForm, authorizedForm, nameEntry, useDates</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>identity</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1.3</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:nameEntryParallel xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:nameEntry xml:lang="fre" scriptCode="Latn">
+               <eac-cpf:part>Institut international des droits de l'homme</eac-cpf:part>
+               <eac-cpf:preferredForm>AFNOR_Z44-060</eac-cpf:preferredForm>
+            </eac-cpf:nameEntry>
+            <eac-cpf:nameEntry xml:lang="eng" scriptCode="Latn">International institute of human
+										rights</eac-cpf:nameEntry>
+            <eac-cpf:nameEntry xml:lang="spa" scriptCode="Latn">
+               <eac-cpf:part>Instituto internacional de derechos humanos</eac-cpf:part>
+            </eac-cpf:nameEntry>
+            <eac-cpf:authorizedForm>AFNOR_Z44-060</eac-cpf:authorizedForm>
+         </eac-cpf:nameEntryParallel>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <nameEntryParallel>
+            <nameEntry xml:lang="fre" scriptCode="Latn">
+               <part> Institut international des droits de l'homme </part>
+               <preferredForm> AFNOR_Z44-060 </preferredForm>
+            </nameEntry>
+            <nameEntry xml:lang="eng" scriptCode="Latn"> International institute of human rights </nameEntry>
+            <nameEntry xml:lang="spa" scriptCode="Latn">
+               <part> Instituto internacional de derechos humanos </part>
+            </nameEntry>
+            <authorizedForm> AFNOR_Z44-060 </authorizedForm>
+         </nameEntryParallel>
+      </egXML>
+   </div>
+</div>

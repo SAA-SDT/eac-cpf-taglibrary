@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="occupations"
+     type="elementDocumentation">
+   <head>
+      <gi>occupations</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Occupations</p>
+      <p xml:lang="fre">Occupations</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A grouping element used to bundle together individual <gi>occupation</gi>
+							elements.</p>
+      <p xml:lang="fre">Élément de regroupement qui sert à lier entre eux des éléments individuels Occupation <gi>occupation</gi>.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Use the optional <gi>occupations</gi> element to group together one or more occurrences
+								of <gi>occupation</gi> so that they can be manipulated as a package. A single
+									<gi>occupation</gi> may stand alone or may be wrapped within <gi>occupations</gi>.</p>
+      <p>The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
+								used to accommodate greater complexity in expressing or representing the occupations being
+								described. A simpler discursive expression of the occupations may be encoded as one or more
+									<gi>p</gi> elements.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Utiliser l’élément facultatif Occupations <gi>occupations</gi> pour regrouper plusieurs occurrences de l’élément Occupation <gi>occupation</gi> de manière à pouvoir les traiter comme un ensemble. Un élément
+                        <gi>occupation</gi> unique peut rester isolé ou peut être englobé dans l'élément <gi>occupations</gi>.</p>
+      <p>Les éléments facultatifs Citation <gi>citation</gi>, Liste <gi>list</gi> et Vue d’ensemble <gi>outline</gi> sont utilisés pour décrire les occupations de manière plus complexe. Pour une présentation plus simple, sous
+                     forme de texte, on peut utiliser un ou plusieurs élément(s) Paragraphe <gi>p</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, list, occupation, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.5</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:occupations xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:occupation>
+               <eac-cpf:term>Teacher</eac-cpf:term>
+            </eac-cpf:occupation>
+            <eac-cpf:occupation>
+               <eac-cpf:term>Railway labourer</eac-cpf:term>
+            </eac-cpf:occupation>
+         </eac-cpf:occupations>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <occupations>
+            <occupation>
+               <term> Teacher </term>
+            </occupation>
+            <occupation>
+               <term> Railway labourer </term>
+            </occupation>
+         </occupations>
+      </egXML>
+   </div>
+</div>

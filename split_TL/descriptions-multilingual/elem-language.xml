@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="language"
+     type="elementDocumentation">
+   <head>
+      <gi>language</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Language</p>
+      <p xml:lang="fre">Langue</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The specification of a particular language used in the EAC-CPF instance or
+							in the creative work of the entity being described.</p>
+      <p xml:lang="fre">La précision d’une langue spécifique utilisée dans l’instance EAC-CPF ou par l’entité décrite dans ses activités.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A required element within <gi>languageDeclaration</gi> that gives the main language in
+								which the EAC-CPF instance is written.</p>
+      <p>A required element within <gi>languageUsed</gi> that gives the language or languages
+								used by the entity being described.</p>
+      <p>The content of the <att>languageCode</att> attribute must be given in the form of valid
+								code from ISO 639-2b.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément obligatoire au sein de l’élément Déclaration de langue <gi>languageDeclaration</gi> qui donne la langue principale dans laquelle l’instance EAC-CPF est rédigée.</p>
+      <p>Élément obligatoire au sein de l’élément Langue utilisée <gi>languageUsed</gi> qui donne la langue ou les langues utilisées par l’entité décrite.</p>
+      <p>Le contenu de l’attribut <att>languageCode</att>doit être un code de la norme ISO 639-2b.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>languageDeclaration, languageUsed</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>languageCode</label>
+            <item>Required</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>languageCode</label>
+            <item>Obligatoire</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.7</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:languageDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+            <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+         </eac-cpf:languageDeclaration>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <languageDeclaration>
+            <language languageCode="eng"> English </language>
+            <script scriptCode="Latn"> Latin </script>
+         </languageDeclaration>
+      </egXML>
+   </div>
+</div>

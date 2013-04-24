@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="componentEntry"
+     type="elementDocumentation">
+   <head>
+      <gi>componentEntry</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Component Entry</p>
+      <p xml:lang="fre">Entrée du composant</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A caption that can be used to provide identification and access to a linked
+							resource.</p>
+      <p xml:lang="fre">Un libellé qui peut être utilisé pour identifier et donner accès à une ressource liée.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A <gi>componentEntry</gi> always occurs within <gi>setComponent</gi> to provide a
+								textual note about the EAC-CPF instance that is being bundled together with other authority
+								records for the same entity within an <gi>alternativeSet</gi> wrapper. The bundled
+								alternate records for a given EAC-CPF entity may be in different languages or may come from
+								different authority systems. The bundling allows them to be transmitted or stored together.
+								The <gi>componentEntry</gi> element provides a place where a particular alternate record
+								can be described or explained in relation to the other authority records.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>On utilise toujours l’élément Entrée du composant <gi>componentEntry</gi> au sein de l’élément Composant d’un ensemble <gi>setComponent</gi> pour donner un libellé à l’instance EAC-CPF empaquetée dans un élément
+                     Ensemble alternatif <gi>alternativeSet</gi> avec d’autres notices d’autorité pour la même entité. Les notices alternatives empaquetées pour une entité donnée EAC-CPF peuvent être rédigées dans différentes langues ou
+                     provenir de différents systèmes d’autorité. L’empaquetage leur permet ainsi d’être transmises ou stockées ensemble. L’élément <gi>componentEntry</gi> est l’emplacement adéquat pour décrire une notice particulière
+                     alternative ou pour expliciter sa relation avec les autres notices d’autorité.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>setComponent</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>scriptCode</label>
+            <item>Facultatif</item>
+            <label>transliteration</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xmlns:xlink_1="http://www.w3.org/1999/xlink"
+                                  xmlns:xlink_2="http://www.w3.org/1999/xlink"
+                                  xlink_1:href="http://nla.gov.au/anbd.aut-an35335937"
+                                  xlink_2:type="simple">
+               <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+                                  xmlns:xlink_2="http://www.w3.org/1999/xlink"
+                                  xmlns:xlink_3="http://www.w3.org/1999/xlink"
+                                  lastDateTimeVerified="2009-08-02"
+                                  xlink_2:href="mawsonBS.xml"
+                                  xlink_3:type="simple">
+               <eac-cpf:objectXMLWrap>
+                  <eac-cpf:eac-cpf> [...] </eac-cpf:eac-cpf>
+               </eac-cpf:objectXMLWrap>
+            </eac-cpf:setComponent>
+         </eac-cpf:alternativeSet>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <alternativeSet>
+            <setComponent xmlns:xlink="http://www.w3.org/1999/xlink"
+                          xlink:href="http://nla.gov.au/anbd.aut-an35335937"
+                          xlink:type="simple">
+               <componentEntry> Bright Sparcs Record </componentEntry>
+            </setComponent>
+            <setComponent xmlns:xlink="http://www.w3.org/1999/xlink" lastDateTimeVerified="2009-08-02"
+                          xlink:href="mawsonBS.xml"
+                          xlink:type="simple">
+               <objectXMLWrap>
+                  <eac-cpf> [...] </eac-cpf>
+               </objectXMLWrap>
+            </setComponent>
+         </alternativeSet>
+      </egXML>
+   </div>
+</div>

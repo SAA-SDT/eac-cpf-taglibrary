@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="localTypeDeclaration"
+     type="elementDocumentation">
+   <head>
+      <gi>localTypeDeclaration</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Local Type Declaration</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">
+         <gi>localTypeDeclaration</gi> is used to declare any local conventions used in
+								<att>localType</att> in the EAC-CPF instance.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>localTypeDeclaration</gi> is available to declare the local conventions and
+								controlled vocabularies used in <att>localType</att> in the EAC-CPF instance. The
+									<gi>citation</gi> element must be used to cite the resource that lists the used values
+								(semantic scope and intention). Any notes relating to how rules or conventions that have been
+								used may be given within a <gi>descriptiveNote</gi> element. The <gi>abbreviation</gi>
+								element may be used to identify the standard or controlled vocabulary in a coded
+								structure.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>abbreviation, citation, descriptiveNote</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:localTypeDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:abbreviation>Categorycodes</eac-cpf:abbreviation>
+            <eac-cpf:citation xmlns:xlink="http://www.w3c.org/1999/xlink"
+                              xlink:href="http://nad.ra.se/static/termlistor/Kategorikoder.htm"
+                              xlink:type="simple">The categorycodes used in Swedish NAD (http://nad.ra.se). To be used in
+										element function</eac-cpf:citation>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Codes for categorizing different types of authority records through
+											organizational form, operation, function, archivalorganization etcetera. </eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:localTypeDeclaration>
+      </egXML>
+   </div>
+</div>

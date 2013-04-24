@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="standardDate"
+     type="attributeDocumentation">
+   <head>
+      <att>standardDate</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Standard Date</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The date represented in a standard form for computer processing.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>standardDate</att> may occur on <gi>date</gi>,
+								<gi>fromDate</gi>, and <gi>toDate</gi>. The value of <att>standardDate</att> provides a
+							standard form of the date expressed in <gi>date</gi>, <gi>fromDate</gi>, or
+								<gi>toDate</gi> that can be used in computer processing, such as searching.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>Union of the XML Schema Datatypes date, gYear, and gYearMonth. The
+							following are all valid patterns: 2009-12-31, 2009, 2009-12.</p>
+   </div>
+   
+</div>

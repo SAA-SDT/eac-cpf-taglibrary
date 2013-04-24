@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="standardDate"
+     type="attributeDocumentation">
+   <head>
+      <att>standardDate</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Standard Date</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The date represented in a standard form for computer processing.</p>
+      <p xml:lang="fre">La date exprimée de manière normalisée pour traitement informatique.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>standardDate</att> may occur on <gi>date</gi>,
+								<gi>fromDate</gi>, and <gi>toDate</gi>. The value of <att>standardDate</att> provides a
+							standard form of the date expressed in <gi>date</gi>, <gi>fromDate</gi>, or
+								<gi>toDate</gi> that can be used in computer processing, such as searching.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'attribut <att>standardDate</att> est un attribut des éléments Date <gi>date</gi>, Date de début <gi>fromDate</gi> et Date de fin <gi>toDate</gi>. <att>standardDate</att> fournit une forme normalisée de la date
+                     exprimée dans Date <gi>date</gi>, Date de début <gi>fromDate</gi> ou Date de fin <gi>toDate</gi>, qui peut être utilisée lors de traitements informatiques, par exemple à des fins d’indexation et de recherche.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>Union of the XML Schema Datatypes date, gYear, and gYearMonth. The
+							following are all valid patterns: 2009-12-31, 2009, 2009-12.</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>Union des types de données date, gYear et gYearMonth, définis dans W3C XML Schema. Les exemples suivants sont des expressions valides : 2009-12-31, 2009, 2009-12</p>
+   </div>
+</div>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="resourceRelation"
+     type="elementDocumentation">
+   <head>
+      <gi>resourceRelation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Resource Relation</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element for encoding a relation between a resource and the CPF entity.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <gi>resourceRelation</gi> element contains the description of a resource related to
+								the described entity. Use <gi>objectXMLWrap</gi> to incorporate XML elements from any XML
+								namespaces or <gi>objectBinWrap</gi> for base64-encoded binary data. A
+         <gi>relationEntry</gi> element is provided for a textual description of the related resource.</p>
+      <p>Use the <gi>date</gi>, <gi>dateRange</gi>, or <gi>dateSet</gi> elements for
+         specifying the time period of the relationship and the <gi>placeEntry</gi> element for relevant
+								location information. A <gi>descriptiveNote</gi> element may be included for a more
+								detailed specifications or explanations of the relationship.</p>
+      <p>The <att>resourceRelationType</att> attribute is used to specify the nature of the
+								relationship between the resource and the entity described in the EAC-CPF instance.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>date, dateRange, dateSet, descriptiveNote, objectBinWrap, objectXMLWrap,
+							placeEntry, relationEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>relations</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>resourceRelationType</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 6</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:resourceRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" resourceRelationType="creatorOf">
+            <eac-cpf:objectXMLWrap>
+               <ead:ead xmlns:ead="urn:isbn:1-931666-22-9"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+                  <ead:eadheader>
+                     <ead:eadid identifier="e4012531" mainagencycode="GB-0066"/>
+                     <ead:filedesc>
+                        <ead:titlestmt>
+                           <ead:titleproper/>
+                        </ead:titlestmt>
+                     </ead:filedesc>
+                  </ead:eadheader>
+                  <ead:archdesc level="file">
+                     <ead:did>
+                        <ead:unitid repositorycode="GB-0066">E 40/12531</ead:unitid>
+                        <ead:unittitle>Attached seal, Andrew Noel</ead:unittitle>
+                        <ead:unitdate>1551-1552</ead:unitdate>
+                        <ead:physdesc>
+                           <ead:genreform type="materialType">Seals</ead:genreform>
+                        </ead:physdesc>
+                     </ead:did>
+                  </ead:archdesc>
+               </ead:ead>
+            </eac-cpf:objectXMLWrap>
+         </eac-cpf:resourceRelation>
+         <eac-cpf:resourceRelation  xmlns:eac-cpf="urn:isbn:1-931666-33-4" resourceRelationType="creatorOf" xml:id="UA013">
+            <eac-cpf:relationEntry>Department of Romance Languages records</eac-cpf:relationEntry>
+            <eac-cpf:objectXMLWrap>
+               <ead:ead xmlns:ead="urn:isbn:1-931666-22-9"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+                  <ead:archdesc level="collection">
+                     <ead:did>
+                        <ead:unittitle>Department of Romance Languages records</ead:unittitle>
+                        <ead:unitid>UA013</ead:unitid>
+                     </ead:did>
+                  </ead:archdesc>
+               </ead:ead>
+            </eac-cpf:objectXMLWrap>
+         </eac-cpf:resourceRelation>
+      </egXML>
+   </div>
+</div>

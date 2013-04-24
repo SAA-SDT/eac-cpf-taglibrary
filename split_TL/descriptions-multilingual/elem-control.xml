@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="control" type="elementDocumentation">
+   <head>
+      <gi>control</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Control</p>
+      <p xml:lang="fre">Contrôle</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The area of the instance that contains control information about its
+							identity, creation, maintenance, status, and the rules and authorities used in the
+							composition of the description.</p>
+      <p xml:lang="fre">Zone contenant les informations relatives au contrôle de l’instance portant notamment sur son identité, sa création, sa gestion, son statut ainsi que les règles et les référentiels utilisés dans la composition de la
+                     description.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>This required wrapper element within <gi>eac-cpf</gi> contains the information necessary
+								to control the instance. This includes information about its identity, creation,
+								maintenance, and status as well the languages, rules and authorities used in the composition
+								of the description.</p>
+      <p>It must contain a unique identifier for the instance within the <gi>recordId</gi>
+								element and other associated identifiers may be given in <gi>otherRecordId</gi>. There
+								must be a description of the agency responsible for its creation and maintenance in
+									<gi>maintenanceAgency</gi> as well as statements about its current drafting status in
+									<gi>maintenanceStatus</gi> and the creation, maintenance, and disposition of the instance
+								in <gi>maintenanceHistory</gi>.</p>
+      <p>Three elements are available to declare languages, rules and conventions used in the
+								EAC-CPF instance. The <gi>languageDeclaration</gi> element provides information on the
+								language and script used in the description. The <gi>conventionDeclaration</gi> element
+								provides information on the authorities or controlled vocabularies used in the instance.
+									<gi>localTypeDeclaration</gi> is used to declare the local conventions and controlled
+								vocabularies used within the <att>localType</att> in the instance.</p>
+      <p>Other optional elements available in <gi>control</gi> include a <gi>sources</gi>
+								element to provide information about the documentary sources used in the composition of the
+								description and a <gi>publicationStatus</gi> element to indicate the editorial status of
+								the eac-cpf instance.</p>
+      <p>Other control elements considered necessary but not otherwise included may be given in
+									<gi>localControl</gi> element.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Au sein de l’élément Contexte archivistique encodé – collectivités, personnes, familles <gi>eac-cpf</gi>
+         <!--FC &lt;eac-cpf&gt;-->, cet élément englobant obligatoire contient les informations nécessaires au contrôle de l’instance. Il s’agit des
+                     informations sur son identité, sa création, sa gestion, son statut, ainsi que sur les langues, les règles et les référentiels utilisés dans la composition de la description.</p>
+      <p>Il doit contenir un identifiant unique pour l’instance dans l’élément Identifiant de la notice <gi>recordId</gi>. D’autres identifiants associés peuvent être fournis au moyen de l’élément Identifiant d’une autre notice
+                        <gi>otherRecordId</gi>. Une description de l’agence responsable de la création et de la gestion de l’instance doit être donnée dans l’élément Organisme responsable <gi>maintenanceAgency</gi>. Des informations sur
+                     l’état de rédaction de la notice sont données dans l’élément Statut de la notice <gi>maintenanceStatus</gi> et celles sur la création, la gestion de l’instance dans l’élément Historique des mises à jour
+                        <gi>maintenanceHistory</gi>.</p>
+      <p>Trois éléments permettent de déclarer les langues, les règles et les conventions utilisées dans l’instance EAC-CPF. L’élément Déclaration de langue <gi>languageDeclaration</gi> indique la langue et l’écriture utilisées
+                     dans la description. L’élément Déclaration de règle ou de convention <gi>conventionDeclaration</gi> précise les référentiels ou les vocabulaires contrôlés utilisés dans l’instance. L’élément Déclaration de type local
+                        <gi>localTypeDeclaration</gi> est utilisé pour déclarer les conventions et vocabulaires contrôlés de niveau local, signalés dans l’instance au moyen des valeurs de l’attribut <att>localType</att>.</p>
+      <p>Les autres éléments facultatifs disponibles dans l’élément <gi>control</gi> sont l’élément Sources <gi>sources</gi>, permettant de fournir l’information sur les sources documentaires utilisées dans la composition de la
+                     description, ainsi que l’élément État de publication <gi>publicationStatus</gi> indiquant le statut éditorial de l’instance EAC-CPF.</p>
+      <p>D’autres éléments considérés comme nécessaires, mais qui ne sont pas compris dans le schéma, peuvent être donnés dans l’élément Contrôle local <gi>localControl</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>conventionDeclaration, languageDeclaration, localControl,
+							localTypeDeclaration, maintenanceAgency, maintenanceHistory, maintenanceStatus,
+							otherRecordId, publicationStatus, recordId, sources</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>eac-cpf</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4</p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:control xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:recordId>nla.party-521122</eac-cpf:recordId>
+            <eac-cpf:maintenanceStatus>revised</eac-cpf:maintenanceStatus>
+            <eac-cpf:publicationStatus>approved</eac-cpf:publicationStatus>
+            <eac-cpf:maintenanceAgency>
+               <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
+               <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
+            </eac-cpf:maintenanceAgency>
+            <eac-cpf:languageDeclaration>
+               <eac-cpf:language languageCode="eng"/>
+               <eac-cpf:script scriptCode="Latn"/>
+            </eac-cpf:languageDeclaration>
+            <eac-cpf:conventionDeclaration>
+               <eac-cpf:abbreviation>AACR2</eac-cpf:abbreviation>
+               <eac-cpf:citation>Anglo-American Cataloging Rules, Revised</eac-cpf:citation>
+            </eac-cpf:conventionDeclaration>
+            <eac-cpf:maintenanceHistory>
+               <eac-cpf:maintenanceEvent>
+                  <eac-cpf:eventType>created</eac-cpf:eventType>
+                  <eac-cpf:eventDateTime standardDateTime="2009-06-26T05:33:41Z">2009-06-26T05:33:41Z</eac-cpf:eventDateTime>
+                  <eac-cpf:agentType>human</eac-cpf:agentType>
+                  <eac-cpf:agent>bdewhurs</eac-cpf:agent>
+               </eac-cpf:maintenanceEvent>
+            </eac-cpf:maintenanceHistory>
+            <eac-cpf:sources>
+               <eac-cpf:source xmlns:xlink="http://www.w3c.org/1999/xlink"
+                               xmlns:xlink_1="http://www.w3.org/1999/xlink"
+                               xmlns:xlink_2="http://www.w3.org/1999/xlink"
+                               xlink_1:href="http://www.icacds.org.uk/eng/ISAAAR(CPF)2ed.pdf"
+                               xlink_2:type="simple">
+                  <eac-cpf:sourceEntry>ISAAR(CPF)</eac-cpf:sourceEntry>
+                  <eac-cpf:descriptiveNote>
+                     <eac-cpf:p>Record created based on ISAAR(CPF) 2nd ed Example 5 - Person
+													description</eac-cpf:p>
+                  </eac-cpf:descriptiveNote>
+               </eac-cpf:source>
+            </eac-cpf:sources>
+         </eac-cpf:control>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <control>
+            <recordId> nla.party-521122 </recordId>
+            <maintenanceStatus> revised </maintenanceStatus>
+            <publicationStatus> approved </publicationStatus>
+            <maintenanceAgency>
+               <agencyCode> AU-ANL:PEAU </agencyCode>
+               <agencyName> National Library of Australia </agencyName>
+            </maintenanceAgency>
+            <languageDeclaration>
+               <language languageCode="eng"/>
+               <script scriptCode="Latn"/>
+            </languageDeclaration>
+            <conventionDeclaration>
+               <abbreviation> AACR2 </abbreviation>
+               <citation> Anglo-American Cataloging Rules, Revised </citation>
+            </conventionDeclaration>
+            <maintenanceHistory>
+               <maintenanceEvent>
+                  <eventType> created </eventType>
+                  <eventDateTime standardDateTime="2009-06-26T05:33:41Z"> 2009-06-26T05:33:41Z </eventDateTime>
+                  <agentType> human </agentType>
+                  <agent> bdewhurs </agent>
+               </maintenanceEvent>
+            </maintenanceHistory>
+            <sources>
+               <source xmlns:xlink="http://www.w3.org/1999/xlink"
+                       xlink:href="http://www.icacds.org.uk/eng/ISAAR(CPF)2ed.pdf"
+                       xlink:type="simple">
+                  <sourceEntry> ISAAR(CPF) </sourceEntry>
+                  <descriptiveNote>
+                     <p> Record created based on ISAAR(CPF) 2nd ed Example 5 – Person description </p>
+                  </descriptiveNote>
+               </source>
+            </sources>
+         </control>
+      </egXML>
+   </div>
+</div>

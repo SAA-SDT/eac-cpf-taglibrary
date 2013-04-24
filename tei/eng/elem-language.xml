@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="language"
+     type="elementDocumentation">
+   <head>
+      <gi>language</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Language</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The specification of a particular language used in the EAC-CPF instance or
+							in the creative work of the CPF entity being described.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A required element within <gi>languageDeclaration</gi> that gives the main language in
+								which the EAC-CPF instance is written.</p>
+      <p>A required element within <gi>languageUsed</gi> that gives the language or languages
+								used by the CPF entity being described.</p>
+      <p>The content of the <att>languageCode</att> attribute must be given in the form of valid
+								code from ISO 639-2b.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>languageDeclaration, languageUsed</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>languageCode</label>
+            <item>Required</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.7</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:languageDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+            <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+         </eac-cpf:languageDeclaration>
+      </egXML>
+   </div>
+</div>

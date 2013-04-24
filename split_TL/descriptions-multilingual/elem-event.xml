@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="event" type="elementDocumentation">
+   <head>
+      <gi>event</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Event</p>
+      <p xml:lang="fre">vènement</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element used to encode an event associated with a date and, optionally, a
+							place within a structured chronology.</p>
+      <p xml:lang="fre">Élément utilisé pour encoder un évènement associé à une date et, éventuellement, à un lieu au sein d'une chronologie structurée.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The element contains discursive text identifying the event described by the
+									<gi>chronItem</gi>. Every <gi>event</gi> must have an associated <gi>date</gi>
+								element, and it may also have an optional <gi>placeEntry</gi> element, all wrapped within
+								a <gi>chronItem</gi> describing the event in a chronology.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L'élément Évènement <gi>event</gi> contient du texte discursif identifiant l'évènement décrit par l'élément Élément de liste chronologique <gi>chronItem</gi>. Chaque <gi>event</gi> doit être associé à un élément Date
+                        <gi>date</gi>. ll peut également être associé à un élément facultatif Forme du nom de lieu <gi>placeEntry</gi>. Tous ces éléments sont englobés dans un élément Élément de liste chronologique <gi>chronItem</gi>, qui
+                     décrit l'évènement au sein d'une chronologie.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>chronItem</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:base</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:chronList xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:chronItem>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1944">1944</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1947">1947</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:event>Summer employment at Minnesota Valley Canning Co.</eac-cpf:event>
+               <eac-cpf:placeEntry>Blue Earth (Minn.)</eac-cpf:placeEntry>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1946">1946</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1948">1948</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:event>Macalester College</eac-cpf:event>
+               <eac-cpf:placeEntry>St. Paul (Minn.)</eac-cpf:placeEntry>
+            </eac-cpf:chronItem>
+            <eac-cpf:chronItem>
+               <eac-cpf:date standardDate="1948">1948</eac-cpf:date>
+               <eac-cpf:event>Campaign Manager, 2nd District, State Democratic-Farmer-Labor Central
+											Committee. Report to Orville Freeman.</eac-cpf:event>
+            </eac-cpf:chronItem>
+         </eac-cpf:chronList>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <chronList>
+            <chronItem>
+               <dateRange>
+                  <fromDate standardDate="1944"> 1944 </fromDate>
+                  <toDate standardDate="1947"> 1947 </toDate>
+               </dateRange>
+               <event> Emploi d'été à la Minnesota Valley Canning Co. </event>
+               <placeEntry> Blue Earth (Minn.) </placeEntry>
+            </chronItem>
+            <chronItem>
+               <dateRange>
+                  <fromDate standardDate="1946"> 1946 </fromDate>
+                  <toDate standardDate="1948"> 1948 </toDate>
+               </dateRange>
+               <event> Macalester College </event>
+               <placeEntry> St. Paul (Minn.) </placeEntry>
+            </chronItem>
+            <chronItem>
+               <date standardDate="1948"> 1948 </date>
+               <event> Directeur de campagne, pour le 2e district, du Comité central du parti Démocrate-agricole-ouvrier au niveau de l'état. Rapport à Orville Freeman. </event>
+            </chronItem>
+         </chronList>
+      </egXML>
+   </div>
+</div>

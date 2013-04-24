@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="accuracy"
+     type="attributeDocumentation">
+   <head>
+      <att>accuracy</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Accuracy</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The accuracy specification for a place statement.</p>
+      <p xml:lang="fre">Le niveau de précision d’une mention de lieu.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Within the <gi>placeEntry</gi> element, this attribute allows for an
+							accuracy specification.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Associé à l’élément Forme du nom de lieu <gi>placeEntry</gi> cet attribut permet de qualifier le niveau de précision.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>[text]</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>string</p>
+   </div>
+</div>

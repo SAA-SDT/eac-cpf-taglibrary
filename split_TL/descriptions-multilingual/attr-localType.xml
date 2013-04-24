@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="localType"
+     type="attributeDocumentation">
+   <head>
+      <att>localType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Local Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Used to make the semantics of the element more specific or to provide
+							semantic specificity to elements that are semantically weak. Value should be an absolute
+							URI.</p>
+      <p xml:lang="fre">Utilisé pour affiner la sémantique d’un élément ou pour apporter de la précision sémantique à des éléments dont la sémantique est faible. La valeur doit être un URI absolu.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>localType</att> is broadly available on many descriptive and a
+							few control elements. It is intended to provide a means to narrow the semantics of some
+							elements or provide semantics for elements that are primarily structural or that are
+							semantically weak. The value of the <att>localType</att> must conform to W3C Schema Part 2:
+							Datatypes, anyURI. To facilitate exchange of EAC-CPF instances, it is highly recommend that
+							the URI be absolute and resolvable to a local resource that describes the semantic scope and
+							use of the value.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>localType</att> est un attribut d’un grand nombre d’éléments descriptifs et de quelques éléments de contrôle. Il est destiné à restreindre la sémantique de certains éléments ou à donner du sens à des
+                     éléments qui à l’origine sont structurels ou dont la sémantique est faible. La valeur de l’attribut <att>localType</att> doit être du type anyURI défini par les spécifications W3C XML Schema. Afin de faciliter l’échange
+                     des instances EAC-CPF, il est hautement recommandé que l’URI soit absolu et renvoie à une ressource locale décrivant la portée sémantique et l’utilisation de la valeur.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>anyURI</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>anyURI</p>
+   </div>
+</div>

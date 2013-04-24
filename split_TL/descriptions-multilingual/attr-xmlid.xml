@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xmlid" type="attributeDocumentation">
+   <head>
+      <att>xml:id</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">XML Identifier</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A unique identifier available on most elements that can be used to name
+							specific elements in the EAC-CPF instance.</p>
+      <p xml:lang="fre">Attribut, disponible pour la plupart des éléments, à utiliser lorsque l’on souhaite identifier de façon univoque un élément particulier dans l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An identifier used to name the element so that it can be referred to, or
+							referenced from, somewhere else. Each <att>xml:id</att> within a document must have a unique
+							value. The <att>xml:id</att> attribute regularizes the naming of the element and thus
+							facilitates building links between it and other resources. For example, the <att>xml:id</att>
+							may be used to uniquely identify two or more <gi>cpfDescription</gi> within
+								<gi>multipleIdentities</gi>. Uniquely identifying or distinguishing two or more
+								<gi>cpfDescription</gi> may be essential or useful in maintenance environments when
+							relating resources, functions, or corporate bodies, persons, or families to one among two or
+							more identities represented in one EAC-CPF instance.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>xml:id</att> a pour valeur un identifiant permettant de renvoyer à l’élément qu’il qualifie ou de citer cet élément. Chaque attribut <att>xml:id</att> doit avoir une valeur unique au sein d’un document
+                     XML. L’attribut <att>xml:id</att> donne la forme canonique pour identifier l’élément et facilite ainsi la construction de liens entre cet élément et d’autres ressources. Par exemple, on peut utiliser l’attribut
+                        <att>xml:id</att> pour identifier de manière unique plusieurs éléments Description de collectivité, de personne ou de famille <gi>cpfDescription</gi> au sein d’un élément Identités multiples
+                        <gi>multipleIdentities</gi>. Il peut être nécessaire ou utile, dans des environnements de gestion, d’identifier de manière unique ou de distinguer plusieurs éléments <gi>cpfDescription</gi> quand on relie des
+                     ressources, des fonctions, ou des collectivités, personnes ou familles, à une identité parmi celles représentées dans une instance EAC-CPF.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>ID</p>
+   </div>
+</div>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="occupation"
+     type="elementDocumentation">
+   <head>
+      <gi>occupation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Occupation</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element that provides information about the occupation of the entity
+							being described.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An <gi>occupation</gi> element is a wrapper element used to encode an index term, using
+								the child element <gi>term</gi>. Terms are used to identify an occupation held by the
+								EAC-CPF entity. Terms may be drawn from controlled vocabularies or may be natural language
+								terms. Associated date or date range (<gi>date</gi>, <gi>dateRange</gi> or
+									<gi>dateSet</gi>) and place(s) (<gi>placeEntry</gi>) may be included to further
+								constrain the term's meaning. A <gi>descriptiveNote</gi> element may be included if a
+								fuller textual explanation needed.</p>
+      <p>A single <gi>occupation</gi> element may be encoded directly within
+									<gi>description</gi>. Alternatively, multiple <gi>occupation</gi> elements may be
+								grouped within a <gi>occupations</gi> wrapper that facilitates manipulating them as a
+								group.</p>
+      <p>Occupations may alternatively be described in discursive form in <gi>biogHist</gi>
+								(ISAAR (CPF) History 5.2.2). The <gi>occupation</gi> element should be used whenever
+								separate semantic processing of information about occupations is required.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry,
+							term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, occupations</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.5</p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:occupation xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Teacher</eac-cpf:term>
+         </eac-cpf:occupation>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <occupation>
+            <term> Teacher </term>
+         </occupation>
+      </egXML>
+   </div>
+</div>

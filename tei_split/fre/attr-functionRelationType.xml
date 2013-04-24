@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="functionRelationType"
+     type="attributeDocumentation">
+   <head>
+      <att>functionRelationType</att>
+   </head>
+   
+   <div type="summary">
+      
+      <p xml:lang="fre">Type de relation qu’entretient l’entité décrite avec la fonction avec laquelle elle est mise en relation.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>L’attribut <att>functionRelationType</att> est un attribut de l’élément Relation avec une fonction <gi>functionRelation</gi>. La valeur désigne le type de relation que l’entité décrite a avec la fonction qui lui est
+                     associée. Si la nature de la relation est plus préciseque l’une des valeurs données ci-dessous, on peut utiliser les attributs XLink en plus de l’attribut <att>functionRelationType</att>.</p>
+   </div>
+   
+   <div type="values" xml:lang="fre">
+      <p>"controls" (contrôle) ou "owns" (est titulaire de) ou "performs" (exerce)</p>
+   </div>
+</div>

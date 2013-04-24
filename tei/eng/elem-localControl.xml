@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="localControl"
+     type="elementDocumentation">
+   <head>
+      <gi>localControl</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Local Control</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Any additional control entry necessary to accommodate local practice.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An element used to record and define any control information necessary to accommodate
+								local practice, in addition to the elements otherwise made available within
+									<gi>control</gi>. The value of the entry should be given in a <gi>term</gi> element and an
+								associated date can be given either as a single date (<gi>date</gi>) or a date range
+									(<gi>dateRange</gi>).</p>
+      <p>The type of entry may be defined using the <att>localType</att> attribute.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>date, dateRange, term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:localControl xmlns:eac-cpf="urn:isbn:1-931666-33-4" localType="detailLevel">
+            <eac-cpf:term>minimal</eac-cpf:term>
+         </eac-cpf:localControl>
+      </egXML>
+   </div>
+</div>

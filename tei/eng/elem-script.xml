@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="script"
+     type="elementDocumentation">
+   <head>
+      <gi>script</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Script</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The specification of a particular script used in the EAC-CPF instance or in
+							the creative work of the CPF entity being described.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A required element within <gi>languageDeclaration</gi> that gives the main script in
+								which the EAC-CPF instance is written.</p>
+      <p>A required element within <gi>languageUsed</gi> that gives the main script used by the
+								CPF entity being described in his/her creative or productive work.</p>
+      <p>The content of the <att>scriptCode</att> attribute must be given in the form of a valid
+								code from ISO 15924.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>languageDeclaration, languageUsed</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>scriptCode</label>
+            <item>Required</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.7</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:languageDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+            <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+         </eac-cpf:languageDeclaration>
+      </egXML>
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:languagesUsed xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:languageUsed>
+               <eac-cpf:language languageCode="gre">Greek, Modern (1453-)</eac-cpf:language>
+               <eac-cpf:script scriptCode="Grek">Greek</eac-cpf:script>
+            </eac-cpf:languageUsed>
+            <eac-cpf:languageUsed>
+               <eac-cpf:language languageCode="gre">Greek, Modern (1453-)</eac-cpf:language>
+               <eac-cpf:script scriptCode="Grek">Greek</eac-cpf:script>
+            </eac-cpf:languageUsed>
+         </eac-cpf:languagesUsed>
+      </egXML>
+   </div>
+</div>

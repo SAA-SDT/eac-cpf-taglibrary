@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="entityType"
+     type="elementDocumentation">
+   <head>
+      <gi>entityType</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Entity Type</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The type of CPF entity being described. Values available are: person,
+							corporateBody, or family.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Within <gi>identity</gi> this mandatory element specifies the type of CPF entity being
+								described in the EAC-CPF instance. Values available are: person, corporateBody, or
+								family.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>"person" or "corporateBody" or "family"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>identity</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1.1</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">         
+         <eac-cpf:identity xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:entityType>corporateBody</eac-cpf:entityType>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part>British Broadcasting Corporation</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1922-10-18">Oct. 18, 1922</eac-cpf:fromDate>
+                     <eac-cpf:toDate></eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+            </eac-cpf:nameEntry>
+         </eac-cpf:identity>
+      </egXML>
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">         
+         <eac-cpf:identity xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:entityType>person</eac-cpf:entityType>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part localType="surname">Elytēs</eac-cpf:part>
+               <eac-cpf:part localType="name">Odysseas</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1911">1911</eac-cpf:fromDate>
+                     <eac-cpf:toDate standardDate="1996">1996</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+            </eac-cpf:nameEntry>
+         </eac-cpf:identity>
+      </egXML>
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">         
+         <eac-cpf:identity xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:entityType>family</eac-cpf:entityType>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part>Rockefeller family</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1839">1839</eac-cpf:fromDate>
+                     <eac-cpf:toDate></eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+            </eac-cpf:nameEntry>
+         </eac-cpf:identity>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="identityType"
+     type="attributeDocumentation">
+   <head>
+      <att>identityType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Identity Type</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Indicates whether the identity is given or acquired. May be useful for
+							processing when multiple identities are described in the same instance.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The <att>identityType</att> may occur on <gi>identity</gi>. Though
+							optional, it is recommended that it be used when multiple identities are described in the
+							same EAC-CPF instance using <gi>multipleIdentities</gi>. It will enable processors to
+							distinguish between the description of a person and one or more personae. </p>
+   </div>
+   
+   <div type="datatype" xml:lang="eng">
+      <p>"given" or "acquired"</p>
+   </div>
+   
+</div>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="useDates"
+     type="elementDocumentation">
+   <head>
+      <gi>useDates</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Date of Use</p>
+      <p xml:lang="fre">Dates d’utilisation</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">The dates when the name or names were used by the entity being described. </p>
+      <p xml:lang="fre">Dates auxquelles le nom ou les noms étaient utilisés par l'entité décrite.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Within <gi>nameEntry</gi>, <gi>useDates</gi> provides the dates when the name was
+								used. For parallel names, <gi>useDates</gi> may occur in <gi>nameEntryParallel</gi>
+								rather than in the individual <gi>nameEntry</gi> elements contained in
+									<gi>nameEntryParallel</gi>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Au sein de l'élément Forme du nom <gi>nameEntry</gi>, l'élément Dates d'utilisation <gi>useDates</gi> fournit les dates auxquelles le nom était utilisé. Pour les formes parallèles du nom, <gi>useDates</gi> peut être
+                     contenu dans l'élément Forme parallèle du nom <gi>nameEntryParallel</gi> plutôt que dans chaque élément <gi>nameEntry</gi> contenu dans <gi>nameEntryParallel</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, dateSet</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry, nameEntryParallel</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1.2 and 5.1.3</p>
+   </div>
+   <div type="occurrence">
+      <p>0...1</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part>Brown, Bob</eac-cpf:part>
+            <eac-cpf:useDates>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:useDates>
+            <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+         </eac-cpf:nameEntry>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <nameEntry>
+            <part> Brown, Bob </part>
+            <useDates>
+               <dateRange>
+                  <fromDate standardDate="1886"> 1886 </fromDate>
+                  <toDate standardDate="1959"> 1959 </toDate>
+               </dateRange>
+            </useDates>
+            <authorizedForm> AACR2 </authorizedForm>
+         </nameEntry>
+      </egXML>
+   </div>
+</div>

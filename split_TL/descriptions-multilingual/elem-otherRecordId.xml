@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="otherRecordId"
+     type="elementDocumentation">
+   <head>
+      <gi>otherRecordId</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Other Record Identifier</p>
+      <p xml:lang="fre"/>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">Alternative record identifiers that may be associated with the EAC-CPF
+							instance.</p>
+      <p xml:lang="fre">Autres identifiants qui peuvent être associés à l’instance EAC-CPF.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>An element in <gi>control</gi> for the provision of alternative record identifiers to
+								the mandatory identifier in <gi>recordId</gi> that may be associated with the EAC-CPF
+								instance. These might include the identifiers of merged EAC-CPF instances representing the
+								same entity or those of records that are no longer current but had some part in the history
+								and maintenance of the EAC-CPF instance.</p>
+      <p>The <att>localType</att> attribute can be used to identify the kind of institution or
+								service responsible for each associated record identifier if not the same as that given in
+								the <gi>maintenanceAgency</gi> element for this EAC-CPF instance.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Élément contenu dans l’élément Contrôle <gi>control</gi> permettant de fournir d’autres identifiants associés à l’instance EAC-CPF, différents de l’identifiant obligatoire enregistré dans l’élément Identifiant de la
+                     notice <gi>recordId</gi>. Il peut s’agir des identifiants d’instances EAC-CPF fusionnées représentant la même entité ou ceux de notices qui ne sont plus utilisées mais font partie de l’histoire et de la gestion de
+                     l’instance EAC-CPF.</p>
+      <p>L’attribut <att>localType</att> peut être utilisé pour identifier le type d’institution ou de service responsable pour chaque identifiant de notice associé s’il est différent de celui fourni dans l’élément Organisme
+                     responsable <gi>maintenanceAgency</gi> de la même instance EAC-CPF.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>0...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:otherRecordId xmlns:eac-cpf="urn:isbn:1-931666-33-4">ARC-ID-976172</eac-cpf:otherRecordId>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <otherRecordId> ARC-ID-976172 </otherRecordId>
+      </egXML>
+   </div>
+</div>

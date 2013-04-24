@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="part" type="elementDocumentation">
+   <head>
+      <gi>part</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Part</p>
+      <p xml:lang="fre">Partie </p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">
+         <gi>part</gi> is used to distinguish components of the name of the entity.</p>
+      <p xml:lang="fre">L’élément Partie <gi>part</gi> est employé pour distinguer les éléments du nom d’une entité.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>Within <gi>nameEntry</gi> each of the component parts of a name, such as forename,
+								surname, honorific title, may be recorded in a separate <gi>part</gi> element.
+									<gi>part</gi> may also contain the full name of the entity when it is not possible to
+								distinguish the different component parts of the name. The <gi>useDates</gi> element
+								should be used for any date information associated with the name.</p>
+      <p>The designation of the information contained in the <gi>part</gi> can be specified by
+								the attribute <att>localType</att>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Dans l’élément Forme du nom <gi>nameEntry</gi> chaque partie du nom, comme le prénom, le nom de famille, le titre honorifique, peut être encodée dans un élément Partie <gi>part</gi> distinct. Partie <gi>part</gi> peut
+                     également contenir l’ensemble du nom lorsqu’il est impossible de distinguer les différentes parties composantes du nom. L’élément Dates d’utilisation <gi>useDates</gi> est employé pour toute information sous forme de
+                     date associée au nom. </p>
+      <p>Le type d’information contenue dans l’élément Partie <gi>part</gi> peut être précisé par un attribut <att>localType</att>.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>nameEntry</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      <p xml:lang="fre">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Facultatif</item>
+            <label>xml:id</label>
+            <item>Facultatif</item>
+            <label>xml:lang</label>
+            <item>Facultatif</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <p>1...∞</p>
+   </div>
+   <div type="examples">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:part localType="surname">Lemoyne</eac-cpf:part>
+            <eac-cpf:part localType="forename">Francois</eac-cpf:part>
+            <eac-cpf:authorizedForm>AFNOR</eac-cpf:authorizedForm>
+         </eac-cpf:nameEntry>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples">
+         <nameEntry>
+            <part localType="surname"> Lemoyne </part>
+            <part localType="forename"> Francois </part>
+            <authorizedForm> AFNOR </authorizedForm>
+         </nameEntry>
+      </egXML>
+   </div>
+</div>

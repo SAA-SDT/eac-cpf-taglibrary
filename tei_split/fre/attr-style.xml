@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="style"
+     type="attributeDocumentation">
+   <head>
+      <att>style</att>
+   </head>
+   
+   <div type="summary">
+      
+      <p xml:lang="fre">Utilisé pour préciser la mise en forme souhaitée pour une chaîne de caractères. Il est recommandé de fournir des valeurs conformes au standard CSS du W3C.</p>
+   </div>
+   
+   <div type="description" xml:lang="fre">
+      <p>L'attribut <att>style</att> est un attribut de l'élément Segment de texte <gi>span</gi>. Dans un nombre limité de contextes qui contiennent une description textuelle, l'élément <gi>span</gi> et son attribut
+                        <att>style</att> peuvent être utilisés pour identifier une chaîne de caractères particulière que l'on souhaite rendre dans un style spécifique. Il est fortement recommandé que la valeur de <att>style</att> soit
+                     exprimée conformément au standard CSS du W3C afin de faciliter l'interopérabilité.</p>
+   </div>
+   
+   <div type="datatype" xml:lang="fre">
+      <p>string</p>
+   </div>
+</div>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="relationEntry"
+     type="elementDocumentation">
+   <head>
+      <gi>relationEntry</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Relation Entry</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A descriptive element for relations that identifies the relationship in a textual form.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>A descriptive element for relations that provides discursive text identifying a related CPF entity, a resource created by or otherwise related to the named CPF entity (e.g., archival records), or the name of a related function.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfRelation, functionRelation, resourceRelation</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:functionRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" functionRelationType="performs">
+            <eac-cpf:relationEntry>Alumni communication management, University of
+               Glasgow</eac-cpf:relationEntry>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>The management of the University's communication with its alumni.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:functionRelation>
+         <eac-cpf:cpfRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4" cpfRelationType="hierarchical-child">
+            <eac-cpf:relationEntry>Supreme Education Council, Ministry of Education</eac-cpf:relationEntry>
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1967">1967</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1981">1981</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Together with the Minister of Education, has the task of management and
+                  supervision over the General Education.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:cpfRelation>
+         <eac-cpf:resourceRelation  xmlns:eac-cpf="urn:isbn:1-931666-33-4" resourceRelationType="creatorOf" xml:id="UA013">
+            <eac-cpf:relationEntry>Department of Romance Languages records</eac-cpf:relationEntry>
+            <eac-cpf:objectXMLWrap>
+               <ead:ead xmlns:ead="urn:isbn:1-931666-22-9">
+                  <ead:archdesc level="collection">
+                     <ead:did>
+                        <ead:unittitle>Department of Romance Languages records</ead:unittitle>
+                        <ead:unitid>UA013</ead:unitid>
+                     </ead:did>
+                  </ead:archdesc>
+               </ead:ead>
+            </eac-cpf:objectXMLWrap>
+         </eac-cpf:resourceRelation>
+      </egXML>
+   </div>
+</div>

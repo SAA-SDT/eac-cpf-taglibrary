@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="placeRole"
+     type="elementDocumentation">
+   <head>
+      <gi>placeRole</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Place Role</p>
+      
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">An element to identify the contextual role a place or jurisdiction encoded in <gi>place</gi> elements has in relation to the CPF entity.</p>
+      
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>
+         <gi>placeRole</gi> provides a contextual role for a <gi>placeEntry</gi> within
+         <gi>place</gi>. Places should be identified in <gi>placeEntry</gi> by the proper noun that commonly designates
+								the place, natural feature, or political jurisdiction. It is strongly recommended that each
+								place name is accompanied by a <gi>placeRole</gi> element in order to describe the nature
+								of the association of the place to the CPF entity.</p>
+      <p>The <att>vocabularySource</att> attribute may be used to indicate the controlled
+								vocabulary form which the <gi>placeRole</gi> term is derived.</p>
+   </div>
+   
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>place</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>scriptCode</label>
+            <item>Optional</item>
+            <label>transliteration</label>
+            <item>Optional</item>
+            <label>vocabularySource</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+      
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>Birth</eac-cpf:placeRole>
+            <eac-cpf:placeEntry>Brussels, Belgium</eac-cpf:placeEntry>
+         </eac-cpf:place>
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>Citizenship</eac-cpf:placeRole>
+            <eac-cpf:placeEntry>Greece</eac-cpf:placeEntry>
+         </eac-cpf:place>
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+            <eac-cpf:placeEntry  countryCode="GR" vocabularySource="ISO3166-2">Greece</eac-cpf:placeEntry>
+         </eac-cpf:place>
+      </egXML>
+   </div>
+</div>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0" xml:id="vocabularySource"
+     type="attributeDocumentation">
+   <head>
+      <att>vocabularySource</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="eng">Source of Vocabulary</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="eng">A value designating the source of the vocabulary from which terms are
+							derived.</p>
+      <p xml:lang="fre">Valeur désignant la source du vocabulaire duquel des termes sont issus.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p>The controlled vocabulary used to derive terms for the <gi>term</gi>,
+								<gi>placeEntry</gi>, and <gi>placeRole</gi> elements. Controlled vocabularies should be
+							declared in the <gi>conventionDeclaration</gi> element within <gi>control</gi>.</p>
+   </div>
+   <div type="description" xml:lang="fre">
+      <p>Le vocabulaire contrôlé utilisé et d’où des termes sont issus pour les éléments Terme <gi>term</gi>, Forme du nom de lieu <gi>placeEntry</gi> et Rôle du lieu <gi>roleEntry</gi>. Les vocabulaires contrôlés doivent être
+                     déclarés dans l’élément Déclaration de règle ou de convention <gi>conventionDeclaration</gi> au sein de l’élément Contrôle <gi>control</gi>.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>anyURI</p>
+   </div>
+   <div type="datatype" xml:lang="fre">
+      <p>anyURI</p>
+   </div>
+</div>
