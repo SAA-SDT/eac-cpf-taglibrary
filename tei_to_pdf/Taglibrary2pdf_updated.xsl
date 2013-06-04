@@ -4,12 +4,14 @@
     xmlns:eac-cpf="urn:isbn:1-931666-33-4"
     xmlns:ead="urn:isbn:1-931666-22-9"
     xmlns:ex="http://www.tei-c.org/ns/Examples"
+    xmlns:eg="http://www.tei-c.org/ns/Examples"
     xmlns:exml="http://workaround for xml namespace restriction/namespace"
     xmlns:xlink="http://www.w3c.org/1999/xlink" 
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema" 
     xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:example="example" exclude-result-prefixes="xs xlink eac-cpf ex exml example ead"
+    xmlns:mods="http://www.loc.gov/mods/v3"
+    xmlns:example="example" exclude-result-prefixes="xs xlink eac-cpf ex eg exml example ead mods"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
     <xsl:output indent="yes"/>
     <!--xmlns:mods="http://www.loc.gov/mods/v3"-->
@@ -102,19 +104,19 @@
         </fo:block>
         <fo:block>
             <xsl:if test="$toctype='long'">
-                <xsl:apply-templates mode="toclong" select="//tei:text/tei:front"/>
+                <xsl:apply-templates mode="toclong" select="//tei:text/tei:front/tei:div"/>
                 <xsl:apply-templates mode="toclong" select="//tei:text/tei:body"/>
                 <xsl:apply-templates mode="toclong" select="//tei:text/tei:back"/>
             </xsl:if>
             <xsl:if test="$toctype='short'">
-                <xsl:apply-templates mode="tocshort" select="//tei:text/tei:front"/>
+                <xsl:apply-templates mode="tocshort" select="//tei:text/tei:front/tei:div"/>
                 <xsl:apply-templates mode="tocshort" select="//tei:text/tei:body"/>
                 <xsl:apply-templates mode="tocshort" select="//tei:text/tei:back"/>
             </xsl:if>
         </fo:block>
     </xsl:template>
 
-    <xsl:template match="tei:front" mode="toclong">
+    <xsl:template match="tei:div" mode="toclong">
         <xsl:for-each select="tei:div">
             <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
                 space-after="6pt" text-align="left">
@@ -136,7 +138,7 @@
         </xsl:for-each>
     </xsl:template>
 
-    <xsl:template match="tei:front" mode="tocshort">
+    <xsl:template match="tei:div" mode="tocshort">
         <xsl:for-each select="tei:div">
             <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
                 space-after="6pt" text-align="left" text-align-last="justify">
@@ -183,8 +185,9 @@
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:note"/>
         </fo:block>
+        <!-- Kan inte ha [] i filnamnet -->
         <fo:block text-align="center" page-break-after="always" padding-before="150">
-            <fo:external-graphic src="../images/SAAVert[540].jpg" alignment-adjust="center"/>
+            <fo:external-graphic src="../images/SAAVert540.jpg" alignment-adjust="center"/>
             <fo:block>Chicago</fo:block>
         </fo:block>
         <!-- Page 2 with SAA info -->
@@ -409,7 +412,7 @@
     </xsl:template>
 
 
-    <xsl:template match="tei:front/tei:div">
+    <xsl:template match="tei:front/tei:div/tei:div">
         <fo:block page-break-before="always" id="{generate-id(.)}">
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
@@ -420,7 +423,7 @@
         </fo:block>
     </xsl:template>
 
-    <xsl:template match="tei:front/tei:div/tei:div">
+    <xsl:template match="tei:front/tei:div/tei:div/tei:div">
         <fo:block id="{generate-id(.)}"/>
         <xsl:apply-templates/>
     </xsl:template>
@@ -518,11 +521,7 @@
             <xsl:apply-templates select="tei:div[@type='occurrence']"/>
             <xsl:apply-templates select="tei:div[@type='mandatory']"/>
             <xsl:apply-templates select="tei:div[@type='repetable']"/>
-            <!-- Karin!!! för mycket nästling fixa!!!! -->
             <xsl:apply-templates select="tei:div[@type='examples']"/>
-            <!--<xsl:apply-templates/>-->
-            <!--<xsl:apply-templates select="tei:div"/>-->
-            <!--<xsl:apply-templates select="tei:list"/>-->
         </xsl:for-each>
     </xsl:template>
 
@@ -751,7 +750,8 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='occurrence']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <xsl:apply-templates/>
+        <!--<fo:list-block provisional-distance-between-starts="40mm">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -764,7 +764,7 @@
                     </fo:block>
                 </fo:list-item-body>
             </fo:list-item>
-        </fo:list-block>
+        </fo:list-block>-->
     </xsl:template>
 
     <xsl:template match="tei:div[@type='reference']">
@@ -851,7 +851,8 @@
 
     </xsl:template>
 
-    <xsl:template match="tei:back/tei:div/tei:list">
+<!-- Finns redan egentligen. Blir en missmatxh -->
+    <!--<xsl:template match="tei:back/tei:div/tei:list">
         <fo:list-block provisional-distance-between-starts="70mm">
             <xsl:for-each select="tei:label">
                 <fo:list-item>
@@ -870,7 +871,7 @@
                 </fo:list-item>
             </xsl:for-each>
         </fo:list-block>
-    </xsl:template>
+    </xsl:template>-->
 
     <xsl:template match="tei:hi">
         <xsl:apply-templates/>
@@ -919,12 +920,18 @@
                         </xsl:choose>
                     </fo:block>
                 </fo:list-item-label>
-               
                 <fo:list-item-body start-indent="body-start()">
-                    
+                    <xsl:for-each select="eg:egXML">
+                        <fo:block>
+                            <xsl:call-template name="newLine"/>
+                            <xsl:apply-templates/> 
+                        </fo:block>
+                    </xsl:for-each>
                     <fo:block>
                         <xsl:call-template name="newLine"/>
-                        <xsl:apply-templates mode="escape"/>
+<!--                        <xsl:text>Kommer hit</xsl:text>-->
+<!--                        <xsl:call-template name="aNewBeginning"/>-->
+<!--                        <xsl:apply-templates mode="escape"/>-->
                         <!--Borttaget för test
                             <xsl:element name="{local-name(.)}">
                             <xsl:copy-of select="@*"/>
@@ -978,6 +985,15 @@
             <xsl:copy-of select="*"/>
 <!--            <xsl:apply-templates/>-->
         </xsl:element>
+    </xsl:template>
+    
+    <xsl:template match="eac-cpf:*|ead:*">
+        <!-- Det här ger bara värdet i varje element Blir inga nya rader-->
+        <xsl:element name="{local-name()}">
+            <xsl:copy-of select="@*"/>
+            <xsl:copy-of select="*"/>
+        </xsl:element>
+        <xsl:apply-templates/>
     </xsl:template>
     
     
@@ -1241,6 +1257,13 @@
     <xsl:template match="tei:head">
         <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="left">
+            <xsl:value-of select="."/>
+        </fo:block>
+    </xsl:template>
+    
+    <xsl:template match="tei:div[type='occurenceSpecifikation']/tei:head">
+        <fo:block font-family="Times" font-size="12t" space-before="8pt"
+            text-align="left">
             <xsl:value-of select="."/>
         </fo:block>
     </xsl:template>
