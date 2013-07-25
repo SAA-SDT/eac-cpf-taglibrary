@@ -2,7 +2,8 @@ Changes needed in the xml file to make the FO work
 
 Every div that should occur in the table of contents need to have the attribute xml:id to work properly, the attribute is set with generate-id function
 The appendixes need to be numbered with the help of the attribute n
-Examples using a different namespace like if the resourcerelation contains ead the elements need a prefix example to work with the FO. There are also the need of the schemaLocation attribute.
+Examples using a different namespace like if the resourcerelation contains ead the elements need a prefix example to work with the FO. There are also the need of the schemaLocation attribute. 
+Using TEI as examples works sort of. Since the whole document is TEI the elements actually have a meaning. So to use TEI have text as namespace prefix and change the www name and remo -c to get it to work.
 
 In publicationStmt it is valuable to have this <idno type="ISBN">123456789</idno> so it can be collected automatically
 

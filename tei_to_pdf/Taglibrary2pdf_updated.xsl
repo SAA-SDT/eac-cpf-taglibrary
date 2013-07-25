@@ -11,11 +11,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema" 
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:mods="http://www.loc.gov/mods/v3"
-    xmlns:example="example" exclude-result-prefixes="xs xlink eac-cpf ex eg exml example ead mods"
+    xmlns:text="http://www.tei.org/ns/1.0"
+    xmlns:example="example" exclude-result-prefixes="xs xlink eac-cpf ex eg exml example ead mods text"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
     <xsl:output indent="yes"/>
-    <!--xmlns:mods="http://www.loc.gov/mods/v3"-->
-    <!-- Test -->
+    <!-- When it comes to translations are it going to be different text for example mandatory and so on? -->
 
     <xsl:variable name="currentLanguage">en</xsl:variable>
     <!-- xml:lang from taglibrary -->
@@ -28,9 +28,9 @@
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="Taglibrary" page-height="29.7cm"
-                    page-width="21cm" margin-top="1.5cm" margin-bottom="1.5cm" margin-left="2.5cm"
+                    page-width="21cm" margin-top="1.5cm" margin-bottom="1.0cm" margin-left="2.5cm"
                     margin-right="1.5cm">
-                    <fo:region-body margin-top="2.0cm" margin-bottom="2.0cm" margin-left="0cm"
+                    <fo:region-body margin-top="2.0cm" margin-bottom="1.5cm" margin-left="0cm"
                         margin-right="0cm" column-count="1"/>
                     <fo:region-before region-name="taglibrary-region-before" extent="1.3cm"/>
 
@@ -185,7 +185,7 @@
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:note"/>
         </fo:block>
-        <!-- Kan inte ha [] i filnamnet -->
+        <!-- No [] in filename -->
         <fo:block text-align="center" page-break-after="always" padding-before="150">
             <fo:external-graphic src="../images/SAAVert540.jpg" alignment-adjust="center"/>
             <fo:block>Chicago</fo:block>
@@ -278,6 +278,7 @@
                         <fo:table-cell>
                             <fo:block> </fo:block>
                         </fo:table-cell>
+                        <!-- After  here some text for making it generic and fit all TL should be in the TL file -->
                         <fo:table-cell>
                             <fo:block>All rights reserved. First edition <xsl:value-of
                                     select="$TheWholeDocument/tei:publicationStmt/tei:date/@when"
@@ -288,6 +289,7 @@
                         <fo:table-cell>
                             <fo:block> </fo:block>
                         </fo:table-cell>
+                        <!-- Should be in the TL file -->
                         <fo:table-cell><fo:block/>Revised 2012</fo:table-cell>
                     </fo:table-row>
                     <fo:table-row>
@@ -463,7 +465,29 @@
                 <xsl:value-of select="tei:head"/>
             </fo:block>
         </xsl:if>
-        <fo:list-block provisional-distance-between-starts="20mm">
+        <xsl:choose>
+            <xsl:when test="tei:label">
+                <fo:list-block provisional-distance-between-starts="70mm">
+                    <xsl:for-each select="tei:label">
+                        <fo:list-item>
+                            <fo:list-item-label end-indent="label-end()">
+                                <fo:block>
+                                    <xsl:apply-templates/>
+                                </fo:block>
+                            </fo:list-item-label>
+                            <fo:list-item-body start-indent="body-start()">
+                                <fo:block>
+                                    <xsl:for-each select="following-sibling::tei:item[1]">
+                                        <xsl:apply-templates/>
+                                    </xsl:for-each>
+                                </fo:block>
+                            </fo:list-item-body>
+                        </fo:list-item>
+                    </xsl:for-each>
+                </fo:list-block>
+            </xsl:when>
+            <xsl:otherwise>
+                <fo:list-block provisional-distance-between-starts="20mm">
             <xsl:for-each select="tei:item">
                 <fo:list-item>
                     <fo:list-item-label font-weight="bold" end-indent="label-end()">
@@ -482,6 +506,9 @@
                 </fo:list-item>
             </xsl:for-each>
         </fo:list-block>
+            </xsl:otherwise>
+        </xsl:choose>
+        
     </xsl:template>
 
     <xsl:template match="tei:div[@type='elements']">
@@ -509,7 +536,6 @@
                 <xsl:value-of select="tei:head/tei:gi"/>
                 <xsl:text>&gt;</xsl:text>
                 <xsl:text>&#xA0;&#xA0;</xsl:text>
-<!--                <xsl:apply-templates select="tei:div[@type='fullName']/tei:p"/>-->
                 <xsl:value-of select="tei:div[@type='fullName']/tei:p"/>
             </fo:block>
             <xsl:apply-templates select="tei:div[@type='summary']"/>
@@ -727,17 +753,6 @@
                                     </xsl:for-each>
                                 </fo:table-body>
                             </fo:table>
-                            <!--<fo:block>
-                                <xsl:for-each select="tei:list/tei:label[1]">
-                                    <xsl:apply-templates/>
-                                    <xsl:apply-templates select="following-sibling::tei:item[1]"/>
-                                </xsl:for-each>
-                                <xsl:for-each select="tei:list/tei:label[position()&gt;1]">
-                                    <xsl:text>&#xA0;</xsl:text>
-                                    <xsl:apply-templates/>
-                                    <xsl:apply-templates select="following-sibling::tei:item[1]"/>
-                                </xsl:for-each>
-                            </fo:block>-->
                         </fo:list-item-body>
                     </fo:list-item>
                 </fo:list-block>
@@ -751,6 +766,7 @@
 
     <xsl:template match="tei:div[@type='occurrence']">
         <xsl:apply-templates/>
+        <!-- Changed due to the alternative ways of stating occurances that are in the latest version -->
         <!--<fo:list-block provisional-distance-between-starts="40mm">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
@@ -851,34 +867,11 @@
 
     </xsl:template>
 
-<!-- Finns redan egentligen. Blir en missmatxh -->
-    <!--<xsl:template match="tei:back/tei:div/tei:list">
-        <fo:list-block provisional-distance-between-starts="70mm">
-            <xsl:for-each select="tei:label">
-                <fo:list-item>
-                    <fo:list-item-label end-indent="label-end()">
-                        <fo:block>
-                            <xsl:apply-templates/>
-                        </fo:block>
-                    </fo:list-item-label>
-                    <fo:list-item-body start-indent="body-start()">
-                        <fo:block>
-                            <xsl:for-each select="following-sibling::tei:item[1]">
-                                <xsl:apply-templates/>
-                            </xsl:for-each>
-                        </fo:block>
-                    </fo:list-item-body>
-                </fo:list-item>
-            </xsl:for-each>
-        </fo:list-block>
-    </xsl:template>-->
-
     <xsl:template match="tei:hi">
         <xsl:apply-templates/>
     </xsl:template>
 
-    <!-- match="tei:front/tei:div/tei:div/ex:egXML" -->
-    <xsl:template name="Tillfalligtute2">
+    <xsl:template match="tei:front/tei:div/tei:div/tei:div/ex:egXML">
         <fo:block>
             <xsl:text> </xsl:text>
         </fo:block>
@@ -929,95 +922,17 @@
                     </xsl:for-each>
                     <fo:block>
                         <xsl:call-template name="newLine"/>
-<!--                        <xsl:text>Kommer hit</xsl:text>-->
-<!--                        <xsl:call-template name="aNewBeginning"/>-->
-<!--                        <xsl:apply-templates mode="escape"/>-->
-                        <!--Borttaget för test
-                            <xsl:element name="{local-name(.)}">
-                            <xsl:copy-of select="@*"/>
-                            <xsl:copy-of select="*"/>
-                        </xsl:element>-->
-<!--                        <xsl:apply-templates/>-->
-                        <!-- Flyttat till egXML -->
-                        <!--<xsl:for-each select="*">
-                            <fo:block>
-                               <xsl:apply-templates/>
-                               <!-\- <xsl:element name="{local-name(.)}">
-                                    <xsl:copy-of select="*"/>
-<!-\-                                    <xsl:apply-templates/>-\->
-                                </xsl:element>
-                               <!-\-<xsl:text>&#x20;</xsl:text>-\->
-                                <!-\-<xsl:apply-templates mode="escape"/>-\->
-<!-\-                                <xsl:call-template name="aNewBeginning"/>-\->
-<!-\-                                <xsl:call-template name="eg"/>-\->
-                                <xsl:call-template name="newLine"/>-\->
-                               
-                            </fo:block>
-                        </xsl:for-each>-->
-                    </fo:block>
-                    
-                </fo:list-item-body>
-                
+                    </fo:block>                    
+                </fo:list-item-body>                
             </fo:list-item>
         </fo:list-block>
     </xsl:template>
     
-    <!-- match="ex:egXML" -->
-    <xsl:template name="tillfalligtute4" >
-       <fo:block> 
-           <xsl:for-each select="*">
-            
-            <xsl:apply-templates mode="escape"/>
-               <!--<xsl:element name="{local-name(.)}">
-            <xsl:copy-of select="@*"/>
-                   <xsl:copy-of select="*"/>
-        </xsl:element>-->
- 
-        <xsl:call-template name="newLine"/> 
-            
-        </xsl:for-each>
-        </fo:block>
-    </xsl:template>
-    
-    <xsl:template match="eac-cpf:*|ead:*" mode="escape">
-        <xsl:element name="{local-name(.)}">
-            <xsl:copy-of select="@*"/>
-            <xsl:copy-of select="*"/>
-<!--            <xsl:apply-templates/>-->
-        </xsl:element>
-    </xsl:template>
-    
-    <xsl:template match="eac-cpf:*|ead:*">
-        <!-- Det här ger bara värdet i varje element Blir inga nya rader-->
-        <xsl:element name="{local-name()}">
-            <xsl:copy-of select="@*"/>
-            <xsl:copy-of select="*"/>
-        </xsl:element>
-        <xsl:apply-templates/>
-    </xsl:template>
-    
-    
-  
-    <xsl:template name="aNewBeginning">
-        <xsl:element name="{local-name(.)}">
-            <xsl:copy-of select="@*"/>
-            <xsl:call-template name="aNewBeginning"/>
-        </xsl:element>
-    </xsl:template>
-
-
     <xsl:template name="eg">
         <xsl:choose>
            <xsl:when test="name()!='eac-cpf:objectXMLWrap'">
-               <!-- Here we should get the transformation to ignore the egXML-tag!!!!  -->
-               
                <fo:block>
                     <xsl:call-template name="newLine"/>
-                   <!--<xsl:element name="{local-name(.)}">
-                       <xsl:copy-of select="@*"/>
-                       <xsl:copy-of select="*"/>
-                       
-                   </xsl:element>-->
                     <xsl:text>&lt;</xsl:text>
                     <xsl:value-of select="local-name()"/>
                     <xsl:for-each select="@*">
@@ -1046,36 +961,26 @@
                     <xsl:value-of select="local-name()"/>
                     <xsl:text>&gt;</xsl:text>
                     <xsl:call-template name="newLine"/>
-                </fo:block>
-               
+                </fo:block>               
             </xsl:when>
             <xsl:otherwise>
-                <xsl:call-template name="objectXMLWrap"/>
+                <xsl:text>&lt;objectXMLWrap&gt;</xsl:text>
+                <fo:block>
+                    <xsl:apply-templates mode="escape"/>
+                </fo:block>
+                <xsl:text>&lt;/objectXMLWrap&gt;</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     
-<!--match="eac-cpf:* |example:* -->
-    <xsl:template name="Tillfalligtute3">
+<!-- In this template all occuring other namespaceprefixis needs to be added -->
+    <xsl:template  match="eac-cpf:* |example:* | ead:* | mods:* | text:*">
         <xsl:variable name="myDepth"
             select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*5"/>
-        <!-- start-indent="{70 + $myDepth}" end-indent="{$myDepth}" -->
         <fo:block start-indent="body-start() + {$myDepth}mm" wrap-option="wrap">
             <xsl:call-template name="newLine"/>
-            <!--<xsl:element name="{local-name(.)}">
-                <xsl:copy-of select="@*"/>
-                <xsl:apply-templates select="* | text()"/>
-            </xsl:element>-->
-            <!--<xsl:element name="{local-name(.)}">
-                <xsl:copy-of select="@*"/>
-                <xsl:copy-of select="*"/>
-                
-            </xsl:element>-->
-            <!--            <xsl:apply-templates mode="escape"/>-->
-            <!--<xsl:call-template name="makeIndent"/>-->
             <xsl:text>&lt;</xsl:text>
             <xsl:value-of select="local-name()"/>
-            <!-- Only gives attributes and that doesnt include the xmlns: -->
             <xsl:for-each select="@*">
                 <xsl:text>&#x20;</xsl:text>
                 <xsl:choose>
@@ -1110,8 +1015,8 @@
         </fo:block>
     </xsl:template>
 
-<!--  -->
-    <xsl:template match="eac-cpf:objectXMLWrap" name="objectXMLWrap">
+<!-- Templeted not used -->
+    <xsl:template match="eac-cpf:objectXMLWrapp" name="objectXMLWrapp">
         <xsl:variable name="myDepth"
             select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*1"/>
         <fo:block start-indent="body-start() + {$myDepth}mm" wrap-option="wrap">
@@ -1123,9 +1028,7 @@
         </fo:block>
     </xsl:template>
 
-    <!-- match="*" mode="escape" -->
-    <xsl:template name="Tillfalligtute">
-        <!-- Xlink och xsi kommer inte med det blir namespacec ibland på alla taggar -->
+    <xsl:template match="*" mode="escape">
         <xsl:variable name="myDepth"
             select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*5"/>
         <fo:block start-indent="body-start() + {$myDepth}mm" wrap-option="wrap">
@@ -1154,13 +1057,6 @@
                     <xsl:text>'</xsl:text>
                 </xsl:if>
             </xsl:for-each>
-            
-            <!--<xsl:text> xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'</xsl:text>-->
-            
-            <!--<xsl:if test="namespace-uri()='http://www.w3c.org/1999/xlink'">
-                <xsl:text>xlink:</xsl:text>
-                <xsl:value-of select="local-name()"/>
-            </xsl:if>-->
 
             <!-- Attributes -->
             <xsl:for-each select="@*">
@@ -1180,10 +1076,6 @@
             <xsl:apply-templates select="node()" mode="escape"/>
 
             <!-- Closing tag -->
-            <!--<xsl:text>&lt;/</xsl:text>
-        <xsl:value-of select="name()"/>
-        <xsl:text>&gt;</xsl:text>-->
-
             <fo:inline keep-together.within-line="always" keep-with-previous.within-line="">
                 <xsl:text>&lt;/</xsl:text>
                 <xsl:value-of select="name()"/>
@@ -1192,13 +1084,6 @@
         </fo:block>
 
     </xsl:template>
-
-    <!--<xsl:template match="text()" mode="escape">
-        <xsl:call-template name="escape-xml">
-            <xsl:with-param name="text" select="."/>
-        </xsl:call-template>
-    </xsl:template>-->
-
 
     <xsl:template name="escape-xml">
         <xsl:param name="text"/>

@@ -5237,7 +5237,7 @@
       </eg:egXML>
       <eg:egXML xml:lang="eng" valid="true">
          <eac-cpf:objectXMLWrap>
-            <tei:bibl xmlns:tei="http://www.tei-c.org/ns/1.0" default="false">
+            <!--<tei:bibl xmlns:tei="http://www.tei-c.org/ns/1.0" default="false">
                <tei:title>
                   <tei:emph rend="italic">Paris d'hier et d'aujourd'hui</tei:emph>
                </tei:title>
@@ -5246,7 +5246,17 @@
                   <tei:name>Roger Henrard</tei:name>
                   <tei:name>Yann Arthus-Bertrand</tei:name>
                </tei:respStmt>
-            </tei:bibl>
+            </tei:bibl>-->
+            <text:bibl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:text="http://www.tei.org/ns/1.0"  xsi:schemaLocation="http://www.tei.org/ns/1.0 tei.xsd" default="false">
+               <text:title>
+                  <text:emph rend="italic">Paris d'hier et d'aujourd'hui</text:emph>
+               </text:title>
+               <text:respStmt>
+                  <text:resp>photographes</text:resp>
+                  <text:name>Roger Henrard</text:name>
+                  <text:name>Yann Arthus-Bertrand</text:name>
+               </text:respStmt>
+            </text:bibl>
          </eac-cpf:objectXMLWrap>
       </eg:egXML>
    </div>
