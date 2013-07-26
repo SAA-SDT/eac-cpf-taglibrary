@@ -14,9 +14,11 @@
     xmlns:text="http://www.tei.org/ns/1.0"
     xmlns:example="example" exclude-result-prefixes="xs xlink eac-cpf ex eg exml example ead mods text"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
+    
     <xsl:output indent="yes"/>
-    <!-- When it comes to translations are it going to be different text for example mandatory and so on? -->
-
+    <!-- Headingtranslations in an own xml-file using the currentLanguage to fetch them -->
+    <xsl:variable name="headingtranslation" select="document('../tei_to_pdf/Headingtranslation.xml')"/>
+    
     <xsl:variable name="currentLanguage">en</xsl:variable>
     <!-- xml:lang from taglibrary -->
     <xsl:variable name="toctype">short</xsl:variable>
@@ -607,11 +609,13 @@
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
+                        <!-- My usual problem to get it to read from the other file, have the node tree so its navigating the tree thats not working.... -->
+                        <xsl:value-of select="$headingtranslation//terms/term[@name='summary']/translation[@lang=$currentLanguage]"/>
                         <xsl:text>Summary: </xsl:text>
                     </fo:block>
                 </fo:list-item-label>
                 <fo:list-item-body start-indent="body-start()">
-                    <fo:block>
+                    <fo:block>t
                         <xsl:apply-templates/>
                     </fo:block>
                 </fo:list-item-body>
