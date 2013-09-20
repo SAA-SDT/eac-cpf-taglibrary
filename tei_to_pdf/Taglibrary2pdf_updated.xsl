@@ -17,7 +17,7 @@
     
     <xsl:output indent="yes"/>
     <!-- Headingtranslations in an own xml-file using the currentLanguage to fetch them -->
-    <xsl:variable name="headingtranslation" select="document('../tei_to_pdf/Headingtranslation.xml')"/>
+    <xsl:variable name="headingtranslation" select="document('Headingtranslation.xml')"/>
     
     <xsl:variable name="currentLanguage">en</xsl:variable>
     <!-- xml:lang from taglibrary -->
@@ -25,6 +25,12 @@
     <!-- long | short -->
     <xsl:param name="spaceCharacter"> </xsl:param>
     <!-- For egxml formatting -->
+    <!-- My usual problem to get it to read from the other file, have the node tree so its navigating the tree thats not working.... -->
+    <!--<xsl:value-of select="$headingtranslation//terms/term[@name='summary']/translation[@lang=$currentLanguage]"/>-->
+    <xsl:variable name="summary" select="$headingtranslation//term[@name='summary']/translation[@lang=$currentLanguage]"/>
+        
+    
+
 
     <xsl:template match="/">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
@@ -609,13 +615,12 @@
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
-                        <!-- My usual problem to get it to read from the other file, have the node tree so its navigating the tree thats not working.... -->
-                        <xsl:value-of select="$headingtranslation//terms/term[@name='summary']/translation[@lang=$currentLanguage]"/>
                         <xsl:text>Summary: </xsl:text>
+                        <xsl:value-of select="$summary"/><xsl:text>: </xsl:text>
                     </fo:block>
                 </fo:list-item-label>
                 <fo:list-item-body start-indent="body-start()">
-                    <fo:block>t
+                    <fo:block>
                         <xsl:apply-templates/>
                     </fo:block>
                 </fo:list-item-body>
@@ -1150,11 +1155,12 @@
         </fo:block>
     </xsl:template>
     
-    <xsl:template match="tei:div[type='occurenceSpecifikation']/tei:head">
+    <!--<xsl:template match="tei:div[@type='occurenceSpecifikation']/tei:head">
+        <!-\- head perhaps to large? and thats because it never finds this template! -\->
         <fo:block font-family="Times" font-size="12t" space-before="8pt"
             text-align="left">
             <xsl:value-of select="."/>
         </fo:block>
-    </xsl:template>
+    </xsl:template>-->
 
 </xsl:stylesheet>
