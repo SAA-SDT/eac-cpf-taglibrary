@@ -7,4 +7,50 @@
     <term name="description">
         <translation lang="en">Description</translation>
     </term>
+    <term name="mayoccurwithin">
+        <translation lang="en">May occur within</translation>
+    </term>
+    <term name="mandatory">
+        <translation lang="en">Mandatory</translation>
+    </term>
+    <term name="optional">
+        <translation lang="en">Optional</translation>
+    </term>
+    <term name="repeatable">
+        <translation lang="en">Repeatable</translation>
+    </term>
+    <term name="repeatablenonrepeatable">
+        <translation lang="en">Non-repeatable</translation>
+    </term>
+    <term name="attributes">
+        <translation lang="en">Attributes</translation>
+    </term>
+    <term name="references">
+        <translation lang="en">References</translation>
+    </term>
+    <term name="datatype">
+        <translation lang="en">Datatype</translation>
+    </term>
+    <term name="toc">
+        <translation lang="en">Table of Contents</translation>
+    </term>
+    <term name="elements">
+        <translation lang="en">Elements</translation>
+    </term>
+    <term name="maycontain">
+        <translation lang="en">May contain</translation>
+    </term>
+    <term name="occurrence">
+        <translation lang="en">Occurrence</translation>
+    </term>
+    <term name="appendix">
+        <translation lang="en">Appendix</translation>
+    </term>
+    <term name="examples">
+        <translation lang="en">Examples</translation>
+    </term>
+    <term name="example">
+        <translation lang="en">Example</translation>
+    </term>
 </terms>
+
