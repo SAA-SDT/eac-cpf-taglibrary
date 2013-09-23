@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/taglibrary_translations.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <terms>
     <term name="summary">
         <translation lang="en">Summary</translation>

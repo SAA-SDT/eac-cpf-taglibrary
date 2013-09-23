@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="terms">
+      <oneOrMore>
+        <element name="term">
+          <attribute name="name">
+            <data type="NCName"/>
+          </attribute>
+          <oneOrMore>
+            <element name="translation">
+              <attribute name="lang">
+                <data type="NCName"/>
+              </attribute>
+              <text/>
+            </element>
+          </oneOrMore>
+        </element>
+      </oneOrMore>
+    </element>
+  </start>
+</grammar>
