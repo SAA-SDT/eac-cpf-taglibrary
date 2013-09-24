@@ -20,7 +20,7 @@
     <term name="repeatable">
         <translation lang="en">Repeatable</translation>
     </term>
-    <term name="repeatablenonrepeatable">
+    <term name="nonrepeatable">
         <translation lang="en">Non-repeatable</translation>
     </term>
     <term name="attributes">

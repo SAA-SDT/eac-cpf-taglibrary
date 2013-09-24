@@ -14,6 +14,16 @@
    </div>
    <div type="description">
       <p xml:lang="en">Description you can use <gi>to get anglebrackets</gi></p>
+      <p>You can create an bullitpoint list using the list shown below the label needs to be here 
+         for validation but gets ignored in the transformation</p>
+      <p>
+         <list type="bulleted">
+            <label>1</label>
+            <item>Text for bullet 1</item>
+            <label>2</label>
+            <item>Text for bullet 2</item>
+         </list>
+      </p>
    </div>
    <div type="mayContain">
       <p>Can contain for example [text] or elementA</p>

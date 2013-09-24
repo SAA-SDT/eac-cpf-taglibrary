@@ -419,6 +419,15 @@
          thesaurus, controlled vocabulary, or other standard used in formulating and compiling the
 								EAC-CPF description. It is recommended that the value be selected from an authorized list of
 								codes. An example of such a list may be the MARC Code List (http://www.loc.gov/marc/sourcelist/).</p>
+      <!-- Test of bullet list -->
+      <p>
+         <list type="bulleted">
+            <label>1</label>
+            <item>Bullet 1</item>
+            <label>2</label>
+            <item>Bullet 2</item>
+         </list>
+      </p>
    </div>
    
    <div type="mayContain" org="uniform" sample="complete" part="N">
