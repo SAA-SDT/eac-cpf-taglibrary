@@ -23,7 +23,7 @@
     <!-- Problems with greek accents. Due to the last step of the transformation and selection of fonts this characters arent beeing displayed correctly  -->
     
     <xsl:output indent="yes"/>
-    <xsl:variable name="currentLanguage">gr</xsl:variable>
+    <xsl:variable name="currentLanguage">en</xsl:variable>
     <!-- xml:lang from taglibrary -->
     <xsl:variable name="toctype">short</xsl:variable>
     <!-- long | short -->
@@ -52,94 +52,91 @@
     <xsl:variable name="appendix" select="$headingtranslations//terms/term[@name='appendix']/translation[@lang=$currentLanguage]"/>
     <xsl:variable name="examples" select="$headingtranslations//terms/term[@name='examples']/translation[@lang=$currentLanguage]"/>
     <xsl:variable name="example" select="$headingtranslations//terms/term[@name='example']/translation[@lang=$currentLanguage]"/>
-    
-
 
     <xsl:template match="/">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
             <fo:layout-master-set>
-                <fo:simple-page-master master-name="Taglibrary" page-height="29.7cm"
-                    page-width="21cm" margin-top="1.5cm" margin-bottom="1.0cm" margin-left="2.5cm"
-                    margin-right="1.5cm">
-                    <fo:region-body margin-top="2.0cm" margin-bottom="1.5cm" margin-left="0cm"
-                        margin-right="0cm" column-count="1"/>
-                    <fo:region-before region-name="taglibrary-region-before" extent="1.3cm"/>
-
-                    <fo:region-after region-name="taglibrary-region-after" extent="0.5cm"/>
-                </fo:simple-page-master>
-
+                    <fo:simple-page-master master-name="taglibrary-even" 
+                        page-height="297mm" page-width="210mm"
+                        margin-top="1.5cm"
+                        margin-bottom="1.5cm"
+                        margin-left="1.5cm"
+                        margin-right="1.5cm"
+                        column-count="1">
+                        <fo:region-body region-name="taglibrary-region-body" margin-top="2.0cm" 
+                            margin-bottom="1.5cm" 
+                            margin-left="1.5cm"
+                            margin-right="1.5cm" 
+                            column-count="1"/>
+                        <fo:region-before region-name="taglibrary-region-before-even" extent="1.3cm"/>
+                        <fo:region-after region-name="taglibrary-region-after-even" extent="0.5cm"/>
+                    </fo:simple-page-master>
+                    <fo:simple-page-master master-name="taglibrary-odd" 
+                        page-height="297mm" page-width="210mm"
+                        margin-top="1.5cm"
+                        margin-bottom="1.5cm"
+                        margin-left="1.5cm"
+                        margin-right="1.5cm"
+                        column-count="1">
+                        <fo:region-body region-name="taglibrary-region-body" margin-top="2.0cm" 
+                            margin-bottom="1.5cm" 
+                            margin-left="1.5cm"
+                            margin-right="1.5cm" 
+                            column-count="1"/>
+                        <fo:region-before region-name="taglibrary-region-before-odd" extent="1.3cm"/>
+                        <fo:region-after region-name="taglibrary-region-after-odd" extent="0.5cm"/>
+                    </fo:simple-page-master>
+                    <fo:page-sequence-master master-name="frames">
+                        <fo:repeatable-page-master-alternatives>
+                            <fo:conditional-page-master-reference master-reference="taglibrary-even" odd-or-even="even"/>
+                            <fo:conditional-page-master-reference master-reference="taglibrary-odd" odd-or-even="odd"/>
+                        </fo:repeatable-page-master-alternatives>
+                    </fo:page-sequence-master>
                 <fo:simple-page-master master-name="Frontmatter" page-height="29.7cm"
                     page-width="21cm" margin-top="2.5cm" margin-bottom="2.5cm" margin-left="2.5cm"
                     margin-right="2.5cm">
-                    <fo:region-body margin-top="2.4cm" margin-bottom="2.4cm" margin-left="0cm"
-                        margin-right="2.4cm" column-count="1" display-align="center"/>
-                    <fo:region-before region-name="frontmatter-region-before" extent="2.3cm"/>
-
+                    <fo:region-body region-name="frontmatter-body" margin-top="2.4cm" margin-bottom="2.4cm" margin-left="0cm"
+                        margin-right="2.4cm" column-count="1" display-align="center" />
+                    <fo:region-before region-name="frontmatter-region-before" extent="2.3cm"/>                    
                     <fo:region-after region-name="frontmatter-region-after" extent="2.3cm"/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
 
             <fo:page-sequence master-reference="Frontmatter">
-                <fo:flow flow-name="xsl-region-body">
+                <fo:flow flow-name="frontmatter-body">
                     <xsl:apply-templates mode="title"
                         select="tei:TEI/tei:text/tei:front/tei:titlePage"/>
                 </fo:flow>
             </fo:page-sequence>
-
-
-
-            <fo:page-sequence master-reference="Taglibrary">
-                <fo:static-content flow-name="taglibrary-region-before">
+            
+            <fo:page-sequence master-reference="frames" force-page-count="end-on-even">
+                <fo:static-content flow-name="taglibrary-region-before-even">
                     <fo:block font-family="Arial, Garamond, serif" font-size="10pt"
-                        text-align="right" alignment-adjust="middle">
+                        text-align="start" alignment-adjust="middle">
                         <fo:retrieve-marker retrieve-class-name="taglibrary-head"/>
                     </fo:block>
                 </fo:static-content>
-                
-                <fo:static-content flow-name="taglibrary-region-after">
-                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="end">
-                        <fo:page-number/>
+            <fo:static-content flow-name="taglibrary-region-after-even">
+                <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="start">
+                    <fo:page-number/>
+                </fo:block>
+            </fo:static-content>
+                <fo:static-content flow-name="taglibrary-region-before-odd">
+                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt"
+                        text-align="end" alignment-adjust="middle">
+                        <fo:retrieve-marker retrieve-class-name="taglibrary-head"/>
                     </fo:block>
                 </fo:static-content>
-
-                <!--<fo:static-content flow-name="taglibrary-region-after-odd">
-                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="end">
-                        <fo:page-number/>
-                    </fo:block>
-                </fo:static-content>-->
-                
-                <!--<fo:static-content flow-name="taglibrary-region-after-even">
-                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="start">
-                        <fo:page-number/>
-                    </fo:block>
-                </fo:static-content>-->
-
-
-                <fo:flow flow-name="xsl-region-body">
-                    <xsl:apply-templates select="tei:TEI"/>
-                </fo:flow>
+            <fo:static-content flow-name="taglibrary-region-after-odd">
+                <fo:block font-family="Arial, Garamond, serif" font-size="10pt"  text-align="end">
+                    <fo:page-number/>
+                </fo:block>
+            </fo:static-content>
+               <fo:flow flow-name="taglibrary-region-body">
+                        <xsl:apply-templates select="tei:TEI"/>
+               </fo:flow>            
             </fo:page-sequence>
         </fo:root>
-    </xsl:template>
-    
-    <xsl:template name="footer.content">
-        <xsl:param name="sequence" select="''"/>
-        <xsl:choose>
-            <xsl:when test="$sequence = 'odd'">
-                <fo:static-content flow-name="taglibrary-region-after-even">
-                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="end">
-                        <fo:page-number/>
-                    </fo:block>
-                </fo:static-content>
-            </xsl:when>
-            <xsl:when test="$sequence = 'even'">
-                <fo:static-content flow-name="taglibrary-region-after-even">
-                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="start">
-                        <fo:page-number/>
-                    </fo:block>
-                </fo:static-content>
-            </xsl:when>
-        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="tei:TEI">
@@ -250,7 +247,7 @@
         </fo:block>
         <!-- No [] in filename -->
         <fo:block text-align="center" page-break-after="always" padding-before="150">
-            <fo:external-graphic src="../images/SAAVert540.jpg" alignment-adjust="center"/>
+            <fo:external-graphic src="../images/SAAVert540.jpg" alignment-adjust="middle"/>
             <fo:block>Chicago</fo:block>
         </fo:block>
         <!-- Page 2 with SAA info -->
@@ -588,7 +585,8 @@
             <xsl:value-of select="$elements"/>
         </fo:block>
         <xsl:for-each select="tei:div[@type='elementDocumentation']">
-            <fo:block font-family="Times" page-break-before="always"
+            <fo:block font-family="Times" font-size="18pt" font-weight="bold" space-before="18pt"
+                space-after="12pt" text-align="left" page-break-before="always"
                 id="{generate-id(.)}">
                 <fo:marker marker-class-name="taglibrary-head">
                     <fo:block>
