@@ -20,8 +20,10 @@
     extension-element-prefixes="exslt"
     version="2.0">
     
+    <!-- Problems with greek accents. Due to the last step of the transformation and selection of fonts this characters arent beeing displayed correctly  -->
+    
     <xsl:output indent="yes"/>
-    <xsl:variable name="currentLanguage">en</xsl:variable>
+    <xsl:variable name="currentLanguage">gr</xsl:variable>
     <!-- xml:lang from taglibrary -->
     <xsl:variable name="toctype">short</xsl:variable>
     <!-- long | short -->
@@ -63,7 +65,7 @@
                         margin-right="0cm" column-count="1"/>
                     <fo:region-before region-name="taglibrary-region-before" extent="1.3cm"/>
 
-                    <fo:region-after region-name="taglibrary-region-after" extent="1.3cm"/>
+                    <fo:region-after region-name="taglibrary-region-after" extent="0.5cm"/>
                 </fo:simple-page-master>
 
                 <fo:simple-page-master master-name="Frontmatter" page-height="29.7cm"
@@ -93,12 +95,24 @@
                         <fo:retrieve-marker retrieve-class-name="taglibrary-head"/>
                     </fo:block>
                 </fo:static-content>
-
+                
                 <fo:static-content flow-name="taglibrary-region-after">
                     <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="end">
                         <fo:page-number/>
                     </fo:block>
                 </fo:static-content>
+
+                <!--<fo:static-content flow-name="taglibrary-region-after-odd">
+                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="end">
+                        <fo:page-number/>
+                    </fo:block>
+                </fo:static-content>-->
+                
+                <!--<fo:static-content flow-name="taglibrary-region-after-even">
+                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="start">
+                        <fo:page-number/>
+                    </fo:block>
+                </fo:static-content>-->
 
 
                 <fo:flow flow-name="xsl-region-body">
@@ -106,6 +120,26 @@
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
+    </xsl:template>
+    
+    <xsl:template name="footer.content">
+        <xsl:param name="sequence" select="''"/>
+        <xsl:choose>
+            <xsl:when test="$sequence = 'odd'">
+                <fo:static-content flow-name="taglibrary-region-after-even">
+                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="end">
+                        <fo:page-number/>
+                    </fo:block>
+                </fo:static-content>
+            </xsl:when>
+            <xsl:when test="$sequence = 'even'">
+                <fo:static-content flow-name="taglibrary-region-after-even">
+                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="start">
+                        <fo:page-number/>
+                    </fo:block>
+                </fo:static-content>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
 
     <xsl:template match="tei:TEI">
@@ -554,8 +588,7 @@
             <xsl:value-of select="$elements"/>
         </fo:block>
         <xsl:for-each select="tei:div[@type='elementDocumentation']">
-            <fo:block font-family="Times" font-size="18pt" font-weight="bold" space-before="18pt"
-                space-after="12pt" text-align="left" page-break-before="always"
+            <fo:block font-family="Times" page-break-before="always"
                 id="{generate-id(.)}">
                 <fo:marker marker-class-name="taglibrary-head">
                     <fo:block>
@@ -635,7 +668,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='summary']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -656,7 +689,7 @@
     
 
     <xsl:template match="tei:div[@type='description']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -674,7 +707,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='mayContain']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -692,7 +725,7 @@
     </xsl:template>
     
     <xsl:template match="tei:div[@type='mayOccurWithin']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -710,7 +743,7 @@
     </xsl:template>
     
     <xsl:template match="tei:div[@type='mandatory']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -730,7 +763,7 @@
     </xsl:template>
     
     <xsl:template match="tei:div[@type='repeatable']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -752,7 +785,7 @@
     <xsl:template match="tei:div[@type='attributes']/tei:p">
         <xsl:choose>
             <xsl:when test="tei:list[@type='gloss']">
-                <fo:list-block provisional-distance-between-starts="40mm">
+                <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
                     <fo:list-item>
                         <fo:list-item-label end-indent="label-end()">
                             <fo:block>
@@ -832,7 +865,7 @@
         <xsl:apply-templates/>
         <!-- Changed due to the alternative ways of stating occurances that are in the latest version -->
         <!-- If added Occurance need to be collected from the variable -->
-        <!--<fo:list-block provisional-distance-between-starts="40mm">
+        <!--<fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -849,7 +882,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='reference']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -867,7 +900,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='datatype']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -885,7 +918,7 @@
     </xsl:template>
 
     <xsl:template match="tei:p">
-        <fo:block>
+        <fo:block space-after="6pt">
             <xsl:apply-templates/>
         </fo:block>
     </xsl:template>
@@ -968,7 +1001,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='examples']">
-        <fo:list-block provisional-distance-between-starts="40mm">
+        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
