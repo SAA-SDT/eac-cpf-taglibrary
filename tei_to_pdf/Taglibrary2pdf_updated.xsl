@@ -23,7 +23,7 @@
     <!-- Problems with greek accents. Due to the last step of the transformation and selection of fonts this characters arent beeing displayed correctly  -->
     
     <xsl:output indent="yes"/>
-    <xsl:variable name="currentLanguage">en</xsl:variable>
+    <xsl:variable name="currentLanguage">gr</xsl:variable>
     <!-- xml:lang from taglibrary -->
     <xsl:variable name="toctype">short</xsl:variable>
     <!-- long | short -->
@@ -54,7 +54,7 @@
     <xsl:variable name="example" select="$headingtranslations//terms/term[@name='example']/translation[@lang=$currentLanguage]"/>
 
     <xsl:template match="/">
-        <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+        <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-selection-strategy="character-by-character" font-family="Times, Pala">
             <fo:layout-master-set>
                     <fo:simple-page-master master-name="taglibrary-even" 
                         page-height="297mm" page-width="210mm"
@@ -111,24 +111,24 @@
             
             <fo:page-sequence master-reference="frames" force-page-count="end-on-even">
                 <fo:static-content flow-name="taglibrary-region-before-even">
-                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt"
+                    <fo:block font-size="10pt"
                         text-align="start" alignment-adjust="middle">
                         <fo:retrieve-marker retrieve-class-name="taglibrary-head"/>
                     </fo:block>
                 </fo:static-content>
             <fo:static-content flow-name="taglibrary-region-after-even">
-                <fo:block font-family="Arial, Garamond, serif" font-size="10pt" text-align="start">
+                <fo:block font-size="10pt" text-align="start">
                     <fo:page-number/>
                 </fo:block>
             </fo:static-content>
                 <fo:static-content flow-name="taglibrary-region-before-odd">
-                    <fo:block font-family="Arial, Garamond, serif" font-size="10pt"
+                    <fo:block font-size="10pt"
                         text-align="end" alignment-adjust="middle">
                         <fo:retrieve-marker retrieve-class-name="taglibrary-head"/>
                     </fo:block>
                 </fo:static-content>
             <fo:static-content flow-name="taglibrary-region-after-odd">
-                <fo:block font-family="Arial, Garamond, serif" font-size="10pt"  text-align="end">
+                <fo:block font-size="10pt"  text-align="end">
                     <fo:page-number/>
                 </fo:block>
             </fo:static-content>
@@ -153,7 +153,7 @@
     </xsl:template>
 
     <xsl:template name="toc">
-        <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center" page-break-before="always">
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
@@ -178,7 +178,7 @@
 
     <xsl:template match="tei:div" mode="toclong">
         <xsl:for-each select="tei:div">
-            <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+            <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
                 space-after="6pt" text-align="left">
                 <fo:inline>
                     <fo:basic-link internal-destination="{generate-id(.)}">
@@ -200,7 +200,7 @@
 
     <xsl:template match="tei:div" mode="tocshort">
         <xsl:for-each select="tei:div">
-            <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+            <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
                 space-after="6pt" text-align="left" text-align-last="justify">
                 <fo:inline>
                     <xsl:value-of select="tei:head"/>
@@ -221,27 +221,27 @@
     </xsl:template>
 
     <xsl:template match="tei:front/tei:titlePage" mode="title">
-        <fo:block font-family="Times" font-size="24pt" font-weight="bold" space-before="18pt"
+        <fo:block font-size="24pt" font-weight="bold" space-before="18pt"
             space-after="12pt" text-align="center">
             <xsl:apply-templates select="tei:docTitle/tei:titlePart"/>
         </fo:block>
-        <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:docEdition"/>
         </fo:block>
-        <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:byline"/>
         </fo:block>
-        <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:docAuthor[1]"/>
         </fo:block>
-        <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:docAuthor[2]"/>
         </fo:block>
-        <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:note"/>
         </fo:block>
@@ -391,7 +391,7 @@
         <xsl:for-each select="tei:div">
             <xsl:choose>
                 <xsl:when test="@type='elements'">
-                    <fo:block font-family="Times" font-size="14pt" font-weight="bold"
+                    <fo:block font-size="14pt" font-weight="bold"
                         space-before="8pt" space-after="6pt" text-align="left">
                         <xsl:value-of select="$elements"/>
                         <xsl:text>: </xsl:text>
@@ -407,7 +407,7 @@
                     </fo:block>
                 </xsl:when>
                 <xsl:when test="@type='attributes'">
-                    <fo:block font-family="Times" font-size="14pt" font-weight="bold"
+                    <fo:block font-size="14pt" font-weight="bold"
                         space-before="8pt" space-after="6pt" text-align="left">
                         <xsl:value-of select="$attributes"/>
                         <xsl:text>: </xsl:text>
@@ -423,7 +423,7 @@
                     </fo:block>
                 </xsl:when>
                 <xsl:when test="@type='appendix'">
-                    <fo:block font-family="Times" font-size="14pt" font-weight="bold"
+                    <fo:block font-size="14pt" font-weight="bold"
                         space-before="8pt" space-after="6pt" text-align="left">
                         <fo:inline>
                             <fo:basic-link internal-destination="{generate-id(.)}">
@@ -440,7 +440,7 @@
         <xsl:for-each select="tei:div">
             <xsl:choose>
                 <xsl:when test="@type='elements'">
-                    <fo:block font-family="Times" font-size="14pt" font-weight="bold"
+                    <fo:block font-size="14pt" font-weight="bold"
                         space-before="8pt" space-after="6pt" text-align="left"
                         text-align-last="justify">
                         <fo:inline>
@@ -451,7 +451,7 @@
                     </fo:block>
                 </xsl:when>
                 <xsl:when test="@type='attributes'">
-                    <fo:block font-family="Times" font-size="14pt" font-weight="bold"
+                    <fo:block font-size="14pt" font-weight="bold"
                         space-before="8pt" space-after="6pt" text-align="left"
                         text-align-last="justify">
                         <fo:inline>
@@ -462,7 +462,7 @@
                     </fo:block>
                 </xsl:when>
                 <xsl:when test="@type='appendix'">
-                    <fo:block font-family="Times" font-size="14pt" font-weight="bold"
+                    <fo:block font-size="14pt" font-weight="bold"
                         space-before="8pt" space-after="6pt" text-align="left"
                         text-align-last="justify">
                         <fo:inline>
@@ -523,7 +523,7 @@
     <xsl:template match="tei:list[@type='simple']">
         <!-- List with only text -->
         <xsl:if test="tei:head">
-            <fo:block font-family="Times" font-size="18pt" font-weight="bold" space-before="18pt"
+            <fo:block font-size="18pt" font-weight="bold" space-before="18pt"
                 space-after="12pt" text-align="left">
                 <xsl:value-of select="tei:head"/>
             </fo:block>
@@ -575,7 +575,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='elements']">
-        <fo:block font-family="Times" font-size="24pt" font-weight="bold" space-before="18pt"
+        <fo:block font-size="24pt" font-weight="bold" space-before="18pt"
             space-after="12pt" text-align="left" page-break-before="always" id="{generate-id(.)}">
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
@@ -585,7 +585,7 @@
             <xsl:value-of select="$elements"/>
         </fo:block>
         <xsl:for-each select="tei:div[@type='elementDocumentation']">
-            <fo:block font-family="Times" font-size="18pt" font-weight="bold" space-before="18pt"
+            <fo:block font-size="18pt" font-weight="bold" space-before="18pt"
                 space-after="12pt" text-align="left" page-break-before="always"
                 id="{generate-id(.)}">
                 <fo:marker marker-class-name="taglibrary-head">
@@ -615,7 +615,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='attributes' and parent::tei:body]">
-        <fo:block font-family="Times" font-size="24pt" font-weight="bold" space-before="18pt"
+        <fo:block font-size="24pt" font-weight="bold" space-before="18pt"
             space-after="12pt" text-align="left" page-break-before="always" id="{generate-id(.)}">
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
@@ -626,7 +626,7 @@
         </fo:block>
 
         <xsl:for-each select="tei:div[@type='attributeDocumentation']">
-            <fo:block font-family="Times" font-size="18pt" font-weight="bold" space-before="18pt"
+            <fo:block font-size="18pt" font-weight="bold" space-before="18pt"
                 space-after="12pt" text-align="left" page-break-before="always"
                 id="{generate-id(.)}">
                 <fo:marker marker-class-name="taglibrary-head">
@@ -949,7 +949,7 @@
     </xsl:template>
 
     <xsl:template match="tei:back/tei:div">
-        <fo:block font-family="Times" font-size="24pt" font-weight="bold" space-before="18pt"
+        <fo:block font-size="24pt" font-weight="bold" space-before="18pt"
             space-after="12pt" text-align="left" page-break-before="always" id="{generate-id(.)}">
             <fo:marker marker-class-name="taglibrary-head">
                 <fo:block>
@@ -1242,7 +1242,7 @@
 
 
     <xsl:template match="tei:head">
-        <fo:block font-family="Times" font-size="14pt" font-weight="bold" space-before="8pt"
+        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="left">
             <xsl:value-of select="."/>
         </fo:block>
@@ -1250,7 +1250,7 @@
     
     <!--<xsl:template match="tei:div[@type='occurenceSpecifikation']/tei:head">
         <!-\- head perhaps to large? and thats because it never finds this template! -\->
-        <fo:block font-family="Times" font-size="12t" space-before="8pt"
+        <fo:block font-size="12t" space-before="8pt"
             text-align="left">
             <xsl:value-of select="."/>
         </fo:block>

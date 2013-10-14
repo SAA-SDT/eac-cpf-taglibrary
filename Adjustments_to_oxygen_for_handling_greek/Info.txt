@@ -1,0 +1,8 @@
+This is for a windows computer!
+
+For the Apache FOP to handle greek the files in this map needs to be added in the main catalog for oxygen most commonly Program Files/Oxygen ...
+In file ttfConvert.bat line 11 must point to your font map. Then run the file. 
+In font map fonts with filenames pala.tff and Arialuni.ttf must exist
+In FOP.properties line 11 and 16 must point to the right folder for fonts
+In Oxygen-Options-Preferences-XML-"XSLT-FO-XQUERY"-FP Processors Set configuration file to point at FOP.properties
+Run your transformation as usual.
