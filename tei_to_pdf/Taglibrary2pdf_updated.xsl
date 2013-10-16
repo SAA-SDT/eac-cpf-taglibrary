@@ -20,7 +20,8 @@
     extension-element-prefixes="exslt"
     version="2.0">
     
-    <!-- Problems with greek accents. Due to the last step of the transformation and selection of fonts this characters arent beeing displayed correctly  -->
+    <!-- Problems with greek accents. Due to the last step of the transformation and selection of fonts this characters arent beeing displayed correctly  
+         Problems with greek solved with a tweak of Oxygen 2013-10-16 but that leaves the images to disappear....-->
     
     <xsl:output indent="yes"/>
     <xsl:variable name="currentLanguage">gr</xsl:variable>
@@ -33,7 +34,7 @@
     
     <!-- Headingtranslations in an own xml-file using the currentLanguage to fetch them -->
     <!-- This only works with XSLT-enginee Saxon 6.5.5 -->
-    <xsl:variable name="headingtranslations" select="document('Headingtranslation.xml')"/>
+    <xsl:variable name="headingtranslations" select="document('../tei/Headingtranslation.xml')"/>
     <!-- All translated headings -->
     <xsl:variable name="summary" select="$headingtranslations//terms/term[@name='summary']/translation[@lang=$currentLanguage]"/>
     <xsl:variable name="description" select="$headingtranslations//terms/term[@name='description']/translation[@lang=$currentLanguage]"/>
@@ -666,7 +667,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='summary']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -687,7 +688,7 @@
     
 
     <xsl:template match="tei:div[@type='description']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -705,7 +706,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='mayContain']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -723,7 +724,7 @@
     </xsl:template>
     
     <xsl:template match="tei:div[@type='mayOccurWithin']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -741,12 +742,14 @@
     </xsl:template>
     
     <xsl:template match="tei:div[@type='mandatory']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
-                    <fo:block>
+                    <fo:block break-after="auto">
                         <xsl:value-of select="$mandatory"/>
                         <xsl:text>/</xsl:text>
+                    </fo:block>
+                    <fo:block>
                         <xsl:value-of select="$optional"/>
                         <xsl:text>: </xsl:text>
                     </fo:block>
@@ -761,12 +764,14 @@
     </xsl:template>
     
     <xsl:template match="tei:div[@type='repeatable']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
-                    <fo:block>
+                    <fo:block break-after="auto">
                         <xsl:value-of select="$repeatable"/>
                         <xsl:text>/</xsl:text>
+                    </fo:block>
+                    <fo:block>
                         <xsl:value-of select="$nonrepeatable"/>
                         <xsl:text>: </xsl:text>
                     </fo:block>
@@ -783,7 +788,7 @@
     <xsl:template match="tei:div[@type='attributes']/tei:p">
         <xsl:choose>
             <xsl:when test="tei:list[@type='gloss']">
-                <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+                <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
                     <fo:list-item>
                         <fo:list-item-label end-indent="label-end()">
                             <fo:block>
@@ -863,7 +868,7 @@
         <xsl:apply-templates/>
         <!-- Changed due to the alternative ways of stating occurances that are in the latest version -->
         <!-- If added Occurance need to be collected from the variable -->
-        <!--<fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <!--<fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -880,7 +885,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='reference']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -898,7 +903,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='datatype']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -999,7 +1004,7 @@
     </xsl:template>
 
     <xsl:template match="tei:div[@type='examples']">
-        <fo:list-block provisional-distance-between-starts="40mm" space-after="6pt">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
@@ -1223,11 +1228,6 @@
         <xsl:text>&#x000D;&#x000A;</xsl:text>
     </xsl:template>
 
-    <xsl:template name="lineBreak">
-        <xsl:text>
-</xsl:text>
-    </xsl:template>
-
     <xsl:template name="makeSpace">
         <xsl:param name="d"/>
         <xsl:if test="number($d)&gt;1">
@@ -1240,20 +1240,11 @@
         </xsl:if>
     </xsl:template>
 
-
     <xsl:template match="tei:head">
         <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="left">
             <xsl:value-of select="."/>
         </fo:block>
     </xsl:template>
-    
-    <!--<xsl:template match="tei:div[@type='occurenceSpecifikation']/tei:head">
-        <!-\- head perhaps to large? and thats because it never finds this template! -\->
-        <fo:block font-size="12t" space-before="8pt"
-            text-align="left">
-            <xsl:value-of select="."/>
-        </fo:block>
-    </xsl:template>-->
 
 </xsl:stylesheet>
