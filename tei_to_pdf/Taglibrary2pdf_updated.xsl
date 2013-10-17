@@ -20,9 +20,6 @@
     extension-element-prefixes="exslt"
     version="2.0">
     
-    <!-- Problems with greek accents. Due to the last step of the transformation and selection of fonts this characters arent beeing displayed correctly  
-         Problems with greek solved with a tweak of Oxygen 2013-10-16 but that leaves the images to disappear....-->
-    
     <xsl:output indent="yes"/>
     <xsl:variable name="currentLanguage">gr</xsl:variable>
     <!-- xml:lang from taglibrary -->
