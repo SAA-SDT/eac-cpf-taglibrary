@@ -21,7 +21,7 @@
     version="2.0">
     
     <xsl:output indent="yes"/>
-    <xsl:variable name="currentLanguage">gr</xsl:variable>
+    <xsl:variable name="currentLanguage">de</xsl:variable>
     <!-- xml:lang from taglibrary -->
     <xsl:variable name="toctype">short</xsl:variable>
     <!-- long | short -->
@@ -219,9 +219,13 @@
     </xsl:template>
 
     <xsl:template match="tei:front/tei:titlePage" mode="title">
+        
         <fo:block font-size="24pt" font-weight="bold" space-before="18pt"
             space-after="12pt" text-align="center">
-            <xsl:apply-templates select="tei:docTitle/tei:titlePart"/>
+            <xsl:for-each select="tei:docTitle/tei:titlePart">
+                <xsl:apply-templates select="."/>
+                <xsl:call-template name="newLine"/>
+            </xsl:for-each>
         </fo:block>
         <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
@@ -231,14 +235,16 @@
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:byline"/>
         </fo:block>
-        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
-            space-after="6pt" text-align="center">
-            <xsl:apply-templates select="tei:docAuthor[1]"/>
-        </fo:block>
-        <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
+        <xsl:for-each select="tei:docAuthor">
+            <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
+                space-after="6pt" text-align="center">
+                <xsl:apply-templates select="."/>
+            </fo:block>
+        </xsl:for-each>
+        <!--<fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:docAuthor[2]"/>
-        </fo:block>
+        </fo:block>-->
         <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:note"/>
