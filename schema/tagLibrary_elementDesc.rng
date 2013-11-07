@@ -109,7 +109,7 @@
                 <attribute name="type">
                     <choice>
                         <value>gloss</value>
-                        <!-- KB September 20 added bullet as value -->
+                        <!-- KB September 20 added bullet as value  -->
                         <value>bulleted</value>
                     </choice>
                 </attribute>
