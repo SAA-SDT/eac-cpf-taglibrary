@@ -31,7 +31,7 @@
       <p>2. <gi>alternativeForm</gi> may be used within <gi>nameEntryParallel</gi> to indicate
 								that the set of parallel names recorded in separate <gi>nameEntry</gi> elements within
 									<gi>nameEntryParallel</gi> are deemed as variant forms of the name.</p>
-      <p>The content <gi>alternativeForm</gi> is an abbreviation selected from a constrained set of values,
+      <p>The content of the <gi>alternativeForm</gi> is an abbreviation selected from a constrained set of values,
 								each of which represents a set of national, international or other rules that govern the
 								construction of EAC-CPF names in those environments. The abbreviations expressed in
 									<gi>alternativeForm</gi> must be declared within the <gi>conventionDeclaration</gi>

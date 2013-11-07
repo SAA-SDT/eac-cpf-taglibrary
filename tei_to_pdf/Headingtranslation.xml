@@ -1,91 +1,93 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schema/taglibrary_translations.rng" 
+<?xml-model href="../schema/taglibrary_translations.rng"
 type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <terms>
-
+    
     <!-- All "fixed" texts that are in the Taglibrary. -->
     <term name="summary">
         <translation lang="en">Summary</translation>
         <translation lang="fr">Résumé</translation>
         <translation lang="gr">Σ&#973;νοψη</translation>
+        <translation lang="de">Kurzfassung</translation>
     </term>
     <term name="description">
         <translation lang="en">Description</translation>
         <translation lang="gr">Περιγραφ&#942;</translation>
+        <translation lang="de">Beschreibung</translation>
     </term>
     <term name="mayoccurwithin">
         <translation lang="en">May occur within</translation>
         <translation lang="gr">Μπορε&#943; να εμφαν&#943;ζεται μέσα σε</translation>
+        <translation lang="de">Kann vorkommen in</translation>
     </term>
     <term name="mandatory">
         <translation lang="en">Mandatory</translation>
         <translation lang="gr">Υποχρεωτικ&#972;</translation>
-
-        <!-- is this for the elements? I am asking, given that in Greek the adjectives are 
- following the gender of the nouns, 
-hence I must express the gender through the translation of this heading.-->
-
-        <!-- Karin: This is for statement of occurances so yes is for elements  -->
+        <translation lang="de">Obligatorisch</translation>
     </term>
-
     <term name="optional">
         <translation lang="en">Optional</translation>
         <translation lang="gr">Προαιρετικ&#972;</translation>
-
-        <!-- the same question as in Mandatory-->
-
-        <!-- Karin: same answer as mandatory -->
+        <translation lang="de">Optional</translation>
     </term>
     <term name="repeatable">
         <translation lang="en">Repeatable</translation>
         <translation lang="gr">Επαναλαμβαν&#972;μενο</translation>
+        <translation lang="de">Wiederholbar</translation>
     </term>
     <term name="nonrepeatable">
         <translation lang="en">Non-repeatable</translation>
         <translation lang="gr">Μη επαναλαμβαν&#972;μενο</translation>
+        <translation lang="de">Nicht wiederholbar</translation>
     </term>
     <term name="attributes">
         <translation lang="en">Attributes</translation>
         <translation lang="gr">Γνωρ&#943;σματα</translation>
+        <translation lang="de">Attribute</translation>
     </term>
     <term name="references">
         <translation lang="en">References</translation>
         <translation lang="gr">Αναφορ&#941;ς</translation>
-
-        <!-- this is for the reference to ISAAR CPF??? -->
-        <!-- Karin: Yes. -->
-
+        <translation lang="de">Referenz</translation>
     </term>
     <term name="datatype">
         <translation lang="en">Datatype</translation>
         <translation lang="gr">Τ&#973;πος δεδομ&#941;νων</translation>
+        <translation lang="de">Datentyp</translation>
     </term>
     <term name="toc">
         <translation lang="en">Table of Contents</translation>
         <translation lang="gr">Π&#943;νακας Περιεχομ&#941;νων</translation>
+        <translation lang="de">Inhaltsverzeichnis</translation>
     </term>
     <term name="elements">
         <translation lang="en">Elements</translation>
         <translation lang="gr">Στοιχε&#943;α</translation>
+        <translation lang="de">Elemente</translation>
     </term>
     <term name="maycontain">
         <translation lang="en">May contain</translation>
         <translation lang="gr">Μπορε&#943; να περι&#941;χει</translation>
+        <translation lang="de">Kann enthalten</translation>
     </term>
     <term name="occurrence">
         <translation lang="en">Occurrence</translation>
         <translation lang="gr">Συχν&#972;τητα</translation>
+        <translation lang="de">Gegenwart</translation>
     </term>
     <term name="appendix">
         <translation lang="en">Appendix</translation>
         <translation lang="gr">Παρ&#940;ρτημα</translation>
+        <translation lang="de">Anhang</translation>
     </term>
     <term name="examples">
         <translation lang="en">Examples</translation>
         <translation lang="gr">Παραδε&#943;γματα</translation>
+        <translation lang="de">Beispiele</translation>
     </term>
     <term name="example">
         <translation lang="en">Example</translation>
         <translation lang="gr">Παρ&#940;δειγμα</translation>
+        <translation lang="de">Beispiel</translation>
     </term>
 </terms>

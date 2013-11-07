@@ -169,8 +169,8 @@
                                                 <xsl:for-each select="tei:div/tei:head/tei:gi">
                                                         <span>
                                                                 <!--<a href="#{generate-id()}">
-<xsl:value-of select="."/>
-</a>-->
+                                                                        <xsl:value-of select="."/>
+                                                                </a>-->
                                                                 <a href="#{translate(., ':','')}">
                                                                         <xsl:value-of select="."/>
                                                                 </a>
@@ -450,15 +450,15 @@
                 </div>
         </xsl:template>
 
-        <!-- <xsl:template match="tei:div[@type='fullName']">
-<xsl:apply-templates/>
-<div class="content">
-<span class="label"> &#xA0; <xsl:apply-templates/>
-</span>
-<xsl:text>&#xA0;&#xA0;</xsl:text>
-<a class="tocReturn" href="#toc">[toc]</a>
-</div>
-</xsl:template>-->
+        <!--        <xsl:template match="tei:div[@type='fullName']">
+                <xsl:apply-templates/>
+                <div class="content">
+                        <span class="label"> &#xA0; <xsl:apply-templates/>
+                        </span>
+                        <xsl:text>&#xA0;&#xA0;</xsl:text>
+                        <a class="tocReturn" href="#toc">[toc]</a>
+                </div>
+        </xsl:template>-->
 
         <xsl:template match="tei:div[@type='summary']">
                 <div class="span">
@@ -590,13 +590,13 @@
 
         <!-- This is replaced with two elements -->
         <!--<xsl:template match="tei:div[@type='occurrence']">
-<div class="leftcol">
-<xsl:value-of select="$occurrence"/><xsl:text>: </xsl:text>
-</div>
-<div class="content">
-<xsl:apply-templates/>
-</div>
-</xsl:template>-->
+                <div class="leftcol">
+                        <xsl:value-of select="$occurrence"/><xsl:text>: </xsl:text>
+                </div>
+                <div class="content">
+                        <xsl:apply-templates/>
+                </div>
+        </xsl:template>-->
 
         <xsl:template match="tei:div[@type='mandatory']">
                 <div class="leftcol">
@@ -725,7 +725,7 @@
                                                         <br/>
                                                 </div>
                                                         <!--<br />
-<xsl:apply-templates/> -->
+                                                        <xsl:apply-templates/> -->
                                         </xsl:for-each>
                                         <br />
         </xsl:template>

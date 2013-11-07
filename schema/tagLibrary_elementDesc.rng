@@ -31,6 +31,8 @@
                     <value>repeatable</value>
                     <!-- KB April 2nd, added occurenceSpecifikation as value -->
                     <value>occurenceSpecifikation</value>
+                    <!-- KB October 29th 2013, added usage as value -->
+                    <value>usage</value>
                 </choice>
             </attribute>
             <!-- FC August 2nd, add xml:lang attribute, datatype language-->

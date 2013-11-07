@@ -459,8 +459,8 @@ space-after="6pt" text-align="center">
                                 <fo:page-number-citation ref-id="{generate-id(.)}"/>
                             </fo:basic-link>
                             <!--<xsl:value-of select="$elements"/>
-<fo:leader leader-pattern="dots"/>
-<fo:page-number-citation ref-id="{generate-id(.)}"/>-->
+                            <fo:leader leader-pattern="dots"/>
+                            <fo:page-number-citation ref-id="{generate-id(.)}"/>-->
                         </fo:inline>
                     </fo:block>
                 </xsl:when>
@@ -475,8 +475,8 @@ space-after="6pt" text-align="center">
                                 <fo:page-number-citation ref-id="{generate-id(.)}"/>
                             </fo:basic-link>
                             <!--<xsl:value-of select="$attributes"/>
-<fo:leader leader-pattern="dots"/>
-<fo:page-number-citation ref-id="{generate-id(.)}"/>-->
+                            <fo:leader leader-pattern="dots"/>
+                            <fo:page-number-citation ref-id="{generate-id(.)}"/>-->
                         </fo:inline>
                     </fo:block>
                 </xsl:when>
@@ -491,8 +491,8 @@ space-after="6pt" text-align="center">
                                 <fo:page-number-citation ref-id="{generate-id(.)}"/>
                             </fo:basic-link>
                            <!-- <xsl:value-of select="tei:head"/>
-<fo:leader leader-pattern="dots"/>
-<fo:page-number-citation ref-id="{generate-id(.)}"/>-->
+                            <fo:leader leader-pattern="dots"/>
+                            <fo:page-number-citation ref-id="{generate-id(.)}"/>-->
                         </fo:inline>
                     </fo:block>
                 </xsl:when>

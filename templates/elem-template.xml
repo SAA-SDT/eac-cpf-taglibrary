@@ -25,6 +25,9 @@
          </list>
       </p>
    </div>
+   <div type="usage">
+      <p xml:lang="en">Usage you can use <gi>to get anglebrackets</gi></p>
+   </div>
    <div type="mayContain">
       <p>Can contain for example [text] or elementA</p>
    </div>
