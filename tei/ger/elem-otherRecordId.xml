@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="otherRecordId" type="elementDocumentation">
+   <head>
+      <gi>otherRecordId</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Zusätzlicher Identifikator für das EAC-CPF-Dokument</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Zusätzlicher Identifikator der mit dem EAC-CPF-Dokument verbunden sein kann.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das Element <gi>otherRecordID</gi> innerhalb von <gi>control</gi> kann einen Identifikator für das EAC-CPF-Dokument enthalten, der zusätzlich zum erforderlichen Identifikator im Element <gi>recordId</gi> angeben wird. Dies können Identifikatoren von miteinander vereinigten EAC-CPF-Dokumenten sein, die eine Entität beschreiben oder Idenifikatoren, die nicht länger genutzt werden, aber für den Ereignisverlauf und die Verwaltung des EAC-CPF-Dokuments von Bedeutung sind.</p>
+      <p xml:lang="ger"
+            >Im Attribut <att>localType</att> kann die Einrichtung genannt werden, aus der dieser alternative Identifikator stammt, sofern diese nicht identisch mit der im Element <gi>maintenanceAgency</gi> aufgeführten Institution ist.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:otherRecordId xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+            >ARC-ID-976172</eac-cpf:otherRecordId>
+         <eac-cpf:otherRecordId xmlns:eac-cpf="urn:isbn:1-931666-33-4" localType="NAD_Code"
+            >SE/RA/10018</eac-cpf:otherRecordId>
+      </_0:egXML>
+   </div>
+</div>

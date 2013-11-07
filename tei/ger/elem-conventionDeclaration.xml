@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="conventionDeclaration" type="elementDocumentation">
+    <head>
+        <gi>conventionDeclaration</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Allgemeine Erfassungsrichtlinien</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger">Richtlinien und Regelwerke inklusive Thesauri u.a., die bei der Erstellung des EAC-CPF-Dokuments herangezogen worden sind.</p>
+    </div>
+    <div type="description" xml:lang="eng">
+        <p xml:lang="ger">Optionales Subelement zu <gi>control</gi>, in dem über das untergeordnete Element <gi>citation</gi> auf Richtlinien, Regelwerke, Thesauri und andere kontrollierte Vokabularien verwiesen werden kann, die zur Erstellung des EAC-CPF-Dokuments verwendet worden sind. Damit bietet das Element <gi>conventionDeclaration</gi> beispielsweise weiterführende Erläuterungen zu Vokabularien, die im Attribut <att>vocabularySource</att> zu den Elementen wie <gi>term</gi>, <gi>placeEntry</gi> und <gi>placeRole</gi> benannt werden. Wie die hier aufgeführten Richtlinien eingesetzt worden sind, kann im Element <gi>descriptiveNote</gi> näher beschrieben werden.</p>
+        <p xml:lang="ger">Im darüber hinaus zur Verfügung stehenden Element <gi>abbreviation</gi> lässt sich zudem ein Identifikator bzw. eine Abkürzung für das betreffende Regelwerk erfassen.</p>
+        <p xml:lang="ger">Für jede  Richtlinie soll ein <gi>conventionDeclaration</gi>-Element angelegt werden.</p>
+    </div>
+    <div type="mayContain">
+        <p>abbreviation, citation, descriptiveNote</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>control</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>xml:id</label>
+                <item>optional</item>
+                <label>xml:lang</label>
+                <item>optional</item>
+            </list>
+        </p>
+    </div>
+    <div type="reference">
+        <p>ISAAR (CPF) 5.4.3</p>
+    </div>
+    <div type="occurrence">
+        <div type="mandatory">
+            <p xml:lang="eng">Optional</p>
+        </div>
+        <div type="repeatable">
+            <p xml:lang="eng">Repeatable</p>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:conventionDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:abbreviation>AFNOR</eac-cpf:abbreviation>
+                <eac-cpf:citation>AFNOR NFZ 44-060 (decembre 1986)</eac-cpf:citation>
+                <eac-cpf:descriptiveNote>
+                    <eac-cpf:p>Indexation conforme &#224; la norme AFNOR NFZ 44-060 (D&#233;cembre
+                        1986) Catalogage: forme et structure des vedettes de collectivit&#233;s-auteurs
+                        Notice encodee conformement &#224; la norme internationale de description
+                        archivistique contextuelle informatis&#233;e EAC 2004</eac-cpf:p>
+                </eac-cpf:descriptiveNote>
+            </eac-cpf:conventionDeclaration>
+            <eac-cpf:conventionDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:citation>International Standards Organization. "ISO 8601 - Data elements and
+                    interchange formats - Information interchange - Representation of dates and times."
+                    Geneva: International Standards Organization, 2000.</eac-cpf:citation>
+            </eac-cpf:conventionDeclaration>
+        </egXML>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="languageDeclaration" type="elementDocumentation">
+   <head>
+      <gi>languageDeclaration</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Angabe der Sprache</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Angabe der vorwiegenden Sprache und Schrift, in denen das EAC-CPF Dokument verfasst ist.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das <gi>languageDeclaration</gi>-Element innerhalb <gi>control</gi> enhält die beiden obligatorischen Subelemente <gi>language</gi> und <gi>script</gi>, welche die Sprache und die Schrift, die im EAC-CPF Dokument hauptsächlich verwendetet wurden, beschreiben. Im optionalen Subelement <gi>descriptiveNote</gi> kann die Verwendung der Sprache und der Schrift erläutert werden.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, language, script</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>xml:id</label>
+            <item>optional</item>
+            <label>xml:lang</label>
+            <item>optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.7</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Optional</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:languageDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+            <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+         </eac-cpf:languageDeclaration>
+      </_0:egXML>
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:languageDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="gre">Greek, Modern (1453-)</eac-cpf:language>
+            <eac-cpf:script scriptCode="Grek">Greek</eac-cpf:script>
+         </eac-cpf:languageDeclaration>
+      </_0:egXML>
+   </div>
+</div>

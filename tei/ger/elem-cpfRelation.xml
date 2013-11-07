@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="cpfRelation" type="elementDocumentation">
+    <head>
+        <gi>cpfRelation</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Verwandte Körperschaft, Person oder Familie</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger">Körperschaft, Person oder Familie, die mit der beschriebenen Entität verwandt ist</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger">Das Element <gi>cpfRelation</gi> enthält die Beschreibung einer Körperschaft, Person oder Familie, die mit der im EAC-CPF-Dokument beschriebenen Entität verwandt ist. Eine solche verwandte Beschreibung kann gleichfalls als EAC-CPF-Datei oder in anderen Standards wie beispielsweise MARC codiert sein. Über die Subelemente <gi>objectXMLWrap</gi> bzw. <gi>objectBinWrap</gi> können Elemente anderer Namespaces bzw. in Form binärer Base64-Daten eingebunden werden. Näher identifizieren lässt sich die verwandte Entität im Element <gi>relationEntry</gi>.</p>
+        <p xml:lang="ger">Daneben stehen die Elemente <gi>date</gi>, <gi>dateRange</gi> oder <gi>dateSet</gi> zur Verfügung, um den Zeitpunkt bzw. die Zeitspanne zu benennen, zu denen die Beziehung zwischen der beschriebenen und der verwandten Entität Gültigkeit gehabt hat, sowie das Element <gi>placeEntry</gi> für eine geographischen Verortung.</p>
+        <p xml:lang="ger">Das Element <gi>descriptiveNote</gi> schließlich bietet die Möglichkeit, die Art der Beziehung genauer zu erläutern, die alternativ bzw. darüber hinaus im Attribut <att>cpfRelationType</att> bereits in Kurzform benannt werden kann. Mögliche Werte für dieses Attribut sind "identity", "hierarchical", "hierarchical-parent", "hierarchical-child", "temporal", "temporal-earlier", "temporal-later", "family" oder "associative".</p>
+    </div>
+    <div type="mayContain">
+        <p>date, dateRange, dateSet, descriptiveNote, objectBinWrap, objectXMLWrap, placeEntry, relationEntry</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>relations</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>cpfRelationType</label>
+                <item>optional</item>
+                <label>lastDateTimeVerified</label>
+                <item>optional</item>
+                <label>xlink:actuate</label>
+                <item>optional</item>
+                <label>xlink:arcrole</label>
+                <item>optional</item>
+                <label>xlink:href</label>
+                <item>optional</item>
+                <label>xlink:role</label>
+                <item>optional</item>
+                <label>xlink:show</label>
+                <item>optional</item>
+                <label>xlink:title</label>
+                <item>optional</item>
+                <label>xlink:type</label>
+                <item>obligatorisch (wenn ein XLINK-Attribut genutzt wird)</item>
+                <label>xml:id</label>
+                <item>optional</item>
+                <label>xml:lang</label>
+                <item>optional</item>
+            </list>
+        </p>
+
+    </div>
+    <div type="reference">
+        <p>ISAAR (CPF) 5.3</p>
+    </div>
+    <div type="occurrence">
+        <div type="mandatory">
+            <p xml:lang="eng">Optional</p>
+        </div>
+        <div type="repeatable">
+            <p xml:lang="eng">Repeatable</p>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:cpfRelation cpfRelationType="hierarchical-parent"
+                xlink:href="FRDAFANCH00MC_NAETUDE_110" xlink:type="simple"
+                xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns:xlink="http://www.w3c.org/1999/xlink">
+                <eac-cpf:relationEntry>&#201;tude notariale CX</eac-cpf:relationEntry>
+                <eac-cpf:dateRange>
+                    <eac-cpf:fromDate standardDate="1609-07-04">4 juillet 1609</eac-cpf:fromDate>
+                    <eac-cpf:toDate standardDate="1640-07-07">7 juillet 1640</eac-cpf:toDate>
+                </eac-cpf:dateRange>
+            </eac-cpf:cpfRelation>
+        </egXML>
+    </div>
+</div>

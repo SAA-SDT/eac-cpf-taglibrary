@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="function" type="elementDocumentation">
+   <head>
+      <gi>function</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Funktion</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+         >Information zu Funktionen, Aktivitäten, Rollen oder Zielsetzungen, die von der beschriebenen Entität wahrgenommen, ausgeführt oder verfolgt worden sind.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Im Element <gi>function</gi> werden mittels des Subelements <gi>term</gi> Indexbegriffe kodiert, die relevante Funktionen, Prozesse, Aktivitäten, Aufgaben oder Transaktionen, die von der beschriebenen Entität wahrgenommen bzw. durchgeführt worden sind, benennen. Diese Indexbegriffe können aus kontrollierten Vokabularien stammen oder Alltagsbegriffe sein. Über Zeit- (<gi>date</gi>, <gi>dateRange</gi> oder <gi>dateSet</gi>) beziehungsweise Ortsangaben (<gi>placeEntry</gi>) kann die Bedeutung des genannten Begriffs zusätzlich eingeordnet werden. Zudem lässt sich im Element <gi>descriptiveNote</gi> gegebenfalls eine detaillierte Erläuterung anfügen.</p>
+      <p xml:lang="ger"
+            >Die Verwendung eines einzelnen <gi>function</gi>-Elements erfolgt direkt unter dem Element <gi>description</gi>. Werden mehrere <gi>function</gi>-Elemente angelegt, werden sie mit Hilfe des Hüllenelements <gi>functions</gi> gruppiert.</p>
+      <p xml:lang="ger"
+            >Alternativ können Funktionen mit dem Element <gi>biogHist</gi> beschrieben werden in Anlehnung and ISAAR (CPF) History 5.2.2. Wenn Informationen zu einzelnen Funktionen semantisch voneinander getrennt verarbeitet werden sollen, empfiehlt sich jedoch in jedem Fall die Verwendung des Elements <gi>function</gi>.</p>
+      <p xml:lang="ger"
+            >Daneben besteht die Möglichkeit, dass Funktionen in einem Archivsystem als separate Einheiten erfasst sind. In diesem Falle sind Funktionen idealerweise in Anlehnung an den International Standard for Describing Functions (ISDF) beschrieben und in einem anderen Format kodiert. Bei Beschreibungen dieser Art lässt sich über das Element <gi>functionRelation</gi> eine Verbindung zwischen der in EAC-CPF beschriebenen Entität und der von ihr wahrgenommenen Funktionen herstellen. Das Element <gi>function</gi> wäre dann höchstwahrscheinlich redundant.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry, term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, functions</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>optional</item>
+            <label>xml:id</label>
+            <item>optional</item>
+            <label>xml:lang</label>
+            <item>optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.5</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:function xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Estate ownership</eac-cpf:term>
+            <eac-cpf:descriptiveNote>Social, political, and cultural role typical of landed aristocracy
+										in England. The first Viscount Campden amassed a large fortune in trade in London and
+										purchased extensive estates, including Exton (Rutland), and Chipping Campden
+										(Gloucestershire). The Barham Court (Kent) estate was the acquisition of the first Baron
+										Barham, a successful admiral and naval administrator (First Lord of the Admiralty
+										1805).</eac-cpf:descriptiveNote>
+         </eac-cpf:function>
+      </egXML>
+   </div>
+</div>

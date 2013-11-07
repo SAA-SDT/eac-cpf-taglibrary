@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkArcrole" type="attributeDocumentation">
+   <head>
+      <att>xlink:arcrole</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Xlink: Bogen</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Ein URI, der den Zweck des Links definiert.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Ein absoluter URI, der die Art der Beziehung zwischen einer Entität, die im EAC-CPF-Dokument beschrieben wird, und einer externen Quelle (<gi>cpfRelation</gi>, <gi>resourceRelation</gi> oder <gi>functionRelation</gi>) oder die Art der Beziehung zwischen der Beschreibung im EAC-CPF-Dokument (oder Teile der Beschreibung) und einer externen Quelle (<gi>citation</gi>, <gi>setComponent</gi> und <gi>source</gi>) angibt. Der Attributwert sollte die Richtung der Beziehung anzeigen. Es ist empfehlenswert, die Richtung der Beziehung von einer lokalen zu einer externen Quelle zu definieren.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>string</p>
+   </div>
+</div>

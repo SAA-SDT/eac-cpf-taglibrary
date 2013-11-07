@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="citation" type="elementDocumentation">
+    <head>
+        <gi>citation</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Zitierverweis</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger">Externe Ressource, aus der direkt zitiert wird oder auf die sich eine im EAC-CPF-Dokument erfasste Information stützt.</p>
+    </div>
+    <div type="description" xml:lang="eng">
+        <p xml:lang="ger">Im Element <gi>citation</gi> wird – für das menschliche Auge und/oder für Maschinen lesbar – auf eine externe Ressourece verwiesen, die beschreibende Daten zu einem bestimmten Aspekt der erfassten Entität enthält, die in dieser Weise nicht direkter Bestandteil des EAC-CPF-Dokuments sind. Das <gi>citation</gi>-Element steht in verschiedenen, beschreibenden EAC-CPF-Elemente zur Verfügung und kann so beispielweise für den Verweis auf die rechtliche Grundlage der Ausübung bestimmer Aufgaben durch die beschriebene Entität genutzt werden.</p>
+        <p xml:lang="ger">Es ist nicht mit dem Element <gi>source</gi> zu verwechseln, das auf eine bei der Erstellung der EAC-CPF-Beschreibung konkret verwendete Ressource verweist. In der Mehrheit der möglichen Anwendungsfälle ist das Element <gi>citation</gi> optional, im Zusammenhang mit den Elementen <gi>conventionDeclaration</gi> und <gi>localTypeDeclaration</gi> innerhalb des <gi>control</gi>-Abschnittes ist es jedoch obligatorisch zu verwenden. Das Element <gi>citation</gi> enthält in allen Fällen den Titel oder die Bezeichnung der Ressource, auf die verwiesen wird, und kann zudem durch das Element <gi>span</gi> mit Formatierungsinformationen ergänzt werden (z.B. Fett- oder Kursivdruck). Die spätere Darstellung für den Nutzer lässt sich darüber hinaus mittels der XLink Attribute  festlegen.</p>
+    </div>
+    <div type="mayContain">
+        <p>[text], span</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>biogHist, conventionDeclaration, function, legalStatus, localDescription,
+            localTypeDeclaration, mandate, occupation, place</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>lastDateTimeVerified</label>
+                <item>optional</item>
+                <label>xlink:actuate</label>
+                <item>optional</item>
+                <label>xlink:arcrole</label>
+                <item>optional</item>
+                <label>xlink:href</label>
+                <item>optional</item>
+                <label>xlink:role</label>
+                <item>optional</item>
+                <label>xlink:show</label>
+                <item>optional</item>
+                <label>xlink:title</label>
+                <item>optional</item>
+                <label>xlink:type</label>
+                <item>obligatorisch (wenn eines der XLINK Attribute genutzt wird)</item>
+                <label>xml:id</label>
+                <item>optional</item>
+                <label>xml:lang</label>
+                <item>optional</item>
+            </list>
+        </p>
+
+    </div>
+    <div type="occurrence">
+        <div type="occurenceSpecifikation" n="1">
+            <head>Within conventionDeclaration and localTypeDeclaration:</head>
+            <div type="mandatory">
+                <p xml:lang="eng">Mandatory</p>
+            </div>
+            <div type="repeatable">
+                <p xml:lang="eng">Repeatable</p>
+            </div>
+        </div>
+        <div type="occurenceSpecifikation" n="2">
+            <head>Other elements:</head>
+            <div type="mandatory">
+                <p xml:lang="eng">Optional</p>
+            </div>
+            <div type="repeatable">
+                <p xml:lang="eng">Repeatable</p>
+            </div>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:conventionDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:abbreviation>AFNOR</eac-cpf:abbreviation>
+                <eac-cpf:citation>Indexation conforme &#224; la norme: AFNOR. " AFNOR NF Z44-060 Documentation - Catalogage d'auteurs
+                    et d'anonymes: formes et structures des vedettes de collectivit&#233;s - auteurs." D&#233;cembre 1996.
+                </eac-cpf:citation>
+            </eac-cpf:conventionDeclaration>
+            <eac-cpf:conventionDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:abbreviation>USNARA-LDRG</eac-cpf:abbreviation>
+                <eac-cpf:citation>U.S. National Archives and Records Administration. "Lifecycle Data
+                    Requirements Guide". March 2012. (for creating the authorized form of the
+                    name).</eac-cpf:citation>
+            </eac-cpf:conventionDeclaration>
+            <eac-cpf:mandate xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:citation>FR ANOM COL C11D 1 Fo179-179 vo: concession de p&#234;che en Acadie par le
+                    Roi &#224; Bergier, Gaultier, Boucher et autres dat&#233; du 3 mars 1684.</eac-cpf:citation>
+            </eac-cpf:mandate>
+            <eac-cpf:biogHist xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:citation>The full biography is presented in "Vasari, Giorgio. "Part 3, Paolo Uccello." In <eac-cpf:span
+                        style="italics"
+                    >The lives of the artists</eac-cpf:span>, by Giorgio Vasari, translated by P. Bondanella and J.C. Bondanella. Oxford: Oxford University Press, 1991."</eac-cpf:citation>
+            </eac-cpf:biogHist>
+        </egXML>
+
+    </div>
+</div>

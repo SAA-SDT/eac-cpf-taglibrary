@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="lastDateTimeVerified" type="attributeDocumentation">
+   <head>
+      <att>lastDateTimeVerified</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Zuletzt verifizierter Zeitpunkt</p>
+   </div>
+   <div type="summary">
+<p xml:lang="ger">Datum oder Zeitpunkt an dem ein Link oder eine verlinkte Quelle verifiziert wurde.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Attribut <att>lastDateTimeVerified</att> kann in den Elementen <gi>citation</gi>, <gi>cpfRelation</gi>, <gi>functionRelation</gi>, <gi>resourceRelation</gi>, <gi>setComponent</gi> oder <gi>term</gi> enthalten sein. Der Wert des Attributs gibt das Datum oder den Zeitpunkt an, an dem ein verlinktes Objekt zuletzt überprüft wurde. Die Prüfung kann den Link selbst betreffen oder die Version des verlinkten Objekts.</p>
+   </div>
+   <div type="datatype">
+      <p xml:lang="ger">Vereinigung der XML-Schema Datierungstypen date, gYear, gYearMonth und dateTime. Die folgenden Zeitformat sind gültig: 2009-12-31, 2009, 2009-12, 2009-12-31T23:59:59.</p>
+   </div>
+
+</div>

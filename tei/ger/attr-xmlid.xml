@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xmlid" type="attributeDocumentation">
+    <head>
+        <att>xml:id</att>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">XML Identifikator</p>
+    </div>
+    <div type="summary">
+<p xml:lang="ger">Ein eindeutiger Identifikator mit dem Elemente in einem EAC-CPF-Dokument eindeutig identifiziert werden können.</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger"
+                >Ein eindeutiger Identifikator für ein Element, so dass es referenziert werden kann. Jedes Attribut <att>xml:id</att> im Dokument muss einen einmaligen Wert haben. Das Attribut <att>xml:id</att> benennt ein Element eindeutig und ermöglicht damit Verlinkungen innerhalb des Dokuments oder von außen. Beispielsweise kann <att>xml:id</att> genutzt werden, um zwei oder mehr <gi>cpfDescription</gi>-Elemente innerhalb von <gi>multipleIdentities</gi> auszuweisen. Das eindeutige Identifizieren von zwei oder mehr <gi>cpfDescription</gi>-Elementen kann wichtig werden, um verwandte Quellen, Funktionen oder Entitäten mit einer oder mehr Identitäten in einem EAC-CPF-Dokument zu verbinden.</p>
+    </div>
+    <div type="datatype" xml:lang="eng">
+        <p>NMTOKEN</p>
+    </div>
+</div>

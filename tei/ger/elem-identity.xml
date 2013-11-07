@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="identity" type="elementDocumentation">
+   <head>
+      <gi>identity</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Identität (Rolle)</p>
+
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+            >Das <gi>identity</gi>-Element enthält den oder die Namen der Entität, die im EAC-CPF-Dokument beschrieben ist. Werden in einem EAC-CPF-Dokument mehrere Identitäten (Rollen) beschrieben, erhält jedes <gi>cpfDescription</gi>-Element ein <gi>identity</gi>-Element.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das <gi>identity</gi>-Element umfasst einen oder mehrere Namen einer Identität (Rolle) innerhalb des <gi>cpfDescription</gi>-Elements einer Entität. Das obligatorische Subelement <gi>entityType</gi> gibt die Art der Entität (d.h. Körperschaft, Familie oder Person) an. Ein oder mehrere <gi>nameEntry</gi>-Elemente und/oder ein oder mehrere <gi>nameEntryParallel</gi>-Elemente, die den Namen unter dem eine Entität bekannt ist, angeben, sind als Subelemente erforderlich. Im optionalen Element <gi>entityId</gi> können eindeutige Identifikatoren angegeben werden, die mit der Entität verknüpft sind.</p>
+      <p xml:lang="ger"
+            >Alle Namen unter denen eine Identität (Rolle) bekannt ist werden in einem <gi>identity</gi>-Element angegeben. Jeder authorisierte oder alternative Name wird in einem eigenen <gi>nameEntry</gi>-Element erfasst.</p>
+      <p xml:lang="ger">Zusätzlich können in <gi>identity</gi> ein oder mehrere für oder von der Entität parallel genutzte Namen in verschiedenen Sprachen und Schriften angegeben werden. In Ländern mit mehr als einer Amtssprache, wie in Kanada oder in der Schweiz, werden Namen von Entitäten oft in mehr als einer Sprache angegeben. Innerhalb von <gi>identity</gi> wird das <gi>nameEntryParallel</gi>-Element genutzt, um zwei oder mehr <gi>nameEntry</gi>-Elemente die für parallele Namensformen einer Entität stehen, zu beschreiben.</p>
+      <p xml:lang="ger">Das <gi>descriptiveNote</gi>-Element kann genutzt werden, um weitere beschreibende Informationen zur Identifizierung einer Entität anzugeben.</p>
+      <p xml:lang="ger">Werden in einem EAC-CPF-Dokument mehrere Identitäten (Rollen) einer Entität erfasst, erhält jedes <gi>cpfDescription</gi>-Element ein Element <gi>identity</gi>.</p>
+   </div>
+   <div type="mayContain">
+      <p>descriptiveNote, entityId, entityType, nameEntry, nameEntryParallel</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>cpfDescription</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>identityType</label>
+            <item>optional</item>
+            <label>localType</label>
+            <item>optional</item>
+            <label>xml:base</label>
+            <item>optional</item>
+            <label>xml:id</label>
+            <item>optional</item>
+            <label>xml:lang</label>
+            <item>optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.1</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:identity xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:entityId>CLU-SC-000008</eac-cpf:entityId>
+            <eac-cpf:entityType>person</eac-cpf:entityType>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part>Brown, Bob</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                     <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+               <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+            </eac-cpf:nameEntry>
+            <eac-cpf:nameEntry>
+               <eac-cpf:part>Brown, Robert Carlton</eac-cpf:part>
+               <eac-cpf:useDates>
+                  <eac-cpf:dateRange>
+                     <eac-cpf:fromDate standardDate="1886">1886</eac-cpf:fromDate>
+                     <eac-cpf:toDate standardDate="1959">1959</eac-cpf:toDate>
+                  </eac-cpf:dateRange>
+               </eac-cpf:useDates>
+               <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
+            </eac-cpf:nameEntry>
+         </eac-cpf:identity>
+      </_0:egXML>
+   </div>
+</div>

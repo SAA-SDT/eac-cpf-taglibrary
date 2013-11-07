@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="longitude" type="attributeDocumentation">
+   <head>
+      <att>longitude</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Längengrad</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Der geographische Längengrad eines Orts.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p xml:lang="ger">Das Attribut <att>longitude</att> kann im Element <gi>place</gi> enthalten sein. Der Attributwert gibt den geographischen Längengrad eines im Element <gi>placeEntry</gi> genannten Ortes an. Es ist empfehlenswert das Attribut <att>longitude</att> zusammen mit den Attributen <att>latitude</att> und <att>altitude</att> zu verwenden.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>NMTOKEN</p>
+   </div>
+</div>

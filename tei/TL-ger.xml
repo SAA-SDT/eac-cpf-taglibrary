@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href=http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/teilite.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+   xmlns:xlink="http://www.w3c.org/1999/xlink" xmlns:eg="http://www.tei-c.org/ns/Examples"
+   xmlns:xi="http://www.w3.org/2001/XInclude">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="eng"
+               >Encoded Archival Context—Corporate Bodies, Persons, and Families (EAC-CPF)</title>
+            <title xml:lang="ger" type="part2">Tag Library - deutsche Übersetzung</title>
+            <respStmt xml:lang="ger">
+               <resp>Herausgegeben vom </resp>
+               <name>Technischen Subkommitee für Encoded Archival Context der Society of American Archivists und der Staatsbibliothek zu Berlin</name>
+            </respStmt>
+            <editor xml:lang="ger">
+               <name>Kerstin Arnold</name>
+               <orgName>Bundesarchiv</orgName>
+               <date when="2013">August 2013</date>
+            </editor>
+         </titleStmt>
+         <editionStmt>
+            <p xml:lang="ger">Entwurf</p>
+         </editionStmt>
+         <publicationStmt>
+            <publisher xml:lang="eng"
+               >Society of American Archivists in collaboration with Staatsbibliothek zu Berlin.</publisher>
+            <publisher xml:lang="ger">Society of American Archivists in Zusammenarbeit mit der Staatsbibliothek zu Berlin.</publisher>
+            <date when="2010"/>
+         </publicationStmt>
+         <sourceDesc>
+            <p xml:lang="eng">Born digital.</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <titlePage xml:lang="ger">
+            <docTitle>
+               <titlePart type="main" xml:lang="eng"
+                  >Encoded Archival Context—Corporate Bodies, Persons, and Families (EAC-CPF) Tag Library</titlePart>
+               <titlePart type="sub"
+                  >Liste der Elemente und Attribute sowie Erläuterung ihrer Verwendung</titlePart>
+            </docTitle>
+            <docEdition>2013</docEdition>
+            <byline>Bearbeitet von </byline>
+            <docAuthor>Kerstin Arnold</docAuthor>
+            <docImprint>
+               <docDate>Oktober 2013</docDate>
+            </docImprint>
+         </titlePage>
+         <div type="Einleitung" xml:lang="ger">
+            <div>
+               <head>Widmung</head>
+               <p>Die Encoded Archival Context Working Group widmet das EAC-CPF Schema in der Fassung des Jahres 2010 sowie die vorliegende Tag Library dem Gedenken an Per-Gunnar Ottosson. P-G, als der er seinen Freunden in aller Welt bekannt war, hat in der Entwicklung vieler internationaler archivischer Standards eine entscheidende Rolle gespielt. So war er auch an den ersten Schritten zur Definition von EAC nachhaltig beteiligt, Krankheit und sein Tod im Jahr 2008 haben jedoch verhindert, dass er die Vollendung der Arbeit an EAC-CPF miterleben konnte. Er wird uns stets für seinen aufgeweckten Intellekt, seine Begeisterung für gemeinschaftliche Arbeit sowie seinen wundervollen Sinn für Humor in Erinnerung bleiben. Vor allem jedoch werden wir uns an ihn als einen Freund erinnern.</p>
+            </div>
+            <div>
+               <head>Vorwort</head>
+               <p>Die EAC-CPF Tag Library ist in ihrer vorliegenden Form ein offenes Dokument. Als solches wird sie sich fortlaufend weiterentwickeln und dabei auch Rückmeldungen von Benutzern hinsichtlich Verdeut-lichung und Ergänzungen einbeziehen. Das The Technical Subcommittee for Encoded Archival Context (TS-EAC) freut sich jederzeit über Fragen, Kommentare und Verbesserungsvorschläge zur Tag Library selbst sowie zu den hier präsentierten Inhalten. Zudem sind auch weitere Anwendungsbeispiele herzlich willkommen. Jegliche Art von Rückmeldung kann direkt an die Redakteurin der Tag Library und Ko-Vorsitzende des TS-EAC, Kathrine M. Wisser (<ref
+                     target="mailto:wisser@simmons.edu"
+                  >wisser [at] simmons.edu</ref>) gerichtet werden.</p>
+               <p>Die Erstfassung der Tag Library in englischer Sprache steht online unter der Adresse <ref
+                     target="http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html"
+                     >http://www3.iath.virginia.edu/eac/cpf/tagLibrary/cpfTagLibrary.html</ref> (Stand: 27.08.2010) zur Verfügung. Sie liegt hier in einer auf TEI P5 basierten Fassung vor, so dass sie in späteren Entwicklungsschritten auch unproblematisch in weiteren Sprachen bereitgestellt werden kann. Zudem ist es so möglich, Dokumentationen in das Schema einzubinden, die bei der Verwendung von XML-Editoren als Unter-stützung eingesetzt werden können. Eine PDF-Version der englischen Tag Library wird zu einem späteren Datum veröffentlicht werden.</p>
+               <p>Die vorliegende Übersetzung der Tag Library ins Deutsche beinhaltet eine kleinere Änderung hinsicht-lich der Darstellung zur Häufigkeit, in der die einzelnen Elemente verwendet werden können. Während im Englischen hier ein gesonderter Punkt bei der Elementbeschreibung unter der Überschrift "Occur-rence:" enthalten ist, wird in der deutschen Fassung direkt hinter dem Elementnamen angegeben, ob ein Element</p>
+               <p><list type="bulleted">
+                     <item>obligatorisch ist "(1/1)" bzw. "(1/*)"</item>
+                     <item>optional verwendet werden kann "(0/1)" bzw. "(0/*)" und</item>
+                     <item>ob es ggf. wiederholt verwendet werden kann "(0/*)" bzw. "(1/*)".</item>
+                  </list>
+               </p>
+               <p>Zudem wurden teils aus dem nordamerikanischen Kontext stammende Beispiele durch europäische Entsprechungen ersetzt (Mehrsprachigkeit in Kanada wird zu Mehrsprachigkeit in Belgien usw.), im Anhang einige komplette Codierungsbeispiele sowie ein Mappingvorschlag zur Übertragung bereits vorhandener EAC-Dokumente in das erweiterte EAC-CPF-Format angefügt und ein alphabetischer Index nach der Bezeichnung der Elemente ergänzt.</p>
+            </div>
+            <div>
+               <head>Hintergrund</head>
+               <p>EAC hat seine Anfänge 1998 in dem Versuch von Richard Szary, Wendy Duff und Daniel Pitti, einen Standard zur Codierung und zum Austausch herkunftsstellenbezogener Informationen aus dem Kontext archivischen Materials zu entwickeln. Dieser Standard sollte als Kommunikationsstandard zum Austausch von Herkunftsstellenbeschreibungen auf Basis des International Standard for Archival Authority Records – Corporate Bodies, Persons, Families (ISAAR (CPF))<note
+                     place="bottom" n="1"
+                        >Beschreibung von ISAAR (CPF) in deutscher Übersetzung online zugänglich unter der Adresse: <ref
+                        target="http://www.ica.org/download.php?id=1647"
+                        >http://www.ica.org/download.php?id=1647</ref> (Stand: 25.07.2013).</note> sowie als Ergänzung zum Standard zur Codierung von Findmitteln dienen, der sich in der Encoded Archival Description (EAD)<note
+                     place="bottom" n="2"
+                        >EAD Tag Library in englischer Originalfassung online unter <ref
+                        target="http://www.loc.gov/ead/tglib/index.html"
+                        >http://www.loc.gov/ead/tglib/index.html</ref> zugänglich (Stand: 25.07.2013); deutsche Übersetzung neben weiteren Informationen zur Verwendung von EAD online zugänglich unter <ref
+                        target="http://www.archivgut-online.de"
+                        >http://www.archivgut-online.de</ref> (Bereich Standards) sowie direkt unter <ref
+                        target="http://www.bundesarchiv.de/imperia/md/content/daofind/ead_tag_library.pdf"
+                        >http://www.bundesarchiv.de/imperia/md/content/daofind/ead_tag_library.pdf</ref> (Stand: 25.07.2013).</note> etabliert hatte. So wie EAD die praktische Anwendung des General International Standard Archival Description (ISAD(G))<note
+                     place="bottom" n="3"
+                        >Beschreibung von ISAD(G) in deutscher Übersetzung online zugänglich unter der Adresse: <ref
+                        target="http://www.ica.org/download.php?id=1684"
+                        >http://www.ica.org/download.php?id=1684</ref> (Stand: 25.07.2013).</note> ermöglichte, sollte der neue Standard zur praktischen Umsetzung von ISAAR (CPF) befähigen. Ein paralleler Standard würde zudem die wesentliche Dualität archivischer Beschreibungen erhalten und stärken, wie sie derzeit in archivischen Findmitteln präsentiert wird.</p>
+               <p>Daneben würde ein separater Standard zur Beschreibung der Herkunftsstellen einige praktische Probleme lösen helfen, die bei der Verwendung von EAD aufgetreten waren. EAD, als umfassender Codierungsstandard für Findbücher – das dominierende archivische Präsentationsmodell – entwickelt, enthält alle denkbaren Formen und Ausprägungen beschreibender Daten über Archivgut. Da Archivgut von bzw. über eine bestimmte Körperschaft oder Person teils in mehreren Beständen, teils auch in mehreren Archiven vorgefunden werden kann, kann es bei der Erfassung von Informationen zu diesen Körperschaften und Personen zu Dopplungen kommen. Daraus wiederum resultierende Inkonsistenzen können sowohl für die Nutzer – mit Blick auf das Auffinden und Interpretieren des Archivguts – als auch für die Archivare selbst – mit Blick auf die Erstellung akkurater und vollständiger Referenzen – Schwierigkeiten mit sich bringen.</p>
+               <p>1998 veranstaltete die Universität Yale ein durch die Digital Library Federation gefördertes und von Richard Szary organisiertes internationales Treffen, um Pläne zur Förderung und zur Entwicklung eines Codierungsstandards auf Basis von ISAAR (CPF) vorzustellen und zu diskutieren. 2001 traf sich dann mit finanzieller Unterstützung der Gladys Krieble Delmas Foundation eine zweite internationale Arbeitsgruppe in Toronto. Ergebnis dieses Treffens waren die Toronto Tenets ("Grundsätze von Toronto") als Basis des in Vorbereitung befindlichen Standards. Die Arbeitsgruppe legte während dieses Treffens auch die Ziele fest, die mit der Verwendung des neuen Standards erreicht werden sollten, erweiterte die Parameter der bereits vorhandenen Document Type Definition (DTD) und etablierte eine weitere Arbeitsgruppe, deren Aufgabe die vollständige Ausformulierung der Syntax sein sollte.</p>
+               <p>Mit Verbreitung der Beta-Version der DTD im Jahr 2004 begann eine ausgiebige Testphase für den neuen Standard in verschiedenen Europäischen und US-amerikanischen Projekten. Auf Grundlage der hieraus resultierenden Testergebnisse formierte sich im Jahr 2007 schließlich die Encoded Archival Context Working Group der Society of American Archivists (SAA), die die Entwicklung des Standards, dessen Ausdruck in Form eines Schemas sowie die Formulierung einer Tag Library weiter vorantreiben sollte. Mit Unterstützung der Gladys Krieble Delmas Foundation, des IBC (Instituto per I beni artistici culturali e naturali) der Emilia-Romagna, des Archivio di Stato di Bologna, der OCLC Re-search sowie der National Library of Australia traf sich die EAC Working Group im Mai 2008 für drei Tage in Bologna, um die Basis für den heutigen Standard EAC-CPF zu legen. Diese Arbeit wurde in der Folge per Mail und Telefonkonferenzen fortgesetzt. Von August bis November 2009 wurde der abschließende Entwurf als Diskussionsgrundlage einer breiteren Fachöffentlichkeit zur Verfügung gestellt. Die Rückmeldungen hierauf flossen in die Fertigstellung des Schemas mit ein, das im März 2010 veröffentlicht worden ist. Die Working Group dank allen Beteiligten für ihre Beiträge, ihr Feedback und ihre umfassende Bereitschaft zu Tests des neuen Schemas, dessen Fortentwicklung ohne diese internationale Unterstützung nicht möglich gewesen wäre. 2011 wurde die EAC Working Group aufgelöst und das SAA Council beschloss das Technical Subcommittee for Encoded Archival Context (TS-EAC) einzusetzen. Derzeit werden die Tag Library und, in Zusammenarbeit mit dem Schema Development Team (SDT), das EAC-CPF-Schema vom TS-EAC betreut.</p>
+               <p>Beschreibungen von Archivgut enthalten neben Informationen zu Inhalt oder intellektuellen wie physischen Attributen des Materials stets auch Informatione zum Kontext seines Entstehens und seiner Verwendung. Dieser kann sehr komplex und vielschichtig sein und Einzelpersonen, Familien, Organisationen, Institutionen, Funktionen, Aktivitäten, Arbeitsprozesse, Orte, Ereignisse sowie andere Entitäten und Objekte umfassen bzw. betreffen. Vorangig hierunter sind diejenigen Entitäten, die für die Entstehung oder Verwendung des Materials verantwortlich gewesen sind, d.h. im Regelfall Körperschaften, Personen oder Familien (CPF-Entitäten). Informationen über die CPF-Entitäten können dem Nutzer helfen, das Archivgut umfassender und besser zu verstehen und für ihre Anwendungszwecke zu interpretieren, da sie somit den Kontext, in dem das Material ursprünglich erstellt, verwaltet und verwendet wurde, in ihre Studien einbeziehen können. Dabei kann diese Art von Information über die Beteiligten am Entstehungsprozess des Archivguts sowohl als Bestandteil eines vollständigen archivischen Beschreibung als auch als unabhängiges, paralleles System gesehen werden, das zu anderen beschreibenden Systemen Verbindungen herstellen kann.</p>
+               <p>Encoded Archival Context – Corporate Bodies, Persons, and Families (EAC-CPF) dient insbesondere der Beschreibung von Einzelpersonen, Familien und Körperschaften, die in unterschiedlichem Maße für die Entstehung, Verwaltung und Verwendung archivischen Materials verantwortlich sind bzw. damit in irgendeiner Weise im Zusammenhang stehen. Mit der Zeit werden sich eventuell weitere Typen kontextbezogener Entitäten unter dem Dach von EAC entwickeln. Aktuell jedoch ist Hauptziel von EAC-CPF eine standardisierte Codierung von Beschreibungen der genannten Art von Entitäten, um die gemeinsame Verwendung, den Austausch und die Präsentation der damit verbundenen Informati-onen in einer digitalen Welt zu ermöglichen. Daher wird auch die Verlinkung zwischen den Beschrei-bungen verschiedener Entitäten zur Entdeckung neuer Zusammenhänge sowie die Verlinkung zu dem durch sie geschaffenen Archivgut unterstützt.</p>
+               <p>Darüber hinaus unterstützt EAC-CPF als Kommunikationsstruktur auch den Austausch entsprechen-der Normdateien, die sich an ISAAR (CPF) orientieren. ISAAR (CPF) "bestimmt die Art von Informati-onen, die in eine Normdatei eingefügt werden können, und bietet Richtlinien für die Anwendung sol-cher Daten in archivischen Verzeichnungssystemen."  ISAAR (CPF) stellt zudem fest, dass "[d]er erfolgreiche Austausch von archivischen Normdaten über Computernetzwerke von der Verwendung von geeigneten Formaten durch die beteiligten Archive ab[hängt]. Encoded Archival Context (EAC) ist ein solches Format, das den Austausch von ISAAR(CPF)-konformen archivischen Normdaten über das Internet unterstützt."  EAC-CPF bietet ein probates Mittel zur umfassenden Abbildung von ISAAR (CPF), auch wenn es noch zusätzliche Elemente oder technische Inhalte umfassen kann, die in ISAAR (CPF) nicht enthalten sind.</p>
+               <p>Auf Grundlage der Toronto Tenets aus dem Jahr 2001 sind für die Entwicklung des Schemas folgende Grundsätze festgelegt worden:
+              <list
+                     type="ordered">
+                     <head>Definition und Verwendung</head>
+                     <item n="1"
+                        >Archivische Kontextinformationen umfassen die Beschreibung der Umstände, unter denen das archivische Material ursprünglich entstanden, verwaltet und verwendet worden ist. Dieser Kontext schließt, ohne darauf begrent zu sein, die Identifikation und die Charakteristik derjenigen Perso-nen, Körperschaften und Familien (allgemein: Entitäten) mit ein, die als Urheber, Nutzer oder Subjekt des Archivguts angesehen werden können, und benennt eventuell vorhandene Beziehun-gen zwischen verschiedenen Entitäten.</item>
+                     <item n="2"
+                        >Kontextinformationen zu Entitäten sind keine Daten zur Beschreibung anderer Informationsquellen, sondern eher Daten zur Beschreibung einzelner Entitäten, die als Teil des Systems verstanden werden, innerhalb dessen diese Informationsquellen (z.B. Akten) existiert haben (und existieren).</item>
+                     <item n="3"
+                        >Die Erfassung von Kontextinformationen zu Entitäten in Archivinformationssystemen unterstützt direkt die umfassende Beschreibung sowie das Verständnis des Archivguts sowie den Prove-nienzansatz bei dessen Aufbereitung über Zeit- und Arbeitsgebietsgrenzen hinweg.</item>
+                     <item n="4"
+                        >Kontextinformationen zu Entitäten können neben der Unterstützung bei Beschreibung, Bereitstel-lung und Interpretation von Archivmaterial auch als unabhängige Informationsquelle von Bedeutung sein.</item>
+                     <item n="5"
+                        >Das vorliegende Modell zielt darüber hinaus auf den Austausch und die gemeinsame Nutzung von Kontextinformationen zu Entitäten, insbesondere im Falle von inhaltlichen Überschneidungen oder gemeinsamen Nutzungsabsichten.</item>
+                  </list>
+                  <list type="ordered">
+                     <head>Struktur und Inhalt</head>
+                     <item n="6"
+                        >Jede Instanz von Kontextinformationen beschreibt eine einzelne Entität.</item>
+                     <item n="7"
+                        >Das Modell liefert den Rahmen, innerhalb dessen die gesamte Bandbreite und Tiefe von Kontext-informationen zu Entitäten erfasst werden kann, und schlägt daneben ein Minimalset an Elemen-ten zur Beschreibung einer einzelnen Entität vor. Eine Empfehlung zur Verwendung weiterer Elemente sollte hingegen ausschließlich im Rahmen spezieller Anwendungszusammenhänge erfolgen.</item>
+                     <item n="8"
+                        >Das Modell definiert die Gesamtheit der Elemente, die zur Beschreibung von Entitäten verwendet werden können, sowie die strukturellen Beziehungen dieser Elemente untereinander. Einzelne Elemente und Struktur unterstützen das Auffinden, die Navigation und die Präsentation von Kontextinformationen zu Entitäten sowie die Verlinkung dieser Informationen mit der Beschreibung von Archivgut und den Beschreibungen anderer Kontexteinheiten, insbesondere denjenigen, die in EAD, MARC oder ähnlichen internationalen Standards codiert sind.
+                     </item>
+                     <item n="9"
+                        >Das Modell hilft bei der Verlinkung der Beschreibung einzelnen Kontexteinheiten mit digitalen oder anderen Repräsentationen dieser Entitäten selbst.</item>
+                  </list>
+                  <list type="ordered">
+                     <head>Technische Aspekte</head>
+                     <item n="10"
+                        >Das Modell wird in XML ausgedrückt um Plattformunabhängigkeit und Übertragbarkeit von Infor-mationen zu fördern. Das Modell kann damit auch in anderen Zusammenhängen eingesetzt wer-den.</item>
+                  </list>
+               </p>
+            </div>
+            <div>
+               <head>Grundsätzliches zu EAC-CPF</head>
+               <p>Die mit Hilfe von EAC-CPF zu erfassenden Entitäten stellen zumeinst komplexe Gebilde dar. Beispielsweise kann eine Entität mehrere, verschiedene Rollen einnehmen oder ein und dieselbe Rolle kann von mehreren, verschiedenen Entitäten wahrgenommen werden. Dadurch ergibt sich die Notwendigkeit, den Standard in seiner Struktur flexibel genug zu halten, um die möglichen Kombinationen entsprechend abbilden zu können. Hierzu sind verschiedene Ansätze definiert worden:</p>
+               <list type="simple">
+                  <item>SINGLE IDENTITY: Beschreibung einer Person (bzw. einer Körperschaft oder einer Familie) mit einer eindeutigen Identität (Rolle) in einem EAC-CPF-Dokument. (Regelfall)</item>
+                  <item>MULTIPLE IDENTITY-MANY IN ONE: Beschreibung einer Person (bzw. einer Körperschaft oder einer Familie) mit zwei oder mehr Identitäten (Rollen) in verschiedenen Abschnitten eines EAC-CPF-Dokuments. Kann in die Variante "Multiple Identity-One in Many" konvertiert werden. (Weniger häufig, jedoch nicht zu selten)</item>
+                  <item>MULTIPLE IDENTITY-ONE IN MANY: Beschreibung einer Person (bzw. einer Körperschaft oder einer Familie) mit zwei oder mehr Identitäten (Rollen) in verschiedenen miteinander verknüpften EAC-CPF-Dokumenten. Kann in die Variante "Multiple Identity-Many in One" konvertiert werden. (Weniger häufig, jedoch nicht zu selten)</item>
+                  <item>ALTERNATIVE SET: EAC-CPF-Dokument zur Beschreibung einer Entität, das aus zwei oder mehr alternativen EAC-CPF-Beschreibungen derselben abgeleitet ist, auf diesen basiert und sie in einem Dokument zusammenführt. Zu verwenden innerhalb eines Konsortiums oder für die Bereitstellung eines zentralen Zugangs zu Normdateien, die in zwei oder mehreren Systemen bzw. von zwei oder mehreren Institutionen verwaltet werden. Alternative EAC-CPF-Dokumente können in verschiedenen Sprachen oder auch in derselben Sprache erfasst sein.</item>
+                  <item>COLLABORATIVE IDENTITY: Beschreibung einer Identität (Rolle), die von zwei oder mehreren Per-sonen wahrgenommen wird (z.B. die gemeinsame Verwendung eines Pseudonyms). Sonderfall des Ansatzes "Multiple Identity-One in Many". (Selten).</item>
+               </list>
+               <p>EAC-CPF ist entwickelt worden, um dieser Vielzahl an Identitäten (Rollen) adäquat begegnen zu kön-nenn, und bietet dabei verschiedene Wege, komplexe Strukturen, angepasst an die jeweiligen Erfor-dernisse und eigenen Präferenzen, auszudrücken. Diese Flexibilität des Standards greift ein Design-prinzip auf, das einerseits die Möglichkeit und teilweise Notwendigkeit der Anpassung an eigene Spezifikationen unterstreicht, andererseits die Möglichkeit der gemeinsamen Präsentation von aus unterschiedlichen Anwendungen stammenden Dateien offen hält. Darin spiegelt sich zudem die Er-kenntnis wieder, dass mit Blick auf die Beschreibung von Identität teils grundlegende philosophische Unterschiede innerhalb der internationalen Gemeinschaft existieren, für die EAC-CPF eine neutrale Basis bietet.</p>
+               <p>Im Rahmen der vorliegenden Tag Library wird durchgehend der allgemein Begriff "Entität" für diejeni-gen Institutionen, Personen und Services verwendet, die in EAC-CPF-Dokumenten beschrieben wer-den. Der Begriff "Akteur" hingegen bezieht sich nachfolgend ausschließlich auf diejenigen Institutio-nen, Personen und Services, die die EAC-CPF-Dokumente erstellen und verwalten.</p>
+            </div>
+            <div>
+               <!-- sija: Glossar übersetzen?              -->
+               <head>Glossar</head>
+               <list type="simple">
+                  <item>Agent:</item>
+                  <item>CPF entity:</item>
+                  <item>Grouping:</item>
+                  <item>Identity:</item>
+                  <item>Resource:</item>
+                  <item>Wrapper:</item>
+               </list>
+            </div>
+            <div>
+               <head>Überblick über die Struktur und Bedeutungszusammenhänge von EAC-CPF</head>
+               <div>
+                  <head>Einleitung</head>
+                  <p>Jedes EAC-CPF-Dokument hat zwei obligatorische Elemente, <gi>control</gi> und entweder <gi>cpfDescription</gi> oder <gi>multipleIdentities</gi>, das wiederum zwei oder mehrere <gi>cpfDescription</gi>-Elemente enthält. Das Element <gi>control</gi> dient zur Verwaltung der EAC-CPF-Beschreibung selbst und bietet Informationen zum Kontext der EAC-CPF-codierten Datei. <gi>cpfDescription</gi> wiederum fasst Informationen zu Namen, beschreibende Elemente und Elemente zur Angabe von Beziehungen zu anderen Entitäten zusammen. Sowohl <gi>control</gi> als auch <gi>cpfDescription</gi> enthalten zur weiteren Ausformulierung ihrer Bereiche entsprechende Subelemente.</p>
+                  <egXML xml:lang="ger" xmlns="http://www.tei-c.org/ns/Examples">
+                     <eac-cpf:eac-cpf>
+                        <eac-cpf:control>
+                           [Verwaltungselemente]
+                        </eac-cpf:control>
+                        <eac-cpf:cpfDescription>
+                           [Bescheibungselemente]
+                        </eac-cpf:cpfDescription>
+                     </eac-cpf:eac-cpf>
+              </egXML>
+                  <p>oder</p>
+                  <egXML xml:lang="ger" xmlns="http://www.tei-c.org/ns/Examples">
+                     <eac-cpf:eac-cpf>
+                        <eac-cpf:control>
+                       [Verwaltungselemente]
+                    </eac-cpf:control>
+                        <eac-cpf:multipleIdentities>
+                           <eac-cpf:cpfDescription>
+                          [Bescheibungselemente]
+                       </eac-cpf:cpfDescription>
+                           <eac-cpf:cpfDescription>
+                          [Bescheibungselemente]
+                       </eac-cpf:cpfDescription>
+                           <eac-cpf:cpfDescription>
+                          [Bescheibungselemente]
+                       </eac-cpf:cpfDescription>
+                        </eac-cpf:multipleIdentities>
+                     </eac-cpf:eac-cpf>
+                  </egXML>
+               </div>
+               <div>
+                  <head>
+                     <gi>control</gi>
+                  </head>
+                  <p>Das <gi>control</gi>-Element umfasst die folgenden Subelemente, in der Reihenfolge ihrer Verwendung im EAC-CPF Schema:</p>
+                  <list type="simple">
+                     <item>
+                        <gi>recordId</gi> - obligatorisches Element zur Angabe eines oder mehrerer eineindeutiger Identifikatoren für das EAC-CPF-Dokument.</item>
+                     <item>
+                        <gi>otherRecordId</gi> - optionales Element zur Angabe eines zusätzlichen, alternativen Identifikators für das EAC-CPF-Dokument.</item>
+                     <item>
+                        <gi>maintenanceStatus</gi> - obligatorisches Element zur Angabe des aktuellen Bearbeitungsstatus des EAC-CPF-Dokuments. Mögliche Werte: "new", "revised", "deleted", "cancelled", "deletedSplit" oder "deletedReplaced".</item>
+                     <item>
+                        <gi>publicationStatus</gi> - optionales Element zur Angabe des Veröffentlichungsstatus des EAC-CPF-Dokuments.</item>
+                     <item>
+                        <gi>maintenanceAgency</gi> – obligatorisches Element zur Angabe des Names sowie eines Identifikators für die Institution, die das EAC-CPF-Dokument erstellt hat, verwaltet und/oder für dessen Veröffentlichung zuständig ist.</item>
+                     <item>
+                        <gi>languageDeclaration</gi> - optionales Element zur Angabe der Sprache, in der die EAC-CPF-Beschreibung verfasst ist, sowohl in ausgeschriebener als auch in codierter Form.</item>
+                     <item>
+                        <gi>conventionDeclaration</gi> - optionales Element zur Angabe der Richtlinien und Regelwerke, an denen man sich bei der Erstellung des EAC-CPF-Dokuments orientiert hat, insbesondere mit Blick auf die Namen, die im Element <gi>identity</gi> angegeben werden sowie hinsichtlich ggf. verwendeter Thesauri und Normdatensätzen.</item>
+                     <item>
+                        <gi>localTypeDeclaration</gi> - optionales Element zur Angabe lokaler Richtlinien und Regelwerke, die im Attribut <att>localType</att> verwendet werden.</item>
+                     <item>
+                        <gi>localControl</gi> - optionales Element zur Angabe weiterer standardisierter oder normierter Daten, die aufgrund der lokalen Anwendungspraxis benötigt werden, jedoch in anderen Subelementen von <gi>control</gi> nicht erfasst werden können.</item>
+                     <item>
+                        <gi>maintenanceHistory</gi> - obligatorisches Element zur Bearbeitungsgeschichte des EAC-CPF-Dokuments mit Angaben zu Datum, Art und Beschreibung eines einzelnen Bearbeitungsereignisses. Kann eines oder mehrere <gi>maintenanceEvent</gi>-Elemente enthalten, die z.B. Erstellung, Import, Update oder Löschen der EAC-CPF-Beschreibung dokumentieren. Jedes <gi>maintenanceEvent</gi>-Element wiederum fasst Angaben zum jeweiligen Akteur, dessen Typisierung (Mensch oder Maschine), Art und Datum des Bearbeitungsereignisses sowie eine kurze Beschreibung desselben zusammen.
+                 </item>
+                     <item>
+                        <gi>sources</gi> - optionales Element zur Angabe der Quellen, die zur Beschreibung der Entität bzw. der Entitäten im EAC-CPF-Dokument herangezogen worden sind. Kann eines oder mehrere <gi>source</gi>-Elemente enthalten.</item>
+                  </list>
+               </div>
+               <div>
+                  <head>
+                     <gi>cpfDescription</gi>
+                  </head>
+                  <p>Das Element <gi>cpfDescription</gi> enthält die eigentliche Beschreibung der Entität. Ähnlich wie das <gi>control</gi>-Element setzt sich auch das <gi>cpfDescription</gi>-Element aus vier komplexen Subelementen zusammen, die jeweils unterschiedliche Aspekte der Entität beschreiben:</p>
+                  <list type="simple">
+                     <item>
+                        <gi>identity</gi> - obligatorisches Element mit teils komplexer Struktur zur Angabe des Namens oder der Namen, die von der beschriebenen Entität im Laufe ihres Lebenszyklus verwendet worden sind. Enthält ein wiederholbares <gi>nameEntry</gi>-Element zur Angaben mehrerer Namen oder ein gleichfalls wiederholbares <gi>nameEntryParallel</gi>-Element zur Angaben eines Namens in verschiedenen Sprachen.</item>
+                     <item>
+                        <gi>description</gi>optionales Element zur formalen Beschreibung der Entität in Anlehnung an die Kapitel des Standards ISAAR (CPF). Das Subelement <gi>localDescription</gi> erlaubt die ergänzende Angabe lokal verwendeter beschreibender Informationen, die in anderen Subelementen von <gi>description</gi> nicht erfasst werden können.
+                 </item>
+                     <item>
+                        <gi>relations</gi> optionales Element zur Angabe einer oder mehrerer Beziehungen zu verwandten Körperschaften, Personen oder Familien (Subelement <gi>cpfRelation</gi>), Funktionen (Subelement <gi>functionRelation</gi>) und Quellen (Subelement <gi>resourceRelation</gi> bzw. zur Beschreibung dieser verwandten Entitäten.</item>
+                     <item>
+                        <gi>alternativeSet</gi> - optionales Element zur Angaben von zwei oder mehreren Normdateien zu der beschriebenen Entität aus zwei oder mehreren Systemen, die in einem EAC-CPF-Dokument abgebildet werden. Es enthält pro angegebener Normdatei ein <gi>setComponent</gi>-Element.
+                 </item>
+                  </list>
+               </div>
+               <div>
+                  <head>
+                     <gi>identity</gi>
+                  </head>
+                  <p>Das komplextestes Element innerhalb von EAC-CPF ist das Element <gi>identity</gi>. Neben der Erfassung eines oder mehrerer Namen für die beschriebene Entität im Allgemeinen dient das Element <gi>identity</gi> auch der Angabe desselben Namens in mehreren Sprachen und/oder Schreibweisen. So haben beispielsweise Körperschaften in Ländern mit mehr als einer Amtssprache wie Belgien, die Schweiz oder Kanada häufig auch parallele Bezeichnungen in all diesen Sprachen.</p>
+                  <p>Das Element <gi>identity</gi> enthält ein obligatorisches Subelement <gi>entityType</gi> sowie eines oder mehrere <gi>nameEntry</gi>-Elemente und/oder <gi>nameEntryParallel</gi>-Elemente. Zusätzlich können auch die optionalen Elemente <gi>entityId</gi> and <gi>descriptiveNote</gi> verwendet werden.</p>
+                  <p>Das <gi>nameEntry</gi>-Element setzt sich aus einem oder mehreren <gi>part</gi>-Elementen zusammen und kann die Attribute <att>scriptCode</att>, <att>xml:lang</att>, <att>transliteration</att> und <att>localType</att> enthalten, mit denen sich nähere Informationen zu Sprache und Schrift erfassen lassen. Es enthält zudem ein optionales <gi>useDates</gi>-Element zur Angabe des Zeitraums, innerhalb dessen ein genannter Name seine Gültigkeit gehabt hat.</p>
+                  <p>Das Element <gi>nameEntryParallel</gi> ist für den Fall zu verwenden, dass derselbe Name in verschiedenen Sprachen angegeben werden soll. Es enthält eines oder mehrere <gi>nameEntry</gi>-Elemente sowie ein optionales <gi>useDates</gi>-Element. So können beispielsweise im Kontext des Belgischen Nationalarchivs parallel verwendete französische und niederländische Bezeichnungen dadurch zugeordnet werden, dass der Identifikator des Archivs in zwei parallelen <gi>nameEntry</gi>-Elementen angegeben und die beiden Bezeichnungen über den entsprechenden Wert des Attributs <att>xml:lang</att> voneinander unterschieden werden.</p>
+                  <p>Namen, die mittels der Elemente <gi>nameEntry</gi> oder <gi>nameEntryParallel</gi> benannt sind, können zusätzlich als autoritisierte Form dieses Namens oder als alternative Variante deklariert werden. Hierzu stehen sowohl für <gi>nameEntry</gi> als auch für <gi>nameEntryParallel</gi> die Subelemente <gi>authorizedForm</gi> bzw. <gi>alternativeForm</gi> zur Verfügung, in denen der entsprechende Status des Namens in Anlehnung an für seine Einstufung verwendete Richtlinien und Regelwerke angegeben werden kann. Der Inhalt der genannten Elemente dient daher der Identifikation dieser Richtlinien. Wird das Element <gi>nameEntryParallel</gi> verwendet, so kann zudem eines der hier enthaltenen <gi>nameEntry</gi>-Elemente über das Subelement <gi>preferredForm</gi> als die bevorzugte Form des jeweiligen Namens festgelegt werden. Auch im Element <gi>preferredForm</gi> sind wiederum die Richtlinien zu benennen, die zu dieser Festlegung geführt haben.</p>
+               </div>
+               <div>
+                  <head>
+                     <gi>description</gi>
+                  </head>
+                  <p>Das Element <gi>description</gi> kann sowohl zur ausfürhlichen Beschreibung einer Entität verwendet werden als auch zu deren Beschreibung mittels Normdaten. Die enthaltenen Subelemente repräsentieren jeweils verschiedene Kategorien des Standards ISAAR (CPF). Die beschreibenden Elemente haben dabei jeweils eine Form zur singularen sowie eine Form zur pluralen Verwendung, wobei letztere dann eingesetzt werden, wenn eine beschreibende Kategorie mehrere Aspekte gleicher Art beinhaltet oder es sich um weniger formale Beschreibungen handelt. So würde beispielsweise das Element <gi>function</gi> einen einzelnen Eintrag zur Benennung einer bestimmten Funktion enthalten, während im Element <gi>functions</gi> Begriffe für verschiedene Funktionen gebündelt werden oder eine umfassendere Beschreibung einer Funktion gegeben werden können. Die meisten Subelemente von <gi>description</gi> bieten zudem ein optionales <gi>descriptionNote</gi>-Element für erläuternde Texte. Subelemente von <gi>description</gi> sind u.a.:</p>
+                  <list type="simple">
+                     <item>
+                        <gi>existDates</gi> - optionales Element zur Angabe wichtiger Daten im Lebenszyklus der beschriebenen Entität. Dabei kann es sich je nach Verwendung der Subelemente <gi>date</gi>, <gi>dateRange</gi> bzw. <gi>dateSet</gi> um genaue oder geschätzte Zeitangaben handeln.</item>
+                     <item>
+                        <gi>place</gi> - optionales Element zur Angabe wichtiger Orts- und geographischer Informationen im Kontext der Beschreibung, ggf. in Kombination mit entsprechenden Zeitangaben. Enthält die Subelemente <gi>place-Entry</gi> und <gi>placeRole</gi> sowie die Elemente <gi>date</gi>, <gi>dateRange</gi> und <gi>dateSet</gi>.</item>
+                     <item>
+                        <gi>localDescription</gi> - optionales Element zur Angabe lokal verwendeter Beschreibungskategorien, die mittels der übrigen Subelemente von <gi>description</gi> nicht adäquat abzubilden sind. Enthält das Subelement <gi>term</gi> sowie die Elemente <gi>date</gi>, <gi>dateRange</gi> und <gi>dateSet</gi>.</item>
+                     <item>
+                        <gi>legalStatus</gi> — optionales Element zur Angabe des Rechtsstatus einer Körperschaft, meist definiert durch entsprechende gesetzliche Regelungen und/oder durch die Regierung oder eine entsprechend autorisierte Behörde vergeben. Enthält das Subelement <gi>term</gi> sowie die Elemente <gi>date</gi>, <gi>dateRange</gi> und <gi>dateSet</gi>.</item>
+                     <item>
+                        <gi>function</gi> - optionales Element zur Angabe relevanter Funktionen, Prozesse, Aktivitäten, Aufgaben oder Transaktionen, die von der beschriebenen Entität wahrgenommen bzw. durchgeführt worden sind. Enthält das Subelement <gi>term</gi> sowie die Elemente <gi>date</gi>, <gi>dateRange</gi> und <gi>dateSet</gi>.</item>
+                     <item>
+                        <gi>occupation</gi> — optionales Element zur Angabe relevanter Berufsbezeichnungen für die beschriebene Entität. Enthält das Subelement <gi>term</gi> sowie die Elemente <gi>date</gi>, <gi>dateRange</gi> und <gi>dateSet</gi>.</item>
+                     <item>
+                        <gi>mandate</gi> — optionales Element zur Angabe relevanter Ämter und Mandate, die die beschriebene Einheit innehatte. Enthält das Subelement <gi>term</gi> sowie die Elemente <gi>date</gi>, <gi>dateRange</gi> und <gi>dateSet</gi>.</item>
+                     <item>
+                        <gi>structureOrGenealogy</gi> - optionales Element zur Abbildung der Verwaltungsstruktur einer beschriebenen Körperschaft bzw. des Stammbaums einer beschriebenen Person oder Familie. Enthält die Subelemente <gi>outline</gi>, <gi>list</gi> und <gi>p</gi> zur eventuellen Strukturierung des Textes.</item>
+                     <item>
+                        <gi>generalContext</gi> - optionales Element zur Angabe allgemeiner Informationen zum sozialen und kulturellen Kontext der beschriebenen Entität. Enthält das Subelement <gi>term</gi> sowie die Elemente <gi>date</gi>, <gi>dateRange</gi> und <gi>dateSet</gi>.</item>
+                     <item>
+                        <gi>biogHist</gi> - optionales Element zur ausführlichen Wiedergabe biographischer und/oder historischer Informationen zur beschriebenen Entität. Enthält ein <gi>abstract</gi>-Element für eine kurze Zusammenfassung des gesamten Inhalts, ein <gi>chronList</gi>-Element für eine nach Daten, Ereignissen und ggf. Orten strukturierte Übersicht sowie die Elemente <gi>list</gi>, <gi>outline</gi> und <gi>p</gi> zur allgemeinen Strukturierung des Textes.</item>
+                  </list>
+                  <p>Alle Subelemente von <gi>description</gi> bieten über das Attribut <att>localType</att> die Möglichkeit, die verwendeten Begriffe als spezifische Termini einer lokalen Anwendung zu definieren. Abgesehen von den Elementen <gi>existDates</gi>, <gi>structureOrGenealogy</gi>, <gi>generalContext</gi> und <gi>biogHist</gi> können die genannten Subelemente zu <gi>description</gi> auch im Plural zur Gruppierung verwendet werden. Diese Gruppierungselemente enthalten zusätzlich die Subelemente <gi>citation</gi>, <gi>list</gi>, <gi>outline</gi> und <gi>p</gi>, um auch komplexere Strukturen abbilden zu können.</p>
+               </div>
+               <div>
+                  <head>
+                     <gi>relations</gi>
+                  </head>
+                  <p>Eines der wichtigsten Prinzipien bei der Erstellung von EAC-CPF war es, die Beschreibung von Beziehungen in linearer Form zu vermeiden und stattdessen die Vorteile einer dezentralisierten Beschreibung zu nutzen.</p>
+                  <p>Werden Beschreibungen von Entitäten als Herkunftsstellen von Archivgut als Bestandteil der archivi-schen Beschreibungen gesehen, ist es zudem hilfreich, Verbindungen zwischen verschiedenen Enti-täten herstellen zu können. Verbindungen sind dabei denkbar:</p>
+                  <list type="bulleted">
+                     <item>zum Archivgut selbst, für das die Beschreibungen der Entitäten den Entstehungskontext abbilden, sowie</item>
+                     <item>zu Funktionen und Aufgaben, die diese Entitäten wahrgenommen haben bzw. weiterhin wahrnehmen und die in den Beschreibungen der Entitäten dokumentiert sind.</item>
+                  </list>
+                  <p>Dabei bestehen Beziehungen stets zwischen verschiedenen Entitäten und nicht innerhalb ein und derselben Entität. Entitäten sind dementsprechend mit anderen Entitäten, mit Funktionen und Aktivitäten oder mit Archivgut, das von ihnen erstellt, verwaltet oder verwendet worden ist, verbunden. Ebenso sind Funktionen und Aktivitäten mit anderen Funktionen und Aktivitäten, mit Herkunftsstellen sowie mit Archivgut verknüpft, das wiederum Verweise auf verwandtes Archivgut, auf Herkunftsstellen sowie auf Funktionen und Aktivitäten enthalten kann. Jede Entität, jede Archivguteinheit und jede Funktion bzw. Aktivität kann somit als Ausgangspunkt zahlreicher und ganz unterschiedlicher Beziehungen dienen.</p>
+                  <p>Da nun also in der Regel Beziehungen zwischen solchen Ausgangs- oder Knotenpunkten aufgebaut werden, ist es sinnvoll, wenn die eigentliche Herstellung und Verwaltung dieser Verbindungen außerhalb der Beschreibungen der verknüpften Entitäten geschieht. Eine Person kann beispielsweise mit einer oder mehreren anderen Personen verbunden sein, mit Organisationen und Institutionen, mit Familien, archivischem Material, Büchern, Zeitschriften und Ausstellungsstücken sowie mit verschie-denen Berufsbezeichnungen und Aktivitäten. Und jede dieser miteinander verbundenen Entitäten kann wiederum mit weiteren Entitäten in Beziehung stehen. Würde man nun all diese Verknüpfungen in der Beschreibung jedes einzelnen der betroffenen Knotenpunkte erfassen wollen, so müsste ein eventueller Fehler in einer Verbindung in jedem Knotenpunkt einzeln korrigiert werden.</p>
+                  <p>Während sich diese Vorgehensweise für die Verwaltung von Beziehungen anbietet, muss es im Rah-men des Austausches von EAC-CPF-Beschreibungen zwischen verschiedenen Systemen bzw. bei Bereitstellung derselben für spätere Benutzer zugleich möglich sein, verbundene Beschreibungen zu sammeln und aneinanderzufügen. Dies ließe sich durch "Stellvertreterbeschreibungen" bewerkstelligen, die je verknüpfter EAC-CPF-Beschreibung idealerweise sowohl für den Menschen lesbare Informationen als auch für Maschinen lesbare Daten enthalten. Während erstere der Identifizierung und Einordnung der verwandten Entität dienen – mittels einer knappen Beschreibung der Entität selbst sowie einer eventuell von ihr wahrgenommenen Funktion oder Aufgabe –, unterstützen zweitere eine freie Verlinkung der Beschreibung der verwandten Entität.</p>
+                  <p>Das <gi>relations</gi>-Element enthält drei Subelemente zur Beschreibung von Beziehungen zu anderen beschreibenden Entitäten: <gi>cpfRelation</gi>, <gi>functionRelation</gi> und <gi>resourceRelation</gi>. In jedem dieser Elemente stehen die Subelemente <gi>relationEntry</gi>, <gi>objectXMLWrap</gi>, <gi>objectBinWrap</gi>, <gi>date</gi>, <gi>dateRange</gi>, <gi>dateSet</gi>, <gi>placeEntry</gi> und <gi>descriptiveNote</gi> zur Verfügung. Zudem bieten optionale Attribute in Abhängigkeit des jeweiligen Beziehungstyps eine Möglichkeit, individuelle Beziehungen näher zu bestimmen. Dies sind u.a.:</p>
+                  <list type="simple">
+                     <item>
+                        <gi>cpfRelation</gi> - enthält das Attribut <att>cpfRelationType</att> mit den möglichen Werten: "identity", "hierarchical", "hierarchical-parent", "hierarchical-child", "temporal", "temporal-earlier", "temporal-later", "family" und "associative".</item>
+                     <item>
+                        <gi>functionRelation</gi> - enthält das Attribut <att>functionRelationType</att> mit den möglichen Werten: "controls", "owns", "performs".</item>
+                     <item>
+                        <gi>resourceRelation</gi> - enthält das Attribut <att>resourceRelationType</att> mit den möglichen Werten "creator-Of", "subjectOf", "other".</item>
+                  </list>
+                  <p>Daneben können die Beziehungselemente das Attribut <att>lastDateTimeVerified</att> sowie eine Reihe einfacher Xlink-Attribute enthalten.</p>
+                  <p>Die benannte einfache Typisierung von Beziehungen kommt zwei Grundanliegen entgegen. Zum einen dem allgemeinen Interesse, Beziehungen schlüssig darlegen, sich an ihnen entlang bewegen und sie ggf. in graphischer Form wie Organigrammen, Stammbäumen oder Zeitlinien darstellen zu können. Bezüglich der graphischen Darstellung repräsentieren die aktuell verfügbaren Typisierungen ein experimentelles Stadium, praktische Umsetzungen in dieser Richtung gibt es bislang nicht. Zum anderen helfen bereits solch einfache Typisierungen den Nutzern bei der Ein- und Zuordnung der Beziehungen selbst sowie der zueinander in Beziehung gesetzten Entitiäten.</p>
+                  <p>Abhängig vom jeweiligen kulturellen und institutionellen Kontext kann die Zahl möglicher Beziehungstypen prinzipiell unendlich sein. Bei der Definition von EAC-CPF hat man sich jedoch für ein eher allgemein gehaltenes, knappes Set an Beziehungstypen beschränkt, da dies als Voraussetzung für den möglichen Aufbau bestimmter Funktionalitäten auf Basis dieser Typisierung angesehen worden ist.</p>
+               </div>
+               <div>
+                  <head>Die Integration von XLink in EAC-CPF</head>
+                  <p>Das EAC-CPF-Schema erlaubt die Verlinkung auf externe Ressourcen mittels eines begrenzten Subsets des <ref
+                        target="http://www.w3.org/TR/xlink/"
+                        >XLink-Standards</ref>. Die entsprechenden XLink-Attribute können zur Erstellung und Beschreibung solcher externer Links verwendet werden und bieten sich insbesondere im Zusammenhang mit den EAC-CPF-Attributen <att>cpfRelationType</att>, <att>functionRelationType</att> und <att>resourceRelationtype</att> an. Sie können zu folgenden Elementen angegeben werden: <gi>citation</gi>, <gi>cpfRelation</gi>, <gi>functionRelation</gi>, <gi>resourceRelation</gi>, <gi>setComponent</gi> und <gi>source</gi>.</p>
+                  <p>Eine umfassende Beschreibung dieser Attribute findet sich im Abschnitt "Beschreibung der EAC-CPF Attribute" der vorliegenden Tag Library. Die nachfolgende Auflistung soll bereits im hiesigen Zusammenhang einen Überblick dazu geben, wie sie in Verbindung miteinander eingesetzt werden können.</p>
+                  <list type="simple">
+                     <head>Das Attribut <att>xlink:type</att></head>
+                     <item>
+                        <att>xlink:type</att> - obligatorisches Attribut, sofern mindestens eines der übrigen XLink-Attribute zu einem Element angegeben wird. Es hat den Standardwert "simple", da die Anwendung von XLink im Rahmen von EAC-CPF ausschließlich mit externen Links zu jeweils einer Ressource definiert ist. Sollen mehrere externe Links angegeben werden, so ist pro Link ein neues EAC-CPF-Element zu verwenden.</item>
+                  </list>
+                  <list type="simple">
+                     <head>Das Attribut <att>xlink:href</att></head>
+                     <item>
+                        <att>xlink:href</att> - optionales Attribut zur Angabe der Adresse, unter der die verlinkte Ressource im Zugriff ist. Der Link muss in Form eines gültigen URI (Uniform Resource Identifier) angegeben sein.</item>
+                  </list>
+                  <list type="simple">
+                     <head>Semantische Attribute</head>
+                     <item>
+                        <att>xlink:arcrole</att> - optionales Attribut zu <gi>cpfRelation</gi>, <gi>functionRelation</gi> und <gi>resourceRelation</gi> zur eindeutigen Beschreibung der Beziehung zwischen der verlinkten und der im EAC-CPF-Dokument beschriebenen Ressource. Wird <att>xlink:arcrole</att> zu <gi>citation</gi>, <gi>setComponent</gi> und <gi>source</gi> verwendet, kann hiermit die jeweilige Beziehung dem Verwendungskontext entsprechend präzisiert werden. Der Wert des Attributs muss in Form eines gültigen URI angegeben sein.</item>
+                     <item>
+                        <att>xlink:role</att> - optionales Attribut zur Charakterisierung der verlinkten Ressource. Dies findet insbesondere im Zusammenhang mit dem Element <gi>resourceRelation</gi> Verwendung, wo eine Charakterisierung entsprechend ISAAR (CPF), Abschnitt 6.2, vorgenommen werden kann. Der Wert des Attributs muss in Form eines gültigen URI angegeben sein.</item>
+                  </list>
+                  <list type="simple">
+                     <head>Attribute zum Aufruf des Links</head>
+                     <item>
+                        <att>xlink:actuate</att> — optionales Attribut, das in Kombination mit dem Attribut <att>xlink:show</att> dazu verwendet werden kann, festzulegen, unter welchen Umständen und wie eine verlinkte Ressource aufgerufen werden soll. Zum Beispiel kann der Link aufgerufen werden, sobald das entsprechende XML-Dokument, in dem der Link angegeben ist, geladen wird, oder erst auf direkte Anforderung durch einen Nutzer oder eine bestimmte Anwendung.</item>
+                     <item>
+                        <att>xlink:show</att> - optionales Attribut, das in Kombination mit dem Attribut <att>xlink:actuate</att> dazu verwendet werden kann, festzulegen, wie eine verlinkte Ressource dem Nutzer angezeigt wird. Beispielsweise kann sie das zuvor aufgerufene Dokument ersetzen oder in einem neuen Browserfenster bzw. -tab geöffnet werden.</item>
+                     <item>
+                        <att>xlink:title</att> - optionales Attribut zur Angabe einer Beschriftung des Links innerhalb einer HTML-Präsentation.</item>
+                  </list>
+                  <p>Die Implementierung von EAC-CPF eine entsprechende serverseitige Definition aller XLink-Attribute, da bisher nicht alle . Ein Beispiel hierzu findet sich online unter der Adresse <ref
+                        target="http://www.snee.com/xml/xlink/sxlinkdemo.xml"
+                        >http://www.snee.com/xml/xlink/sxlinkdemo.xml</ref>.</p>
+                  <p>Das nachfolgende Beispiel zeigt den möglichen Einsatz von XLink in Bezug auf ein externes Vokabular. Es handelt sich bei der verlinkten Ressource um die Beschreibung des Ehepartners der in der EAC-CPF-Datei beschriebenen Person:</p>
+                  <eg:egXML xml:lang="eng" valid="true" xmlns="http://www.tei-c.org/ns/Examples">
+                     <eac-cpf:cpfRelation cpfRelationType="family" xlink:actuate="onRequest"
+                        xlink:arcrole="http://library.illinois.edu/archives/eac-cpfRelations.html#spouseOf"
+                        xlink:href="http://library.illinois.edu/archives/archon/index.php?p=creators/creator&amp;id=546"
+                        xlink:show="new" xlink:type="simple">
+                        <eac-cpf:relationEntry>Gregory, John Milton</eac-cpf:relationEntry>
+                        <eac-cpf:descriptiveNote>
+                           <eac-cpf:p>John Milton Gregory was the husband of Louisa Allen Gregory.</eac-cpf:p>
+                        </eac-cpf:descriptiveNote>
+                     </eac-cpf:cpfRelation>
+                     <eac-cpf:resourceRelation resourceRelationType="creatorOf"
+                        xlink:role="http://library.illinois.edu/archives/eac-cpfRelations.html#collector"
+                        xlink:type="simple">
+                        <eac-cpf:relationEntry>Collezione Fortunato Depero (Polo culturale e Galleria Museum Depero, Roverto</eac-cpf:relationEntry>
+                        <eac-cpf:descriptiveNote>
+                           <eac-cpf:p>ITA MART, Collezione Depero, Collezione d'arte, 1919-1959, Creatore della collezione, </eac-cpf:p>
+                        </eac-cpf:descriptiveNote>
+                     </eac-cpf:resourceRelation>
+                  </eg:egXML>
+                  <p>Hinweis: Das Vokabular, das unter im obigen Beispiel verlinkten Adresse purl.org angegeben ist, wird hier lediglich zu Demonstrationszwecken herangezogen. Es stellt kein normiertes oder standardisiertes Vokabular dar.</p>
+                  <p>Es wird davon ausgegangen, dass sich im Laufe der Zeit entsprechende normierte und standardisierte Vokabularien entwickeln und etablieren werden, um die Beziehungen von Personen, Familien, Körperschaften, Ressourcen und Funktionen, die mit den Elementen <gi>cpfRelation</gi>, <gi>resourceRelation</gi> und <gi>functionRelation</gi> erfasst werden, charakterisieren zu können. Solche Vokabularien können sowohl lokal, als auch national oder sogar international verwaltet werden, ggf. in Nachfolge der Arbeit der EAC Working Group.</p>
+               </div>
+               <div>
+                  <head>Das Attribut <att>localType</att></head>
+                  <p>Als internationaler Standard versucht EAC-CPF, soweit wie möglich auf gemeinsame Definitionen zurückzugreifen, ohne dabei jedoch kulturelle und institutionelle Unterschiede zu übertünchen. Die oben beschriebene Semantik und Struktur stellt daher den aktuellen Konsens hinsichtlich Semantik und Struktur dar, der sich eng an den Standard ISAAR (CPF) hält.</p>
+                  <p>In Ergänzung dazu sowie zu dem bereits benannten Element <gi>localDescription</gi> lässt sich zu vielen EAC-CPF-Elementen das Attribut <att>localType</att> einsetzen. Mit dessen Hilfe kann EAC-CPF auf nationale, regionale und lokale Bedürfnisse abgestimmt verwendet werden, wenn etwa in den lokalen Systemen spezifischere Kategorien erforderlich sind als EAC-CPF sie in seiner allgemeinen Definition bietet.</p>
+               </div>
+            </div>
+         </div>
+      </front>
+      <body>
+         <div type="elements">
+            <xi:include href="ger/elem-abbreviation.xml" parse="xml"/>
+            <xi:include href="ger/elem-abstract.xml" parse="xml"/> 
+            <xi:include href="ger/elem-address.xml" parse="xml"/>
+            <xi:include href="ger/elem-addressLine.xml" parse="xml"/>
+            <xi:include href="ger/elem-agencyCode.xml" parse="xml"/>
+            <xi:include href="ger/elem-agencyName.xml" parse="xml"/>
+            <xi:include href="ger/elem-agent.xml" parse="xml"/>
+            <xi:include href="ger/elem-agentType.xml" parse="xml"/>
+            <xi:include href="ger/elem-alternativeForm.xml" parse="xml"/>
+            <xi:include href="ger/elem-alternativeSet.xml" parse="xml"/>
+            <xi:include href="ger/elem-authorizedForm.xml" parse="xml"/>
+            <xi:include href="ger/elem-biogHist.xml" parse="xml"/>
+            <xi:include href="ger/elem-chronItem.xml" parse="xml"/>
+            <xi:include href="ger/elem-chronList.xml" parse="xml"/>
+            <xi:include href="ger/elem-citation.xml" parse="xml"/>
+            <xi:include href="ger/elem-componentEntry.xml" parse="xml"/>
+            <xi:include href="ger/elem-control.xml" parse="xml"/>
+            <xi:include href="ger/elem-conventionDeclaration.xml" parse="xml"/>
+            <xi:include href="ger/elem-cpfDescription.xml" parse="xml"/>
+            <xi:include href="ger/elem-cpfRelation.xml" parse="xml"/>
+            <xi:include href="ger/elem-date.xml" parse="xml"/>
+            <xi:include href="ger/elem-dateRange.xml" parse="xml"/>
+            <xi:include href="ger/elem-dateSet.xml" parse="xml"/>
+            <xi:include href="ger/elem-description.xml" parse="xml"/>
+            <xi:include href="ger/elem-descriptiveNote.xml" parse="xml"/>
+            <xi:include href="ger/elem-eac-cpf.xml" parse="xml"/>
+            <xi:include href="ger/elem-entityId.xml" parse="xml"/>
+            <xi:include href="ger/elem-entityType.xml" parse="xml"/>
+            <xi:include href="ger/elem-event.xml" parse="xml"/>
+            <xi:include href="ger/elem-eventDateTime.xml" parse="xml"/>
+            <xi:include href="ger/elem-eventDesccription.xml" parse="xml"/>
+            <xi:include href="ger/elem-eventType.xml" parse="xml"/>
+            <xi:include href="ger/elem-existDates.xml" parse="xml"/>
+            <xi:include href="ger/elem-fromDate.xml" parse="xml"/>
+            <xi:include href="ger/elem-function.xml" parse="xml"/>
+            <xi:include href="ger/elem-functionRelation.xml" parse="xml"/>
+            <xi:include href="ger/elem-functions.xml" parse="xml"/>
+            <xi:include href="ger/elem-generalContext.xml" parse="xml"/>
+            <xi:include href="ger/elem-identity.xml" parse="xml"/>
+            <xi:include href="ger/elem-item.xml" parse="xml"/>
+            <xi:include href="ger/elem-language.xml" parse="xml"/>
+            <xi:include href="ger/elem-languageDeclaration.xml" parse="xml"/>
+            <xi:include href="ger/elem-languagesUsed.xml" parse="xml"/>
+            <xi:include href="ger/elem-languageUsed.xml" parse="xml"/>
+            <xi:include href="ger/elem-legalStatus.xml" parse="xml"/>
+            <xi:include href="ger/elem-legalStatuses.xml" parse="xml"/>
+            <xi:include href="ger/elem-level.xml" parse="xml"/>
+            <xi:include href="ger/elem-list.xml" parse="xml"/>
+            <xi:include href="ger/elem-localControl.xml" parse="xml"/>
+            <xi:include href="ger/elem-localDescription.xml" parse="xml"/>
+            <xi:include href="ger/elem-localDescriptions.xml" parse="xml"/>
+            <xi:include href="ger/elem-localTypeDeclaration.xml" parse="xml"/>
+            <xi:include href="ger/elem-maintenanceAgency.xml" parse="xml"/>
+            <xi:include href="ger/elem-maintenanceEvent.xml" parse="xml"/>
+            <xi:include href="ger/elem-maintenanceHistory.xml" parse="xml"/>
+            <xi:include href="ger/elem-maintenanceStatus.xml" parse="xml"/>
+            <xi:include href="ger/elem-mandate.xml" parse="xml"/>
+            <xi:include href="ger/elem-mandates.xml" parse="xml"/>
+            <xi:include href="ger/elem-multipleIdentities.xml" parse="xml"/>
+            <xi:include href="ger/elem-nameEntry.xml" parse="xml"/>
+            <xi:include href="ger/elem-nameEntryParallel.xml" parse="xml"/>
+            <xi:include href="ger/elem-objectBinWrap.xml" parse="xml"/>
+            <xi:include href="ger/elem-objectXMLWrap.xml" parse="xml"/>
+            <xi:include href="ger/elem-occupation.xml" parse="xml"/>
+            <xi:include href="ger/elem-occupations.xml" parse="xml"/>
+            <xi:include href="ger/elem-otherAgencyCode.xml" parse="xml"/>
+            <xi:include href="ger/elem-otherRecordId.xml" parse="xml"/>
+            <xi:include href="ger/elem-outline.xml" parse="xml"/>
+            <xi:include href="ger/elem-p.xml" parse="xml"/>
+            <xi:include href="ger/elem-part.xml" parse="xml"/>
+            <xi:include href="ger/elem-place.xml" parse="xml"/>
+            <xi:include href="ger/elem-placeEntry.xml" parse="xml"/>
+            <xi:include href="ger/elem-placeRole.xml" parse="xml"/>
+            <xi:include href="ger/elem-places.xml" parse="xml"/>
+            <xi:include href="ger/elem-preferredForm.xml" parse="xml"/>
+            <xi:include href="ger/elem-publicationStatus.xml" parse="xml"/>
+            <xi:include href="ger/elem-recordId.xml" parse="xml"/>
+            <xi:include href="ger/elem-relationEntry.xml" parse="xml"/>
+            <xi:include href="ger/elem-relations.xml" parse="xml"/>
+            <xi:include href="ger/elem-resourceRelation.xml" parse="xml"/>
+            <xi:include href="ger/elem-script.xml" parse="xml"/>
+            <xi:include href="ger/elem-setComponent.xml" parse="xml"/>
+            <xi:include href="ger/elem-source.xml" parse="xml"/>
+            <xi:include href="ger/elem-sourceEntry.xml" parse="xml"/>
+            <xi:include href="ger/elem-sources.xml" parse="xml"/>
+            <xi:include href="ger/elem-span.xml" parse="xml"/>
+            <xi:include href="ger/elem-structureOrGenealogy.xml" parse="xml"/>
+            <xi:include href="ger/elem-term.xml" parse="xml"/>
+            <xi:include href="ger/elem-toDate.xml" parse="xml"/>
+            <xi:include href="ger/elem-useDates.xml" parse="xml"/>
+         </div>
+         <div type="attributes">
+            <xi:include href="ger/attr-accuracy.xml" parse="xml"/>
+            <xi:include href="ger/attr-altitude.xml" parse="xml"/>
+            <xi:include href="ger/attr-countryCode.xml" parse="xml"/>
+            <xi:include href="ger/attr-cpfRelationType.xml" parse="xml"/>
+            <xi:include href="ger/attr-functionRelationType.xml" parse="xml"/>
+            <xi:include href="ger/attr-identityType.xml" parse="xml"/>
+            <xi:include href="ger/attr-languageCode.xml" parse="xml"/>
+            <xi:include href="ger/attr-lastDateTimeVerified.xml" parse="xml"/>
+            <xi:include href="ger/attr-latitude.xml" parse="xml"/>
+            <xi:include href="ger/attr-localType.xml" parse="xml"/>
+            <xi:include href="ger/attr-longitude.xml" parse="xml"/>
+            <xi:include href="ger/attr-notAfter.xml" parse="xml"/>
+            <xi:include href="ger/attr-notBefore.xml" parse="xml"/>
+            <xi:include href="ger/attr-resourceRelationType.xml" parse="xml"/>
+            <xi:include href="ger/attr-scriptCode.xml" parse="xml"/>
+            <xi:include href="ger/attr-standardDate.xml" parse="xml"/>
+            <xi:include href="ger/attr-standardDateTime.xml" parse="xml"/>
+            <xi:include href="ger/attr-style.xml" parse="xml"/>
+            <xi:include href="ger/attr-transliteration.xml" parse="xml"/>
+            <xi:include href="ger/attr-vocabularySource.xml" parse="xml"/>
+            <xi:include href="ger/attr-xlinkActuate.xml" parse="xml"/>
+            <xi:include href="ger/attr-xlinkArcrole.xml" parse="xml"/>
+            <xi:include href="ger/attr-xlinkHref.xml" parse="xml"/>
+            <xi:include href="ger/attr-xlinkRole.xml" parse="xml"/>
+            <xi:include href="ger/attr-xlinkShow.xml" parse="xml"/>
+            <xi:include href="ger/attr-xlinkTitle.xml" parse="xml"/>
+            <xi:include href="ger/attr-xlinkType.xml" parse="xml"/>
+            <xi:include href="ger/attr-xmlbase.xml" parse="xml"/>
+            <xi:include href="ger/attr-xmlid.xml" parse="xml"/>
+            <xi:include href="ger/attr-xmllang.xml" parse="xml"/>
+         </div>
+      </body>
+      <back>
+         <div xml:id="appendix-ger" type="appendix" xml:lang="ger">
+            <head>ISAAR(CPF) Crosswalk</head>
+            <list type="simple">
+               <label>ISAAR (CPF)</label>
+               <item>EAC-CPF</item>
+               <label>5.1 Bereich Identität</label>
+               <item>
+                  <gi>identity</gi>
+               </item>
+               <label>5.1.1 Typ der Einheit</label>
+               <item>
+                  <gi>entityType</gi>
+               </item>
+               <label>5.1.2 Autorisierte Namensform(en)</label>
+               <item>
+                  <gi>nameEntry</gi> or <gi>nameEntryParallel</gi> with <gi>authorizedForm</gi>
+               </item>
+               <label>5.1.3 Parallele Namensformen</label>
+               <item>
+                  <gi>nameEntryParallel</gi>
+               </item>
+               <label>5.1.4 Standardisierte Namensformen gemäss anderen Regelwerken</label>
+               <item>
+                  <gi>nameEntry</gi> or <gi>nameEntryParallel</gi> with <gi>authorizedForm</gi>
+               </item>
+               <label>5.1.5 Andere Namensformen</label>
+               <item>
+                  <gi>nameEntry</gi> or <gi>nameEntryParallel</gi> with <gi>alternativeForm</gi>
+               </item>
+               <label>5.1.6 Identifizierungscodes von Körperschaften</label>
+               <item>
+                  <gi>entityId</gi>
+               </item>
+               <label>5.2 Bereich Beschreibung</label>
+               <item>
+                  <gi>description</gi>
+               </item>
+               <label>5.2.1 Existenzzeit</label>
+               <item>
+                  <gi>existDates</gi>
+               </item>
+               <label>5.2.2 Geschichte</label>
+               <item>
+                  <gi>biogHist</gi>
+               </item>
+               <label>5.2.3 Orte</label>
+               <item>
+                  <gi>place</gi> or <gi>places</gi>
+               </item>
+               <label>5.2.4 Rechtlicher Status</label>
+               <item>
+                  <gi>legalStatus</gi> or <gi>legalStatuses</gi>
+               </item>
+               <label>5.2.5 Funktionen, berufliche und private Aktivitäten</label>
+               <item>
+                  <gi>function</gi> or <gi>functions</gi>, <gi>occupation</gi> or <gi>occupations</gi>
+               </item>
+               <label>5.2.6 Mandate/Rechtsgrundlagen der Befugnisse</label>
+               <item>
+                  <gi>mandate</gi> or <gi>mandates</gi>
+               </item>
+               <label>5.2.7 Interne Strukturen/Genealogie</label>
+               <item>
+                  <gi>structureOrGenealogy</gi>
+               </item>
+               <label>5.2.8 Allgemeiner Kontext</label>
+               <item>
+                  <gi>generalContext</gi>
+               </item>
+               <label>5.3 Bereich Beziehungen</label>
+               <item>
+                  <gi>relations</gi>
+               </item>
+               <label>5.3.1 Namen/Identifikatoren von verwandten Körperschaften, Personen oder Familien</label>
+               <item>
+                  <gi>cpfRelation</gi>
+               </item>
+               <label>5.3.2 Kategorie der Beziehung</label>
+               <item>
+                  <tag>cpfRelation cpfRelationType="[value]"</tag>
+               </item>
+               <label>5.3.3 Beschreibung der Beziehung</label>
+               <item>
+                  <gi>objectXMLWrap</gi> or <gi>objectBinWrap</gi> or <gi>relationEntry</gi>
+               </item>
+               <label>5.3.4 Zeitliche Dauer der Beziehung</label>
+               <item>
+                  <gi>cpfRelation</gi>/<gi>date</gi> or <gi>dateRange</gi> or <gi>dateSet</gi>
+               </item>
+               <label>5.4 Bereich Kontrolle</label>
+               <item>
+                  <gi>control</gi>
+               </item>
+               <label>5.4.1 Identifikator der Normdatei</label>
+               <item>
+                  <gi>recordId</gi>
+               </item>
+               <label>5.4.2 Identifikator für die Institution</label>
+               <item>
+                  <gi>maintenanceAgency</gi>/<gi>agencyCode</gi> and/or <gi>agencyName</gi>
+               </item>
+               <label>5.4.3 Regeln und/oder Konventionen</label>
+               <item>
+                  <gi>conventionDeclaration</gi>
+               </item>
+               <label>5.4.4 Status</label>
+               <item>
+                  <gi>maintenanceStatus</gi>
+               </item>
+               <label>5.4.5 Erfassungsniveau</label>
+               <item>
+                  <gi>localControl</gi>
+               </item>
+               <label>5.4.6 Daten der Erstellung, Überarbeitung oder Löschung</label>
+               <item>
+                  <gi>maintenanceEvent</gi>/<gi>eventDateTime</gi>
+               </item>
+               <label>5.4.7 Sprach(en) und Schrift(en)</label>
+               <item>
+                  <gi>languageDeclaration</gi>
+               </item>
+               <label>5.4.8 Quellen</label>
+               <item>
+                  <gi>sources</gi>
+               </item>
+               <label>5.4.9 Anmerkungen zu Aktualisierungen</label>
+               <item>
+                  <gi>maintenanceEvent</gi>/<gi>maintenanceDescription</gi>
+               </item>
+               <label>6. Verknüpfung von Körperschaften, Personen und Archivalien und anderen Quellen</label>
+               <item>
+                  <gi>resourceRelation</gi>
+               </item>
+               <label>6.1 Identifikatoren und Titel von verwandten Quellen</label>
+               <item>
+                  <gi>objectXMLWrap</gi> or <gi>objectBinWrap</gi> or <gi>relationEntry</gi>
+               </item>
+               <label>6.2 Typ der verwandten Quellen</label>
+               <item>
+                  <tag>resourceRelation xlink:role="[value]"</tag>
+               </item>
+               <label>6.3 Art der Beziehungen</label>
+               <item>
+                  <tag>resourceRelation resourceRelationType="[value]"</tag>
+               </item>
+               <label>6.4 Zeitangaben für die verwandten Materialien und/oder für die Beziehungen</label>
+               <item>
+                  <gi>resourceRelation</gi>/<gi>date</gi> or <gi>dateRange</gi> or <gi>dateSet</gi>
+               </item>
+            </list>
+         </div>
+      </back>
+   </text>
+</TEI>

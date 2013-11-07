@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="functionRelation" type="elementDocumentation">
+   <head>
+      <gi>functionRelation</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Verwandte Funktionsbeschreibung</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Beschreibung einer Funktion, die von der beschriebenen Entität wahrgenommen wird bzw. worden ist.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p xml:lang="ger">Das Element <gi>functionRelation</gi> dient der Erläuterung einer Funktion, die von der in EAC-CPF beschriebenen Entität wahrgenommen wird bzw. wahrgenommen worden ist. Hierfür können mittels des Subelements <gi>objectXMLWrap</gi> Elemente aus anderen XML-Formaten und -Standards eingebunden werden. Gleiches gilt für Elemente aus base64-kodierten, binären Datenformaten, die mittels des Elements <gi>objectBinWrap</gi> einzufügen sind. Zur textbasierten Identifikation der verwandten Funktion dient das Element <gi>relationEntry</gi>.</p>
+      <p xml:lang="ger">Daneben können mit den Elementen <gi>date</gi>, <gi>dateRange</gi>, oder <gi>dateSet</gi> bzw. <gi>placeEntry</gi> Zeit- und Ortsangaben zur Ausübung der beschriebenen Funktion durch die Entität gemacht werden. Eine detaillierte Beschreibung der Beziehung zwischen Funktion und Entität lässt sich im Element <gi>descriptiveNote</gi> erfassen. Die Art dieser Beziehung wird mittels des Attributs <att>functionRelationType</att> angegeben, für das eine geschlossene Liste an möglichen Werten vorgegeben ist.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, dateSet, descriptiveNote, objectBinWrap, objectXMLWrap, placeEntry, relationEntry</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>relations</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>functionRelationType</label>
+            <item>optional</item>
+            <label>lastDateTimeVerified</label>
+            <item>optional</item>
+            <label>xlink:actuate</label>
+            <item>optional</item>
+            <label>xlink:arcrole</label>
+            <item>optional</item>
+            <label>xlink:href</label>
+            <item>optional</item>
+            <label>xlink:role</label>
+            <item>optional</item>
+            <label>xlink:show</label>
+            <item>optional</item>
+            <label>xlink:title</label>
+            <item>optional</item>
+            <label>xlink:type</label>
+            <item>obligatorisch (wenn ein XLINK-Attribut verwendet wird)</item>
+            <label>xml:id</label>
+            <item>optional</item>
+            <label>xml:lang</label>
+            <item>optional</item>
+         </list>
+      </p>
+
+   </div>
+   <div type="reference">
+      <p>ISDF Chapter 6</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:functionRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+            functionRelationType="performs">
+            <eac-cpf:relationEntry>Alumni communication management, University of
+               Glasgow</eac-cpf:relationEntry>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>The management of the University's communication with its
+                  alumni.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:functionRelation>
+         <eac-cpf:functionRelation xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+            functionRelationType="controls">
+            <eac-cpf:relationEntry>Εstablishment and abolishment of schools</eac-cpf:relationEntry>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>The second responsibility of the Department is to control the establishment and abolishment of schools.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:functionRelation>
+      </egXML>
+   </div>
+</div>

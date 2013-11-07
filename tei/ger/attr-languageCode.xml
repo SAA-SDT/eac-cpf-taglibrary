@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="languageCode" type="attributeDocumentation">
+   <head>
+      <att>languageCode</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Sprachencode</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Dreistelliger Sprachencode gemäß dem Standard ISO 639-2. Erforderliches Attribut<gi>language</gi> für das Element <gi>language</gi>.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Attribut <att>languageCode</att> muss im Element <gi>language</gi> angegeben werden. Der Sprachencode wird gemäß dem Standard ISO 639-2 angegeben, um die Sprache, in der das EAC-CPF-Dokument verfasst ist, anzugeben. Die Werte werden aus der Liste des Standards "ISO 639-2 Codes for the representation of Names of Languages" entnommen, die auf der Webseite der <ref
+            target="http://www.loc.gov/standards/iso639-2/langhome.html"
+         >Library of Congress</ref> eingesehen werden kann.</p>
+   </div>
+
+   <div type="datatype" xml:lang="eng">
+      <p>ISO 639-2 Codes for the Representation of Names of Languages</p>
+   </div>
+
+</div>

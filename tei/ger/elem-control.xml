@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="control" type="elementDocumentation">
+    <head>
+        <gi>control</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Kopfangaben des EAC-CPF-Dokuments</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger">Identifikation des EAC-CPF-Dokuments inklusive Angaben zu seiner Erstellung, seiner Bearbeitungshistorie und seinem Bearbeitungsstatus sowie zu den Richtlinien und Regeln, die für seine Erstellung angewandt worden sind.</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger">Obligatorisches Subelement zu <gi>eac-cpf</gi>, das alle Informationen zusammenfasst, die für die Kontrolle des EAC-CPF-Dokuments nötig sind. Dies umfasst Angaben zur Identifikation des Dokuments, zu seiner Erstellung, Bearbeitung und Verwaltung, zu den Sprachen, Richtlinien und Regeln, die dabei verwendet werden.</p>
+        <p xml:lang="ger">Das Element <gi>control</gi> enthält das obligatorische Subelement <gi>recordId</gi> zur Angabe eines eineindeutigen Identifikators des EAC-CPF-Dokuments sowie optional das wiederholbare Subelement <gi>otherRecordId</gi> zur Angabe weiterer, z.B. lokal verwendeter Identifikatoren. Daneben sind die Elemente <gi>maintenanceAgency</gi>, <gi>maintenanceStatus</gi> und <gi>maintenanceHistory</gi> obligatorisch zu verwenden, um die Institution zu benennen, die das EAC-CPF-Dokument erstellt hat und verwaltet, den Bearbeitungsstand des Dokuments festzuhalten und die Bearbeitungshistorie zu dokumentieren.</p>
+        <p xml:lang="ger">Des Weiteren stehen optional Subelemente zu <gi>control</gi> zur Verfügung, mit denen folgende Informationen erfasst werden können:</p>
+        <p xml:lang="ger">die Sprachen und Schriften, die im EAC-CPF-Dokument genutzt werden (Element <gi>languageDeclaration</gi>),</p>
+        <p xml:lang="ger">die Richtlinien und Regelwerke, an denen man sich bei der Erstellung des EAC-CPF-Dokuments orientiert hat (Element <gi>conventionDeclaration</gi>),</p>
+        <p xml:lang="ger">dazu ergänzend verwendete lokale Richtlinien und Regelwerke, die nachfolgend im Attribut <att>localType</att> benannt werden (Element <gi>localTypeDeclaration</gi>), </p>
+        <p xml:lang="ger">historische wie aktuelle Dokumente und Zeugnisse, die als Quellen für die Erstellung der EAC-CPF-Beschreibung herangezogen worden sind (Element <gi>sources</gi>), sowie</p>
+        <p xml:lang="ger">der Stand der Veröffentlichung des EAC-CPF-Dokuments selbst (Element <gi>publicationStatus</gi>).</p>
+        <p xml:lang="ger">Zur Angabe weiterer Informationen, die nicht in den bislang genannten Subelementen von <gi>control</gi> zu erfassen sind, kann das Element <gi>localControl</gi> verwendet werden.</p>
+    </div>
+    <div type="mayContain"><p>conventionDeclaration, languageDeclaration, localControl,localTypeDeclaration, maintenanceAgency, maintenanceHistory, maintenanceStatus,otherRecordId, publicationStatus, recordId, sources</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>eac-cpf</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>xml:base</label>
+                <item>optional</item>
+                <label>xml:id</label>
+                <item>optional</item>
+                <label>xml:lang</label>
+                <item>optional</item>
+            </list>
+        </p>
+
+    </div>
+    <div type="reference">
+        <p>ISAAR (CPF) 5.4</p>
+    </div>
+    <div type="occurrence">
+        <div type="mandatory">
+            <p xml:lang="eng">Mandatory</p>
+        </div>
+        <div type="repeatable">
+            <p xml:lang="eng">Non-repeatable</p>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:control xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <eac-cpf:recordId>nla.party-521122</eac-cpf:recordId>
+                <eac-cpf:maintenanceStatus>revised</eac-cpf:maintenanceStatus>
+                <eac-cpf:publicationStatus>approved</eac-cpf:publicationStatus>
+                <eac-cpf:maintenanceAgency>
+                    <eac-cpf:agencyCode>GR-TEI:ATHENS</eac-cpf:agencyCode>
+                    <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
+                </eac-cpf:maintenanceAgency>
+                <eac-cpf:languageDeclaration>
+                    <eac-cpf:language languageCode="eng"/>
+                    <eac-cpf:script scriptCode="Latn"/>
+                </eac-cpf:languageDeclaration>
+                <eac-cpf:conventionDeclaration>
+                    <eac-cpf:abbreviation>AACR2</eac-cpf:abbreviation>
+                    <eac-cpf:citation>Anglo-American Cataloging Rules, Revised</eac-cpf:citation>
+                </eac-cpf:conventionDeclaration>
+                <eac-cpf:maintenanceHistory>
+                    <eac-cpf:maintenanceEvent>
+                        <eac-cpf:eventType>created</eac-cpf:eventType>
+                        <eac-cpf:eventDateTime standardDateTime="2009-06-26T05:33:41Z"
+                            >2009-06-26T05:33:41Z</eac-cpf:eventDateTime>
+                        <eac-cpf:agentType>human</eac-cpf:agentType>
+                        <eac-cpf:agent>bdewhurs</eac-cpf:agent>
+                    </eac-cpf:maintenanceEvent>
+                </eac-cpf:maintenanceHistory>
+                <eac-cpf:sources>
+                    <eac-cpf:source xlink:href="http://www.icacds.org.uk/eng/ISAAAR(CPF)2ed.pdf"
+                        xlink:type="simple">
+                        <eac-cpf:sourceEntry>ISAAR(CPF)</eac-cpf:sourceEntry>
+                        <eac-cpf:descriptiveNote>
+                            <eac-cpf:p>Record created based on ISAAR(CPF) 2nd ed Example 5 - Person
+                                description</eac-cpf:p>
+                        </eac-cpf:descriptiveNote>
+                    </eac-cpf:source>
+                </eac-cpf:sources>
+            </eac-cpf:control>
+        </egXML>
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:control xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <eac-cpf:recordId>254pap_XML</eac-cpf:recordId>
+                <eac-cpf:maintenanceStatus>new</eac-cpf:maintenanceStatus>
+                <eac-cpf:maintenanceAgency>
+                    <eac-cpf:agencyCode>GR-ΤΕΙΑ</eac-cpf:agencyCode>
+                    <eac-cpf:agencyName>Technological Educational Institute of Athens</eac-cpf:agencyName>
+                </eac-cpf:maintenanceAgency>
+                <eac-cpf:languageDeclaration>
+                    <eac-cpf:language languageCode="gre">Greek language, Modern.</eac-cpf:language>
+                    <eac-cpf:script scriptCode="Grek"/>
+                </eac-cpf:languageDeclaration>
+                <eac-cpf:conventionDeclaration>
+                    <eac-cpf:abbreviation>ISAAR (CPF)</eac-cpf:abbreviation>
+                    <eac-cpf:citation>Committee on Descriptive Standards Canberra. International Standard
+                        Archival Authority Description for Corporate Bodies, Persons and Families (ISAAR
+                        CPF). Australia, Second Edition, October (2003).</eac-cpf:citation>
+                </eac-cpf:conventionDeclaration>
+                <eac-cpf:conventionDeclaration>
+                    <eac-cpf:abbreviation>NLG Authorities</eac-cpf:abbreviation>
+                    <eac-cpf:citation>Maniati, Ioanna (ed.) (1991). National Library of Greece: Greek Subject Headings Catalog. Athens.</eac-cpf:citation>
+                </eac-cpf:conventionDeclaration>
+                <eac-cpf:maintenanceHistory>
+                    <eac-cpf:maintenanceEvent>
+                        <eac-cpf:eventType>created</eac-cpf:eventType>
+                        <eac-cpf:eventDateTime>2011-05-20</eac-cpf:eventDateTime>
+                        <eac-cpf:agentType>human</eac-cpf:agentType>
+                        <eac-cpf:agent>Department of Library Science and Information Systems, Technological Educational Institute of Athens</eac-cpf:agent>
+                    </eac-cpf:maintenanceEvent>
+                </eac-cpf:maintenanceHistory>
+                <eac-cpf:sources>
+                    <eac-cpf:source>
+                        <eac-cpf:sourceEntry>Archives of the Secondary Education Division(Ministry of National Education and Religion).</eac-cpf:sourceEntry>
+                    </eac-cpf:source>
+                </eac-cpf:sources>
+            </eac-cpf:control>
+        </egXML>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xmlns="http://www.tei-c.org/ns/1.0"
+    xml:id="alternativeForm"
+    type="elementDocumentation">
+    <head>
+        <gi>alternativeForm</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Alternative Namensform</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger">Charakterisierung eines Namens als Eintrag im Element <gi>nameEntry</gi> bzw. einer Gruppe von Namen als Eintrag im Element <gi>nameEntryParallel</gi> als Varianten des autorisierten Namens.</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger">Der Name einer mittels EAC-CPF beschriebenen Entität, der in den Elementen 
+            <gi>nameEntry</gi> oder <gi>nameEntryParallel</gi> zu erfassen ist, kann entweder die autorisierte Form dieses Namens oder eine Variante desselben sein. Das optionale Element <gi>alternativeForm</gi> bietet die Möglichkeit, einen Eintrag in den Elementen <gi>nameEntry</gi> bzw. <gi>nameEntryParallel</gi> als Alternative zum autorisierten Namen der beschriebenen Entität zu charakterisieren.</p>
+        <p xml:lang="ger">Dabei wird im Element <gi>alternativeForm</gi> die Richtlinie bzw. das Regelwerk benannt, nach dem die Einordnung eines Namens als alternative Form erfolgt ist. Innerhalb des EAC-CPF-Schemas sind zwei Verwendungsweisen des Elements <gi>alternativeForm</gi> denkbar:</p>
+        <p xml:lang="ger">1. <gi>alternativeForm</gi> in Verwendung mit <gi>nameEntry</gi>-Elementen, wenn diese nicht in einem übergeordneten <gi>nameEntryParallel</gi>-Element zusammengefasst sind. In diesem Fall wird durch das Element <gi>alternativeForm</gi> der im jeweiligen <gi>nameEntry</gi>-Element genannte Name als Variante des offiziellen, autorisierten Namens deklariert, der ggf. in einem anderen <gi>nameEntry</gi>-Element genannt ist.</p>
+        <p xml:lang="ger">2. <gi>alternativeForm</gi> in Verwendung mit dem Element <gi>nameEntryParallel</gi>, um das gesamte Namensset, das in den hier zusammengefassten <gi>nameEntry</gi>-Elementen erfasst ist, als alternative Namensform zu definieren.</p>
+        <p xml:lang="ger">Im Element <gi>alternativeForm</gi> selbst wird eine Abkürzung derjenigen nationalen oder internationalen Richtlinie angegeben, nach der ein Name als Variante des offiziellen Namens eingestuft worden ist. Die verwendete Abkürzung ist mittels des Elements <gi>conventionDeclaration</gi> innerhalb des <gi>control</gi>-Bereichs des EAC-CPF-Dokuments zu benennen und zu erläutern.</p>
+        <p xml:lang="ger">Die Verwendung des Elements <gi>alternativeForm</gi> bietet sich parallel zum Einsatz des Elements <gi>authorizedForm</gi> an, in dem die Richtlinie bzw. das Regelwerk erfasst ist, nach dem ein Name als autorisierte Form definiert worden ist. Daneben lässt sich über das Element <gi>preferredForm</gi> ein Name als die im System des jeweiligen Bearbeiters bevorzugt verwendete Form festlegen. Diese Definition ist unabhängig davon, ob es sich dabei um die autorisierte oder eine alternative Namensform handelt.</p>
+        <p xml:lang="ger">Das Element <gi>alternativeForm</gi> kann wiederholt verwendet werden, wenn mehrere Richtlinien oder Regelwerke zur Einordnung herangezogen worden sind.</p>
+    </div>
+    <div type="mayContain">
+        <p>NMTOKEN</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>nameEntry, nameEntryParallel</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>xml:id</label>
+                <item>optional</item>
+            </list>
+        </p>
+    </div>
+    <div type="reference">
+        <p>ISAAR (CPF) 5.1.5</p>
+    </div>
+    <div type="occurrence">
+        <div type="mandatory">
+            <p xml:lang="eng">Optional</p>
+        </div>
+        <div type="repeatable">
+            <p xml:lang="eng">Repeatable</p>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:part>Brown, Bob, 1886-1959</eac-cpf:part>
+                <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
+                <eac-cpf:alternativeForm>ncafnor</eac-cpf:alternativeForm>
+            </eac-cpf:nameEntry>
+            <eac-cpf:nameEntry xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:part>Brown, Robert Carlton (1886-1959)</eac-cpf:part>
+                <eac-cpf:authorizedForm>ncafnor</eac-cpf:authorizedForm>
+                <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
+            </eac-cpf:nameEntry>
+        </egXML>
+    </div>
+</div>
+

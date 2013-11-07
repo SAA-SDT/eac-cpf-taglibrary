@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="mandates" type="elementDocumentation">
+   <head>
+      <gi>mandates</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Mandate / Befugnisse</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Ein Element zur Gruppierung einzelner <gi>mandate</gi>-Elemente.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Im optionalen Element <gi>mandates</gi> werden ein oder mehrere <gi>mandate</gi>-Elemente zusammengefasst, so dass sie als Gruppe behandelt werden können. Ein einzelnes <gi>mandate</gi>-Element kann allein innerhalb von <gi>description</gi> stehen oder innerhalb von <gi>mandates</gi>.</p>
+      <p xml:lang="ger">In den optionalen Subelementen <gi>citation</gi>, <gi>list</gi> und <gi>outline</gi> kann eine komplexe oder gegliederte Erläuterung der Mandate oder Befugnisse angegeben werden. Eine einfache textliche Beschreibung wird in einem oder mehreren <gi>p</gi>-Elementen angegeben.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, list, mandate, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.6</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:mandates xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:mandate>
+               <eac-cpf:term>Instrucciones de 13-VI-1586 por las que se crean y definen las secretarias de Tierra y Mar.</eac-cpf:term>
+            </eac-cpf:mandate>
+            <eac-cpf:mandate>
+               <eac-cpf:term>Real Decreto de Nueva Planta para el consejo de Guerra de 23-IV-1714.</eac-cpf:term>
+            </eac-cpf:mandate>
+            <eac-cpf:mandate>
+               <eac-cpf:term>Real Decreto de Nueva Planta para el consejo de Guerra de 23-VIII-1715.</eac-cpf:term>
+            </eac-cpf:mandate>
+         </eac-cpf:mandates>
+      </_0:egXML>
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:mandates xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:mandate>
+               <eac-cpf:term>Law 380/1914, "The Establishment of the Greek State Archiving Service"</eac-cpf:term>
+               <eac-cpf:date standardDate="1914">1914</eac-cpf:date>
+               <eac-cpf:descriptiveNote>
+                  <eac-cpf:p>The General State Archives of Greece were established thanks the efforts of the Professor Spyridon Lambrou and the historian-researcher Yiannis Vlachogiannis with the purpose of "collecting and monitoring documents included in all public archives dating 50 years back". Their efforts conluded to the production of a law by the Prime Minister Eleftherios Venizelos.</eac-cpf:p>
+               </eac-cpf:descriptiveNote>
+            </eac-cpf:mandate>
+            <eac-cpf:mandate>
+               <eac-cpf:term>Law 2027/1939</eac-cpf:term>
+               <eac-cpf:date standardDate="1939">1939</eac-cpf:date>
+               <eac-cpf:descriptiveNote>
+                  <eac-cpf:p>Law 2027/1939 determines the "Reorganization of the General State Archives".</eac-cpf:p>
+               </eac-cpf:descriptiveNote>
+            </eac-cpf:mandate>
+            <eac-cpf:mandate>
+               <eac-cpf:term>Law 1946/1991</eac-cpf:term>
+               <eac-cpf:date standardDate="1991">1991</eac-cpf:date>
+               <eac-cpf:descriptiveNote>
+                  <eac-cpf:p>Law 1946/1991 determines a new legislative frame, which regulates the operation of the General State Archives to this day. The Central Service is structured into departments and Archives are established in prefectures which did not exist till then.</eac-cpf:p>
+               </eac-cpf:descriptiveNote>
+            </eac-cpf:mandate>
+         </eac-cpf:mandates>
+      </_0:egXML>
+   </div>
+</div>

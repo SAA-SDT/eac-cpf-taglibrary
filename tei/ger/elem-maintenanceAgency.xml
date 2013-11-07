@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="maintenanceAgency" type="elementDocumentation">
+   <head>
+      <gi>maintenanceAgency</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Verwaltende Institution</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Die Institution oder Einrichtung, die für die Erstellung, Pflege und/oder Weiterleitung der EAC-CPF-Datei verantwortlich ist.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p xml:lang="ger"
+         >Ein erforderliches Element innerhalb von <gi>control</gi>, dass die Informationen über die Institution enthält, die für die Erstellung, Pflege und/oder Weiterleitung der EAC-CPF-Datei verantwortlich ist.</p>
+      <p xml:lang="ger"
+            >Das Element <gi>maintenanceAgency</gi> muss Angaben zum Namen der Einrichtung (<gi>agencyName</gi>) enthalten und es wird empfohlen, die optionalen Angaben zum Identifikator der Institution (<gi>agencyCode</gi> und/oder <gi>otherAgencyCode</gi>) ebenfalls anzugeben. Allgemeine Informationen über die Institution können im Element <gi>descriptiveNote</gi> erfasst werden.</p>
+   </div>
+   <div type="mayContain">
+      <p>agencyCode, agencyName, descriptiveNote, otherAgencyCode</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.2</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:agencyCode>FR-DAF</eac-cpf:agencyCode>
+            <eac-cpf:agencyName>Archives nationales (Paris)</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </_0:egXML>
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:otherAgencyCode>GB-058</eac-cpf:otherAgencyCode>
+            <eac-cpf:agencyName>The British Library: Manuscript Collections</eac-cpf:agencyName>
+         </eac-cpf:maintenanceAgency>
+      </_0:egXML>
+   </div>
+</div>

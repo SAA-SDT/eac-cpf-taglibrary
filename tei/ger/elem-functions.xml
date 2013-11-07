@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="functions" type="elementDocumentation">
+   <head>
+      <gi>functions</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Funktionen</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Zusammenfassende Beschreibung mehrerer Funktionen, die von der genannten Entität wahrgenommen werden bzw. worden sind</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Mehrere <gi>function</gi>-Elemente können über das Element <gi>functions</gi> zusammengefasst werden, wenn sie beispielsweise in Transfer- oder Austauschprozessen als Gruppe behandelt werden sollen.</p>
+      <p xml:lang="ger">Die optionalen Subelement <gi>citation</gi>, <gi>list</gi> und <gi>outline</gi> bieten die Möglichkeit, die über <gi>functions</gi> zusammengefassten Funktionen, Prozesse, Aktivitäten, Aufgaben und Transaktionen näher zu beschreiben.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, function, list, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>localType</label>
+            <item>optional</item>
+            <label>xml:id</label>
+            <item>optional</item>
+            <label>xml:lang</label>
+            <item>optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.5</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:functions xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:function>
+               <eac-cpf:term>Indigenous land rights plaintiff</eac-cpf:term>
+            </eac-cpf:function>
+            <eac-cpf:function>
+               <eac-cpf:term>Indigenous arts administrator</eac-cpf:term>
+            </eac-cpf:function>
+         </eac-cpf:functions>
+      </_0:egXML>
+   </div>
+</div>

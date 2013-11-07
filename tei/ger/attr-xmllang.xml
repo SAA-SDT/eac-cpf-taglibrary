@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xmllang" type="attributeDocumentation">
+    <head>
+        <att>xml:lang</att>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">XML Sprache</p>
+    </div>
+    <div type="summary">
+<p xml:lang="ger"
+            >Zweistelliger Sprachencode vom Registry code for languages, wie er von den W3C Spezifikationen gefordert wird.</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger"
+                >Das Attribut <att>xml:lang</att> kann in jedem Element enthalten sein, dass einen textlichen Inhalt hat. Es wird immer angegeben, wenn Informationen zur Sprache des Elementinhalts oder der Sprache des Inhalts der Subelemente erforderlich ist. Das Attribut <att>xml:lang</att> sollte genutzt werden, wenn die Sprache im Elementinhalt von der im Element <gi>language</gi> im Kontrollbereich angegebenen Sprache abweicht. Die Verwendung der Sprachencodes nach dem IANA Registry code for languages wird in den Spezifikationen des W3C vorgegeben.</p>
+    </div>
+
+    <div type="datatype" xml:lang="eng">
+        <p>IANA Registry for language codes.</p>
+    </div>
+
+</div>

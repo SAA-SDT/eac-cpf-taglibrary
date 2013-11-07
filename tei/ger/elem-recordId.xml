@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="recordId" type="elementDocumentation">
+   <head>
+      <gi>recordId</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Identifikator für das EAC-CPF-Dokument</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Eindeutiger Identifikator für das vorliegende EAC-CPF-Dokument.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das erforderliche Element innerhalb von <gi>control</gi> enthält einen eindeutigen Identifikator für das EAC-CPF-Dokument. Der jeweilige Besitzer garantiert die Eindeutigkeit von <gi>recordId</gi> in dem von ihm kontrollierten System. Das Element <gi>recordId</gi> ergibt, zusammen mit dem Inhalt des obligatorischen Elements <gi>agencyCode</gi> innerhalb von <gi>maintenanceAgency</gi>, einen global eindeutigen Identifikator.</p>
+      <p xml:lang="ger">Weitere Identifkatoren für das EAC-CPF-Dokument werden im Element <gi>otherRecordId</gi> erfasst.</p>
+   </div>
+   <div type="mayContain">
+      <p>NMTOKEN</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.1</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:recordId xmlns:eac-cpf="urn:isbn:1-931666-33-4">F10219</eac-cpf:recordId>
+      </_0:egXML>
+   </div>
+</div>

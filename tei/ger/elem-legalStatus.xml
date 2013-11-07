@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="legalStatus" type="elementDocumentation">
+   <head>
+      <gi>legalStatus</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Rechtform einer Körperschaft</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Das Element enthält Informationen zur Rechtsform einer Körperschaft.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das <gi>legalStatus</gi>-Element enthält das Subelement <gi>term</gi>. Die Rechtsform einer Körperschaft wird im Allgemeinen vorgegeben. Innerhalb des Subelements <gi>term</gi> sollte der entsprechende juristische Begriff für die Rechtsform eingetragen werden. Der Begriff für die Rechtsform einer Körperschaft kann aus einem normierten Vokabular oder aus der Alltagssprache entnommen werden.</p>
+      <p xml:lang="ger">Daneben können mit den Elementen <gi>date</gi>, <gi>dateRange</gi> oder <gi>dateSet</gi> bzw. <gi>placeEntry</gi> Zeit- und Ortsangaben zur Rechtsform gemacht werden. Eine Beschreibung der Rechtsform einer Entität kann im Element <gi>descriptiveNote</gi> angegeben werden.</p>
+      <p xml:lang="ger"
+            >Ein einzelnes <gi>legalStatus</gi>-Element kann direkt als Subelement von <gi>description</gi> angegeben werden. Alternativ werden mehrere <gi>legalStatus</gi>-Elemente innerhalb des Hüllenelements <gi>legalStatuses</gi> zusammengefasst, wenn sie als Gruppe behandelt werden sollen..</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry, term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, legalStatuses</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.4</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:legalStatus xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Department of State</eac-cpf:term>
+         </eac-cpf:legalStatus>
+         <eac-cpf:legalStatus xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:term>Organismo de la Administracion Central del Estado</eac-cpf:term>
+            <eac-cpf:date standardDate="1769">1769</eac-cpf:date>
+         </eac-cpf:legalStatus>
+      </_0:egXML>
+   </div>
+</div>

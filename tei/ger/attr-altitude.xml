@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="altitude" type="attributeDocumentation">
+   <head>
+      <att>altitude</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Höhe</p>
+   </div>
+   <div type="summary">
+<p xml:lang="ger">Die Höhe oder Höhenangabe eines Ortes.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das Attribut <att>altitude</att> kann im Element <gi>place</gi> enthalten sein. Der Wert des Attributs ist die Höhe oder Höhenangabe des im Element <gi>placeEntry</gi> genannten Ortes. Das Attribut <att>altitude</att> für die Höhenlage sollte zusammen mit den Attributen <att>longitude</att> und <att>latitude</att> für die Breiten- und Längengrade angegeben werden.</p>
+   </div>
+
+   <div type="datatype" xml:lang="eng">
+      <p>NMTOKEN</p>
+   </div>
+
+</div>

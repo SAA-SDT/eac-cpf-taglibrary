@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="maintenanceStatus" type="elementDocumentation">
+   <head>
+      <gi>maintenanceStatus</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Bearbeitungsstatus</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Der aktuelle Bearbeitungsstatus eines EAC-CPF-Dokuments.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Ein obligatorisches Element innerhalb von <gi>control</gi>, das den aktuellen Bearbeitungsstatus eines EAC-CPF-Dokuments angibt. Wenn ein EAC-CPF-Dokument bearbeitet wird und es im Element <gi>maintenanceHistory</gi> dokumentiert wird, sollte der Bearbeitungsstatus ebenfalls aktualisiert werden.</p>
+      <p xml:lang="ger"
+            >Bei der ersten Erstellung des EAC-CPF-Dokuments wird das Element <gi>maintenanceStatus</gi> mit "new" gefüllt, eine Überarbeitung des Dokuments wird mit "revised" gekennzeichnet. Da es für die Dokumentation des EAC-CPF-Dokuments wichtig ist, insbesondere beim Austausch und der Verknüpfung zwischen Dateien, sind eine Reihe von festen Werten zum Bearbeitungsstatus für nicht mehr gültige EAC-CPF-Dokumente verfügbar. Ein EAC-CPF-Dokument, dass lediglich aus dem System gelöscht wurde, erhält den Status "deleted". Wenn ein Dokment als nicht mehr gültig markiert werden soll (veraltet oder ausgemustert), die Datei aber für Referenzzwecke aufbewahrt wird, wird der Wert "cancelled" genutzt. Wenn ein EAC-CPF-Dokument gelöscht wurde, weil es von zwei oder mehr Dokumenten ersetzt wird, erhält es den Status "deletedSplit", während "deletedReplaced" angegeben wird, wenn es nur einfach ersetzt wurde. Der Status "derived" besagt, dass das Dokument aus einem anderem Beschreibungssystem heraus erstellt wurde.</p>
+   </div>
+   <div type="mayContain">
+      <p>"cancelled" or "deleted" or "deletedReplaced" or "deletedSplit" or "derived" or "new" or "revised"</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.4</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:maintenanceStatus xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+            >new</eac-cpf:maintenanceStatus>
+      </_0:egXML>
+   </div>
+</div>

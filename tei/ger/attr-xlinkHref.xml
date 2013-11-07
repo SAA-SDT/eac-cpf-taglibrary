@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkHref" type="attributeDocumentation">
+   <head>
+      <att>xlink:href</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Xlink: HREF</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Enthält ein URI, der zu einer verwandten Quelle führt.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+         >Die Adresse zu einer externen Quelle. Das Attribut <att>xlink:href</att> wird in Form eines Uniform Resource Identifier (URI) angegeben. Die Angabe eines relativen URI ist möglich, empfohlen wird jedoch ein absoluter URI.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>anyURI</p>
+   </div>
+</div>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="legalStatuses" type="elementDocumentation">
+   <head>
+      <gi>legalStatuses</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Rechtsformen einer Körperschaft</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+         >Zusammenfassende Beschreibung mehrerer Rechtsformen, die zur Beschreibung einer Körperschaft notwendig sind..</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das optionale Element <gi>legalStatuses</gi> fässt ein oder mehrere <gi>legalStatus</gi>-Elemente zusammen, so dass sie als Gruppe behandelt werden können. Ein einzelnes <gi>legalStatus</gi>-Element kann direkt als Subelement von <gi>description</gi> angegeben werden oder als innerhalb von <gi>legalStatuses</gi>  kodiert werden.</p>
+      <p xml:lang="ger">Die optionalen Subelemente <gi>citation</gi>, <gi>list</gi>, und <gi>outline</gi> können eine komplexe Struktur einer Rechtsform abbilden. Eine einfache Beschreibung zu den Rechtsformen einer Körperschaft kann in einem oder mehreren <gi>p</gi>-Elementen angeben werden.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, descriptiveNote, legalStatus, list, outline, p</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.4</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:legalStatuses xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>Private limited liability company</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1941">1941</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="1948">1948</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:legalStatus>
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>Public limited liability company</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="1948">1948</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="2006">2006</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:legalStatus>
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>Private limited liability company</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate standardDate="2006">2006</eac-cpf:fromDate>
+                  <eac-cpf:toDate standardDate="2008">2008</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+            </eac-cpf:legalStatus>
+         </eac-cpf:legalStatuses>
+      </_0:egXML>
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:legalStatuses xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>EPIC</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate notBefore="1946-04">avril 1946</eac-cpf:fromDate>
+                  <eac-cpf:toDate notAfter="2004-11">novembre 2004</eac-cpf:toDate>
+               </eac-cpf:dateRange>
+               <eac-cpf:descriptiveNote>
+                  <eac-cpf:p>Établissement public à caractère industriel et commercial</eac-cpf:p>
+               </eac-cpf:descriptiveNote>
+            </eac-cpf:legalStatus>
+            <eac-cpf:legalStatus>
+               <eac-cpf:term>SA</eac-cpf:term>
+               <eac-cpf:dateRange>
+                  <eac-cpf:fromDate notBefore="2004-11">novembre 2004</eac-cpf:fromDate>
+                  <eac-cpf:toDate/>
+               </eac-cpf:dateRange>
+               <eac-cpf:descriptiveNote>
+                  <eac-cpf:p>Société anonyme à capitaux publics</eac-cpf:p>
+               </eac-cpf:descriptiveNote>
+            </eac-cpf:legalStatus>
+         </eac-cpf:legalStatuses>
+      </_0:egXML>
+   </div>
+</div>

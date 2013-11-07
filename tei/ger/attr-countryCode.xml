@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="countryCode" type="attributeDocumentation">
+   <head>
+      <att>countryCode</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Ländercode</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Zweistelliger Code für ein Land gemäß dem Standard ISO 3166-1.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Attribut <att>countryCode</att> kann in den Elementen <gi>placeEntry</gi> und <gi>address</gi> enthalten sein. Das Attribut kann verwendet werden, um den Code zur Angabe eines Landes gemäß dem Standard ISO 3166-1 aufzunehmen. Die Werte für das Attribut werden aus der Liste des ISO 3166-1 Codes for the Representation of Names of Countries entnommen, die auf der Webseite der <ref
+            target="http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm"
+            >ISO 3166 Maintenance Agency</ref> abgerufen werden kann.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>ISO 3166-1 Codes for the Representation of Names of Countries, column
+							A2.</p>
+   </div>
+
+</div>
