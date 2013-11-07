@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/taglibrary_translations.rng" 
 type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<terms>
-
+<terms>    
     <!-- All "fixed" texts that are in the Taglibrary. -->
     <term name="summary">
         <translation lang="en">Summary</translation>
@@ -89,5 +88,8 @@ type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
         <translation lang="en">Example</translation>
         <translation lang="gr">Παρ&#940;δειγμα</translation>
         <translation lang="de">Beispiel</translation>
+    </term>
+    <term name="usage">
+        <translation lang="en">Usage</translation>
     </term>
 </terms>
