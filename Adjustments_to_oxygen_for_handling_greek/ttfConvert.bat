@@ -1,4 +1,4 @@
-@echo off
+@echo off 
 set LIB=lib
 set CP=%LIB%\fop.jar
 set CP=%CP%;%LIB%\avalon-framework-4.2.0.jar
