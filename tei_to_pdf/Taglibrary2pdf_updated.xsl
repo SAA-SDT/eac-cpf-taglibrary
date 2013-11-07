@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:fo="http://www.w3.org/1999/XSL/Format" 
+    xmlns:fo="http://www.w3.org/1999/XSL/Format"
     xmlns:eac-cpf="urn:isbn:1-931666-33-4"
     xmlns:ead="urn:isbn:1-931666-22-9"
     xmlns:ex="http://www.tei-c.org/ns/Examples"
     xmlns:eg="http://www.tei-c.org/ns/Examples"
     xmlns:exml="http://workaround for xml namespace restriction/namespace"
-    xmlns:xlink="http://www.w3c.org/1999/xlink" 
+    xmlns:xlink="http://www.w3c.org/1999/xlink"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:mods="http://www.loc.gov/mods/v3"
     xmlns:text="http://www.tei.org/ns/1.0"
@@ -16,16 +16,16 @@
     xmlns:term="term"
     xmlns:exslt="http://exslt.org/common"
     exclude-result-prefixes="xs xlink eac-cpf ex eg exml example ead mods text term"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0" 
+    xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     extension-element-prefixes="exslt"
     version="2.0">
     
     <xsl:output indent="yes"/>
-    <xsl:variable name="currentLanguage">de</xsl:variable>
+    <xsl:variable name="currentLanguage">en</xsl:variable>
     <!-- xml:lang from taglibrary -->
-    <xsl:variable name="toctype">short</xsl:variable>
+    <xsl:variable name="toctype">long</xsl:variable>
     <!-- long | short -->
-    <xsl:param name="spaceCharacter"> </xsl:param>
+    <xsl:param name="spaceCharacter"> </xsl:param>
     <!-- For egxml formatting -->
     <xsl:variable name="bulletpoint">&#x2022;</xsl:variable>
     
@@ -50,36 +50,37 @@
     <xsl:variable name="appendix" select="$headingtranslations//terms/term[@name='appendix']/translation[@lang=$currentLanguage]"/>
     <xsl:variable name="examples" select="$headingtranslations//terms/term[@name='examples']/translation[@lang=$currentLanguage]"/>
     <xsl:variable name="example" select="$headingtranslations//terms/term[@name='example']/translation[@lang=$currentLanguage]"/>
-
+    <xsl:variable name="usage" select="$headingtranslations//terms/term[@name='usage']/translation[@lang=$currentLanguage]"/>
+    
     <xsl:template match="/">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-selection-strategy="character-by-character" font-family="Times, Pala">
             <fo:layout-master-set>
-                    <fo:simple-page-master master-name="taglibrary-even" 
+                    <fo:simple-page-master master-name="taglibrary-even"
                         page-height="297mm" page-width="210mm"
                         margin-top="1.5cm"
                         margin-bottom="1.5cm"
                         margin-left="1.5cm"
                         margin-right="1.5cm"
                         column-count="1">
-                        <fo:region-body region-name="taglibrary-region-body" margin-top="2.0cm" 
-                            margin-bottom="1.5cm" 
+                        <fo:region-body region-name="taglibrary-region-body" margin-top="2.0cm"
+                            margin-bottom="1.5cm"
                             margin-left="1.5cm"
-                            margin-right="1.5cm" 
+                            margin-right="1.5cm"
                             column-count="1"/>
                         <fo:region-before region-name="taglibrary-region-before-even" extent="1.3cm"/>
                         <fo:region-after region-name="taglibrary-region-after-even" extent="0.5cm"/>
                     </fo:simple-page-master>
-                    <fo:simple-page-master master-name="taglibrary-odd" 
+                    <fo:simple-page-master master-name="taglibrary-odd"
                         page-height="297mm" page-width="210mm"
                         margin-top="1.5cm"
                         margin-bottom="1.5cm"
                         margin-left="1.5cm"
                         margin-right="1.5cm"
                         column-count="1">
-                        <fo:region-body region-name="taglibrary-region-body" margin-top="2.0cm" 
-                            margin-bottom="1.5cm" 
+                        <fo:region-body region-name="taglibrary-region-body" margin-top="2.0cm"
+                            margin-bottom="1.5cm"
                             margin-left="1.5cm"
-                            margin-right="1.5cm" 
+                            margin-right="1.5cm"
                             column-count="1"/>
                         <fo:region-before region-name="taglibrary-region-before-odd" extent="1.3cm"/>
                         <fo:region-after region-name="taglibrary-region-after-odd" extent="0.5cm"/>
@@ -95,7 +96,7 @@
                     margin-right="2.5cm">
                     <fo:region-body region-name="frontmatter-body" margin-top="2.4cm" margin-bottom="2.4cm" margin-left="0cm"
                         margin-right="2.4cm" column-count="1" display-align="center" />
-                    <fo:region-before region-name="frontmatter-region-before" extent="2.3cm"/>                    
+                    <fo:region-before region-name="frontmatter-region-before" extent="2.3cm"/>
                     <fo:region-after region-name="frontmatter-region-after" extent="2.3cm"/>
                 </fo:simple-page-master>
             </fo:layout-master-set>
@@ -126,13 +127,13 @@
                     </fo:block>
                 </fo:static-content>
             <fo:static-content flow-name="taglibrary-region-after-odd">
-                <fo:block font-size="10pt"  text-align="end">
+                <fo:block font-size="10pt" text-align="end">
                     <fo:page-number/>
                 </fo:block>
             </fo:static-content>
                <fo:flow flow-name="taglibrary-region-body">
                         <xsl:apply-templates select="tei:TEI"/>
-               </fo:flow>            
+               </fo:flow>
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
@@ -179,7 +180,7 @@
             <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
                 space-after="6pt" text-align="left">
                 <fo:inline>
-                    <fo:basic-link internal-destination="{generate-id(.)}">
+                    <fo:basic-link internal-destination="{generate-id()}">
                         <xsl:value-of select="tei:head"/>
                     </fo:basic-link>
                 </fo:inline>
@@ -201,17 +202,21 @@
             <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
                 space-after="6pt" text-align="left" text-align-last="justify">
                 <fo:inline>
-                    <xsl:value-of select="tei:head"/>
-                    <fo:leader leader-pattern="dots"/>
-                    <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                    <fo:basic-link internal-destination="{generate-id(.)}">
+                        <xsl:value-of select="tei:head"/>
+                        <fo:leader leader-pattern="dots"/>
+                        <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                    </fo:basic-link>
                 </fo:inline>
             </fo:block>
             <xsl:for-each select="tei:div">
                 <fo:block start-indent="10pt" text-align-last="justify">
                     <fo:inline>
-                        <xsl:value-of select="tei:head"/>
-                        <fo:leader leader-pattern="dots"/>
-                        <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                        <fo:basic-link internal-destination="{generate-id(.)}">
+                            <xsl:value-of select="tei:head"/>
+                            <fo:leader leader-pattern="dots"/>
+                            <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                        </fo:basic-link>
                     </fo:inline>
                 </fo:block>
             </xsl:for-each>
@@ -242,9 +247,9 @@
             </fo:block>
         </xsl:for-each>
         <!--<fo:block font-size="14pt" font-weight="bold" space-before="8pt"
-            space-after="6pt" text-align="center">
-            <xsl:apply-templates select="tei:docAuthor[2]"/>
-        </fo:block>-->
+space-after="6pt" text-align="center">
+<xsl:apply-templates select="tei:docAuthor[2]"/>
+</fo:block>-->
         <fo:block font-size="14pt" font-weight="bold" space-before="8pt"
             space-after="6pt" text-align="center">
             <xsl:apply-templates select="tei:note"/>
@@ -343,7 +348,7 @@
                         <fo:table-cell>
                             <fo:block> </fo:block>
                         </fo:table-cell>
-                        <!-- After  here some text for making it generic and fit all TL should be in the TL file -->
+                        <!-- After here some text for making it generic and fit all TL should be in the TL file -->
                         <fo:table-cell>
                             <fo:block>All rights reserved. First edition <xsl:value-of
                                     select="$TheWholeDocument/tei:publicationStmt/tei:date/@when"
@@ -420,7 +425,7 @@
                         <xsl:for-each select="tei:div[@type='attributeDocumentation']">
                             <fo:inline>
                                 <fo:basic-link internal-destination="{generate-id(.)}">
-                                    <xsl:value-of select="@xml:id"/>
+                                    <xsl:value-of select="tei:head/tei:att"/>
                                 </fo:basic-link>
                             </fo:inline>
                         </xsl:for-each>
@@ -448,9 +453,14 @@
                         space-before="8pt" space-after="6pt" text-align="left"
                         text-align-last="justify">
                         <fo:inline>
-                            <xsl:value-of select="$elements"/>
-                            <fo:leader leader-pattern="dots"/>
-                            <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                            <fo:basic-link internal-destination="{generate-id(.)}">
+                                <xsl:value-of select="$elements"/>
+                                <fo:leader leader-pattern="dots"/>
+                                <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                            </fo:basic-link>
+                            <!--<xsl:value-of select="$elements"/>
+<fo:leader leader-pattern="dots"/>
+<fo:page-number-citation ref-id="{generate-id(.)}"/>-->
                         </fo:inline>
                     </fo:block>
                 </xsl:when>
@@ -459,9 +469,14 @@
                         space-before="8pt" space-after="6pt" text-align="left"
                         text-align-last="justify">
                         <fo:inline>
-                            <xsl:value-of select="$attributes"/>
-                            <fo:leader leader-pattern="dots"/>
-                            <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                            <fo:basic-link internal-destination="{generate-id(.)}">
+                                <xsl:value-of select="$attributes"/>
+                                <fo:leader leader-pattern="dots"/>
+                                <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                            </fo:basic-link>
+                            <!--<xsl:value-of select="$attributes"/>
+<fo:leader leader-pattern="dots"/>
+<fo:page-number-citation ref-id="{generate-id(.)}"/>-->
                         </fo:inline>
                     </fo:block>
                 </xsl:when>
@@ -470,9 +485,14 @@
                         space-before="8pt" space-after="6pt" text-align="left"
                         text-align-last="justify">
                         <fo:inline>
-                            <xsl:value-of select="tei:head"/>
-                            <fo:leader leader-pattern="dots"/>
-                            <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                            <fo:basic-link internal-destination="{generate-id(.)}">
+                                <xsl:value-of select="tei:head"/>
+                                <fo:leader leader-pattern="dots"/>
+                                <fo:page-number-citation ref-id="{generate-id(.)}"/>
+                            </fo:basic-link>
+                           <!-- <xsl:value-of select="tei:head"/>
+<fo:leader leader-pattern="dots"/>
+<fo:page-number-citation ref-id="{generate-id(.)}"/>-->
                         </fo:inline>
                     </fo:block>
                 </xsl:when>
@@ -591,9 +611,9 @@
         <xsl:for-each select="tei:div[@type='elementDocumentation']">
             <fo:block font-size="18pt" font-weight="bold" space-before="18pt"
                 space-after="12pt" text-align="left" page-break-before="always"
-                id="{generate-id(.)}">
+                id="{generate-id()}">
                 <fo:marker marker-class-name="taglibrary-head">
-                    <fo:block>
+                    <fo:block id="{tei:head/tei:gi}">
                         <xsl:text>&lt;</xsl:text>
                         <xsl:value-of select="tei:head/tei:gi"/>
                         <xsl:text>&gt;</xsl:text>
@@ -605,8 +625,10 @@
                 <xsl:text>&#xA0;&#xA0;</xsl:text>
                 <xsl:value-of select="tei:div[@type='fullName']/tei:p"/>
             </fo:block>
+            <!-- Should add check if div type exist -->
             <xsl:apply-templates select="tei:div[@type='summary']"/>
             <xsl:apply-templates select="tei:div[@type='description']"/>
+            <xsl:apply-templates select="tei:div[@type='usage']"/>
             <xsl:apply-templates select="tei:div[@type='mayContain']"/>
             <xsl:apply-templates select="tei:div[@type='mayOccurWithin']"/>
             <xsl:apply-templates select="tei:div[@type='reference']"/>
@@ -628,23 +650,24 @@
             </fo:marker>
             <xsl:value-of select="$attributes"/>
         </fo:block>
-
         <xsl:for-each select="tei:div[@type='attributeDocumentation']">
             <fo:block font-size="18pt" font-weight="bold" space-before="18pt"
                 space-after="12pt" text-align="left" page-break-before="always"
                 id="{generate-id(.)}">
                 <fo:marker marker-class-name="taglibrary-head">
-                    <fo:block>
+                    <fo:block id="{@xml:id}">
                         <xsl:text>@</xsl:text>
-                        <xsl:value-of select="@xml:id"/>
+                        <xsl:value-of select="tei:head/tei:att"/>
                     </fo:block>
                 </fo:marker>
                 <xsl:text>@</xsl:text>
-                <xsl:value-of select="@xml:id"/>
+                <xsl:value-of select="tei:head/tei:att"/>
                 <xsl:text>&#xA0;&#xA0;</xsl:text>
-                <xsl:value-of select="@xml:id"/>
+                <xsl:value-of select="tei:div[@type='fullName']/tei:p"/>
             </fo:block>
-            <xsl:apply-templates/>
+            <xsl:apply-templates select="tei:div[@type='summary']"/>
+            <xsl:apply-templates select="tei:div[@type='description']"/>
+            <xsl:apply-templates select="tei:div[@type='datatype']"/>
         </xsl:for-each>
     </xsl:template>
 
@@ -707,6 +730,24 @@
             </fo:list-item>
         </fo:list-block>
     </xsl:template>
+    
+    <xsl:template match="tei:div[@type='usage']">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
+            <fo:list-item>
+                <fo:list-item-label end-indent="label-end()">
+                    <fo:block>
+                        <xsl:value-of select="$usage"/>
+                        <xsl:text>: </xsl:text>
+                    </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                    <fo:block>
+                        <xsl:apply-templates/>
+                    </fo:block>
+                </fo:list-item-body>
+            </fo:list-item>
+        </fo:list-block>
+    </xsl:template>
 
     <xsl:template match="tei:div[@type='mayContain']">
         <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
@@ -719,7 +760,10 @@
                 </fo:list-item-label>
                 <fo:list-item-body start-indent="body-start()">
                     <fo:block>
-                        <xsl:apply-templates/>
+                        <!--<xsl:apply-templates/>-->
+                        <xsl:call-template name="tokenize">
+                            <xsl:with-param name="text" select="tei:p"/>
+                        </xsl:call-template>
                     </fo:block>
                 </fo:list-item-body>
             </fo:list-item>
@@ -737,7 +781,10 @@
                 </fo:list-item-label>
                 <fo:list-item-body start-indent="body-start()">
                     <fo:block>
-                        <xsl:apply-templates/>
+<!-- <xsl:apply-templates/>-->
+                        <xsl:call-template name="tokenize">
+                            <xsl:with-param name="text" select="tei:p"/>
+                        </xsl:call-template>
                     </fo:block>
                 </fo:list-item-body>
             </fo:list-item>
@@ -806,7 +853,10 @@
                                         <fo:table-row>
                                             <fo:table-cell width="50mm">
                                                 <fo:block>
-                                                  <xsl:apply-templates/>
+                                                    <xsl:call-template name="tokenize">
+                                                        <xsl:with-param name="text" select="."/>
+                                                    </xsl:call-template>
+                                                  <!--<xsl:apply-templates/>-->
                                                 </fo:block>
                                             </fo:table-cell>
                                             <fo:table-cell>
@@ -821,7 +871,10 @@
                                         <fo:table-row>
                                             <fo:table-cell>
                                                 <fo:block>
-                                                  <xsl:apply-templates/>
+                                                    <xsl:call-template name="tokenize">
+                                                        <xsl:with-param name="text" select="."/>
+                                                    </xsl:call-template>
+                                                  <!--<xsl:apply-templates/>-->
                                                 </fo:block>
                                             </fo:table-cell>
                                             <fo:table-cell>
@@ -872,19 +925,19 @@
         <!-- Changed due to the alternative ways of stating occurances that are in the latest version -->
         <!-- If added Occurance need to be collected from the variable -->
         <!--<fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
-            <fo:list-item>
-                <fo:list-item-label end-indent="label-end()">
-                    <fo:block>
-                        <xsl:text>Occurrence: </xsl:text>
-                    </fo:block>
-                </fo:list-item-label>
-                <fo:list-item-body start-indent="body-start()">
-                    <fo:block>
-                        <xsl:apply-templates/>
-                    </fo:block>
-                </fo:list-item-body>
-            </fo:list-item>
-        </fo:list-block>-->
+<fo:list-item>
+<fo:list-item-label end-indent="label-end()">
+<fo:block>
+<xsl:text>Occurrence: </xsl:text>
+</fo:block>
+</fo:list-item-label>
+<fo:list-item-body start-indent="body-start()">
+<fo:block>
+<xsl:apply-templates/>
+</fo:block>
+</fo:list-item-body>
+</fo:list-item>
+</fo:list-block>-->
     </xsl:template>
 
     <xsl:template match="tei:div[@type='reference']">
@@ -972,11 +1025,36 @@
             <xsl:text>:</xsl:text>
         </fo:block>
         <xsl:apply-templates/>
-
     </xsl:template>
 
     <xsl:template match="tei:hi">
         <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:note">
+        <fo:footnote>
+            <fo:inline font-size="10" vertical-align="text-top"><xsl:value-of select="@n"/></fo:inline>
+            <fo:footnote-body>
+                <fo:list-block font-size="9">
+                    <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()">
+                            <fo:block><xsl:value-of select="@n"/></fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                            <fo:block space-after="8">
+                                <xsl:apply-templates/>
+                            </fo:block>
+                        </fo:list-item-body>
+                    </fo:list-item>
+                </fo:list-block>
+            </fo:footnote-body>
+        </fo:footnote>
+    </xsl:template>
+    
+    <xsl:template match="tei:ref">
+        <fo:inline color="blue" keep-together.within-line="always">
+            <xsl:apply-templates/>
+        </fo:inline>
     </xsl:template>
 
     <xsl:template match="tei:front/tei:div/tei:div/tei:div/ex:egXML">
@@ -1027,13 +1105,13 @@
                     <xsl:for-each select="eg:egXML">
                         <fo:block>
                             <xsl:call-template name="newLine"/>
-                            <xsl:apply-templates/> 
+                            <xsl:apply-templates/>
                         </fo:block>
                     </xsl:for-each>
                     <fo:block>
                         <xsl:call-template name="newLine"/>
-                    </fo:block>                    
-                </fo:list-item-body>                
+                    </fo:block>
+                </fo:list-item-body>
             </fo:list-item>
         </fo:list-block>
     </xsl:template>
@@ -1071,7 +1149,7 @@
                     <xsl:value-of select="local-name()"/>
                     <xsl:text>&gt;</xsl:text>
                     <xsl:call-template name="newLine"/>
-                </fo:block>               
+                </fo:block>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:text>&lt;objectXMLWrap&gt;</xsl:text>
@@ -1084,7 +1162,7 @@
     </xsl:template>
     
 <!-- In this template all occuring other namespaceprefixis needs to be added -->
-    <xsl:template  match="eac-cpf:* |example:* | ead:* | mods:* | text:*">
+    <xsl:template match="eac-cpf:* |example:* | ead:* | mods:* | text:*">
         <xsl:variable name="myDepth"
             select="count(ancestor::*[not(namespace-uri()='http://www.tei-c.org/ns/1.0')])*5"/>
         <fo:block start-indent="body-start() + {$myDepth}mm" wrap-option="wrap">
@@ -1151,9 +1229,9 @@
             <xsl:for-each select="namespace::*">
                 <xsl:variable name="nsuri" select="."/>
                 <xsl:if
-                    test="$curnode/descendant-or-self::*[namespace-uri()=$nsuri] and 
-                          $curnode/descendant-or-self::*[namespace-uri()!='http://www.tei-c.org/ns/Examples']                       
-                          ">
+                    test="$curnode/descendant-or-self::*[namespace-uri()=$nsuri] and
+$curnode/descendant-or-self::*[namespace-uri()!='http://www.tei-c.org/ns/Examples']
+">
 
                     <xsl:text> xmlns</xsl:text>
                     <xsl:if test="name() != ''">
@@ -1249,5 +1327,48 @@
             <xsl:value-of select="."/>
         </fo:block>
     </xsl:template>
-
+    
+    
+    
+    <xsl:template name="tokenize">
+        <xsl:param name="text" select="."/>
+        <xsl:param name="separator" select="','"/>
+        <xsl:choose>
+            <xsl:when test="not(contains($text, $separator))">
+                <xsl:choose>
+                    <xsl:when test="not(contains($text, '['))">
+                        <fo:basic-link internal-destination="{translate(normalize-space($text), ':','')}">
+                            <xsl:value-of select="normalize-space($text)"/>
+                        </fo:basic-link>
+                        
+<!-- <a href="#{translate(normalize-space($text), ':','')}">
+<xsl:value-of select="normalize-space($text)"/>
+</a>-->
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="normalize-space($text)"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:choose>
+                    <xsl:when test="not(contains($text, '['))">
+                        <fo:basic-link internal-destination="{translate(normalize-space(substring-before($text, $separator)), ':','')}">
+                            <xsl:value-of select="normalize-space(substring-before($text, $separator))"/>
+                        </fo:basic-link>
+                        <!--<a href="#{translate(normalize-space(substring-before($text, $separator)), ':','')}">
+<xsl:value-of select="normalize-space(substring-before($text, $separator))"/>
+</a>-->
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="normalize-space(substring-before($text, $separator))"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:text>, </xsl:text>
+                <xsl:call-template name="tokenize">
+                    <xsl:with-param name="text" select="substring-after($text, $separator)"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 </xsl:stylesheet>
