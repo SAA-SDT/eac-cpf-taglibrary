@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="vocabularySource" type="attributeDocumentation">
+   <head>
+      <att>vocabularySource</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Quelle des Vokabulars/Thesaurus</p>
+   </div>
+   <div type="summary">
+<p xml:lang="ger">Angabe der Quelle des kontrollierten Vokabulars oder Thesaurus, aus dem ein Begriff entnommen wurde.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Attribut <att>vocabularySource</att> kann in den Elementen <gi>term</gi>, <gi>placeEntry</gi> und <gi>placeRole</gi> enthalten sein. Der Wert gibt die Quelle des kontrollierten Vokabulars oder Thesaurus an, aus dem ein Begriff entnommen wurde. Das Vokabular oder der Thesaurus sollte im Element <gi>conventionDeclaration</gi> im Bereich <gi>control</gi> angegeben werden.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>anyURI</p>
+   </div>
+</div>

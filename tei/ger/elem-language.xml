@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="language" type="elementDocumentation">
+   <head>
+      <gi>language</gi>
+   </head>
+   <div type="fullName">
+<p xml:lang="ger">Sprache</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+         >Angabe der Sprache in der das EAC-CPF-Dokument erstellt wurde oder in der die beschriebene Entität wirkte.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Als obligatorisches Subelement in <gi>languageDeclaration</gi> gibt <gi>language</gi> die Sprache an, in der das EAC-CPF-Dokument hauptsächlich verfasst ist.</p>
+      <p xml:lang="ger"
+            >Als obligatorisches Subelement in <gi>languageUsed</gi> gibt <gi>language</gi> die Sprache an, in der die im EAC-CPF-Dokument beschriebenen Entität wirkte.</p>
+      <p xml:lang="ger">Im obligatorischen <att>languageCode</att>-Attribut wird die Sprache in Form eines gültigen ISO 639-2b-Codes angegeben.</p>
+   </div>
+   <div type="mayContain">
+      <p>[text]</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>languageDeclaration, languageUsed</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list type="gloss">
+            <label>languageCode</label>
+            <item>obligatorisch</item>
+            <label>xml:id</label>
+            <item>optional</item>
+            <label>xml:lang</label>
+            <item>optional</item>
+         </list>
+      </p>
+
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.7</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p>Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p>Non-repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:languageDeclaration xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:language languageCode="eng">English</eac-cpf:language>
+            <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
+         </eac-cpf:languageDeclaration>
+      </_0:egXML>
+   </div>
+</div>

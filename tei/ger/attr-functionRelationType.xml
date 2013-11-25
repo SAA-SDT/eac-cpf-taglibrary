@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="functionRelationType" type="attributeDocumentation">
+   <head>
+      <att>functionRelationType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Art der Beziehung zu Funktionen</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Die Art der Verbindung, die die beschriebene zu einer Funktion hat.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das Attribut <att>functionRelationType</att> kann im Element <gi>functionRelation</gi> enthalten sein. Der Wert des Attributs bezeichnet die Art der Verbindung, die die beschriebene Entität zu einer Funktion hat. Wenn die Art der Beziehung näher bezeichnet werden soll, als die vorgebenden Attributwerte für <att>functionRelationType</att> ermöglichen, können zusätzlich die verfügbaren XLINK-Attribute genutzt werden.</p>
+   </div>
+
+   <div type="datatype" xml:lang="eng">
+      <p>"controls" or "owns" or "performs"</p>
+   </div>
+
+</div>

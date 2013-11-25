@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="standardDateTime" type="attributeDocumentation">
+   <head>
+      <att>standardDateTime</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Standardisierter Zeitpunkt</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Datum oder Zeitpunkt in einem standardisierten, maschinenlesbaren Format.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Attribut <att>standardDateTime</att> kann im Element <gi>eventDateTime</gi> enthalten sein. Der Wert des Attributs ist die standardisierte Angabe in einem maschinenlesbaren Format des Inhalts des Elements <gi>eventDateTime</gi> und kann für die automatische Datenverarbeitung, beispielsweise für Suchfunktionen, genutzt werden.</p>
+   </div>
+   <div type="datatype">
+      <p xml:lang="ger">Vereinigung der XML-Schema Datierungstypen date, gYear, gYearMonth und dateTime. Die folgenden Zeitformat sind gültig: 2009-12-31, 2009, 2009-12, 2009-12-31T23:59:59.</p>
+   </div>
+</div>

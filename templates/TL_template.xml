@@ -52,6 +52,7 @@
             <tag> with text to create anglebrakets
             <att> with text to create attributes
             
+            
             Possible elements in each <p>:
             <list type="ordered"> for ordered list 
                the list contains:
@@ -60,6 +61,7 @@
             <list type="simple"> for a simple list
                the list contains:
                <item> for the text
+            <note n="number"> for creating footnotes
             -->
             <head>Title</head>
             <p>Text</p>

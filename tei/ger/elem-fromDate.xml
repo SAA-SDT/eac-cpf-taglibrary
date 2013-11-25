@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="fromDate" type="elementDocumentation">
+    <head>
+        <gi>fromDate</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Anfangsdatum</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger">Anfangsdatum einer Zeitspanne.</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger"
+                >Das Element <gi>fromDate</gi> gibt als Subelement zu <gi>dateRange</gi> das Anfangsdatum eines Zeitraumes an. Dies kann als genaue oder geschätzte Tages-, Monats- oder Jahresangabe in beliebigem Format erfolgen. Zur ergänzenden Angabe des Anfangsdatum nach ISO-Standard 8601 normalisierter Form (JJJJ-MM-TT usw.) steht das Attribut <att>standardDate</att> zur Verfügung. Mittels der Attribute <att>notBefore</att> und <att>notAfter</att> kann zudem verdeutlicht werden, dass eine Zeitangabe auf Schätzungen beruht.</p>
+    </div>
+    <div type="mayContain">
+        <p>[text]</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>dateRange</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>notAfter</label>
+                <item>optional</item>
+                <label>notBefore</label>
+                <item>optional</item>
+                <label>standardDate</label>
+                <item>optional</item>
+                <label>xml:id</label>
+                <item>optional</item>
+                <label>xml:lang</label>
+                <item>optional</item>
+            </list>
+        </p>
+
+    </div>
+    <div type="occurrence">
+        <div type="mandatory">
+            <p xml:lang="eng">Mandatory</p>
+        </div>
+        <div type="repeatable">
+            <p xml:lang="eng">Non-repeatable</p>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:existDates xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:dateRange>
+                    <eac-cpf:fromDate standardDate="1868">1868</eac-cpf:fromDate>
+                    <eac-cpf:toDate standardDate="1936">1936</eac-cpf:toDate>
+                </eac-cpf:dateRange>
+            </eac-cpf:existDates>
+        </egXML>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkType" type="attributeDocumentation">
+   <head>
+      <att>xlink:type</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Xlink: Typ</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Ein fester Wert "simple", der ein XLINK-kompatibles Element von einem spezifischen Typ bestimmt.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Ein fester Wert "simple", der ein XLINK-kompatibles Element von einem spezifischen Typ bestimmt. Während das XSD-Schema von EAC-CPF das Attribut als optional definiert, ist es nach der Relax NG Definition für EAC-CPF erforderlich. Um den Austausch von EAC-CPF-Dokumenten zu gewährleisten, ist es empfehlenswert, das Attribut <att>xlink:type</att> jeweils mit anzugeben, wenn ein anderes XLINK Attribut genutzt wird.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>Fixed value: "simple"</p>
+   </div>
+</div>

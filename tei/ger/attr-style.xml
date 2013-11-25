@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="style" type="attributeDocumentation">
+   <head>
+      <att>style</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Formatierung</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Definition der Formatierung für eine Zeile. Empfehlenswert ist die Verwendung von Attributwerten gemäß W3C CSS.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p xml:lang="ger"
+            >Das Attribut <att>style</att> kann im Element <gi>span</gi> enthalten sein. In einigen Elementen kann das Element <gi>span</gi> zusammen mit dem Attribut <att>style</att> eine beliebige Zeichenfolge in einem bestimmten Format auszeichnen und damit hervorheben. Es wird dringend empfohlen, die Werte des Attributs <att>style</att> nach den Vorschlägen von W3C CSS zu nutzen, um die Interoperabilität mit anderen System und Formaten zu gewährleisten.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>string</p>
+   </div>
+</div>

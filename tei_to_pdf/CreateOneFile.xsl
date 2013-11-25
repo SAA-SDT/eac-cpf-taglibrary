@@ -9,7 +9,7 @@
         <xsl:template match="node">
             <xsl:copy>
                 <xsl:apply-templates select="@*"/>
-                <xsl:copy-of select="document('../tei/TL_EN.xml')"/>
+                <xsl:copy-of select="document('../tei/TL_eng.xml')"/>
             </xsl:copy>
         </xsl:template>  
     

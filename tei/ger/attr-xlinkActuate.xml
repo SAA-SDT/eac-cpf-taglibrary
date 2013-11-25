@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkActuate" type="attributeDocumentation">
+   <head>
+      <att>xlink:actuate</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Xlink: Auslösen</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Information darüber, wie sich ein Link verhält, wenn er angesprochen wird.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das Attribut <att>xlink:actuate</att> wird zusammen mit dem Attribut <att>xlink:show</att> genutzt, um eine Reaktion des Links festzulegen. Der Attributwert liefert Information darüber, wie sich ein Link verhält, wenn er angesprochen wird.</p>
+      <p xml:lang="ger"
+         >Der Wert "onLoad" aktiviert den Link automatisch, der Wert "onRequest" dagegen aktiviert den Link, wenn er angeklickt wird. Der Wert "none" resultiert in keiner Aktivität, der Wert "other" wird genutzt, um andere Aktivitäten zu definieren.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>"onLoad" or "onRequest" or "other" or "none"</p>
+   </div>
+</div>

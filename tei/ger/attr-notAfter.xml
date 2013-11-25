@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="notAfter" type="attributeDocumentation">
+   <head>
+      <att>notAfter</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Nicht nach/später</p>
+   </div>
+   <div type="summary">
+<p xml:lang="ger">Das späteste mögliche Datum für ein unsicheres Datum.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das Attribut <att>notAfter</att> kann in den Elementen <gi>date</gi>, <gi>fromDate</gi> und <gi>toDate</gi> enthalten sein. Für unsichere Datumsangaben, die im Attribut <att>standardDate</att> kodiert werden, ist es das späteste mögliche Datum. Siehe auch das Attribut  <att>notBefore</att>.</p>
+   </div>
+   <div type="datatype">
+      <p xml:lang="ger">Vereinigung der XML-Schema Datierungstypen date, gYear, gYearMonth und dateTime. Die folgenden Zeitformat sind gültig: 2009-12-31, 2009, 2009-12, 2009-12-31T23:59:59.</p>
+   </div>
+</div>

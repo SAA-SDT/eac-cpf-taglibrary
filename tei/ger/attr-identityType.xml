@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="identityType" type="attributeDocumentation">
+   <head>
+      <att>identityType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Art der Identität</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Angabe, ob eine Identität vorgegeben oder erlangt worden ist. Das Attribut kann nützlich sein, um mehrere Identitäten, die in einem EAC-CPF-Dokument beschrieben werden, näher zu beschreiben.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das Attribut <att>identityType</att> kann im Element <gi>identity</gi> enthalten sein. Obwohl die Verwendung optional ist, wird empfohlen das Attribut anzugeben, wenn mehrere Identitäten in einem EAC-CPF-Dokument mit dem Element <gi>multipleIdentities</gi> beschrieben werden. Durch die Angabe des Attributs <att>identityType</att> kann zwischen der Beschreibung einer oder mehrerer Persönlichkeiten unterschieden werden.</p>
+      <p xml:lang="ger"
+         >Wenn die Identität einer Entität vorgegeben oder von vornherein bestimmt ist, wird der Attributwert "given" verwendet. Wenn die Identität einer Entität dagegen erlangt oder erworben wurd, wird der Attributwert "acquired" verwendet.</p>
+   </div>
+
+   <div type="datatype" xml:lang="eng">
+      <p>"given" or "acquired"</p>
+   </div>
+
+</div>

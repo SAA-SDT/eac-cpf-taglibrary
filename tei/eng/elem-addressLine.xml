@@ -15,7 +15,7 @@
    </div>
    <div type="description" xml:lang="eng">
       <p>A required element in <gi>address</gi>, the <gi>addressLine</gi> element is used to encode
-         one line of a postal or other address. <gi>addressLine</gi> may be repeated afor each line of the address.</p>
+         one line of a postal or other address. <gi>addressLine</gi> may be repeated for each line of the address.</p>
    </div>
    
    <div type="mayContain">

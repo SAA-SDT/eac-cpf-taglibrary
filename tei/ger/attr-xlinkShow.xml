@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkShow" type="attributeDocumentation">
+   <head>
+      <att>xlink:show</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Xlink: Anzeige</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Information darüber, wo sich ein Link öffnet, wenn er angesprochen wird.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p xml:lang="ger">Das Attribut <att>xlink:show</att> wird zusammen mit dem Attribut <att>xlink:show</att> genutzt, um eine Reaktion des Links festzulegen. Der Attributwert liefert Information darüber, wo sich ein Link öffnet, wenn er angesprochen wird.</p>
+      <p xml:lang="ger"
+         >Der Wert "embed" öffnet die externe Quelle an der Stelle des Links, der Wert "new" öffnet die Quelle in einem neuen Fenster. Der Wert "replace" ersetzt die Quelle, aus welcher der Link geöffnet wurde, durch die geöffnete externe Quelle. Der Wert "none" resultiert in keiner Aktivität, der Wert "other" wird genutzt, um andere Aktivitäten zu definieren.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>"embed" or "new" or "replace" or "none" or "other"</p>
+   </div>
+</div>

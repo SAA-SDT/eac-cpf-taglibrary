@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="list" type="elementDocumentation">
+   <head>
+      <gi>list</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Liste</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+         >Mit dem Element <gi>list</gi> werden ein oder mehrere <gi>item</gi>-Elemente zur Erstellung einer einfachen Liste zusammengefasst.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Mit dem Element <gi>list</gi> werden Listen erstellt. <gi>list</gi> wird in einer Reihe von Beschreibungselementen verwendet. Listen bestehen aus einem oder mehreren <gi>item</gi>-Elementen. Das Element <gi>list</gi> ist nicht zu verwechseln mit dem Element <gi>chronList</gi>, das eine chronologische Liste enthält.</p>
+   </div>
+   <div type="mayContain">
+      <p>item</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>biogHist, functions, generalContext, legalStatuses, localDescriptions, mandates, occupations, places, structureOrGenealogy</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:list xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:item><eac-cpf:span style="font-style:italic"
+               >1450-1950</eac-cpf:span>(1929)</eac-cpf:item>
+            <eac-cpf:item><eac-cpf:span style="font-style:italic"
+               >Globe Gliding</eac-cpf:span>(1930)</eac-cpf:item>
+            <eac-cpf:item><eac-cpf:span style="font-style:italic"
+               >Gems</eac-cpf:span>(1931)</eac-cpf:item>
+            <eac-cpf:item><eac-cpf:span style="font-style:italic"
+               >Words</eac-cpf:span>(1931)</eac-cpf:item>
+            <eac-cpf:item><eac-cpf:span style="font-style:italic"
+               >Demonics</eac-cpf:span>(1931)</eac-cpf:item>
+            <eac-cpf:item><eac-cpf:span style="font-style:italic"
+               >Can We Co-operate</eac-cpf:span>(1942)</eac-cpf:item>
+            <eac-cpf:item><eac-cpf:span style="font-style:italic"
+               >Amazing Amazon</eac-cpf:span>(1942)</eac-cpf:item>
+         </eac-cpf:list>
+      </_0:egXML>
+   </div>
+</div>

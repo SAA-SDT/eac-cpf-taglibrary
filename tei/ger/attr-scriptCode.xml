@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="scriptCode" type="attributeDocumentation">
+   <head>
+      <att>scriptCode</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Schriftcode</p>
+   </div>
+   <div type="summary">
+<p xml:lang="ger">Vierstelliger Schriftcode gemäßt dem Standart ISO 15924.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das Attribut <att>scriptCode</att> muss im Element <gi>script</gi> angegeben werden. Der Schriftcode ist ein vierstelliger Code gemäß ISO 15924 zur Angabe der Schrift zusammen mit der Sprache. Er kann in den Elementen angegeben werden, in denen auch die Sprache kodiert wird.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>ISO 15924 Code for the Representation of Names and Scripts</p>
+   </div>
+</div>

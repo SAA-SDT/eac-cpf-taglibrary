@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xmlbase" type="attributeDocumentation">
+   <head>
+      <att>xml:base</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">XML Base</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+         >Spezifizierung eines zugrundliegenden URI, sofern er sich von dem zugrundliegenden URI des EAC-CPF-Dokuments unterscheided.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Attribut <att>xml:base</att> wird genutzt, um ein zugrundliegenden URI anzugeben, wenn er sich von dem zugrundliegenden URI des EAC-CPF-Dokuments unterscheided. Damit können relative URIs, die im Dokument als Attributwert angegeben werden, angesprochen werden. Mit dem Attribut <att>xml:base</att> können absolute URIs definiert werden, die eine Verwendung von relativen URIs im Dokument erlauben.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>NMTOKEN</p>
+   </div>
+</div>

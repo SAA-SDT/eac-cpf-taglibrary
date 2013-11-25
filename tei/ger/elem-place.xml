@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="place" type="elementDocumentation">
+   <head>
+      <gi>place</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Ort</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Element zur Angabe von Orten oder geographischen Informationen im Kontext der Beschreibung.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Im <gi>place</gi>-Element wird ein geographischer Begriff innerhalb von <gi>placeEntry</gi> kodiert. Die Begriffe werden genutzt, um Orte oder Zuständigkeiten die mit einer Entität verbunden sind zu benennen. Das Element <gi>placeRole</gi> enthält Informationen über die Verbindung des Ortes mit einer Entität. Die Verwendung von <gi>placeRole</gi> wird daher dringend empfohlen. Die Begriffe in <gi>placeEntry</gi> und <gi>placeRole</gi> können aus kontrolliertem Vokabular oder aus der Alltagssprache stammen. Kontrollierte Vokabularien, Thesaurie oder Onthologien können im Attribut <att>vocabularySource</att> definiert werden. Mit den Orten zusammenhängende Zeitangaben können in den Elementen <gi>date</gi>, <gi>dateRange</gi> oder <gi>dateSet</gi> angegeben werden. Das Element <gi>descriptiveNote</gi> kann weitere Erläuterungen enthalten. Im <gi>address</gi>-Element werden Post- oder Adressinformationen spezifiziert.</p>
+      <p xml:lang="ger">Ein einzelnes <gi>place</gi>-Element kann direkt innherhalb von <gi>description</gi> stehen. Mehrere <gi>place</gi>-Elemente hingegen werden im Hüllenelement <gi>places</gi> zusammengefasst, um sie gemeinsam ansprechen zu können.</p>
+      <p xml:lang="ger">Orte können alternativ innerhalb von <gi>biogHist</gi> beschrieben werden. Das <gi>place</gi>-Element sollte immer dann genutzt werden, wenn eine Ortsangabe erforderlich oder nützlich ist.</p>
+   </div>
+   <div type="mayContain">
+      <p>address, citation, date, dateRange, dateSet, descriptiveNote, placeEntry, placeRole</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, places</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.3</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:placeEntry>Paris, France</eac-cpf:placeEntry>
+            <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
+         </eac-cpf:place>
+      </_0:egXML>
+   </div>
+</div>

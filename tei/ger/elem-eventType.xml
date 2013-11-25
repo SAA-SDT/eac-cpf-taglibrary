@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="eventType" type="elementDocumentation">
+    <head>
+        <gi>eventType</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Typ des Bearbeitungsereignisses</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger">Typisierung eines Bearbeitungsereignisses zum EAC-CPF-Dokument.</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger">Obligatorisches Subelement zu <gi>maintenanceEvent</gi>, über das das benannte Bearbeitungsereignis charakterisiert wird. Als mögliche Inhalte für das Element <gi>eventType</gi> stehen die Werte "created", "revised", "updated", "deleted", "derived" oder "cancelled" zur Verfügung. Ergänzend zu dieser grundsätzlichen Typsierung kann das Bearbeitungsereignis im Element <gi>eventDescription</gi> näher erläutert werden.</p>
+        <p xml:lang="ger">Bei der Neuerstellung eines EAC-CPF-Dokuments sollte dem Bearbeitungsereignis der <gi>eventType</gi> "created" zugeordnet werden. Alternativ dazu wäre der Typ "derived" zu verwenden, wenn es sich um eine Übernahme von Daten aus einem anderen beschreibenden System handelt. Inhaltliche Überarbeitungen und Ergänzungen werden als <gi>eventType</gi> "revised" erfasst, während minimale Aktualisierungen als "updated" zu kennzeichnen sind. Um mit Blick auf den Austausch von Informationen deutlich machen zu können, welchen Bearbeitungsstand ein Dokument repräsentiert, stehen zudem die Typen "deleted" bzw. "cancelled" zur Verfügung. Mit diesen werden Dateien gekennzeichnet, die entweder vollständig aus einem System gelöscht worden sind oder lediglich als Referenz zurückgehalten werden, aber z.B. durch eine aktuellere Fassung ersetzt wurden.</p>
+    </div>
+    <div type="mayContain">
+        <p xml:lang="eng">"cancelled" or "created" or "deleted" or "derived" or "revised" or "updated"</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>maintenanceEvent</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>xml:id</label>
+                <item>optional</item>
+            </list>
+        </p>
+
+    </div>
+    <div type="reference">
+        <p>ISAAR (CPF) 5.4.9</p>
+    </div>
+    <div type="occurrence">
+        <div type="mandatory">
+            <p xml:lang="eng">Mandatory</p>
+        </div>
+        <div type="repeatable">
+            <p xml:lang="eng">Non-repeatable</p>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:eventType>created</eac-cpf:eventType>
+                <eac-cpf:eventDateTime standardDateTime="2009-11-30T12:00:00+01:00"/>
+                <eac-cpf:agentType>human</eac-cpf:agentType>
+                <eac-cpf:agent>Bill Stockting</eac-cpf:agent>
+                <eac-cpf:eventDescription>Created from original in ISAAR (CPF), 2nd edition: example
+                    10</eac-cpf:eventDescription>
+            </eac-cpf:maintenanceEvent>
+        </egXML>
+    </div>
+</div>

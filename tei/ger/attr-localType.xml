@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="localType" type="attributeDocumentation">
+   <head>
+      <att>localType</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Lokaler Typ eines Elements</p>
+   </div>
+   <div type="summary">
+<p xml:lang="ger">Mit dem Attribut wird ein Element inhaltlich näher bezeichnet. Der Attributwert sollte ein absoluter URI sein.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Attribut <att>localType</att> kann in vielen beschreibenden Elementen und in einigen Element im Kontrollbereich enthalten sein. Es wird verwendet, um ein Element inhaltlich näher zu bezeichnen. Dabei kann es sich um Elemente zur Strukturierung oder um allgemeine Beschreibungselemente handeln. Der Wert des Attributs <att>localType</att> muss gemäß der Definition "W3C Schema Part 2: Datatypes, anyURI" gebildet werden. Um die Möglichkeiten des Austauschs von EAC-CPF-Dokumenten zu erhalten, ist es empfehlenswert ein absolutes URI zu verwenden, der mit der lokalen Resource, auf die verwiesen wird, aufgelöst werden kann.</p>
+   </div>
+
+   <div type="datatype" xml:lang="eng">
+      <p>anyURI</p>
+   </div>
+
+</div>

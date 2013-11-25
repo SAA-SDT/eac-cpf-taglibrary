@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="mandate" type="elementDocumentation">
+   <head>
+      <gi>mandate</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Mandat / Befugnis</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Beschluss, Gesetz oder Direktive zur Befugnis oder zu dem Mandat einer Körperschaft zur Ausübung ihrer Funktion oder zu ihrem Verantwortungsbereich.</p>
+   </div>
+   <div type="description" xml:lang="eng">
+      <p xml:lang="ger"
+            >Das Element <gi>mandate</gi> enthält Beschreibung des Mandats in dem Element <gi>term</gi>. Es wird die Quelle der Befugnis oder des Mandats für eine Körperschaft zur Ausübung ihrer Funktion oder zu ihrem Verantwortungsbereich angegeben. Dies können Beschlüsse, Gesetze oder andere Direktiven sein. Der Begriff kann kontrolliertem Vokabular entnommen werden oder aus der Alltagssprache stammen. Der Begriff innerhalb von <gi>term</gi> kann mit der Angabe einer Datierung (<gi>date</gi>, <gi>dateRange</gi> oder <gi>dateSet</gi>) und eines Ortes (<gi>placeEntry</gi>) näher erläutert werden. Im Element <gi>descriptiveNote</gi> können Beschreibungen zum Mandat erfasst werden.</p>
+      <p xml:lang="ger"
+            >Ein einzelnes <gi>mandate</gi>-Element kann direkt innerhalb von <gi>description</gi> stehen. Mehrere Elemente <gi>mandate</gi> werden im Element <gi>mandates</gi> zusammengefasst.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry, term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, mandates</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.2.6</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples">
+         <eac-cpf:mandate xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:dateRange>
+               <eac-cpf:fromDate standardDate="1919">1919</eac-cpf:fromDate>
+               <eac-cpf:toDate standardDate="1925">1925</eac-cpf:toDate>
+            </eac-cpf:dateRange>
+            <eac-cpf:citation>Minnesota. Executive Session Laws 1919 c49</eac-cpf:citation>
+            <eac-cpf:descriptiveNote>
+               <eac-cpf:p>Board created in 1919 to receive and examine applications for bonuses from Minnesota soldiers.</eac-cpf:p>
+            </eac-cpf:descriptiveNote>
+         </eac-cpf:mandate>
+      </_0:egXML>
+   </div>
+</div>

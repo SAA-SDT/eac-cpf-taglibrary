@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="localDescription" type="elementDocumentation">
+   <head>
+      <gi>localDescription</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Angabe lokal verwendeter Beschreibungskategorien</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+            >Ein Element zur Angabe lokal verwendeter Beschreibungskategorien, die mittels der übrigen Subelemente von <gi>description</gi> nicht adäquat abzubilden sind. Die Bedeutung des Element hängt vom Kontext ab, in dem es verwendet wird.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Element <gi>localDescription</gi> erlaubt eine Erweiterung der Beschreibungselemente, die in ISAAR (CPF) definiert und im EAC-CPF-Schema spezifiziert sind. Das <gi>localDescription</gi>-Element soll möglichst Begriffe enthalten und weniger beschreibenden Text. Das Subelement <gi>term</gi> kann diese Begriffe aus kontollierten Vokabularien oder aus der Alltagssprache enthalten. Die Elemente <gi>date</gi>, <gi>dateRange</gi> oder <gi>dateSet</gi> sowie <gi>placeEntry</gi> können den Begriff zeitlich und räumlich verorten. Im Element <gi>descriptiveNote</gi> kann eine ausführliche textliche Beschreibung angegeben werden.</p>
+      <p xml:lang="ger">Das Element <gi>localDescription</gi> sollte angegeben werden, wenn innerhalb der lokalen Anwendung weitere Erschließungsinformationen entstehen und diese nicht in den vorhandenen EAC-CPF-Elementen abgebildet werden können.</p>
+   </div>
+   <div type="mayContain">
+      <p>citation, date, dateRange, dateSet, descriptiveNote, placeEntry, term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>description, localDescriptions</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Required</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:localDescription xmlns:eac-cpf="urn:isbn:1-931666-33-4"
+            localType="http://....fr/eac-cpf/localType/nationalité">
+            <eac-cpf:term vocabularySource="http://....fr/eac-cpf/localType/nationalité#French"
+               >French</eac-cpf:term>
+            <eac-cpf:placeEntry countryCode="FR"
+               vocabularySource="http://....fr/registerOfFrenchPlaceNames#France"
+               >France</eac-cpf:placeEntry>
+         </eac-cpf:localDescription>
+      </_0:egXML>
+   </div>
+</div>

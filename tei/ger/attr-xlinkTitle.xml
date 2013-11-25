@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../TEI/schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="xlinkTitle" type="attributeDocumentation">
+   <head>
+      <att>xlink:title</att>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Xlink: Titel</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Information, die anstelle der URI für den Link zur externen Quelle angezeigt wird.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Text, der anstelle der URI für den Link zur externen Quelle angezeigt wird.</p>
+   </div>
+   <div type="datatype" xml:lang="eng">
+      <p>string</p>
+   </div>
+</div>

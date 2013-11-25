@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="setComponent" type="elementDocumentation">
+   <head>
+      <gi>setComponent</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Externe Normdatei</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+            >Ein Element innerhalb von <gi>alternativeSet</gi>, das die EAC-CPF-Kodierung für eine vollständige Normdatei enthält. Es erlaubt die Bündelung von Normdateien aus mehreren System innerhalb einer <gi>cpfDescription</gi>.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger">Das Element <gi>setComponent</gi> bildet die Hülle für eine vollständige Normdatei, so dass mehrere Dateien aus verschiedenen Systemen oder in unterschiedichen Sprachen, aber für eine Identität, innerhalb eines EAC-CPF-Dokuments kombiniert werden können. Das erforderliche Element <gi>componentEntry</gi> enthält die Verbindung zur Normdatei im externen System. Ein optionales Beschreibungselement <gi>descriptiveNote</gi> kann für eine textliche Erklärung der Normdatei verwendet werden.</p>
+   </div>
+   <div type="mayContain">
+      <p>componentEntry, descriptiveNote, objectBinWrap, objectXMLWrap</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>alternativeSet</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>lastDateTimeVerified</label>
+            <item>Optional</item>
+            <label>xlink:actuate</label>
+            <item>Optional</item>
+            <label>xlink:arcrole</label>
+            <item>Optional</item>
+            <label>xlink:href</label>
+            <item>Optional</item>
+            <label>xlink:role</label>
+            <item>Optional</item>
+            <label>xlink:show</label>
+            <item>Optional</item>
+            <label>xlink:title</label>
+            <item>Optional</item>
+            <label>xlink:type</label>
+            <item>Required (if any XLINK attributes used)</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:alternativeSet xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+               xlink:href="http://authorities.loc.gov" xlink:type="simple">
+               <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+            <eac-cpf:setComponent xmlns:xlink="http://www.w3c.org/1999/xlink"
+               xlink:href="http://nla.gov.au/anbd.aut-an35335937" xlink:type="simple">
+               <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
+            </eac-cpf:setComponent>
+         </eac-cpf:alternativeSet>
+      </_0:egXML>
+   </div>
+</div>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="address" type="elementDocumentation">
+    <head>
+        <gi>address</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Addresse</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger">Postalische oder andere Adressangaben.</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger"><gi>address</gi> ist ein zusammenfassendes Subelement zum Element <gi>place</gi>. Es kann eines oder mehrere <gi>addressLine</gi>-Elemente enthalten, in denen postalische oder sonstige Adress- und Kontaktdaten der beschriebenen Entität erfasst sind.</p>
+    </div>
+    <div type="mayContain">
+        <p>addressLine</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>place</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>localType</label>
+                <item>optional</item>
+                <label>xml:id</label>
+                <item>optional</item>
+                <label>xml:lang</label>
+                <item>optional</item>
+            </list>
+        </p>
+    </div>
+    <div type="reference">
+        <p>ISAAR (CPF) 5.2.3</p>
+    </div>
+    <div type="occurrence">
+        <div type="mandatory">
+            <p xml:lang="eng">Optional</p>
+        </div>
+        <div type="repeatable">
+            <p xml:lang="eng">Repeatable</p>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:placeRole>siege social</eac-cpf:placeRole>
+                <eac-cpf:address>
+                    <eac-cpf:addressLine localType="voie">2 rue Corneille</eac-cpf:addressLine>
+                    <eac-cpf:addressLine localType="city">Paris</eac-cpf:addressLine>
+                    <eac-cpf:addressLine localType="postalcode">75006</eac-cpf:addressLine>
+                    <eac-cpf:addressLine>France</eac-cpf:addressLine>
+                </eac-cpf:address>
+            </eac-cpf:place>
+            <eac-cpf:place xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:placeRole>headquarters</eac-cpf:placeRole>
+                <eac-cpf:address>
+                    <eac-cpf:addressLine>221 Kifissias Avenue</eac-cpf:addressLine>
+                    <eac-cpf:addressLine>Marousi</eac-cpf:addressLine>
+                    <eac-cpf:addressLine>15124</eac-cpf:addressLine>
+                    <eac-cpf:addressLine>Greece</eac-cpf:addressLine>
+                </eac-cpf:address>
+            </eac-cpf:place>
+        </egXML>
+    </div>
+</div>

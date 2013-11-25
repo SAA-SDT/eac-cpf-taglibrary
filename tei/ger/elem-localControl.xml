@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="localControl" type="elementDocumentation">
+   <head>
+      <gi>localControl</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Angaben zu lokalen Normierungen oder Regelwerken</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger"
+            >Ein Element zur Angabe standardisierter oder normierter Daten, die aufgrund der lokalen Anwendungspraxis benötigt werden, jedoch in anderen Subelementen von <gi>control</gi> nicht erfasst werden können.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das optionale Element <gi>localControl</gi> wird zur Angabe weiterer standardisierter oder normierter Daten, die aufgrund der lokalen Anwendungspraxis benötigt werden, jedoch in anderen Subelementen von <gi>control</gi> nicht erfasst werden können, genutzt. Die Information über standadisierten oder normierten Daten wird im Subelement <gi>term</gi> angegeben und kann mit einem Datum im Element <gi>date</gi> oder einer Zeitspanne im Element <gi>dateRange</gi> näher beschrieben werden.</p>
+      <p xml:lang="ger">Die Art des Eintrags in <gi>localControl</gi> kann im Attribut <att>localType</att> definiert werden.</p>
+   </div>
+   <div type="mayContain">
+      <p>date, dateRange, term</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>control</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>localType</label>
+            <item>Optional</item>
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Optional</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:localControl xmlns:eac-cpf="urn:isbn:1-931666-33-4" localType="detailLevel">
+            <eac-cpf:term>minimal</eac-cpf:term>
+         </eac-cpf:localControl>
+      </_0:egXML>
+   </div>
+</div>

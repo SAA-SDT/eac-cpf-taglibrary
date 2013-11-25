@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="maintenanceEvent" type="elementDocumentation">
+   <head>
+      <gi>maintenanceEvent</gi>
+   </head>
+   <div type="fullName">
+      <p xml:lang="ger">Bearbeitungsschritt</p>
+   </div>
+   <div type="summary">
+      <p xml:lang="ger">Ein Bearbeitungsschritt an einem EAC-CPF-Dokument.</p>
+   </div>
+   <div type="description">
+      <p xml:lang="ger"
+            >Das Element <gi>maintenanceEvent</gi> innerhalb von <gi>maintenanceHistory</gi> wird verwendet, um Informationen zu einzelnen Bearbeitungsschritten an einem EAC-CPF-Dokument zu erfassen. Es muss wenigstens ein Bearbeitungsschritt für jedes EAC-CPF-Dokument angegeben werden, was für gewöhnlich die Erstellung des Dokuments ist. Jeder Schritt muss mit einem Element <gi>eventType</gi> näher definiert werden. Informationen darüber wer oder was den Bearbeitungsschritt ausgeführt hat oder dafür verantwortlich ist, können in den Elementen <gi>agent</gi> und <gi>agentType</gi> angegeben werden. Der Zeitpunkt kann im <gi>eventDateTime</gi>-Element erfasst werden. Eine beschreibende Erläuterung kann im Element <gi>eventDescription</gi> bereitgestellt werden.</p>
+   </div>
+   <div type="mayContain">
+      <p>agent, agentType, eventDateTime, eventDescription, eventType</p>
+   </div>
+   <div type="mayOccurWithin">
+      <p>maintenanceHistory</p>
+   </div>
+   <div type="attributes">
+      <p xml:lang="eng">
+         <list xmlns="http://www.tei-c.org/ns/1.0" type="gloss">
+            <label>xml:id</label>
+            <item>Optional</item>
+            <label>xml:lang</label>
+            <item>Optional</item>
+         </list>
+      </p>
+   </div>
+   <div type="reference">
+      <p>ISAAR (CPF) 5.4.6 and 5.4.9</p>
+   </div>
+   <div type="occurrence">
+      <div type="mandatory">
+         <p xml:lang="eng">Mandatory</p>
+      </div>
+      <div type="repeatable">
+         <p xml:lang="eng">Repeatable</p>
+      </div>
+   </div>
+   <div type="examples">
+      <_0:egXML xmlns:_0="http://www.tei-c.org/ns/Examples" xml:lang="eng">
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>derived</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2009-08-30T09:37:17.029-04:00"/>
+            <eac-cpf:agentType>machine</eac-cpf:agentType>
+            <eac-cpf:agent>XSLT ead2cpf.xsl/Saxon B9</eac-cpf:agent>
+            <eac-cpf:eventDescription>Derived from EAD instance.</eac-cpf:eventDescription>
+         </eac-cpf:maintenanceEvent>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>revised</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2009-07-08T10:45:00-01:00"
+               >2009-07-08 10:45</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>Claire Sibille</eac-cpf:agent>
+            <eac-cpf:eventDescription>Notice convertie en EAC-CPF avec l' éditeur oXygen</eac-cpf:eventDescription>
+         </eac-cpf:maintenanceEvent>
+         <eac-cpf:maintenanceEvent xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+            <eac-cpf:eventType>created</eac-cpf:eventType>
+            <eac-cpf:eventDateTime standardDateTime="2001-11-03T12:00:00+01:00"
+               >2001-11/03 12:00</eac-cpf:eventDateTime>
+            <eac-cpf:agentType>human</eac-cpf:agentType>
+            <eac-cpf:agent>Lina Bountouri</eac-cpf:agent>
+         </eac-cpf:maintenanceEvent>
+      </_0:egXML>
+   </div>
+</div>

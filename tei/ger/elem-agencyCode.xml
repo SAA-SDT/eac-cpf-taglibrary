@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="agencyCode" type="elementDocumentation">
+    <head>
+        <gi>agencyCode</gi>
+    </head>
+    <div type="fullName">
+        <p xml:lang="ger">Identifikator der herausgebenden Institution</p>
+    </div>
+    <div type="summary">
+        <p xml:lang="ger"
+            >Identifikator derjenigen Institution, die für die Erstellung, Verwaltung und Veröffentlichung des EAC-CPF-Dokuments verantwortlich ist.</p>
+    </div>
+    <div type="description">
+        <p xml:lang="ger"
+                >Optionales Subelement zu <gi>maintenanceAgency</gi> im Abschnitt <gi>control</gi> des EAC-CPF-Dokuments zur Angabe eines Identifikators für diejenige Institution, die selbiges erstellt hat, verwaltet und für seine Veröffentlichung verantwortlich zeichnet. Der vollständige Name der Institution wird im parallel verwendbaren Element <gi>agencyName</gi> erfasst. Der in <gi>agencyCode</gi> angegebene Identifikator ist in Kombination mit dem Inhalt des obligatorischen Elements <gi>recordId</gi> als globaler Identifikator der EAC-CPF-Beschreibung einsetzbar.</p>
+        <p xml:lang="ger"
+                >Der Identifikator der herausgebenden Institution ist in Anlehnung an den International Standard Identifier for Libraries and Related Organizations (ISIL: ISO 15511) zu bilden und besteht aus einem Länderpräfix (nach ISO 3166-1), einem Minusstrich sowie dem eigentlichen Institutionsidentifikator. Insgesamt ist dieser alphanumerische Code (A-Z, 0-9, Schrägstrich, Minusstrich und Doppelpunkt) auf 16 Zeichen beschränkt. Sofern vorhanden ist in das Element <gi>agencyCode</gi> ein bei einer nationalen ISIL-Agentur oder einem ähnlichen Service registrierter ISIL-Code einzutragen. Alternativ wird empfohlen, ggf. lokal verwendete Institutionscodes durch den Ländercode nach ISO-Standard 3166-1 als Präfix zu ergänzen und dieses im Element <gi>agencyCode</gi> anzugeben.</p>
+    </div>
+    <div type="mayContain">
+        <p>[text]</p>
+    </div>
+    <div type="mayOccurWithin">
+        <p>maintenanceAgency</p>
+    </div>
+    <div type="attributes">
+        <p xml:lang="eng">
+            <list type="gloss">
+                <label>xml:id</label>
+                <item>optional</item>
+            </list>
+        </p>
+    </div>
+    <div type="reference">
+        <p>ISAAR (CPF) 5.4.2</p>
+    </div>
+
+    <div type="occurrence">
+        <div type="mandatory">
+            <p xml:lang="eng">Optional</p>
+        </div>
+        <div type="repeatable">
+            <p xml:lang="eng">Non-repeatable</p>
+        </div>
+    </div>
+    <div type="examples">
+        <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
+            <eac-cpf:maintenanceAgency xmlns:eac-cpf="urn:isbn:1-931666-33-4">
+                <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
+                <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
+            </eac-cpf:maintenanceAgency>
+        </egXML>
+    </div>
+</div>

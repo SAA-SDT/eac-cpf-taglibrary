@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <div type="elementDocumentation" xml:id="elementName"  xmlns="http://www.tei-c.org/ns/1.0">
-   <!-- @type is always elementDocumentation
+   <!-- @type is always elementDocumentation 
       @xml:id is the name of the element-->
    <head>
       <gi>name as in XML</gi>
@@ -14,6 +14,19 @@
    </div>
    <div type="description">
       <p xml:lang="en">Description you can use <gi>to get anglebrackets</gi></p>
+      <p>You can create an bullitpoint list using the list shown below the label needs to be here 
+         for validation but gets ignored in the transformation</p>
+      <p>
+         <list type="bulleted">
+            <label>1</label>
+            <item>Text for bullet 1</item>
+            <label>2</label>
+            <item>Text for bullet 2</item>
+         </list>
+      </p>
+   </div>
+   <div type="usage">
+      <p xml:lang="en">Usage you can use <gi>to get anglebrackets</gi></p>
    </div>
    <div type="mayContain">
       <p>Can contain for example [text] or elementA</p>
