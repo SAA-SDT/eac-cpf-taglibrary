@@ -51,6 +51,7 @@
     <xsl:variable name="examples" select="$headingtranslations//terms/term[@name='examples']/translation[@lang=$currentLanguage]"/>
     <xsl:variable name="example" select="$headingtranslations//terms/term[@name='example']/translation[@lang=$currentLanguage]"/>
     <xsl:variable name="usage" select="$headingtranslations//terms/term[@name='usage']/translation[@lang=$currentLanguage]"/>
+    <xsl:variable name="and" select="$headingtranslations//terms/term[@name='and']/translation[@lang=$currentLanguage]"/>
     
     <xsl:template match="/">
         <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-selection-strategy="character-by-character" font-family="Times, Pala">
@@ -1052,6 +1053,7 @@ space-after="6pt" text-align="center">
     </xsl:template>
     
     <xsl:template match="tei:ref">
+        <!-- Karin: check how to make i link in FO! -->
         <fo:inline color="blue" keep-together.within-line="always">
             <xsl:apply-templates/>
         </fo:inline>

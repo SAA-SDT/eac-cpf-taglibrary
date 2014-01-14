@@ -11,6 +11,8 @@
         exclude-result-prefixes="xs xlink eac-cpf ex eg exml example ead mods text term"
         xpath-default-namespace="http://www.tei-c.org/ns/1.0" extension-element-prefixes="exslt"
         version="2.0">
+        
+        <!-- Karin: order of elelemnts!!!!! -->
 
         <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" encoding="UTF-8"
@@ -65,8 +67,8 @@
         <xsl:variable name="example"
                 select="$headingtranslations//terms/term[@name='example']/translation[@lang=$currentLanguage]"/>
         <xsl:variable name="usage" select="$headingtranslations//terms/term[@name='usage']/translation[@lang=$currentLanguage]"/>
-
-
+        <xsl:variable name="and" select="$headingtranslations//terms/term[@name='and']/translation[@lang=$currentLanguage]"/>
+        
         <xsl:template match="/">
                 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
                         <head>
