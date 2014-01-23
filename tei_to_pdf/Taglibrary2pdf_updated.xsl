@@ -626,7 +626,7 @@ space-after="6pt" text-align="center">
                 <xsl:text>&#xA0;&#xA0;</xsl:text>
                 <xsl:value-of select="tei:div[@type='fullName']/tei:p"/>
             </fo:block>
-            <!-- Should add check if div type exist -->
+            <!-- Should add check if div type exist??? -->
             <xsl:apply-templates select="tei:div[@type='summary']"/>
             <xsl:apply-templates select="tei:div[@type='description']"/>
             <xsl:apply-templates select="tei:div[@type='usage']"/>
@@ -714,7 +714,49 @@ space-after="6pt" text-align="center">
     
     
 
+    <!-- To be used when description is it own header -->
+    <!--<xsl:template match="tei:div[@type='description']">
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
+            <fo:list-item>
+                <fo:list-item-label end-indent="label-end()">
+                    <fo:block>
+                        <xsl:value-of select="$description"/>
+                        <xsl:text>: </xsl:text>
+                    </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                    <fo:block>
+                        <xsl:apply-templates/>
+                    </fo:block>
+                </fo:list-item-body>
+            </fo:list-item>
+        </fo:list-block>
+    </xsl:template>-->
+    
     <xsl:template match="tei:div[@type='description']">
+        <!-- Combination of description and usage -->
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
+            <fo:list-item>
+                <fo:list-item-label end-indent="label-end()">
+                    <fo:block>
+                        <xsl:value-of select="$description"/>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="$and"/>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="$usage"/>
+                        <xsl:text>: </xsl:text>
+                    </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                    <fo:block>
+                        <xsl:apply-templates/>
+                    </fo:block>
+                </fo:list-item-body>
+            </fo:list-item>
+        </fo:list-block>
+    </xsl:template>
+    
+    <xsl:template match="tei:div[@type='description'][parent::tei:div[@type='attributeDocumentation']]">
         <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
@@ -732,13 +774,31 @@ space-after="6pt" text-align="center">
         </fo:list-block>
     </xsl:template>
     
-    <xsl:template match="tei:div[@type='usage']">
+   <!-- <xsl:template match="tei:div[@type='usage']">
         <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>
                 <fo:list-item-label end-indent="label-end()">
                     <fo:block>
                         <xsl:value-of select="$usage"/>
                         <xsl:text>: </xsl:text>
+                    </fo:block>
+                </fo:list-item-label>
+                <fo:list-item-body start-indent="body-start()">
+                    <fo:block>
+                        <xsl:apply-templates/>
+                    </fo:block>
+                </fo:list-item-body>
+            </fo:list-item>
+        </fo:list-block>
+    </xsl:template>-->
+    
+    <xsl:template match="tei:div[@type='usage']">
+        <!-- Combination of description and usage -->
+        <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
+            <fo:list-item>
+                <fo:list-item-label end-indent="label-end()">
+                    <fo:block>
+                        <xsl:text> </xsl:text>
                     </fo:block>
                 </fo:list-item-label>
                 <fo:list-item-body start-indent="body-start()">
