@@ -12,8 +12,6 @@
         xpath-default-namespace="http://www.tei-c.org/ns/1.0" extension-element-prefixes="exslt"
         version="2.0">
 
-        <!-- Karin: order of elelemnts!!!!! -->
-
         <xsl:output doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
                 encoding="UTF-8" indent="yes" method="html"/>
@@ -70,7 +68,9 @@
                 select="$headingtranslations//terms/term[@name='usage']/translation[@lang=$currentLanguage]"/>
         <xsl:variable name="and"
                 select="$headingtranslations//terms/term[@name='and']/translation[@lang=$currentLanguage]"/>
-
+        <xsl:variable name="availability"
+                select="$headingtranslations//terms/term[@name='availability']/translation[@lang=$currentLanguage]"/>
+        
         <xsl:template match="/">
                 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
                         <head>
@@ -267,13 +267,12 @@
         <xsl:template match="tei:front/tei:div/tei:div/tei:div/tei:head">
                 <div class="head04">
                         <xsl:value-of select="."/>
-                        <!--<xsl:apply-templates/>-->
+<!--                        <xsl:apply-templates/>-->
                         <xsl:text>&#xA0;&#xA0;</xsl:text>
                         <a class="tocReturn" href="#toc">[toc]</a>
                 </div>
         </xsl:template>
         
-        <!-- This is never used, needs to be used!!!!! -->
         <xsl:template match="tei:att[ancestor-or-self::tei:front]">
                 <div class="head04">
                         <xsl:text>@</xsl:text>
@@ -470,13 +469,12 @@
                 <xsl:text>&gt;</xsl:text>
         </xsl:template>
 
-        <!-- If this tempelete isnt here the link back to toc will be duplicated -->
+        <!-- If this tempelete isnt here the link back to toc will be duplicated and @ in the text will be headers and links -->
         <xsl:template match="tei:att[ancestor-or-self::tei:front]">
                 <xsl:text>@</xsl:text>
                 <xsl:value-of select="."/>
         </xsl:template>
         
-
         <xsl:template match="tei:head/tei:att">
                 <div class="leftcol" id="{translate(., ':','')}">
 
@@ -737,10 +735,10 @@
                 </div>
         </xsl:template>
 
-        <xsl:template match="tei:att">
+       <!-- <xsl:template match="tei:att[ancestor-or-self::tei:body]">
                 <xsl:text>@</xsl:text>
                 <xsl:apply-templates/>
-        </xsl:template>
+        </xsl:template>-->
 
         <xsl:template match="tei:att" mode="toc">
                 <xsl:text>@</xsl:text>

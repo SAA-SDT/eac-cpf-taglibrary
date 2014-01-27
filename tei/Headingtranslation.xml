@@ -130,4 +130,7 @@ type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
     <term name="and">
         <translation lang="en">and</translation>
     </term>
+    <term name="availability">
+        <translation lang="en">Availability</translation>
+    </term>
 </terms>
