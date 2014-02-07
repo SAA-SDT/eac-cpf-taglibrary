@@ -400,8 +400,8 @@
                         <xsl:apply-templates select="tei:div[@type='reference']"/>
                         <xsl:apply-templates select="tei:div[@type='attributes']"/>
                         <xsl:apply-templates select="tei:div[@type='occurrence']"/>
-                        <xsl:apply-templates select="tei:div[@type='mandatory']"/>
-                        <xsl:apply-templates select="tei:div[@type='repetable']"/>
+                        <!--<xsl:apply-templates select="tei:div[@type='mandatory']"/>
+                        <xsl:apply-templates select="tei:div[@type='repetable']"/>-->
                         <xsl:apply-templates select="tei:div[@type='examples']"/>
                 </div>
         </xsl:template>
@@ -686,7 +686,8 @@
         </xsl:template>-->
 
         <xsl:template match="tei:div[@type='mandatory']">
-                <div class="leftcol">
+                <!-- Alway occur togheter with repetable -->
+                <!--<div class="leftcol">
                         <xsl:value-of select="$mandatory"/>
                         <xsl:text>/</xsl:text>
                         <xsl:value-of select="$optional"/>
@@ -694,11 +695,13 @@
                 </div>
                 <div class="content">
                         <xsl:apply-templates/>
-                </div>
+                </div>-->
+                <xsl:value-of select="tei:p"/>
         </xsl:template>
 
         <xsl:template match="tei:div[@type='repeatable']">
-                <div class="leftcol">
+                <!-- Changes in layout always occur with mandatory so therefor the , -->
+                <!--<div class="leftcol">
                         <xsl:value-of select="$repeatable"/>
                         <xsl:text>/</xsl:text>
                         <xsl:value-of select="$nonrepeatable"/>
@@ -706,9 +709,32 @@
                 </div>
                 <div class="content">
                         <xsl:apply-templates/>
+                </div>-->
+                <xsl:text>, </xsl:text>
+                <xsl:value-of select="tei:p"/>
+        </xsl:template>
+        
+        <xsl:template match="tei:div[@type='occurrence']">
+                <div class="leftcol">
+                        <xsl:value-of select="$availability"/>
+                        <xsl:text>: </xsl:text>
+                </div>
+                <div class="content">
+                        <xsl:apply-templates/>
                 </div>
         </xsl:template>
-
+        
+        <xsl:template match="tei:div[@type='occurenceSpecifikation']">
+                       <xsl:if test="string-length(tei:head)>0">
+                                <xsl:value-of select="tei:head"/>
+                                <xsl:text>: </xsl:text>
+                        </xsl:if>
+                        <xsl:value-of select="tei:div[@type='mandatory']/tei:p"/>
+                        <xsl:text>, </xsl:text>
+                        <xsl:value-of select="tei:div[@type='repeatable']/tei:p"/>
+                        <br />             
+        </xsl:template>
+        
         <xsl:template match="tei:div[@type='reference']">
                 <div class="leftcol">
                         <xsl:value-of select="$references"/>

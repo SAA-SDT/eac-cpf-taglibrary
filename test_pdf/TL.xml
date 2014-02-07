@@ -1548,7 +1548,7 @@
    </div>
    <div type="occurrence" org="uniform" sample="complete" part="N">
       <div type="occurenceSpecifikation" n="1" org="uniform" sample="complete" part="N">
-         <head>Within conventionDeclaration:</head>
+         <head>Within conventionDeclaration</head>
          <div type="mandatory" org="uniform" sample="complete" part="N">
             <p xml:lang="eng">Mandatory</p>
          </div>
@@ -1557,7 +1557,7 @@
          </div>
       </div>
       <div type="occurenceSpecifikation" n="2" org="uniform" sample="complete" part="N">
-         <head>Other elements:</head>
+         <head>Other elements</head>
          <div type="mandatory" org="uniform" sample="complete" part="N">
             <p xml:lang="eng">Optional</p>
          </div>
