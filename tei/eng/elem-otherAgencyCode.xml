@@ -10,16 +10,16 @@
       
    </div>
    <div type="summary">
-      <p xml:lang="eng">Alternate code representing the instituion or service responsible for the
+      <p xml:lang="eng">Alternate code representing the institution or service responsible for the
 							creation, maintenance, and/or dissemination of the EAC-CPF instance.</p>
       
    </div>
    <div type="description" xml:lang="eng">
       <p>An element of <gi>maintenanceAgency</gi> within <gi>control</gi> providing an
 								alternative and/or local institution code representing the institution or service
-								responsible for the creation, maintenace, and/or dissemination of the EAC-CPF instance to
+								responsible for the creation, maintenance, and/or dissemination of the EAC-CPF instance to
 								that given in the <gi>agencyCode</gi> element in the format of the International Standard
-								identifier for Libraries and Related Organizations (ISIL: ISO 15511). The name of the agency
+								Identifier for Libraries and Related Organizations (ISIL: ISO 15511). The name of the agency
 								is given in <gi>agencyName</gi>. The addition of an ISO 3166-1 alpha-2 country code as the
 								prefix is recommended to ensure international uniqueness.</p>
    </div>

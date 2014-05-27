@@ -20,7 +20,7 @@
 								a particular set of rules or conventions, or it may be an alternative or unauthorized form
 								according to a different set of rules. This optional element provides the opportunity to
 								indicate one or more sets of rules or conventions under which the form of the name expressed
-								in <gi>nameEntry</gi> or <gi>nameEntryParallel</gi> would be regard as an authorized
+								in <gi>nameEntry</gi> or <gi>nameEntryParallel</gi> would be regarded as an authorized
 								form.</p>
       <p>The eac-cpf schema offers two possibilities:</p>
       <p>1. <gi>authorizedForm</gi> is used within <gi>nameEntry</gi> only when
