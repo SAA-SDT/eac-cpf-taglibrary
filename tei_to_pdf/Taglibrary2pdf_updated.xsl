@@ -752,7 +752,7 @@ space-after="6pt" text-align="center">
         </fo:list-block>
     </xsl:template>-->
 
-    <xsl:template match="tei:div[@type='description']">
+    <xsl:template match="tei:div[@type='description'][parent::tei:div[@type='elementDocumentation']]">
         <!-- Combination of description and usage -->
         <fo:list-block provisional-distance-between-starts="45mm" space-after="6pt">
             <fo:list-item>

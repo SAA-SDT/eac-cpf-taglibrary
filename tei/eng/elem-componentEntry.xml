@@ -15,7 +15,7 @@
       
    </div>
    <div type="description" xml:lang="eng">
-      <p>A <gi>componentEntry</gi> always occurs within <gi>setComponent</gi> to provide a
+      <p>A <gi>componentEntry</gi> occurs within <gi>setComponent</gi> to provide a
 								textual note about the EAC-CPF instance that is being bundled together with other authority
 								records for the same entity within an <gi>alternativeSet</gi> wrapper. The bundled
 								alternate records for a given EAC-CPF entity may be in different languages or may come from

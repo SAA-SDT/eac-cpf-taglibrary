@@ -23,14 +23,14 @@
 								tree) in a way that demonstrates the interrelationships of its members with relevant
 								dates.</p>
       <p>The optional <gi>list</gi> and <gi>outline</gi> elements are used to accommodate
-								greater complexity in expressing or representing the activities being described.
+								greater complexity in expressing or representing the structure(s) or genealogy being described.
 									<gi>citation</gi> may be used to provide a link to external documents like organizational
-								charts and family trees. A simpler discursive expression of the activities may be encoded as
+         charts and family trees. A simpler discursive expression of the structure(s) or genealogy may be encoded as
 								one or more <gi>p</gi> elements.</p>
       <p>Genealogical and administrative structure information may alternatively be described in
 								discursive form in the <gi>biogHist</gi> element (ISAAR (CPF) 5.2.2 History) and/or with
 									<gi>cpfRelation</gi> elements (ISAAR (CPF) 5.3). The <gi>structureOrGenealogy</gi>
-								element should be used whenever separate semantic processing of information about structure
+								element should be used whenever separate semantic processing of information about structures
 								or genealogies is required.</p>
    </div>
    

@@ -289,7 +289,7 @@
                         <gi>structureOrGenealogy</gi> — Optional. Includes information about the structure of a corporate body or the genealogy of a person or family. Includes elements <gi>outline</gi>, <gi>list</gi>, and <gi>p</gi> to assist in structuring the text.
                      </item>
                      <item>
-                        <gi>generalContext</gi> — Optional. Includes information about the general social and cultural context of the entity being described. Includes a <gi>term</gi> element and the range of possibilities with date information: <gi>date</gi>, <gi>dateRange</gi>, <gi>dateSet</gi>.
+                        <gi>generalContext</gi> — Optional. Includes information about the general social and cultural context of the entity being described. Includes <gi>list</gi>, <gi>outline</gi>, <gi>p</gi> elements to assist in structuring the text.
                      </item>
                      <item>
                         <gi>biogHist</gi> — Optional. Includes discursive text providing biographical and/or historical information about the CPF entity being described. Includes an <gi>abstract</gi> element for a brief synopsis of the full content; a <gi>chronList</gi> element allows for structured date, event and optional place information. Includes <gi>list</gi>, <gi>outline</gi>, <gi>p</gi> elements to assist in structuring the text.
@@ -341,7 +341,7 @@
                   <list type="simple">
                      <head>Locator Attribute</head>
                      <item>
-                        <att>xlink:href</att> — This optional element may be used to provide the location of the resource that is being linked to. The link must be a valid URI.</item>
+                        <att>xlink:href</att> — This optional attribute may be used to provide the location of the resource that is being linked to. The link must be a valid URI.</item>
                   </list>
                   <list type="simple">
                      <head>Semantic Attributes</head>
@@ -603,11 +603,11 @@
                </item>
                <label>5.3 Relationships area</label>
                <item>
-                  <gi>relations</gi>
+                  <gi>cpfRelation</gi>
                </item>
                <label>5.3.1 Names/Identifiers of related corporate bodies, persons or families</label>
                <item>
-                  <gi>cpfRelation</gi>
+                  <gi>cpfRelation</gi>/<gi>objectXMLWrap</gi> or <gi>objectBinWrap</gi> or <gi>relationEntry</gi>
                </item>
                <label>5.3.2 Category of relationship</label>
                <item>
@@ -615,7 +615,7 @@
                </item>
                <label>5.3.3 Description of relationship</label>
                <item>
-                  <gi>objectXMLWrap</gi> or <gi>objectBinWrap</gi> or <gi>relationEntry</gi>
+                  <gi>cpfRelation</gi>/<gi>objectXMLWrap</gi> or <gi>objectBinWrap</gi> or <gi>relationEntry</gi>
                </item>
                <label>5.3.4 Dates of the relationship</label>
                <item>
@@ -639,7 +639,7 @@
                </item>
                <label>5.4.4 Status</label>
                <item>
-                  <gi>maintenanceStatus</gi>
+                  <gi>maintenanceStatus</gi> and <gi>publicationStatus</gi>
                </item>
                <label>5.4.5 Level of detail</label>
                <item>
@@ -659,7 +659,7 @@
                </item>
                <label>5.4.9 Maintenance notes</label>
                <item>
-                  <gi>maintenanceEvent</gi>/<gi>maintenanceDescription</gi>
+                  <gi>maintenanceEvent</gi>/<gi>agent</gi>, <gi>agentType</gi>, <gi>eventDescription</gi> and <gi>eventType</gi>
                </item>
                <label>6. Relating corporate bodies, persons, and families to archival materials and other resources</label>
                <item>
@@ -667,7 +667,7 @@
                </item>
                <label>6.1 Identifiers and titles of related resources</label>
                <item>
-                  <gi>objectXMLWrap</gi> or <gi>objectBinWrap</gi> or <gi>relationEntry</gi>
+                  <gi>resourceRelation</gi>/<gi>objectXMLWrap</gi> or <gi>objectBinWrap</gi> or <gi>relationEntry</gi>
                </item>
                <label>6.2 Types of related resources</label>
                <item>

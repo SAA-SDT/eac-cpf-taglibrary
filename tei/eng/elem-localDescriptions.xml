@@ -21,11 +21,11 @@
 									<gi>localDescriptions</gi>.</p>
       <p>The optional <gi>citation</gi>, <gi>list</gi>, and <gi>outline</gi> elements are
 								used to accommodate greater complexity in expressing or representing the information being
-								described. A simpler discursive may be encoded as one or more <gi>p</gi> elements.</p>
+								described. A simpler discursive expression may be encoded as one or more <gi>p</gi> elements.</p>
    </div>
    
    <div type="mayContain">
-      <p>citation, list, localDescription, outline, p</p>
+      <p>citation, descriptiveNote, list, localDescription, outline, p</p>
    </div>
    <div type="mayOccurWithin">
       <p>description</p>
