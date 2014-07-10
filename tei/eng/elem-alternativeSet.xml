@@ -23,7 +23,7 @@
 								together records describing the same CPF entity in different languages, or from different rules
 								when it is desirable to provide users with alternative descriptions of the same entity. For
 								example, in the context of the European Union, an international cooperative project may want
-								to provide users the option of descriptions in Italian, French, German, English, Spanish,
+								to provide users the option of storing descriptions in Italian, French, German, English, Spanish,
 								and in other European languages.</p>
       <p>
          <gi>alternativeSet</gi> should not be confused with <gi>sources</gi>, wherein authority

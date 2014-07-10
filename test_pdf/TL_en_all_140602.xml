@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-model href="../schema/TL-teiliteSchema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" 
-   xmlns:eac-cpf="urn:isbn:1-931666-33-4" 
-   xmlns:xlink="http://www.w3c.org/1999/xlink" 
-   xmlns:eg="http://www.tei-c.org/ns/Examples"
-   xmlns:xi="http://www.w3.org/2001/XInclude"><!-- -->
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schema/TL-teiliteSchema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:eac-cpf="urn:isbn:1-931666-33-4" xmlns:xlink="http://www.w3c.org/1999/xlink" xmlns:eg="http://www.tei-c.org/ns/Examples" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader type="text">
       <fileDesc>
          <titleStmt>
@@ -134,7 +128,7 @@
                      used when there is more than one <gi scheme="TEI">cpfDescription</gi>. These two wrapper elements contain
                      specific elements to support the functional intentions of the parent or containing
                      element.</p>
-                  <eg:egXML xml:lang="eng" valid="true">
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
                      <eac-cpf:eac-cpf>
                         <eac-cpf:control>
                            [control elements]
@@ -143,9 +137,9 @@
                            [description elements]
                         </eac-cpf:cpfDescription>
                      </eac-cpf:eac-cpf>
-                  </eg:egXML>
+                  </egXML>
                   <p>OR</p>
-                  <eg:egXML xml:lang="eng" valid="true">
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
                      <eac-cpf:eac-cpf>
                         <eac-cpf:control>
                            [control elements]
@@ -162,7 +156,7 @@
                            </eac-cpf:cpfDescription>
                         </eac-cpf:multipleIdentities>
                      </eac-cpf:eac-cpf>
-                  </eg:egXML>
+                  </egXML>
                </div>
                <div org="uniform" sample="complete" part="N">
                   <head>
@@ -289,7 +283,7 @@
                         <gi scheme="TEI">structureOrGenealogy</gi> — Optional. Includes information about the structure of a corporate body or the genealogy of a person or family. Includes elements <gi scheme="TEI">outline</gi>, <gi scheme="TEI">list</gi>, and <gi scheme="TEI">p</gi> to assist in structuring the text.
                      </item>
                      <item>
-                        <gi scheme="TEI">generalContext</gi> — Optional. Includes information about the general social and cultural context of the entity being described. Includes a <gi scheme="TEI">term</gi> element and the range of possibilities with date information: <gi scheme="TEI">date</gi>, <gi scheme="TEI">dateRange</gi>, <gi scheme="TEI">dateSet</gi>.
+                        <gi scheme="TEI">generalContext</gi> — Optional. Includes information about the general social and cultural context of the entity being described. Includes <gi scheme="TEI">list</gi>, <gi scheme="TEI">outline</gi>, <gi scheme="TEI">p</gi> elements to assist in structuring the text.
                      </item>
                      <item>
                         <gi scheme="TEI">biogHist</gi> — Optional. Includes discursive text providing biographical and/or historical information about the CPF entity being described. Includes an <gi scheme="TEI">abstract</gi> element for a brief synopsis of the full content; a <gi scheme="TEI">chronList</gi> element allows for structured date, event and optional place information. Includes <gi scheme="TEI">list</gi>, <gi scheme="TEI">outline</gi>, <gi scheme="TEI">p</gi> elements to assist in structuring the text.
@@ -341,7 +335,7 @@
                   <list type="simple">
                      <head>Locator Attribute</head>
                      <item>
-                        <att scheme="TEI">xlink:href</att> — This optional element may be used to provide the location of the resource that is being linked to. The link must be a valid URI.</item>
+                        <att scheme="TEI">xlink:href</att> — This optional attribute may be used to provide the location of the resource that is being linked to. The link must be a valid URI.</item>
                   </list>
                   <list type="simple">
                      <head>Semantic Attributes</head>
@@ -368,7 +362,7 @@
                      implementation of the xlink attributes using server-side instructions. One implementation example, demonstrating the intended effects of xlink usage, is provided at <ref target="http://www.snee.com/xml/xlink/sxlinkdemo.xml">http://www.snee.com/xml/xlink/sxlinkdemo.xml</ref>.</p>
                   <p>The following excerpt provides one example of how xlink might be implemented in reference to an external vocabulary, to indicate that the information at the related URL describes the spouse of the person described in
                      the EAC-CPF record:</p>
-                  <eg:egXML xml:lang="eng" valid="true">
+                  <eg:egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
                      <eac-cpf:cpfRelation cpfRelationType="family" xlink:actuate="onRequest" xlink:arcrole="http://library.illinois.edu/archives/eac-cpfRelations.html#spouseOf" xlink:href="http://library.illinois.edu/archives/archon/index.php?p=creators/creator&amp;id=546" xlink:show="new" xlink:type="simple">
                         <eac-cpf:relationEntry>Gregory, John Milton</eac-cpf:relationEntry>
                         <eac-cpf:descriptiveNote>
@@ -400,7 +394,7 @@
       </front>
       <body>
          <div type="elements" org="uniform" sample="complete" part="N">
-            <div xml:id="abbreviation" type="elementDocumentation" xml:base="eng/elem-abbreviation.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="abbreviation" type="elementDocumentation" xml:base="eng/elem-abbreviation.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">abbreviation</gi>
    </head>
@@ -419,20 +413,7 @@
          thesaurus, controlled vocabulary, or other standard used in formulating and compiling the
 								EAC-CPF description. It is recommended that the value be selected from an authorized list of
 								codes. An example of such a list may be the MARC Code List (http://www.loc.gov/marc/sourcelist/).</p>
-      <!-- Test of bullet list -->
-      <p>
-         <list type="bulleted">
-            <label>1</label>
-            <item>Bullet 1</item>
-            <label>2</label>
-            <item>Bullet 2</item>
-         </list>
-      </p>
    </div>
-               
-               <div type="usage" xml:lang="eng" org="uniform" sample="complete" part="N">
-                  <p>This is my usage my usage my usage........</p>
-               </div>
    
    <div type="mayContain" org="uniform" sample="complete" part="N">
       <p>[token]</p>
@@ -458,15 +439,15 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:conventionDeclaration>
             <eac-cpf:abbreviation>RICA</eac-cpf:abbreviation>
             <eac-cpf:citation>RICA (Regole italiane di catalogazione per autore)</eac-cpf:citation>
          </eac-cpf:conventionDeclaration>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="abstract" type="elementDocumentation" xml:base="eng/elem-abstract.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="abstract" type="elementDocumentation" xml:base="eng/elem-abstract.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">abstract</gi>
    </head>
@@ -517,14 +498,14 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">            
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">            
             <eac-cpf:biogHist>
                <eac-cpf:abstract>Hubert H. Humphrey was born in Wallace, South Dakota (1911). He  was elected Mayor of Minneapolis in 1945 and served until 1948.  In November of 1948, he was elected to the United
                   States Senate and he also served as the Senate Democratic Whip from 1961 to 1964 and in 1968, Humphrey was the Democratic
                   Party's candidate for President, but he was defeated by Richard M. Nixon. </eac-cpf:abstract>
                <eac-cpf:p>Hubert H. Humphrey was born in Wallace, South Dakota, on May 27,
                   1911. He left South Dakota to attend the University of Minnesota but
-                  returned to South Dakota to help manage his fathers drug store early
+                  returned to South Dakota to help manage his father&#146;s drug store early
                   in the depression. He attended the Capitol College of Pharmacy in
                   Denver, Colorado, and became a register pharmacist in 1933. On
                   September 3, 1936, Humphrey married Muriel Fay Buck. He returned
@@ -539,7 +520,7 @@
                   worked at a variety of jobs. In 1945, he was elected Mayor of
                   Minneapolis and served until 1948. In 1948, at the Democratic
                   National Convention, he gained national attention when he delivered a
-                  stirring speech in favor of a strong civil rights plank in the partys
+                  stirring speech in favor of a strong civil rights plank in the party&#146;s
                   platform. In November of 1948, Humphrey was elected to the United
                   States Senate. He served as the Senate Democratic Whip from 1961 to
                   1964.</eac-cpf:p>
@@ -547,16 +528,16 @@
                   Johnson asked the convention to select Humphrey as the Vice
                   Presidential nominee. The ticket was elected in November in a
                   Democratic landslide. In 1968, Humphrey was the Democratic
-                  Partys candidate for President, but he was defeated narrowly by
+                  Party&#146;s candidate for President, but he was defeated narrowly by
                   Richard M. Nixon. After the defeat, Humphrey returned to Minnesota
                   to teach at the University of Minnesota and Macalester College. He
                   returned to the U.S. Senate in 1971, and he won re-election in 1976.
                   He died January 13, 1978 of cancer.</eac-cpf:p>
             </eac-cpf:biogHist>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="address" type="elementDocumentation" xml:base="eng/elem-address.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="address" type="elementDocumentation" xml:base="eng/elem-address.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">address</gi>
    </head>
@@ -607,7 +588,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:place>
             <eac-cpf:placeRole>siege social</eac-cpf:placeRole>
             <eac-cpf:address>
@@ -626,10 +607,10 @@
                <eac-cpf:addressLine>Greece</eac-cpf:addressLine>
             </eac-cpf:address>
          </eac-cpf:place>   
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="addressLine" type="elementDocumentation" xml:base="eng/elem-addressLine.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="addressLine" type="elementDocumentation" xml:base="eng/elem-addressLine.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">addressLine</gi>
    </head>
@@ -643,7 +624,7 @@
    </div>
    <div type="description" xml:lang="eng" org="uniform" sample="complete" part="N">
       <p>A required element in <gi scheme="TEI">address</gi>, the <gi scheme="TEI">addressLine</gi> element is used to encode
-         one line of a postal or other address. <gi scheme="TEI">addressLine</gi> may be repeated afor each line of the address.</p>
+         one line of a postal or other address. <gi scheme="TEI">addressLine</gi> may be repeated for each line of the address.</p>
    </div>
    
    <div type="mayContain" org="uniform" sample="complete" part="N">
@@ -666,7 +647,7 @@
       
    </div>
    <div type="reference" org="uniform" sample="complete" part="N">
-      <p>ISAAR (CPF) </p>
+      <p>ISAAR (CPF) 5.2.3</p>
    </div>
   
    <div type="occurrence" org="uniform" sample="complete" part="N">
@@ -678,7 +659,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:place>
             <eac-cpf:placeRole>siege social</eac-cpf:placeRole>
             <eac-cpf:address>
@@ -688,8 +669,8 @@
                <eac-cpf:addressLine>France</eac-cpf:addressLine>
             </eac-cpf:address>
          </eac-cpf:place>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:place>
             <eac-cpf:placeRole>headquarters</eac-cpf:placeRole>
             <eac-cpf:address>
@@ -699,10 +680,10 @@
                <eac-cpf:addressLine>Greece</eac-cpf:addressLine>
             </eac-cpf:address>
          </eac-cpf:place>
-      </eg:egXML> 
+      </egXML> 
    </div>
 </div>
-            <div xml:id="agencyCode" type="elementDocumentation" xml:base="eng/elem-agencyCode.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="agencyCode" type="elementDocumentation" xml:base="eng/elem-agencyCode.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">agencyCode</gi>
    </head>
@@ -759,15 +740,15 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceAgency>
             <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
             <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
          </eac-cpf:maintenanceAgency>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="agencyName" type="elementDocumentation" xml:base="eng/elem-agencyName.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="agencyName" type="elementDocumentation" xml:base="eng/elem-agencyName.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">agencyName</gi>
    </head>
@@ -818,15 +799,15 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceAgency>
             <eac-cpf:agencyCode>AU-ANL:PEAU</eac-cpf:agencyCode>
             <eac-cpf:agencyName>National Library of Australia</eac-cpf:agencyName>
          </eac-cpf:maintenanceAgency>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="agent" type="elementDocumentation" xml:base="eng/elem-agent.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="agent" type="elementDocumentation" xml:base="eng/elem-agent.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">agent</gi>
    </head>
@@ -876,7 +857,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
       <eac-cpf:maintenanceEvent>
          <eac-cpf:eventType>created</eac-cpf:eventType>
          <eac-cpf:eventDateTime>20/06/2000 12:00</eac-cpf:eventDateTime>
@@ -885,7 +866,7 @@
       </eac-cpf:maintenanceEvent>
       <eac-cpf:maintenanceEvent>
          <eac-cpf:eventType>updated</eac-cpf:eventType>
-         <eac-cpf:eventDateTime standardDateTime="20120601T12:00:00+02:00">June 1, 2012</eac-cpf:eventDateTime>
+         <eventDateTime standardDateTime="20120601T12:00:00+02:00">June 1, 2012</eventDateTime>
          <eac-cpf:agentType>human</eac-cpf:agentType>
          <eac-cpf:agent>Ionian University Library, Catalog Division</eac-cpf:agent>
       </eac-cpf:maintenanceEvent>
@@ -895,10 +876,10 @@
          <eac-cpf:agentType>machine</eac-cpf:agentType>
          <eac-cpf:agent>ConvertUtility</eac-cpf:agent>
       </eac-cpf:maintenanceEvent>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="agentType" type="elementDocumentation" xml:base="eng/elem-agentType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="agentType" type="elementDocumentation" xml:base="eng/elem-agentType.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">agentType</gi>
    </head>
@@ -945,7 +926,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
        <eac-cpf:maintenanceEvent>
          <eac-cpf:eventType>created</eac-cpf:eventType>
          <eac-cpf:eventDateTime>20/06/2000 12:00</eac-cpf:eventDateTime>
@@ -954,7 +935,7 @@
       </eac-cpf:maintenanceEvent>
       <eac-cpf:maintenanceEvent>
          <eac-cpf:eventType>updated</eac-cpf:eventType>
-         <eac-cpf:eventDateTime standardDateTime="20120601T12:00:00+02:00">June 1, 2012</eac-cpf:eventDateTime>
+         <eventDateTime standardDateTime="20120601T12:00:00+02:00">June 1, 2012</eventDateTime>
          <eac-cpf:agentType>human</eac-cpf:agentType>
          <eac-cpf:agent>Ionian University Library, Catalog Division</eac-cpf:agent>
       </eac-cpf:maintenanceEvent>
@@ -964,10 +945,10 @@
          <eac-cpf:agentType>machine</eac-cpf:agentType>
          <eac-cpf:agent>ConvertUtility</eac-cpf:agent>
       </eac-cpf:maintenanceEvent>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="alternativeForm" type="elementDocumentation" xml:base="eng/elem-alternativeForm.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="alternativeForm" type="elementDocumentation" xml:base="eng/elem-alternativeForm.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">alternativeForm</gi>
    </head>
@@ -997,7 +978,7 @@
       <p>2. <gi scheme="TEI">alternativeForm</gi> may be used within <gi scheme="TEI">nameEntryParallel</gi> to indicate
 								that the set of parallel names recorded in separate <gi scheme="TEI">nameEntry</gi> elements within
 									<gi scheme="TEI">nameEntryParallel</gi> are deemed as variant forms of the name.</p>
-      <p>The content <gi scheme="TEI">alternativeForm</gi> is an abbreviation selected from a constrained set of values,
+      <p>The content of the <gi scheme="TEI">alternativeForm</gi> is an abbreviation selected from a constrained set of values,
 								each of which represents a set of national, international or other rules that govern the
 								construction of EAC-CPF names in those environments. The abbreviations expressed in
 									<gi scheme="TEI">alternativeForm</gi> must be declared within the <gi scheme="TEI">conventionDeclaration</gi>
@@ -1040,7 +1021,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:nameEntry>
             <eac-cpf:part>Brown, Bob, 1886-1959</eac-cpf:part>
             <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
@@ -1051,10 +1032,10 @@
             <eac-cpf:authorizedForm>ncafnor</eac-cpf:authorizedForm>
             <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
          </eac-cpf:nameEntry>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="alternativeSet" type="elementDocumentation" xml:base="eng/elem-alternativeSet.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="alternativeSet" type="elementDocumentation" xml:base="eng/elem-alternativeSet.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">alternativeSet</gi>
    </head>
@@ -1076,7 +1057,7 @@
 								together records describing the same CPF entity in different languages, or from different rules
 								when it is desirable to provide users with alternative descriptions of the same entity. For
 								example, in the context of the European Union, an international cooperative project may want
-								to provide users the option of descriptions in Italian, French, German, English, Spanish,
+								to provide users the option of storing descriptions in Italian, French, German, English, Spanish,
 								and in other European languages.</p>
       <p>
          <gi scheme="TEI">alternativeSet</gi> should not be confused with <gi scheme="TEI">sources</gi>, wherein authority
@@ -1112,37 +1093,37 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
-         <eac-cpf:alternativeSet>
-            <eac-cpf:setComponent xmlns:xlink.10="http://www.w3.org/1999/xlink" xlink.10:href="http://authorities.loc.gov/" xlink.10:type="simple" lastDateTimeVerified="2009-08-02">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
+         <eac-cpf:alternativeSet xmlns:xlink="http://www.w3.org/1999/xlink">
+            <eac-cpf:setComponent xlink:href="http://authorities.loc.gov/" xlink:type="simple" lastDateTimeVerified="2009-08-02">
                <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
-            <eac-cpf:setComponent xmlns:xlink.10="http://www.w3.org/1999/xlink" xlink.10:href="http://nla.gov.au/anbd.aut-an35335937" xlink.10:type="simple" lastDateTimeVerified="2012-06-25">
+            <eac-cpf:setComponent xlink:href="http://nla.gov.au/anbd.aut-an35335937" xlink:type="simple" lastDateTimeVerified="2012-06-25">
                <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
             <eac-cpf:setComponent>
                <eac-cpf:objectXMLWrap>
-                  <eac-cpf:eac-cpf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd">
+                  <eac-cpf:eac-cpf xmlns="urn:isbn:1-931666-33-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd">
                      <eac-cpf:control>[...]</eac-cpf:control>
                      <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
                   </eac-cpf:eac-cpf>
                </eac-cpf:objectXMLWrap>
             </eac-cpf:setComponent>
          </eac-cpf:alternativeSet>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
-         <eac-cpf:alternativeSet>
-            <eac-cpf:setComponent xmlns:xlink.10="http://www.w3.org/1999/xlink" xlink.10:href="http://authorities.loc.gov/" xlink.10:type="simple">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
+         <eac-cpf:alternativeSet xmlns:xlink="http://www.w3.org/1999/xlink">
+            <eac-cpf:setComponent xlink:href="http://authorities.loc.gov/" xlink:type="simple">
                <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
-            <eac-cpf:setComponent xmlns:xlink.10="http://www.w3.org/1999/xlink" xlink.10:href="http://nla.gov.au/anbd.aut-an35335937" xlink.10:type="simple">
+            <eac-cpf:setComponent xlink:href="http://nla.gov.au/anbd.aut-an35335937" xlink:type="simple">
                <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
          </eac-cpf:alternativeSet>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="authorizedForm" type="elementDocumentation" xml:base="eng/elem-authorizedForm.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="authorizedForm" type="elementDocumentation" xml:base="eng/elem-authorizedForm.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">authorizedForm</gi>
    </head>
@@ -1161,7 +1142,7 @@
 								a particular set of rules or conventions, or it may be an alternative or unauthorized form
 								according to a different set of rules. This optional element provides the opportunity to
 								indicate one or more sets of rules or conventions under which the form of the name expressed
-								in <gi scheme="TEI">nameEntry</gi> or <gi scheme="TEI">nameEntryParallel</gi> would be regard as an authorized
+								in <gi scheme="TEI">nameEntry</gi> or <gi scheme="TEI">nameEntryParallel</gi> would be regarded as an authorized
 								form.</p>
       <p>The eac-cpf schema offers two possibilities:</p>
       <p>1. <gi scheme="TEI">authorizedForm</gi> is used within <gi scheme="TEI">nameEntry</gi> only when
@@ -1211,7 +1192,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:nameEntry>
             <eac-cpf:part>Brown, Bob, 1886-1959</eac-cpf:part>
             <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
@@ -1222,10 +1203,10 @@
             <eac-cpf:authorizedForm>ncafnor</eac-cpf:authorizedForm>
             <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
          </eac-cpf:nameEntry>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="biogHist" type="elementDocumentation" xml:base="eng/elem-biogHist.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="biogHist" type="elementDocumentation" xml:base="eng/elem-biogHist.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">biogHist</gi>
    </head>
@@ -1284,7 +1265,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:biogHist>
             <eac-cpf:abstract>Established in 1961, the United States Peace Corps administered and
 										coordinated Federal international volunteer and related domestic volunteer programs in
@@ -1328,10 +1309,10 @@
                </eac-cpf:chronItem>
             </eac-cpf:chronList>
          </eac-cpf:biogHist>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="chronItem" type="elementDocumentation" xml:base="eng/elem-chronItem.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="chronItem" type="elementDocumentation" xml:base="eng/elem-chronItem.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">chronItem</gi>
    </head>
@@ -1383,7 +1364,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:chronItem>
             <eac-cpf:date standardDate="1957">1957</eac-cpf:date>
             <eac-cpf:event>Left Mer and moved to the mainland. Worked at various jobs including
@@ -1397,10 +1378,10 @@
             <eac-cpf:event>Union representative, Townsville-Mount Isa rail construction
 										project.</eac-cpf:event>
          </eac-cpf:chronItem>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="chronList" type="elementDocumentation" xml:base="eng/elem-chronList.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="chronList" type="elementDocumentation" xml:base="eng/elem-chronList.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">chronList</gi>
    </head>
@@ -1453,7 +1434,7 @@
    </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:chronList>
             <eac-cpf:chronItem>
                <eac-cpf:date standardDate="1936">1936</eac-cpf:date>
@@ -1481,10 +1462,10 @@
 											in the coastal regions of New South Wales</eac-cpf:event>
             </eac-cpf:chronItem>
          </eac-cpf:chronList>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="citation" type="elementDocumentation" xml:base="eng/elem-citation.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="citation" type="elementDocumentation" xml:base="eng/elem-citation.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">citation</gi>
    </head>
@@ -1516,8 +1497,8 @@
       <p>[text], span</p>
    </div>
    <div type="mayOccurWithin" org="uniform" sample="complete" part="N">
-      <p>biogHist, conventionDeclaration, function, legalStatus, localDescription,
-							localTypeDeclaration, mandate, occupation, place</p>
+      <p>biogHist, conventionDeclaration, function, functions, legalStatus, legalStatuses, localDescription, localDescriptions, 
+							localTypeDeclaration, mandate, mandates, occupation, occupations, place, places</p>
    </div>
    <div type="attributes" org="uniform" sample="complete" part="N">
       <p xml:lang="eng">
@@ -1548,7 +1529,7 @@
    </div>
    <div type="occurrence" org="uniform" sample="complete" part="N">
       <div type="occurenceSpecifikation" n="1" org="uniform" sample="complete" part="N">
-         <head>Within conventionDeclaration</head>
+         <head>Within conventionDeclaration:</head>
          <div type="mandatory" org="uniform" sample="complete" part="N">
             <p xml:lang="eng">Mandatory</p>
          </div>
@@ -1557,7 +1538,7 @@
          </div>
       </div>
       <div type="occurenceSpecifikation" n="2" org="uniform" sample="complete" part="N">
-         <head>Other elements</head>
+         <head>Other elements:</head>
          <div type="mandatory" org="uniform" sample="complete" part="N">
             <p xml:lang="eng">Optional</p>
          </div>
@@ -1567,7 +1548,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:conventionDeclaration>
             <eac-cpf:abbreviation>AFNOR</eac-cpf:abbreviation>
             <eac-cpf:citation>Indexation conforme à la norme: AFNOR. " AFNOR NF Z44-060 Documentation - Catalogage d'auteurs 
@@ -1587,11 +1568,11 @@
          <eac-cpf:biogHist> 
             <eac-cpf:citation>The full biography is presented in "Vasari, Giorgio. "Part 3, Paolo Uccello." In <eac-cpf:span style="italics">The lives of the artists</eac-cpf:span>, by Giorgio Vasari, translated by P. Bondanella and J.C. Bondanella. Oxford: Oxford University Press, 1991."</eac-cpf:citation>
          </eac-cpf:biogHist>
-      </eg:egXML>
+      </egXML>
 
    </div>
 </div>
-            <div xml:id="componentEntry" type="elementDocumentation" xml:base="eng/elem-componentEntry.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="componentEntry" type="elementDocumentation" xml:base="eng/elem-componentEntry.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">componentEntry</gi>
    </head>
@@ -1605,7 +1586,7 @@
       
    </div>
    <div type="description" xml:lang="eng" org="uniform" sample="complete" part="N">
-      <p>A <gi scheme="TEI">componentEntry</gi> always occurs within <gi scheme="TEI">setComponent</gi> to provide a
+      <p>A <gi scheme="TEI">componentEntry</gi> occurs within <gi scheme="TEI">setComponent</gi> to provide a
 								textual note about the EAC-CPF instance that is being bundled together with other authority
 								records for the same entity within an <gi scheme="TEI">alternativeSet</gi> wrapper. The bundled
 								alternate records for a given EAC-CPF entity may be in different languages or may come from
@@ -1646,21 +1627,21 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
-         <eac-cpf:alternativeSet>
-            <eac-cpf:setComponent xmlns:xlink.10="http://www.w3.org/1999/xlink" xlink.10:href="http://nla.gov.au/anbd.aut-an35335937" xlink.10:type="simple">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
+         <eac-cpf:alternativeSet xmlns:xlink="http://www.w3.org/1999/xlink">
+            <eac-cpf:setComponent xlink:href="http://nla.gov.au/anbd.aut-an35335937" xlink:type="simple">
                <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
-            <eac-cpf:setComponent xmlns:xlink.10="http://www.w3.org/1999/xlink" lastDateTimeVerified="2009-08-02" xlink.10:href="mawsonBS.xml" xlink.10:type="simple">
+            <eac-cpf:setComponent lastDateTimeVerified="2009-08-02" xlink:href="mawsonBS.xml" xlink:type="simple">
                <eac-cpf:objectXMLWrap>
-                  <eac-cpf:eac-cpf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd"> [...] </eac-cpf:eac-cpf>
+                  <eac-cpf:eac-cpf xmlns="urn:isbn:1-931666-33-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd"> [...] </eac-cpf:eac-cpf>
                </eac-cpf:objectXMLWrap>
             </eac-cpf:setComponent>
          </eac-cpf:alternativeSet>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="control" type="elementDocumentation" xml:base="eng/elem-control.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="control" type="elementDocumentation" xml:base="eng/elem-control.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">control</gi>
    </head>
@@ -1732,8 +1713,8 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
-         <eac-cpf:control>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
+         <eac-cpf:control xmlns:xlink="http://www.w3.org/1999/xlink">
           <eac-cpf:recordId>nla.party-521122</eac-cpf:recordId>
             <eac-cpf:maintenanceStatus>revised</eac-cpf:maintenanceStatus>
             <eac-cpf:publicationStatus>approved</eac-cpf:publicationStatus>
@@ -1758,7 +1739,7 @@
                </eac-cpf:maintenanceEvent>
             </eac-cpf:maintenanceHistory>
             <eac-cpf:sources>
-               <eac-cpf:source xmlns:xlink.10="http://www.w3.org/1999/xlink" xlink.10:href="http://www.icacds.org.uk/eng/ISAAAR(CPF)2ed.pdf" xlink.10:type="simple">
+               <eac-cpf:source xlink:href="http://www.icacds.org.uk/eng/ISAAAR(CPF)2ed.pdf" xlink:type="simple">
                   <eac-cpf:sourceEntry>ISAAR(CPF)</eac-cpf:sourceEntry>
                   <eac-cpf:descriptiveNote>
                      <eac-cpf:p>Record created based on ISAAR(CPF) 2nd ed Example 5 - Person
@@ -1767,9 +1748,9 @@
                </eac-cpf:source>
             </eac-cpf:sources>
          </eac-cpf:control>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
-         <eac-cpf:control>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
+         <eac-cpf:control xmlns:xlink="http://www.w3.org/1999/xlink">
             <eac-cpf:recordId>254pap_XML</eac-cpf:recordId>
             <eac-cpf:maintenanceStatus>new</eac-cpf:maintenanceStatus>
             <eac-cpf:maintenanceAgency>
@@ -1804,10 +1785,10 @@
                </eac-cpf:source>
             </eac-cpf:sources>
          </eac-cpf:control>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="conventionDeclaration" type="elementDocumentation" xml:base="eng/elem-conventionDeclaration.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="conventionDeclaration" type="elementDocumentation" xml:base="eng/elem-conventionDeclaration.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">conventionDeclaration</gi>
    </head>
@@ -1861,7 +1842,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:conventionDeclaration>
             <eac-cpf:abbreviation>AFNOR</eac-cpf:abbreviation>
             <eac-cpf:citation>AFNOR NFZ 44-060 (decembre 1986)</eac-cpf:citation>
@@ -1877,10 +1858,10 @@
                interchange formats - Information interchange - Representation of dates and times."
                Geneva: International Standards Organization, 2000.</eac-cpf:citation>
          </eac-cpf:conventionDeclaration>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="cpfDescription" type="elementDocumentation" xml:base="eng/elem-cpfDescription.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="cpfDescription" type="elementDocumentation" xml:base="eng/elem-cpfDescription.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">cpfDescription</gi>
    </head>
@@ -1951,16 +1932,16 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:cpfDescription>
             <eac-cpf:identity>[...] </eac-cpf:identity>
             <eac-cpf:description>[...] </eac-cpf:description>
             <eac-cpf:relations>[...]</eac-cpf:relations>
          </eac-cpf:cpfDescription>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="cpfRelation" type="elementDocumentation" xml:base="eng/elem-cpfRelation.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="cpfRelation" type="elementDocumentation" xml:base="eng/elem-cpfRelation.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">cpfRelation</gi>
    </head>
@@ -2036,7 +2017,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:cpfRelation cpfRelationType="hierarchical-parent" xlink:href="FRDAFANCH00MC_NAETUDE_110" xlink:type="simple">
             <eac-cpf:relationEntry>Étude notariale CX</eac-cpf:relationEntry>
             <eac-cpf:dateRange>
@@ -2044,10 +2025,10 @@
                <eac-cpf:toDate standardDate="1640-07-07">7 juillet 1640</eac-cpf:toDate>
             </eac-cpf:dateRange>        
          </eac-cpf:cpfRelation>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="date" type="elementDocumentation" xml:base="eng/elem-date.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="date" type="elementDocumentation" xml:base="eng/elem-date.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">date</gi>
    </head>
@@ -2113,15 +2094,15 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:date standardDate="1765-09-18">September 18, 1765</eac-cpf:date>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:date localType="WeddingDay" standardDate="2000-08-12">September 12, 2000</eac-cpf:date>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="dateRange" type="elementDocumentation" xml:base="eng/elem-dateRange.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="dateRange" type="elementDocumentation" xml:base="eng/elem-dateRange.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">dateRange</gi>
    </head>
@@ -2179,15 +2160,15 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:dateRange>
             <eac-cpf:fromDate standardDate="1765-09-18">September 18, 1765</eac-cpf:fromDate>
             <eac-cpf:toDate standardDate="1846-06-01">June 1, 1846</eac-cpf:toDate>
          </eac-cpf:dateRange>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="dateSet" type="elementDocumentation" xml:base="eng/elem-dateSet.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="dateSet" type="elementDocumentation" xml:base="eng/elem-dateSet.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">dateSet</gi>
    </head>
@@ -2234,7 +2215,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:dateSet>
             <eac-cpf:dateRange>
                <eac-cpf:fromDate standardDate="1928-09">1928 settembre</eac-cpf:fromDate>
@@ -2247,10 +2228,10 @@
             <eac-cpf:date>1950</eac-cpf:date>
             <eac-cpf:date standardDate="1951-10-27">27 of October 1951</eac-cpf:date>
          </eac-cpf:dateSet>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="description" type="elementDocumentation" xml:base="eng/elem-description.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="description" type="elementDocumentation" xml:base="eng/elem-description.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">description</gi>
    </head>
@@ -2304,7 +2285,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:description>
             <eac-cpf:existDates>
                <eac-cpf:dateRange>
@@ -2331,8 +2312,8 @@
                   Hill.</eac-cpf:p>
             </eac-cpf:biogHist>
          </eac-cpf:description>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:description>
             <eac-cpf:existDates>
                <eac-cpf:dateRange>
@@ -2356,10 +2337,10 @@
                </eac-cpf:function>
             </eac-cpf:functions>
          </eac-cpf:description>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="descriptiveNote" type="elementDocumentation" xml:base="eng/elem-descriptiveNote.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="descriptiveNote" type="elementDocumentation" xml:base="eng/elem-descriptiveNote.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">descriptiveNote</gi>
    </head>
@@ -2409,7 +2390,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:source xlink:href="http://www.icacds.org.uk/eng/ISAAAR(CPF)2ed.pdf" xlink:type="simple">
             <eac-cpf:sourceEntry>ISAAAR(CPF)</eac-cpf:sourceEntry>
             <eac-cpf:descriptiveNote>
@@ -2417,10 +2398,10 @@
 											description</eac-cpf:p>
             </eac-cpf:descriptiveNote>
          </eac-cpf:source>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="eac-cpf" type="elementDocumentation" xml:base="eng/elem-eac-cpf.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="eac-cpf" type="elementDocumentation" xml:base="eng/elem-eac-cpf.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">eac-cpf</gi>
    </head>
@@ -2466,13 +2447,13 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
         <eac-cpf:eac-cpf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-33-4 http://eac.staatsbibliothek-berlin.de/schema/cpf.xsd">
             <eac-cpf:control>[...]</eac-cpf:control>
             <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
          </eac-cpf:eac-cpf>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <?xml-model href="http://eac.staatsbibliothek-berlin.de/schema/cpf.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
          <eac-cpf:eac-cpf>
             <eac-cpf:control>[...]</eac-cpf:control>
@@ -2481,7 +2462,7 @@
                <eac-cpf:cpfDescription>[...]</eac-cpf:cpfDescription>
             </eac-cpf:multipleIdentities>
          </eac-cpf:eac-cpf>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
             <?xml-model href="../schemas/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="entityId" type="elementDocumentation" xml:base="eng/elem-entityId.xml" org="uniform" sample="complete" part="N">
@@ -2534,7 +2515,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
          <eac-cpf:identity>
             <eac-cpf:entityId>CLU-SC-000008</eac-cpf:entityId>
             <eac-cpf:entityType>person</eac-cpf:entityType>
@@ -2549,26 +2530,26 @@
                <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
             </eac-cpf:nameEntry>
          </eac-cpf:identity>
-      </eg:egXML>
-      <eg:egXML valid="true">
-         <eac-cpf:identity>
-            <eac-cpf:entityId> CLU-SC-000008 </eac-cpf:entityId>
-            <eac-cpf:entityType> person </eac-cpf:entityType>
-            <eac-cpf:nameEntry>
-               <eac-cpf:part> Brown, Bob, 1886-1959 </eac-cpf:part>
-               <eac-cpf:authorizedForm> AACR2 </eac-cpf:authorizedForm>
-               <eac-cpf:alternativeForm> ncafnor </eac-cpf:alternativeForm>
-            </eac-cpf:nameEntry>
-            <eac-cpf:nameEntry>
-               <eac-cpf:part> Brown, Robert Carlton (1886-1959) </eac-cpf:part>
-               <eac-cpf:authorizedForm> ncafnor </eac-cpf:authorizedForm>
-               <eac-cpf:alternativeForm> AACR2 </eac-cpf:alternativeForm>
-            </eac-cpf:nameEntry>
-         </eac-cpf:identity>
-      </eg:egXML>
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
+         <identity>
+            <entityId> CLU-SC-000008 </entityId>
+            <entityType> person </entityType>
+            <nameEntry>
+               <part> Brown, Bob, 1886-1959 </part>
+               <authorizedForm> AACR2 </authorizedForm>
+               <alternativeForm> ncafnor </alternativeForm>
+            </nameEntry>
+            <nameEntry>
+               <part> Brown, Robert Carlton (1886-1959) </part>
+               <authorizedForm> ncafnor </authorizedForm>
+               <alternativeForm> AACR2 </alternativeForm>
+            </nameEntry>
+         </identity>
+      </egXML>
    </div>
 </div>
-            <div xml:id="entityType" type="elementDocumentation" xml:base="eng/elem-entityType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="entityType" type="elementDocumentation" xml:base="eng/elem-entityType.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">entityType</gi>
    </head>
@@ -2614,7 +2595,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">         
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:identity>
             <eac-cpf:entityType>corporateBody</eac-cpf:entityType>
             <eac-cpf:nameEntry>
@@ -2627,8 +2608,8 @@
                </eac-cpf:useDates>
             </eac-cpf:nameEntry>
          </eac-cpf:identity>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">         
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:identity>
             <eac-cpf:entityType>person</eac-cpf:entityType>
             <eac-cpf:nameEntry>
@@ -2642,8 +2623,8 @@
                </eac-cpf:useDates>
             </eac-cpf:nameEntry>
          </eac-cpf:identity>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">         
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:identity>
             <eac-cpf:entityType>family</eac-cpf:entityType>
             <eac-cpf:nameEntry>
@@ -2656,10 +2637,10 @@
                </eac-cpf:useDates>
             </eac-cpf:nameEntry>
          </eac-cpf:identity>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="event" type="elementDocumentation" xml:base="eng/elem-event.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="event" type="elementDocumentation" xml:base="eng/elem-event.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">event</gi>
    </head>
@@ -2706,7 +2687,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:chronList>
             <eac-cpf:chronItem>
                <eac-cpf:dateRange>
@@ -2730,10 +2711,10 @@
 											Committee. Report to Orville Freeman.</eac-cpf:event>
             </eac-cpf:chronItem>
          </eac-cpf:chronList>
-      </eg:egXML>
+      </egXML>
     </div>
 </div>
-            <div xml:id="eventDateTime" type="elementDocumentation" xml:base="eng/elem-eventDateTime.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="eventDateTime" type="elementDocumentation" xml:base="eng/elem-eventDateTime.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">eventDateTime</gi>
    </head>
@@ -2783,7 +2764,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceEvent>
                <eac-cpf:eventType>created</eac-cpf:eventType>
                <eac-cpf:eventDateTime standardDateTime="2009-11-30T12:00:00+01:00"/>
@@ -2799,10 +2780,10 @@
                <eac-cpf:agent>Karin Bredenberg</eac-cpf:agent>
                <eac-cpf:eventDescription>Updated example 10</eac-cpf:eventDescription>
             </eac-cpf:maintenanceEvent>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="eventDesccription" type="elementDocumentation" xml:base="eng/elem-eventDesccription.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="eventDesccription" type="elementDocumentation" xml:base="eng/elem-eventDesccription.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">eventDescription</gi>
    </head>
@@ -2844,7 +2825,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceEvent>
             <eac-cpf:eventType>created</eac-cpf:eventType>
             <eac-cpf:eventDateTime standardDateTime="2009-11-30T12:00:00+01:00"/>
@@ -2852,10 +2833,10 @@
             <eac-cpf:agent>Bill Stockting</eac-cpf:agent>
             <eac-cpf:eventDescription>Created from original in ISAAR (CPF), 2nd edition: example 10</eac-cpf:eventDescription>
          </eac-cpf:maintenanceEvent>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="eventType" type="elementDocumentation" xml:base="eng/elem-eventType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="eventType" type="elementDocumentation" xml:base="eng/elem-eventType.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">eventType</gi>
    </head>
@@ -2910,7 +2891,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceEvent>
             <eac-cpf:eventType>created</eac-cpf:eventType>
             <eac-cpf:eventDateTime standardDateTime="2009-11-30T12:00:00+01:00"/>
@@ -2919,10 +2900,10 @@
             <eac-cpf:eventDescription>Created from original in ISAAR (CPF), 2nd edition: example
                10</eac-cpf:eventDescription>
          </eac-cpf:maintenanceEvent>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="existDates" type="elementDocumentation" xml:base="eng/elem-existDates.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="existDates" type="elementDocumentation" xml:base="eng/elem-existDates.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">existDates</gi>
    </head>
@@ -2938,7 +2919,7 @@
    </div>
    <div type="description" xml:lang="eng" org="uniform" sample="complete" part="N">
       <p>The dates of existence of the entity being described, such as dates of establishment and
-								dissolution for corporate bodies and dates of birth and death or flourit for persons.
+								dissolution for corporate bodies and dates of birth and death or floruit for persons.
 									<gi scheme="TEI">existDates</gi> may contain actual or approximate dates expressed through its
 								elements <gi scheme="TEI">date</gi>, <gi scheme="TEI">dateRange</gi>, or <gi scheme="TEI">dateSet</gi>. A
 									<gi scheme="TEI">descriptiveNote</gi> may be included if a fuller explanation of the dates of
@@ -2983,7 +2964,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:existDates>
             <eac-cpf:dateRange>
                <eac-cpf:fromDate standardDate="1868">1868</eac-cpf:fromDate>
@@ -2991,10 +2972,10 @@
             </eac-cpf:dateRange>
             <eac-cpf:descriptiveNote><eac-cpf:p>The company was in business these years</eac-cpf:p></eac-cpf:descriptiveNote>
          </eac-cpf:existDates>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="fromDate" type="elementDocumentation" xml:base="eng/elem-fromDate.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="fromDate" type="elementDocumentation" xml:base="eng/elem-fromDate.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">fromDate</gi>
    </head>
@@ -3046,17 +3027,17 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:existDates>
             <eac-cpf:dateRange>
                <eac-cpf:fromDate standardDate="1868">1868</eac-cpf:fromDate>
                <eac-cpf:toDate standardDate="1936">1936</eac-cpf:toDate>
             </eac-cpf:dateRange>
          </eac-cpf:existDates>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="function" type="elementDocumentation" xml:base="eng/elem-function.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="function" type="elementDocumentation" xml:base="eng/elem-function.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">function</gi>
    </head>
@@ -3121,7 +3102,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:function>
             <eac-cpf:term>Estate ownership</eac-cpf:term>
             <eac-cpf:descriptiveNote>Social, political, and cultural role typical of landed aristocracy
@@ -3131,10 +3112,10 @@
 										Barham, a successful admiral and naval administrator (First Lord of the Admiralty
 										1805).</eac-cpf:descriptiveNote>
          </eac-cpf:function>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="functionRelation" type="elementDocumentation" xml:base="eng/elem-functionRelation.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="functionRelation" type="elementDocumentation" xml:base="eng/elem-functionRelation.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">functionRelation</gi>
    </head>
@@ -3208,7 +3189,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:functionRelation functionRelationType="performs">
             <eac-cpf:relationEntry>Alumni communication management, University of
                Glasgow</eac-cpf:relationEntry>
@@ -3223,10 +3204,10 @@
                <eac-cpf:p>The second responsibility of the Department is to control the establishment and abolishment of schools.</eac-cpf:p>
             </eac-cpf:descriptiveNote>
          </eac-cpf:functionRelation>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="functions" type="elementDocumentation" xml:base="eng/elem-functions.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="functions" type="elementDocumentation" xml:base="eng/elem-functions.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">functions</gi>
    </head>
@@ -3280,7 +3261,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:functions>
             <eac-cpf:function>
                <eac-cpf:term>Indigenous land rights plaintiff</eac-cpf:term>
@@ -3289,10 +3270,10 @@
                <eac-cpf:term>Indigenous arts administrator</eac-cpf:term>
             </eac-cpf:function>
          </eac-cpf:functions>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="generalContext" type="elementDocumentation" xml:base="eng/elem-generalContext.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="generalContext" type="elementDocumentation" xml:base="eng/elem-generalContext.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">generalContext</gi>
    </head>
@@ -3346,7 +3327,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:generalContext>
             <eac-cpf:p>Edward Koiko Mabo was born in 1936 on the island of Mer, one of the Murray
 										Islands, which are located at the eastern extremity of Torres Strait. In June 1992, six
@@ -3356,10 +3337,10 @@
 										existed in Australia before European settlement and that, in some cases, this land tenure
 										was not subsequently extinguished by the Crown.</eac-cpf:p>
          </eac-cpf:generalContext>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="identity" type="elementDocumentation" xml:base="eng/elem-identity.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="identity" type="elementDocumentation" xml:base="eng/elem-identity.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">identity</gi>
    </head>
@@ -3423,7 +3404,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:identity>
             <eac-cpf:entityId>CLU-SC-000008</eac-cpf:entityId>
             <eac-cpf:entityType>person</eac-cpf:entityType>
@@ -3448,10 +3429,10 @@
                <eac-cpf:alternativeForm>AACR2</eac-cpf:alternativeForm>
             </eac-cpf:nameEntry>
          </eac-cpf:identity>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="item" type="elementDocumentation" xml:base="eng/elem-item.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="item" type="elementDocumentation" xml:base="eng/elem-item.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">item</gi>
    </head>
@@ -3509,7 +3490,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:list>
             <eac-cpf:item>
                <eac-cpf:span style="font-style:italic">1450-1950</eac-cpf:span>
@@ -3531,8 +3512,8 @@
                <eac-cpf:span style="font-style:italic">Amazing Amazon</eac-cpf:span> (1942)
 									</eac-cpf:item>
          </eac-cpf:list>
-      </eg:egXML>
-         <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+         <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:outline>
             <eac-cpf:level>
                <eac-cpf:item>I.</eac-cpf:item>
@@ -3553,10 +3534,10 @@
                </eac-cpf:level>
             </eac-cpf:level>
          </eac-cpf:outline>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="language" type="elementDocumentation" xml:base="eng/elem-language.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="language" type="elementDocumentation" xml:base="eng/elem-language.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">language</gi>
    </head>
@@ -3609,15 +3590,15 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:languageDeclaration>
             <eac-cpf:language languageCode="eng">English</eac-cpf:language>
             <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
          </eac-cpf:languageDeclaration>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="languageDeclaration" type="elementDocumentation" xml:base="eng/elem-languageDeclaration.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="languageDeclaration" type="elementDocumentation" xml:base="eng/elem-languageDeclaration.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">languageDeclaration</gi>
    </head>
@@ -3667,21 +3648,21 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:languageDeclaration>
             <eac-cpf:language languageCode="eng">English</eac-cpf:language>
             <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
          </eac-cpf:languageDeclaration>  
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:languageDeclaration>
             <eac-cpf:language languageCode="gre">Greek, Modern (1453-)</eac-cpf:language>
             <eac-cpf:script scriptCode="Grek">Greek</eac-cpf:script>
          </eac-cpf:languageDeclaration>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="languagesUsed" type="elementDocumentation" xml:base="eng/elem-languagesUsed.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="languagesUsed" type="elementDocumentation" xml:base="eng/elem-languagesUsed.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">languagesUsed</gi>
    </head>
@@ -3729,7 +3710,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:languagesUsed>
             <eac-cpf:languageUsed>
                <eac-cpf:language languageCode="eng">English</eac-cpf:language>
@@ -3743,10 +3724,10 @@
                <eac-cpf:p>Published works in English and Spanish.</eac-cpf:p>
             </eac-cpf:descriptiveNote>
          </eac-cpf:languagesUsed>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="languageUsed" type="elementDocumentation" xml:base="eng/elem-languageUsed.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="languageUsed" type="elementDocumentation" xml:base="eng/elem-languageUsed.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">languageUsed</gi>
    </head>
@@ -3792,25 +3773,25 @@
          <p>Optional</p>
       </div>
       <div type="repeatable" org="uniform" sample="complete" part="N">
-         <p>Non-repeatable</p>
+         <p>Repeatable</p>
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:languageUsed>
             <eac-cpf:language languageCode="eng">English</eac-cpf:language>
             <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
          </eac-cpf:languageUsed>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:languageUsed>
             <eac-cpf:language languageCode="gre">Greek, Modern (1453-)</eac-cpf:language>
             <eac-cpf:script scriptCode="Grek">Greek</eac-cpf:script>
          </eac-cpf:languageUsed>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="legalStatus" type="elementDocumentation" xml:base="eng/elem-legalStatus.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="legalStatus" type="elementDocumentation" xml:base="eng/elem-legalStatus.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">legalStatus</gi>
    </head>
@@ -3870,7 +3851,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:legalStatus>
             <eac-cpf:term>Department of State</eac-cpf:term>
          </eac-cpf:legalStatus>
@@ -3878,10 +3859,10 @@
             <eac-cpf:term>Organismo de la Administracion Central del Estado</eac-cpf:term>
             <eac-cpf:date standardDate="1769">1769</eac-cpf:date>
          </eac-cpf:legalStatus>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="legalStatuses" type="elementDocumentation" xml:base="eng/elem-legalStatuses.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="legalStatuses" type="elementDocumentation" xml:base="eng/elem-legalStatuses.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">legalStatuses</gi>
    </head>
@@ -3936,7 +3917,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:legalStatuses>
             <eac-cpf:legalStatus>
                <eac-cpf:term>Private limited liability company</eac-cpf:term>
@@ -3960,8 +3941,8 @@
                </eac-cpf:dateRange>
             </eac-cpf:legalStatus>
          </eac-cpf:legalStatuses>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:legalStatuses>
             <eac-cpf:legalStatus>
                <eac-cpf:term>EPIC</eac-cpf:term>
@@ -3984,10 +3965,10 @@
                </eac-cpf:descriptiveNote>
             </eac-cpf:legalStatus>
          </eac-cpf:legalStatuses>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="level" type="elementDocumentation" xml:base="eng/elem-level.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="level" type="elementDocumentation" xml:base="eng/elem-level.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">level</gi>
    </head>
@@ -4037,7 +4018,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:outline>
             <eac-cpf:level>
                <eac-cpf:item>I.</eac-cpf:item>
@@ -4058,10 +4039,10 @@
                </eac-cpf:level>
             </eac-cpf:level>
          </eac-cpf:outline>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="list" type="elementDocumentation" xml:base="eng/elem-list.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="list" type="elementDocumentation" xml:base="eng/elem-list.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">list</gi>
    </head>
@@ -4109,7 +4090,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:list>
             <eac-cpf:item>
                <eac-cpf:span style="font-style:italic">1450-1950</eac-cpf:span>
@@ -4130,10 +4111,10 @@
                <eac-cpf:span style="font-style:italic">Amazing Amazon</eac-cpf:span> (1942)
             </eac-cpf:item>
          </eac-cpf:list>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="localControl" type="elementDocumentation" xml:base="file:/C:/Documents%20and%20Settings/MARKABR/Mina%20dokument/RA/GitHub/eac-cpf-taglibrary/tei/eng/elem-localControl.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="localControl" type="elementDocumentation" xml:base="eng/elem-localControl.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">localControl</gi>
    </head>
@@ -4182,14 +4163,14 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:localControl localType="detailLevel">
             <eac-cpf:term>minimal</eac-cpf:term>
          </eac-cpf:localControl>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="localDescription" type="elementDocumentation" xml:base="eng/elem-localDescription.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="localDescription" type="elementDocumentation" xml:base="eng/elem-localDescription.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">localDescription</gi>
    </head>
@@ -4245,15 +4226,15 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:localDescription localType="http://....fr/eac-cpf/localType/nationalité">
             <eac-cpf:term vocabularySource="http://....fr/eac-cpf/localType/nationalité#French">French</eac-cpf:term>
             <eac-cpf:placeEntry countryCode="FR" vocabularySource="http://....fr/registerOfFrenchPlaceNames#France">France</eac-cpf:placeEntry>
          </eac-cpf:localDescription>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="localDescriptions" type="elementDocumentation" xml:base="eng/elem-localDescriptions.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="localDescriptions" type="elementDocumentation" xml:base="eng/elem-localDescriptions.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">localDescriptions</gi>
    </head>
@@ -4273,11 +4254,11 @@
 									<gi scheme="TEI">localDescriptions</gi>.</p>
       <p>The optional <gi scheme="TEI">citation</gi>, <gi scheme="TEI">list</gi>, and <gi scheme="TEI">outline</gi> elements are
 								used to accommodate greater complexity in expressing or representing the information being
-								described. A simpler discursive may be encoded as one or more <gi scheme="TEI">p</gi> elements.</p>
+								described. A simpler discursive expression may be encoded as one or more <gi scheme="TEI">p</gi> elements.</p>
    </div>
    
    <div type="mayContain" org="uniform" sample="complete" part="N">
-      <p>citation, list, localDescription, outline, p</p>
+      <p>citation, descriptiveNote, list, localDescription, outline, p</p>
    </div>
    <div type="mayOccurWithin" org="uniform" sample="complete" part="N">
       <p>description</p>
@@ -4304,7 +4285,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
          <eac-cpf:localDescriptions localType="http://....fr/eac-cpf/localType/">
             <eac-cpf:localDescription localType="http://....fr/eac-cpf/localType/nationalité">
                <eac-cpf:term vocabularySource="http://....fr/eac-cpf/localType/nationalité#French">French</eac-cpf:term>
@@ -4319,10 +4300,10 @@
                <eac-cpf:placeEntry countryCode="BR" vocabularySource="http://....fr/registerOfFrenchPlaceNames#France">Brazil</eac-cpf:placeEntry>
             </eac-cpf:localDescription>
          </eac-cpf:localDescriptions>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="localTypeDeclaration" type="elementDocumentation" xml:base="file:/C:/Documents%20and%20Settings/MARKABR/Mina%20dokument/RA/GitHub/eac-cpf-taglibrary/tei/eng/elem-localTypeDeclaration.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="localTypeDeclaration" type="elementDocumentation" xml:base="eng/elem-localTypeDeclaration.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">localTypeDeclaration</gi>
    </head>
@@ -4372,7 +4353,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:localTypeDeclaration>
             <eac-cpf:abbreviation>Categorycodes</eac-cpf:abbreviation>
             <eac-cpf:citation xlink:href="http://nad.ra.se/static/termlistor/Kategorikoder.htm" xlink:type="simple">The categorycodes used in Swedish NAD (http://nad.ra.se). To be used in
@@ -4382,10 +4363,10 @@
 											organizational form, operation, function, archivalorganization etcetera. </eac-cpf:p>
             </eac-cpf:descriptiveNote>
          </eac-cpf:localTypeDeclaration>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="maintenanceAgency" type="elementDocumentation" xml:base="eng/elem-maintenanceAgency.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="maintenanceAgency" type="elementDocumentation" xml:base="eng/elem-maintenanceAgency.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">maintenanceAgency</gi>
    </head>
@@ -4437,21 +4418,21 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceAgency>
             <eac-cpf:agencyCode>FR-DAF</eac-cpf:agencyCode>
             <eac-cpf:agencyName>Archives nationales (Paris)</eac-cpf:agencyName>
          </eac-cpf:maintenanceAgency>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceAgency>
             <eac-cpf:otherAgencyCode>GB-058</eac-cpf:otherAgencyCode>
             <eac-cpf:agencyName>The British Library: Manuscript Collections</eac-cpf:agencyName>
          </eac-cpf:maintenanceAgency>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="maintenanceEvent" type="elementDocumentation" xml:base="eng/elem-maintenanceEvent.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="maintenanceEvent" type="elementDocumentation" xml:base="eng/elem-maintenanceEvent.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">maintenanceEvent</gi>
    </head>
@@ -4503,7 +4484,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceEvent>
             <eac-cpf:eventType>derived</eac-cpf:eventType>
             <eac-cpf:eventDateTime standardDateTime="2009-08-30T09:37:17.029-04:00"/>
@@ -4524,10 +4505,10 @@
             <eac-cpf:agentType>human</eac-cpf:agentType>
             <eac-cpf:agent>Lina Bountouri</eac-cpf:agent>
          </eac-cpf:maintenanceEvent>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="maintenanceHistory" type="elementDocumentation" xml:base="eng/elem-maintenanceHistory.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="maintenanceHistory" type="elementDocumentation" xml:base="eng/elem-maintenanceHistory.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">maintenanceHistory</gi>
    </head>
@@ -4576,7 +4557,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceHistory>
             <eac-cpf:maintenanceEvent>
                <eac-cpf:eventType>created</eac-cpf:eventType>
@@ -4593,10 +4574,10 @@
                <eac-cpf:eventDescription>Aggiunte fonti, regole usate e campi di controllo</eac-cpf:eventDescription>
             </eac-cpf:maintenanceEvent>
          </eac-cpf:maintenanceHistory>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="maintenanceStatus" type="elementDocumentation" xml:base="eng/elem-maintenanceStatus.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="maintenanceStatus" type="elementDocumentation" xml:base="eng/elem-maintenanceStatus.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">maintenanceStatus</gi>
    </head>
@@ -4653,12 +4634,12 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceStatus>new</eac-cpf:maintenanceStatus>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="mandate" type="elementDocumentation" xml:base="eng/elem-mandate.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="mandate" type="elementDocumentation" xml:base="eng/elem-mandate.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">mandate</gi>
    </head>
@@ -4719,7 +4700,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
          <eac-cpf:mandate>
             <eac-cpf:dateRange>
                <eac-cpf:fromDate standardDate="1919">1919</eac-cpf:fromDate>
@@ -4731,10 +4712,10 @@
                   bonuses from Minnesota soldiers.</eac-cpf:p>
             </eac-cpf:descriptiveNote>
          </eac-cpf:mandate>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="mandates" type="elementDocumentation" xml:base="eng/elem-mandates.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="mandates" type="elementDocumentation" xml:base="eng/elem-mandates.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">mandates</gi>
    </head>
@@ -4788,7 +4769,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:mandates>
             <eac-cpf:mandate>
                <eac-cpf:term>Instrucciones de 13-VI-1586 por las que se crean y definen las
@@ -4803,8 +4784,8 @@
                   23-VIII-1715.</eac-cpf:term>
             </eac-cpf:mandate>
          </eac-cpf:mandates>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:mandates>
             <eac-cpf:mandate>
                <eac-cpf:term>Law 380/1914, "The Establishment of the Greek State Archiving Service"</eac-cpf:term>
@@ -4831,10 +4812,10 @@
                </eac-cpf:descriptiveNote>
             </eac-cpf:mandate>
          </eac-cpf:mandates>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="multipleIdentities" type="elementDocumentation" xml:base="eng/elem-multipleIdentities.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="multipleIdentities" type="elementDocumentation" xml:base="eng/elem-multipleIdentities.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">multipleIdentities</gi>
    </head>
@@ -4884,7 +4865,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:multipleIdentities>
             <eac-cpf:cpfDescription>
                <eac-cpf:identity identityType="acquired" localType="pseudonyme">
@@ -4963,10 +4944,10 @@
          
             </eac-cpf:cpfDescription>
           </eac-cpf:multipleIdentities>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="nameEntry" type="elementDocumentation" xml:base="eng/elem-nameEntry.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="nameEntry" type="elementDocumentation" xml:base="eng/elem-nameEntry.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">nameEntry</gi>
    </head>
@@ -5044,7 +5025,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:nameEntry>
             <eac-cpf:part localType="surname">Lemoyne</eac-cpf:part>
             <eac-cpf:part localType="forename">Francois</eac-cpf:part>
@@ -5065,10 +5046,10 @@
             </eac-cpf:useDates>
             <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
          </eac-cpf:nameEntry>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="nameEntryParallel" type="elementDocumentation" xml:base="eng/elem-nameEntryParallel.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="nameEntryParallel" type="elementDocumentation" xml:base="eng/elem-nameEntryParallel.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">nameEntryParallel</gi>
    </head>
@@ -5123,7 +5104,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:nameEntryParallel>
             <eac-cpf:nameEntry xml:lang="fr" scriptCode="Latn">
                <eac-cpf:part>Institut international des droits de l'homme</eac-cpf:part>
@@ -5137,10 +5118,10 @@
             </eac-cpf:nameEntry>
             <eac-cpf:authorizedForm>AFNOR_Z44-060</eac-cpf:authorizedForm>
          </eac-cpf:nameEntryParallel>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="objectBinWrap" type="elementDocumentation" xml:base="eng/elem-objectBinWrap.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="objectBinWrap" type="elementDocumentation" xml:base="eng/elem-objectBinWrap.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">objectBinWrap</gi>
    </head>
@@ -5183,12 +5164,12 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:objectBinWrap> [Base64 Binary code] </eac-cpf:objectBinWrap>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="objectXMLWrap" type="elementDocumentation" xml:base="file:/C:/Documents%20and%20Settings/MARKABR/Mina%20dokument/RA/GitHub/eac-cpf-taglibrary/tei/eng/elem-objectXMLWrap.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="objectXMLWrap" type="elementDocumentation" xml:base="eng/elem-objectXMLWrap.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">objectXMLWrap</gi>
    </head>
@@ -5232,7 +5213,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:objectXMLWrap>
             <mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/mods/v3/mods-3-3.xsd">
                <mods:titleInfo>
@@ -5247,8 +5228,8 @@
                </mods:name>
             </mods:mods>
          </eac-cpf:objectXMLWrap>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:objectXMLWrap>
             <!--<tei:bibl xmlns:tei="http://www.tei-c.org/ns/1.0" default="false">
                <tei:title>
@@ -5271,10 +5252,10 @@
                </text:respStmt>
             </text:bibl>
          </eac-cpf:objectXMLWrap>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="occupation" type="elementDocumentation" xml:base="eng/elem-occupation.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="occupation" type="elementDocumentation" xml:base="eng/elem-occupation.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">occupation</gi>
    </head>
@@ -5335,7 +5316,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:occupations>
             <eac-cpf:occupation>
                <eac-cpf:term>Teacher</eac-cpf:term>
@@ -5344,8 +5325,8 @@
                <eac-cpf:term>Railway labourer</eac-cpf:term>
             </eac-cpf:occupation>
          </eac-cpf:occupations>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:description>
             <eac-cpf:occupations>
                <eac-cpf:occupation>
@@ -5435,10 +5416,10 @@
                </eac-cpf:citation>
             </eac-cpf:biogHist>
          </eac-cpf:description>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="occupations" type="elementDocumentation" xml:base="eng/elem-occupations.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="occupations" type="elementDocumentation" xml:base="eng/elem-occupations.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">occupations</gi>
    </head>
@@ -5492,7 +5473,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:occupations>
             <eac-cpf:occupation>
                <eac-cpf:term>Teacher</eac-cpf:term>
@@ -5501,8 +5482,8 @@
                <eac-cpf:term>Railway labourer</eac-cpf:term>
             </eac-cpf:occupation>
          </eac-cpf:occupations>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:description>
             <eac-cpf:occupations>
                <eac-cpf:occupation>
@@ -5592,10 +5573,10 @@
                </eac-cpf:citation>
             </eac-cpf:biogHist>
          </eac-cpf:description>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="otherAgencyCode" type="elementDocumentation" xml:base="eng/elem-otherAgencyCode.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="otherAgencyCode" type="elementDocumentation" xml:base="eng/elem-otherAgencyCode.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">otherAgencyCode</gi>
    </head>
@@ -5604,16 +5585,16 @@
       
    </div>
    <div type="summary" org="uniform" sample="complete" part="N">
-      <p xml:lang="eng">Alternate code representing the instituion or service responsible for the
+      <p xml:lang="eng">Alternate code representing the institution or service responsible for the
 							creation, maintenance, and/or dissemination of the EAC-CPF instance.</p>
       
    </div>
    <div type="description" xml:lang="eng" org="uniform" sample="complete" part="N">
       <p>An element of <gi scheme="TEI">maintenanceAgency</gi> within <gi scheme="TEI">control</gi> providing an
 								alternative and/or local institution code representing the institution or service
-								responsible for the creation, maintenace, and/or dissemination of the EAC-CPF instance to
+								responsible for the creation, maintenance, and/or dissemination of the EAC-CPF instance to
 								that given in the <gi scheme="TEI">agencyCode</gi> element in the format of the International Standard
-								identifier for Libraries and Related Organizations (ISIL: ISO 15511). The name of the agency
+								Identifier for Libraries and Related Organizations (ISIL: ISO 15511). The name of the agency
 								is given in <gi scheme="TEI">agencyName</gi>. The addition of an ISO 3166-1 alpha-2 country code as the
 								prefix is recommended to ensure international uniqueness.</p>
    </div>
@@ -5644,15 +5625,15 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:maintenanceAgency>
             <eac-cpf:otherAgencyCode>GB-058</eac-cpf:otherAgencyCode>
             <eac-cpf:agencyName>The British Library: Manuscript Collections</eac-cpf:agencyName>
          </eac-cpf:maintenanceAgency>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="otherRecordId" type="elementDocumentation" xml:base="eng/elem-otherRecordId.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="otherRecordId" type="elementDocumentation" xml:base="eng/elem-otherRecordId.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">otherRecordId</gi>
    </head>
@@ -5700,13 +5681,13 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
          <eac-cpf:otherRecordId>ARC-ID-976172</eac-cpf:otherRecordId>   
          <eac-cpf:otherRecordId localType="NAD_Code">SE/RA/10018</eac-cpf:otherRecordId>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="outline" type="elementDocumentation" xml:base="eng/elem-outline.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="outline" type="elementDocumentation" xml:base="eng/elem-outline.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">outline</gi>
    </head>
@@ -5754,7 +5735,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:outline>
             <eac-cpf:level>
                <eac-cpf:item>I.</eac-cpf:item>
@@ -5775,10 +5756,10 @@
                </eac-cpf:level>
             </eac-cpf:level>
          </eac-cpf:outline>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="p" type="elementDocumentation" xml:base="eng/elem-p.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="p" type="elementDocumentation" xml:base="eng/elem-p.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">p</gi>
    </head>
@@ -5829,7 +5810,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:biogHist>
             <eac-cpf:p>Robert Carlton Brown (1886-1959) was a writer, editor, publisher, and traveler.
 										From 1908 to 1917, he wrote poetry and prose for numerous magazines and newspapers in New
@@ -5845,10 +5826,10 @@
 										(1924-1929) and <eac-cpf:span style="font-style:italic">British American</eac-cpf:span>
 										(1926-1929).</eac-cpf:p>
          </eac-cpf:biogHist>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="part" type="elementDocumentation" xml:base="eng/elem-part.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="part" type="elementDocumentation" xml:base="eng/elem-part.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">part</gi>
    </head>
@@ -5899,14 +5880,14 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
          <eac-cpf:nameEntry>
             <eac-cpf:part localType="surname">Lemoyne</eac-cpf:part>
             <eac-cpf:part localType="forename">Francois</eac-cpf:part>
             <eac-cpf:authorizedForm>AFNOR</eac-cpf:authorizedForm>
          </eac-cpf:nameEntry>
-      </eg:egXML>
-      <eg:egXML valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
          <eac-cpf:nameEntry>
             <eac-cpf:part>Elytēs, Odysseas</eac-cpf:part>
             <eac-cpf:useDates>
@@ -5916,10 +5897,10 @@
                </eac-cpf:dateRange>
             </eac-cpf:useDates>
          </eac-cpf:nameEntry>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="place" type="elementDocumentation" xml:base="eng/elem-place.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="place" type="elementDocumentation" xml:base="eng/elem-place.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">place</gi>
    </head>
@@ -5983,15 +5964,15 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:place>
             <eac-cpf:placeEntry>Paris, France</eac-cpf:placeEntry>
             <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
          </eac-cpf:place>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="placeEntry" type="elementDocumentation" xml:base="eng/elem-placeEntry.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="placeEntry" type="elementDocumentation" xml:base="eng/elem-placeEntry.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">placeEntry</gi>
    </head>
@@ -6064,7 +6045,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
         <eac-cpf:place>
             <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
             <eac-cpf:placeEntry localType="address">31 rue Cambon</eac-cpf:placeEntry>
@@ -6084,10 +6065,10 @@
                <eac-cpf:toDate standardDate="1986">1986</eac-cpf:toDate>
             </eac-cpf:dateRange>
          </eac-cpf:place>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="placeRole" type="elementDocumentation" xml:base="eng/elem-placeRole.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="placeRole" type="elementDocumentation" xml:base="eng/elem-placeRole.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">placeRole</gi>
    </head>
@@ -6144,7 +6125,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:place>
             <eac-cpf:placeRole>Birth</eac-cpf:placeRole>
             <eac-cpf:placeEntry>Brussels, Belgium</eac-cpf:placeEntry>
@@ -6157,10 +6138,10 @@
             <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
             <eac-cpf:placeEntry countryCode="GR" vocabularySource="ISO3166-2">Greece</eac-cpf:placeEntry>
          </eac-cpf:place>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="places" type="elementDocumentation" xml:base="eng/elem-places.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="places" type="elementDocumentation" xml:base="eng/elem-places.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">places</gi>
    </head>
@@ -6214,7 +6195,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:places>
             <eac-cpf:place>
                <eac-cpf:placeRole>Residence</eac-cpf:placeRole>
@@ -6247,10 +6228,10 @@
                <eac-cpf:placeEntry countryCode="SU">Union Soviétique</eac-cpf:placeEntry>
             </eac-cpf:place>
          </eac-cpf:places>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="preferredForm" type="elementDocumentation" xml:base="eng/elem-preferredForm.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="preferredForm" type="elementDocumentation" xml:base="eng/elem-preferredForm.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">preferredForm</gi>
    </head>
@@ -6311,23 +6292,23 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" valid="true">
          <eac-cpf:nameEntryParallel>
-            <eac-cpf:nameEntry xml:lang="fr" scriptCode="Latn">
-               <eac-cpf:part>Institut international des droits de l'homme</eac-cpf:part>
-               <eac-cpf:preferredForm>AFNOR_Z44-060</eac-cpf:preferredForm>
-            </eac-cpf:nameEntry>
-            <eac-cpf:nameEntry xml:lang="en" scriptCode="Latn">International institute of human
-               rights</eac-cpf:nameEntry>
-            <eac-cpf:nameEntry xml:lang="sp" scriptCode="Latn">
-               <eac-cpf:part>Instituto internacional de derechos humanos</eac-cpf:part>
-            </eac-cpf:nameEntry>
-            <eac-cpf:authorizedForm>AFNOR_Z44-060</eac-cpf:authorizedForm>
+            <nameEntry xml:lang="fr" scriptCode="Latn">
+               <part>Institut international des droits de l'homme</part>
+               <preferredForm>AFNOR_Z44-060</preferredForm>
+            </nameEntry>
+            <nameEntry xml:lang="en" scriptCode="Latn">International institute of human
+               rights</nameEntry>
+            <nameEntry xml:lang="sp" scriptCode="Latn">
+               <part>Instituto internacional de derechos humanos</part>
+            </nameEntry>
+            <authorizedForm>AFNOR_Z44-060</authorizedForm>
          </eac-cpf:nameEntryParallel>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="publicationStatus" type="elementDocumentation" xml:base="eng/elem-publicationStatus.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="publicationStatus" type="elementDocumentation" xml:base="eng/elem-publicationStatus.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">publicationStatus</gi>
    </head>
@@ -6373,12 +6354,12 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:publicationStatus>inProcess</eac-cpf:publicationStatus>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="recordId" type="elementDocumentation" xml:base="eng/elem-recordId.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="recordId" type="elementDocumentation" xml:base="eng/elem-recordId.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">recordId</gi>
    </head>
@@ -6426,12 +6407,12 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:recordId>F10219</eac-cpf:recordId>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="relationEntry" type="elementDocumentation" xml:base="eng/elem-relationEntry.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="relationEntry" type="elementDocumentation" xml:base="eng/elem-relationEntry.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">relationEntry</gi>
    </head>
@@ -6479,7 +6460,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:functionRelation functionRelationType="performs">
             <eac-cpf:relationEntry>Alumni communication management, University of
                Glasgow</eac-cpf:relationEntry>
@@ -6511,10 +6492,10 @@
                </ead:ead>
             </eac-cpf:objectXMLWrap>
          </eac-cpf:resourceRelation>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="relations" type="elementDocumentation" xml:base="eng/elem-relations.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="relations" type="elementDocumentation" xml:base="eng/elem-relations.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">relations</gi>
    </head>
@@ -6570,16 +6551,16 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:relations>
             <eac-cpf:cpfRelation>[...]</eac-cpf:cpfRelation>
             <eac-cpf:functionRelation>[...]</eac-cpf:functionRelation>
             <eac-cpf:resourceRelation>[...]</eac-cpf:resourceRelation>
          </eac-cpf:relations>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="resourceRelation" type="elementDocumentation" xml:base="eng/elem-resourceRelation.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="resourceRelation" type="elementDocumentation" xml:base="eng/elem-resourceRelation.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">resourceRelation</gi>
    </head>
@@ -6652,7 +6633,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:resourceRelation resourceRelationType="creatorOf">
             <eac-cpf:objectXMLWrap>
                <ead:ead xmlns:ead="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
@@ -6690,10 +6671,10 @@
                </ead:ead>
             </eac-cpf:objectXMLWrap>
          </eac-cpf:resourceRelation>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="script" type="elementDocumentation" xml:base="eng/elem-script.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="script" type="elementDocumentation" xml:base="eng/elem-script.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">script</gi>
    </head>
@@ -6746,13 +6727,13 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:languageDeclaration>
             <eac-cpf:language languageCode="eng">English</eac-cpf:language>
             <eac-cpf:script scriptCode="Latn">Latin</eac-cpf:script>
          </eac-cpf:languageDeclaration>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:languagesUsed>
             <eac-cpf:languageUsed>
                <eac-cpf:language languageCode="gre">Greek, Modern (1453-)</eac-cpf:language>
@@ -6763,10 +6744,10 @@
                <eac-cpf:script scriptCode="Grek">Greek</eac-cpf:script>
             </eac-cpf:languageUsed>
          </eac-cpf:languagesUsed>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="setComponent" type="elementDocumentation" xml:base="eng/elem-setComponent.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="setComponent" type="elementDocumentation" xml:base="eng/elem-setComponent.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">setComponent</gi>
    </head>
@@ -6833,7 +6814,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:alternativeSet>
             <eac-cpf:setComponent xlink:href="http://authorities.loc.gov" xlink:type="simple">
                <eac-cpf:componentEntry>Bright Sparcs Record</eac-cpf:componentEntry>
@@ -6842,10 +6823,10 @@
                <eac-cpf:componentEntry>NLA record.</eac-cpf:componentEntry>
             </eac-cpf:setComponent>
          </eac-cpf:alternativeSet>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="source" type="elementDocumentation" xml:base="eng/elem-source.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="source" type="elementDocumentation" xml:base="eng/elem-source.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">source</gi>
    </head>
@@ -6912,7 +6893,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:sources>
             <eac-cpf:source>
                <eac-cpf:sourceEntry>HMC, Principal Family and Estate Collections: Family Names L-W,
@@ -6922,8 +6903,8 @@
                <eac-cpf:sourceEntry>HMC, Complete Peerage, 1936</eac-cpf:sourceEntry>
             </eac-cpf:source>
          </eac-cpf:sources>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:sources>
             <eac-cpf:source>
             <eac-cpf:sourceEntry>Union Lists of Artist Names, The Getty Research
@@ -6934,10 +6915,10 @@
                   Institute</eac-cpf:sourceEntry>
             </eac-cpf:source>
          </eac-cpf:sources>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="sourceEntry" type="elementDocumentation" xml:base="eng/elem-sourceEntry.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="sourceEntry" type="elementDocumentation" xml:base="eng/elem-sourceEntry.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">sourceEntry</gi>
    </head>
@@ -6989,7 +6970,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:sources>
             <eac-cpf:source>
                <eac-cpf:sourceEntry>HMC, Principal Family and Estate Collections: Family Names L-W,
@@ -6999,8 +6980,8 @@
                <eac-cpf:sourceEntry>HMC, Complete Peerage, 1936</eac-cpf:sourceEntry>
             </eac-cpf:source>
          </eac-cpf:sources>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:sources>
             <eac-cpf:source>
                <eac-cpf:sourceEntry>Union Lists of Artist Names, The Getty Research
@@ -7011,10 +6992,10 @@
                   Institute</eac-cpf:sourceEntry>
             </eac-cpf:source>
          </eac-cpf:sources>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="sources" type="elementDocumentation" xml:base="eng/elem-sources.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="sources" type="elementDocumentation" xml:base="eng/elem-sources.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">sources</gi>
    </head>
@@ -7061,7 +7042,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:sources>
             <eac-cpf:source>
                <eac-cpf:sourceEntry>HMC, Principal Family and Estate Collections: Family Names L-W,
@@ -7071,8 +7052,8 @@
                <eac-cpf:sourceEntry>HMC, Complete Peerage, 1936</eac-cpf:sourceEntry>
             </eac-cpf:source>
          </eac-cpf:sources>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:sources>
             <eac-cpf:source>
                <eac-cpf:sourceEntry>Union Lists of Artist Names, The Getty Research
@@ -7083,10 +7064,10 @@
                   Institute</eac-cpf:sourceEntry>
             </eac-cpf:source>
          </eac-cpf:sources>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="span" type="elementDocumentation" xml:base="eng/elem-span.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="span" type="elementDocumentation" xml:base="eng/elem-span.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">span</gi>
    </head>
@@ -7134,7 +7115,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:biogHist>
             <eac-cpf:p>Robert Carlton Brown (1886-1959) was a writer, editor, publisher, and traveler.
 										From 1908 to 1917, he wrote poetry and prose for numerous magazines and newspapers in New
@@ -7150,10 +7131,10 @@
 										(1924-1929) and <eac-cpf:span style="font-style:italic">British American</eac-cpf:span>
 										(1926-1929).</eac-cpf:p>
          </eac-cpf:biogHist>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="structureOrGenealogy" type="elementDocumentation" xml:base="eng/elem-structureOrGenealogy.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="structureOrGenealogy" type="elementDocumentation" xml:base="eng/elem-structureOrGenealogy.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">structureOrGenealogy</gi>
    </head>
@@ -7175,14 +7156,14 @@
 								tree) in a way that demonstrates the interrelationships of its members with relevant
 								dates.</p>
       <p>The optional <gi scheme="TEI">list</gi> and <gi scheme="TEI">outline</gi> elements are used to accommodate
-								greater complexity in expressing or representing the activities being described.
+								greater complexity in expressing or representing the structure(s) or genealogy being described.
 									<gi scheme="TEI">citation</gi> may be used to provide a link to external documents like organizational
-								charts and family trees. A simpler discursive expression of the activities may be encoded as
+         charts and family trees. A simpler discursive expression of the structure(s) or genealogy may be encoded as
 								one or more <gi scheme="TEI">p</gi> elements.</p>
       <p>Genealogical and administrative structure information may alternatively be described in
 								discursive form in the <gi scheme="TEI">biogHist</gi> element (ISAAR (CPF) 5.2.2 History) and/or with
 									<gi scheme="TEI">cpfRelation</gi> elements (ISAAR (CPF) 5.3). The <gi scheme="TEI">structureOrGenealogy</gi>
-								element should be used whenever separate semantic processing of information about structure
+								element should be used whenever separate semantic processing of information about structures
 								or genealogies is required.</p>
    </div>
    
@@ -7217,7 +7198,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:structureOrGenealogy>
             <eac-cpf:p>Sir Edward Noel (d 1643) married Julian, daughter and co-heir of Baptists Hicks
                (d 1629), Viscount Campden, and succeeded to the viscouty of Campden and a portion of
@@ -7236,8 +7217,8 @@
                father's baronetcy, and was created Viscount Campden and Earl of Gainsborough in
                1841.</eac-cpf:p>
          </eac-cpf:structureOrGenealogy>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:structureOrGenealogy>
             <eac-cpf:p>The organogram of the <eac-cpf:span style="font-style:italic">Ministry of Culture and Tourism</eac-cpf:span> before its incorporation with the Ministry of Education and Religious Affairs, was the following:</eac-cpf:p>
             <eac-cpf:outline>
@@ -7261,10 +7242,10 @@
                </eac-cpf:level>
             </eac-cpf:outline>
          </eac-cpf:structureOrGenealogy>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="term" type="elementDocumentation" xml:base="eng/elem-term.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="term" type="elementDocumentation" xml:base="eng/elem-term.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">term</gi>
    </head>
@@ -7314,11 +7295,11 @@
          <p>Optional</p>
       </div>
       <div type="repeatable" org="uniform" sample="complete" part="N">
-         <p>Repeatable</p>
+         <p>Non-repeatable</p>
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">         
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:function>
             <eac-cpf:term>Estate ownership</eac-cpf:term>
             <eac-cpf:descriptiveNote>
@@ -7331,24 +7312,24 @@
                   1805).</eac-cpf:p>
             </eac-cpf:descriptiveNote>
          </eac-cpf:function>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">         
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:function>
             <eac-cpf:term vocabularySource="AGIFT">Education and training</eac-cpf:term>
          </eac-cpf:function>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">         
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:localControl localType="detailLevel">
             <eac-cpf:term>minimal</eac-cpf:term>
          </eac-cpf:localControl> 
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">         
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:legalStatus>
             <eac-cpf:term scriptCode="Latn">Organismo de la Administracion Central del Estado</eac-cpf:term>
             <eac-cpf:date standardDate="1769">1769</eac-cpf:date>
          </eac-cpf:legalStatus>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">         
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:mandate>
             <eac-cpf:term lastDateTimeVerified="2012-07-12T12:13:25">Minnesota. Executive Session Laws 1919 c49</eac-cpf:term>
                <eac-cpf:dateRange>
@@ -7360,15 +7341,15 @@
                      bonuses from Minnesota soldiers.</eac-cpf:p>
                </eac-cpf:descriptiveNote>
          </eac-cpf:mandate>
-      </eg:egXML>
-      <eg:egXML xml:lang="eng" valid="true">         
+      </egXML>
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">         
          <eac-cpf:occupation>
             <eac-cpf:term>Teacher</eac-cpf:term>
          </eac-cpf:occupation>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="toDate" type="elementDocumentation" xml:base="eng/elem-toDate.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="toDate" type="elementDocumentation" xml:base="eng/elem-toDate.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">toDate</gi>
    </head>
@@ -7419,17 +7400,17 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:existDates>
             <eac-cpf:dateRange>
                <eac-cpf:fromDate standardDate="1868">1868</eac-cpf:fromDate>
                <eac-cpf:toDate standardDate="1936">1936</eac-cpf:toDate>
             </eac-cpf:dateRange>
          </eac-cpf:existDates>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
-            <div xml:id="useDates" type="elementDocumentation" xml:base="eng/elem-useDates.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="useDates" type="elementDocumentation" xml:base="eng/elem-useDates.xml" org="uniform" sample="complete" part="N">
    <head>
       <gi scheme="TEI">useDates</gi>
    </head>
@@ -7476,7 +7457,7 @@
       </div>
    </div>
    <div type="examples" org="uniform" sample="complete" part="N">
-      <eg:egXML xml:lang="eng" valid="true">
+      <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:lang="eng" valid="true">
          <eac-cpf:nameEntry>
             <eac-cpf:part>Brown, Bob</eac-cpf:part>
             <eac-cpf:useDates>
@@ -7487,12 +7468,12 @@
             </eac-cpf:useDates>
             <eac-cpf:authorizedForm>AACR2</eac-cpf:authorizedForm>
          </eac-cpf:nameEntry>
-      </eg:egXML>
+      </egXML>
    </div>
 </div>
          </div>
          <div type="attributes" org="uniform" sample="complete" part="N">
-            <div xml:id="accuracy" type="attributeDocumentation" xml:base="eng/attr-accuracy.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="accuracy" type="attributeDocumentation" xml:base="eng/attr-accuracy.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">accuracy</att>
    </head>
@@ -7513,7 +7494,7 @@
    </div>
    
 </div>
-            <div xml:id="altitude" type="attributeDocumentation" xml:base="eng/attr-altitude.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="altitude" type="attributeDocumentation" xml:base="eng/attr-altitude.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">altitude</att>
    </head>
@@ -7534,7 +7515,7 @@
    </div>
    
 </div>
-            <div xml:id="countryCode" type="attributeDocumentation" xml:base="eng/attr-countryCode.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="countryCode" type="attributeDocumentation" xml:base="eng/attr-countryCode.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">countryCode</att>
    </head>
@@ -7559,7 +7540,7 @@
    </div>
    
 </div>
-            <div xml:id="cpfRelationType" type="attributeDocumentation" xml:base="eng/attr-cpfRelationType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="cpfRelationType" type="attributeDocumentation" xml:base="eng/attr-cpfRelationType.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">cpfRelationType</att>
    </head>
@@ -7586,7 +7567,7 @@
    </div>
    
 </div>
-            <div xml:id="functionRelationType" type="attributeDocumentation" xml:base="eng/attr-functionRelationType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="functionRelationType" type="attributeDocumentation" xml:base="eng/attr-functionRelationType.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">functionRelationType</att>
    </head>
@@ -7611,7 +7592,7 @@
    </div>
    
 </div>
-            <div xml:id="identityType" type="attributeDocumentation" xml:base="eng/attr-identityType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="identityType" type="attributeDocumentation" xml:base="eng/attr-identityType.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">identityType</att>
    </head>
@@ -7635,7 +7616,7 @@
    </div>
    
 </div>
-            <div xml:id="languageCode" type="attributeDocumentation" xml:base="eng/attr-languageCode.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="languageCode" type="attributeDocumentation" xml:base="eng/attr-languageCode.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">languageCode</att>
    </head>
@@ -7660,7 +7641,7 @@
    </div>
    
 </div>
-            <div xml:id="lastDateTimeVerified" type="attributeDocumentation" xml:base="eng/attr-lastDateTimeVerified.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="lastDateTimeVerified" type="attributeDocumentation" xml:base="eng/attr-lastDateTimeVerified.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">lastDateTimeVerified</att>
    </head>
@@ -7685,7 +7666,7 @@
    </div>
    
 </div>
-            <div xml:id="latitude" type="attributeDocumentation" xml:base="eng/attr-latitude.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="latitude" type="attributeDocumentation" xml:base="eng/attr-latitude.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">latitude</att>
    </head>
@@ -7697,7 +7678,7 @@
       
    </div>
    <div type="description" xml:lang="eng" org="uniform" sample="complete" part="N">
-      <p>The <att scheme="TEI">latitude</att> may occur on <gi scheme="TEI">place</gi>. The value of the
+      <p>The <att scheme="TEI">latitude</att> may occur on <gi scheme="TEI">placeEntry</gi>. The value of the
 							attribute is the geographic latitude of the place named. <att scheme="TEI">latitude</att> should be used
 							in conjunction with <att scheme="TEI">longitude</att> and <att scheme="TEI">altitude</att>.</p>
    </div>
@@ -7707,7 +7688,7 @@
    </div>
    
 </div>
-            <div xml:id="localType" type="attributeDocumentation" xml:base="eng/attr-localType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="localType" type="attributeDocumentation" xml:base="eng/attr-localType.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">localType</att>
    </head>
@@ -7735,7 +7716,7 @@
    </div>
    
 </div>
-            <div xml:id="longitude" type="attributeDocumentation" xml:base="eng/attr-longitude.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="longitude" type="attributeDocumentation" xml:base="eng/attr-longitude.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">longitude</att>
    </head>
@@ -7757,7 +7738,7 @@
    </div>
    
 </div>
-            <div xml:id="notAfter" type="attributeDocumentation" xml:base="eng/attr-notAfter.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="notAfter" type="attributeDocumentation" xml:base="eng/attr-notAfter.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">notAfter</att>
    </head>
@@ -7781,7 +7762,7 @@
    </div>
    
 </div>
-            <div xml:id="notBefore" type="attributeDocumentation" xml:base="eng/attr-notBefore.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="notBefore" type="attributeDocumentation" xml:base="eng/attr-notBefore.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">notBefore</att>
    </head>
@@ -7805,7 +7786,7 @@
    </div>
    
 </div>
-            <div xml:id="resourceRelationType" type="attributeDocumentation" xml:base="eng/attr-resourceRelationType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="resourceRelationType" type="attributeDocumentation" xml:base="eng/attr-resourceRelationType.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">resourceRelationType</att>
    </head>
@@ -7829,7 +7810,7 @@
    </div>
    
 </div>
-            <div xml:id="scriptCode" type="attributeDocumentation" xml:base="eng/attr-scriptCode.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="scriptCode" type="attributeDocumentation" xml:base="eng/attr-scriptCode.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">scriptCode</att>
    </head>
@@ -7851,7 +7832,7 @@
    </div>
    
 </div>
-            <div xml:id="standardDate" type="attributeDocumentation" xml:base="eng/attr-standardDate.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="standardDate" type="attributeDocumentation" xml:base="eng/attr-standardDate.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">standardDate</att>
    </head>
@@ -7875,7 +7856,7 @@
    </div>
    
 </div>
-            <div xml:id="standardDateTime" type="attributeDocumentation" xml:base="eng/attr-standardDateTime.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="standardDateTime" type="attributeDocumentation" xml:base="eng/attr-standardDateTime.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">standardDateTime</att>
    </head>
@@ -7901,7 +7882,7 @@
    </div>
    
 </div>
-            <div xml:id="style" type="attributeDocumentation" xml:base="eng/attr-style.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="style" type="attributeDocumentation" xml:base="eng/attr-style.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">style</att>
    </head>
@@ -7926,7 +7907,7 @@
    </div>
    
 </div>
-            <div xml:id="transliteration" type="attributeDocumentation" xml:base="eng/attr-transliteration.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="transliteration" type="attributeDocumentation" xml:base="eng/attr-transliteration.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">transliteration</att>
    </head>
@@ -7948,7 +7929,7 @@
    </div>
    
 </div>
-            <div xml:id="vocabularySource" type="attributeDocumentation" xml:base="eng/attr-vocabularySource.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="vocabularySource" type="attributeDocumentation" xml:base="eng/attr-vocabularySource.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">vocabularySource</att>
    </head>
@@ -7971,7 +7952,7 @@
    </div>
    
 </div>
-            <div xml:id="xlinkActuate" type="attributeDocumentation" xml:base="eng/attr-xlinkActuate.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xlinkActuate" type="attributeDocumentation" xml:base="eng/attr-xlinkActuate.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xlink:actuate</att>
    </head>
@@ -7995,7 +7976,7 @@
       <p>"onLoad" or "onRequest" or "other" or "none"</p>
    </div>
 </div>
-            <div xml:id="xlinkArcrole" type="attributeDocumentation" xml:base="eng/attr-xlinkArcrole.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xlinkArcrole" type="attributeDocumentation" xml:base="eng/attr-xlinkArcrole.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xlink:arcrole</att>
    </head>
@@ -8018,7 +7999,7 @@
       <p>string</p>
    </div>
 </div>
-            <div xml:id="xlinkHref" type="attributeDocumentation" xml:base="eng/attr-xlinkHref.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xlinkHref" type="attributeDocumentation" xml:base="eng/attr-xlinkHref.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xlink:href</att>
    </head>
@@ -8037,7 +8018,7 @@
       <p>anyURI</p>
    </div>
 </div>
-            <div xml:id="xlinkRole" type="attributeDocumentation" xml:base="eng/attr-xlinkRole.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xlinkRole" type="attributeDocumentation" xml:base="eng/attr-xlinkRole.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xlink:role</att>
    </head>
@@ -8056,7 +8037,7 @@
       <p>string</p>
    </div>
 </div>
-            <div xml:id="xlinkShow" type="attributeDocumentation" xml:base="eng/attr-xlinkShow.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xlinkShow" type="attributeDocumentation" xml:base="eng/attr-xlinkShow.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xlink:show</att>
    </head>
@@ -8079,7 +8060,7 @@
       <p>"embed" or "new" or "replace" or "none" or "other"</p>
    </div>
 </div>
-            <div xml:id="xlinkTitle" type="attributeDocumentation" xml:base="eng/attr-xlinkTitle.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xlinkTitle" type="attributeDocumentation" xml:base="eng/attr-xlinkTitle.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xlink:title</att>
    </head>
@@ -8098,7 +8079,7 @@
       <p>string</p>
    </div>
 </div>
-            <div xml:id="xlinkType" type="attributeDocumentation" xml:base="eng/attr-xlinkType.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xlinkType" type="attributeDocumentation" xml:base="eng/attr-xlinkType.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xlink:type</att>
    </head>
@@ -8121,7 +8102,7 @@
       <p>Fixed value: "simple"</p>
    </div>
 </div>
-            <div xml:id="xmlbase" type="attributeDocumentation" xml:base="eng/attr-xmlbase.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xmlbase" type="attributeDocumentation" xml:base="eng/attr-xmlbase.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xml:base</att>
    </head>
@@ -8147,7 +8128,7 @@
    </div>
    
 </div>
-            <div xml:id="xmlid" type="attributeDocumentation" xml:base="eng/attr-xmlid.xml" org="uniform" sample="complete" part="N">
+            <?xml-model href="../../schema/tagLibrary_elementDesc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><div xml:id="xmlid" type="attributeDocumentation" xml:base="eng/attr-xmlid.xml" org="uniform" sample="complete" part="N">
    <head>
       <att scheme="TEI">xml:id</att>
    </head>
@@ -8275,11 +8256,11 @@
                </item>
                <label>5.3 Relationships area</label>
                <item>
-                  <gi scheme="TEI">relations</gi>
+                  <gi scheme="TEI">cpfRelation</gi>
                </item>
                <label>5.3.1 Names/Identifiers of related corporate bodies, persons or families</label>
                <item>
-                  <gi scheme="TEI">cpfRelation</gi>
+                  <gi scheme="TEI">cpfRelation</gi>/<gi scheme="TEI">objectXMLWrap</gi> or <gi scheme="TEI">objectBinWrap</gi> or <gi scheme="TEI">relationEntry</gi>
                </item>
                <label>5.3.2 Category of relationship</label>
                <item>
@@ -8287,7 +8268,7 @@
                </item>
                <label>5.3.3 Description of relationship</label>
                <item>
-                  <gi scheme="TEI">objectXMLWrap</gi> or <gi scheme="TEI">objectBinWrap</gi> or <gi scheme="TEI">relationEntry</gi>
+                  <gi scheme="TEI">cpfRelation</gi>/<gi scheme="TEI">objectXMLWrap</gi> or <gi scheme="TEI">objectBinWrap</gi> or <gi scheme="TEI">relationEntry</gi>
                </item>
                <label>5.3.4 Dates of the relationship</label>
                <item>
@@ -8311,7 +8292,7 @@
                </item>
                <label>5.4.4 Status</label>
                <item>
-                  <gi scheme="TEI">maintenanceStatus</gi>
+                  <gi scheme="TEI">maintenanceStatus</gi> and <gi scheme="TEI">publicationStatus</gi>
                </item>
                <label>5.4.5 Level of detail</label>
                <item>
@@ -8331,7 +8312,7 @@
                </item>
                <label>5.4.9 Maintenance notes</label>
                <item>
-                  <gi scheme="TEI">maintenanceEvent</gi>/<gi scheme="TEI">maintenanceDescription</gi>
+                  <gi scheme="TEI">maintenanceEvent</gi>/<gi scheme="TEI">agent</gi>, <gi scheme="TEI">agentType</gi>, <gi scheme="TEI">eventDescription</gi> and <gi scheme="TEI">eventType</gi>
                </item>
                <label>6. Relating corporate bodies, persons, and families to archival materials and other resources</label>
                <item>
@@ -8339,7 +8320,7 @@
                </item>
                <label>6.1 Identifiers and titles of related resources</label>
                <item>
-                  <gi scheme="TEI">objectXMLWrap</gi> or <gi scheme="TEI">objectBinWrap</gi> or <gi scheme="TEI">relationEntry</gi>
+                  <gi scheme="TEI">resourceRelation</gi>/<gi scheme="TEI">objectXMLWrap</gi> or <gi scheme="TEI">objectBinWrap</gi> or <gi scheme="TEI">relationEntry</gi>
                </item>
                <label>6.2 Types of related resources</label>
                <item>

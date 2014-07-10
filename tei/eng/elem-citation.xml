@@ -33,8 +33,8 @@
       <p>[text], span</p>
    </div>
    <div type="mayOccurWithin">
-      <p>biogHist, conventionDeclaration, function, legalStatus, localDescription,
-							localTypeDeclaration, mandate, occupation, place</p>
+      <p>biogHist, conventionDeclaration, function, functions, legalStatus, legalStatuses, localDescription, localDescriptions, 
+							localTypeDeclaration, mandate, mandates, occupation, occupations, place, places</p>
    </div>
    <div type="attributes">
       <p xml:lang="eng">

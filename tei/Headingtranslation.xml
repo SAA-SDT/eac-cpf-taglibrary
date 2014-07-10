@@ -8,88 +8,129 @@ type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
         <translation lang="fr">Résumé</translation>
         <translation lang="gr">Σ&#973;νοψη</translation>
         <translation lang="de">Kurzfassung</translation>
+        <translation lang="it">Sommario</translation>
     </term>
     <term name="description">
         <translation lang="en">Description</translation>
+        <translation lang="fr">Description</translation>
         <translation lang="gr">Περιγραφ&#942;</translation>
         <translation lang="de">Beschreibung</translation>
+        <translation lang="it">Descrizione</translation>
     </term>
     <term name="mayoccurwithin">
         <translation lang="en">May occur within</translation>
+        <translation lang="fr">Peut être contenu dans</translation>
         <translation lang="gr">Μπορε&#943; να εμφαν&#943;ζεται μέσα σε</translation>
         <translation lang="de">Kann vorkommen in</translation>
+        <translation lang="it">Ricorrere in</translation>
     </term>
     <term name="mandatory">
         <translation lang="en">Mandatory</translation>
+        <translation lang="fr">Obligatoire</translation>
         <translation lang="gr">Υποχρεωτικ&#972;</translation>
         <translation lang="de">Obligatorisch</translation>
+        <translation lang="it">Obbligatorio</translation>
     </term>
     <term name="optional">
         <translation lang="en">Optional</translation>
+        <translation lang="fr">Optionnel</translation>
         <translation lang="gr">Προαιρετικ&#972;</translation>
         <translation lang="de">Optional</translation>
+        <translation lang="it">Opzionale</translation>
     </term>
     <term name="repeatable">
         <translation lang="en">Repeatable</translation>
+        <translation lang="fr">Répétable</translation>
         <translation lang="gr">Επαναλαμβαν&#972;μενο</translation>
         <translation lang="de">Wiederholbar</translation>
+        <translation lang="it">Ripetibile</translation>
     </term>
     <term name="nonrepeatable">
         <translation lang="en">Non-repeatable</translation>
+        <translation lang="fr">Non répétable</translation>
         <translation lang="gr">Μη επαναλαμβαν&#972;μενο</translation>
         <translation lang="de">Nicht wiederholbar</translation>
+        <translation lang="it">Non ripetibile</translation>
     </term>
     <term name="attributes">
         <translation lang="en">Attributes</translation>
+        <translation lang="fr">Attributs</translation>
         <translation lang="gr">Γνωρ&#943;σματα</translation>
         <translation lang="de">Attribute</translation>
+        <translation lang="it">Attributi</translation>
     </term>
     <term name="references">
         <translation lang="en">References</translation>
+        <translation lang="fr">Références</translation>
         <translation lang="gr">Αναφορ&#941;ς</translation>
         <translation lang="de">Referenz</translation>
+        <translation lang="it">Riferimenti</translation>        
     </term>
     <term name="datatype">
         <translation lang="en">Datatype</translation>
+        <translation lang="fr">Type de données</translation>
         <translation lang="gr">Τ&#973;πος δεδομ&#941;νων</translation>
         <translation lang="de">Datentyp</translation>
+        <translation lang="it">Tipo di dato</translation>
     </term>
     <term name="toc">
         <translation lang="en">Table of Contents</translation>
+        <translation lang="fr">Table des matières</translation>
         <translation lang="gr">Π&#943;νακας Περιεχομ&#941;νων</translation>
         <translation lang="de">Inhaltsverzeichnis</translation>
+        <translation lang="it">Indice</translation>
     </term>
     <term name="elements">
         <translation lang="en">Elements</translation>
+        <translation lang="fr">Éléments</translation>
         <translation lang="gr">Στοιχε&#943;α</translation>
         <translation lang="de">Elemente</translation>
+        <translation lang="it">Elementi</translation>
     </term>
     <term name="maycontain">
         <translation lang="en">May contain</translation>
+        <translation lang="fr">Peut contenir</translation>
         <translation lang="gr">Μπορε&#943; να περι&#941;χει</translation>
         <translation lang="de">Kann enthalten</translation>
+        <translation lang="it">Può contenere</translation>
     </term>
     <term name="occurrence">
         <translation lang="en">Occurrence</translation>
+        <translation lang="fr">Cardinalité</translation>
         <translation lang="gr">Συχν&#972;τητα</translation>
         <translation lang="de">Gegenwart</translation>
+        <translation lang="it">Occorrenze</translation>
     </term>
     <term name="appendix">
         <translation lang="en">Appendix</translation>
+        <translation lang="fr">Appendice</translation>
         <translation lang="gr">Παρ&#940;ρτημα</translation>
         <translation lang="de">Anhang</translation>
+        <translation lang="it">Appendice</translation>
     </term>
     <term name="examples">
         <translation lang="en">Examples</translation>
+        <translation lang="fr">Exemples</translation>
         <translation lang="gr">Παραδε&#943;γματα</translation>
         <translation lang="de">Beispiele</translation>
+        <translation lang="it">Esempi</translation>
     </term>
     <term name="example">
         <translation lang="en">Example</translation>
+        <translation lang="fr">Exemple</translation>
         <translation lang="gr">Παρ&#940;δειγμα</translation>
         <translation lang="de">Beispiel</translation>
+        <translation lang="it">Esempio</translation>
     </term>
     <term name="usage">
         <translation lang="en">Usage</translation>
+        <translation lang="fr">Usage</translation>
+        <translation lang="it">Uso</translation>
+    </term>
+    <term name="and">
+        <translation lang="en">and</translation>
+    </term>
+    <term name="availability">
+        <translation lang="en">Availability</translation>
     </term>
 </terms>

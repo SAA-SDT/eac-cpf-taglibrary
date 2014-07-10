@@ -51,7 +51,7 @@
          <p>Optional</p>
       </div>
       <div type="repeatable">
-         <p>Repeatable</p>
+         <p>Non-repeatable</p>
       </div>
    </div>
    <div type="examples">
