@@ -65,7 +65,8 @@
       </egXML>
       <egXML xml:lang="eng" xmlns="http://www.tei-c.org/ns/Examples">
          <eac-cpf:objectXMLWrap xmlns:eac-cpf="urn:isbn:1-931666-33-4">
-            <tei:bibl xmlns:tei="http://www.tei-c.org/ns/1.0">
+            <!-- Karin: Having a tei example is making the transformation mess up so therefore tei is renamed to have namespace text here -->
+            <!--<tei:bibl xmlns:tei="http://www.tei-c.org/ns/1.0" default="false">
                <tei:title>
                   <tei:emph rend="italic">Paris d'hier et d'aujourd'hui</tei:emph>
                </tei:title>
@@ -74,7 +75,17 @@
                   <tei:name>Roger Henrard</tei:name>
                   <tei:name>Yann Arthus-Bertrand</tei:name>
                </tei:respStmt>
-            </tei:bibl>
+            </tei:bibl>-->
+            <text:bibl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:text="http://www.tei.org/ns/1.0"  xsi:schemaLocation="http://www.tei.org/ns/1.0 tei.xsd" default="false">
+               <text:title>
+                  <text:emph rend="italic">Paris d'hier et d'aujourd'hui</text:emph>
+               </text:title>
+               <text:respStmt>
+                  <text:resp>photographes</text:resp>
+                  <text:name>Roger Henrard</text:name>
+                  <text:name>Yann Arthus-Bertrand</text:name>
+               </text:respStmt>
+            </text:bibl>
          </eac-cpf:objectXMLWrap>
       </egXML>
    </div>
