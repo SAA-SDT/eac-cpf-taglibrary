@@ -16,7 +16,7 @@
             </respStmt>
          </titleStmt>
          <editionStmt>
-            <p xml:lang="eng">Draft</p>
+            <p xml:lang="eng">2014 Edition</p>
          </editionStmt>
          <publicationStmt>
             <publisher xml:lang="eng">Society of American Archivists in collaboration with Staatsbibliothek zu Berlin.</publisher>
@@ -33,7 +33,7 @@
             <docTitle>
                <titlePart type="main">Encoded Archival Context—Corporate Bodies, Persons, and Families (EAC-CPF) Tag Library</titlePart>
             </docTitle>
-            <docEdition>Edition 2012</docEdition>
+            <docEdition>Edition 2014</docEdition>
             <byline>Prepared and maintained by the</byline>
             <docAuthor>Technical Subcommittee for Encoded Archival Context of the Society of American Archivists</docAuthor>
             <docAuthor>and the Staatsbibliothek zu Berlin</docAuthor>
@@ -121,7 +121,7 @@
                   <item>Resource: Materials, other than CPF entities and functions’ descriptions, to which CPF instances are related.</item>
                   <item>Wrapper: In the EAC-CPF Tag Library, the term “wrapper” is used as a descriptive function for elements that can contain other elements only, e.g., <tag>legalStatus</tag>, <tag>function</tag>, and <tag>cpfDescription</tag>, etc.</item>
                </list>
-               <p>The sections “Mandatory/Optional” and “Repeatable/Non-repeatable” inform about the conditions of the occurrence of an element within its parent element.</p>
+               <p>The section “Availability” informs about the conditions of the occurrence of an element within its parent element.</p>
             </div>
             <div>
                <head>Overview of EAC-CPF Structure and Semantics</head>
